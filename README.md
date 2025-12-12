@@ -1,8 +1,17 @@
-# SAFAN - Digital Edition of Elias Hutter's Hebrew New Testament
+# safan - Digital Edition of Elias Hutter's Hebrew Besorah
 
-**SAFAN** is the first public, free, and completely open digital edition of the Hebrew translation of the New Testament made by Elias Hutter in Nuremberg between 1599 and 1602—a historical text that for 426 years only existed in physical libraries or illegible scanned PDFs.
+**SAFAN** is the first public, free, and completely open digital edition of the Hebrew translation of Besorah (New Testament) made by Elias Hutter in Nuremberg between 1599 and 1602—a historical text that for 426 years only existed in physical libraries or illegible scanned PDFs.
 
 ## 🚀 Quick Start
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/edyhvh/safan.git
+cd safan
+```
+
+**Note**: Replace `YOUR_USERNAME` with your actual GitHub username when you create the repository.
 
 ### Prerequisites
 
@@ -27,9 +36,12 @@ This command will:
 
 ### Download the Source PDFs
 
-The Hutter Polyglot Bible PDFs are not included in this repository because they are very large (~7.5G total). You can download them using the provided script:
+The Hutter Polyglot Bible PDFs are not included in this repository because they are very large (~7.5G total). You can download them using the provided script: 
 
 ```bash
+# Go to safan dir first
+cd path/to/safan
+
 # List all available books
 python scripts/get_hutter_pdfs.py --list
 
