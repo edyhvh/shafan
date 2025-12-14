@@ -461,6 +461,8 @@ def find_main_box_from_projection(
     search_end = int(width * 0.8)
     search_sum_x = sum_x[:search_end]
     
+    x_span = None  # Initialize before loop
+    
     # Try multiple thresholds to find all valid columns
     for threshold_ratio in [0.005, 0.01, 0.015, 0.02, 0.025, 0.03, 0.035, 0.04, 0.045, 0.05]:
         if search_sum_x.size == 0:

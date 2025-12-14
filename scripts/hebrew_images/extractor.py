@@ -22,6 +22,11 @@ from .utils import (
     validate_column_width,
     reject_first_column,
 )
+from .validation import (
+    fix_wrong_column_detection,
+    fix_right_edge_expansion,
+    fix_corinthians2_000068,
+)
 from .logger import ImageLogger, log_summary
 
 logger = logging.getLogger(__name__)
@@ -296,8 +301,12 @@ class HebrewTextExtractor:
             if img_logger:
                 img_logger.log_info(f"Split wide region: x={x}, w={w}")
 
-        # REMOVED: Validation step that was causing issues
-        # The original detection methods should handle column selection correctly
+        # Apply general fixes for common problems
+        # Fix 1: Wrong column detection (column too far right)
+        box = fix_wrong_column_detection(thresh, box, width)
+        
+        # Fix 2: Right edge expansion (text too close to edge)
+        box = fix_right_edge_expansion(thresh, box, width)
 
         logger.debug(
             "Final bounding box: x=%d, y=%d, w=%d, h=%d", box[0], box[1], box[2], box[3]
@@ -406,6 +415,11 @@ class HebrewTextExtractor:
 
             # Detect bounding box
             (x, y, w, h), method_used = self.detect_hebrew_column(image, image_logger)
+
+            # Apply specific fix for corinthians2/000068.png
+            is_corinthians2 = "corinthians2" in str(self.input_dir).lower()
+            if is_corinthians2 and image_path.name == "000068.png":
+                (x, y, w, h) = fix_corinthians2_000068((x, y, w, h), width)
 
             # Validate and clamp coordinates
             x = min(max(0, x), max(0, width - 1))
