@@ -461,8 +461,8 @@ Examples:
 
     parser.add_argument(
         '--output', '-o',
-        default='data/images',
-        help='Output directory (default: data/images)'
+        default='data/images/raw_images',
+        help='Output directory (default: data/images/raw_images)'
     )
 
     parser.add_argument(

@@ -447,6 +447,20 @@ class HebrewTextExtractor:
             min_height = int(height * 0.85)
             h = max(min_height, min(h, height - y))
 
+            # Apply padding to avoid cutting text at edges
+            # Based on analysis: text boundaries are often 0-1px from detected box edges
+            PADDING_LEFT = 40
+            PADDING_RIGHT = 40
+            PADDING_BOTTOM = 100
+            PADDING_TOP = 0  # Keep y=0 to preserve enumeration at top
+
+            new_x = max(0, x - PADDING_LEFT)
+            new_y = max(0, y - PADDING_TOP)
+            new_w = min(width - new_x, w + PADDING_LEFT + PADDING_RIGHT)
+            new_h = min(height - new_y, h + PADDING_TOP + PADDING_BOTTOM)
+
+            x, y, w, h = new_x, new_y, new_w, new_h
+
             # Crop
             cropped = image[y : y + h, x : x + w]
 
