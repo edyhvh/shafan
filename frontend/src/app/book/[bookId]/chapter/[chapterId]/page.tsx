@@ -1,8 +1,8 @@
-import { notFound } from 'next/navigation'
-import { loadBook, BOOK_NAMES } from '@/lib/safan'
-import Reader from '@/components/Reader'
-import Navigation from '@/components/Navigation'
-
+// import { notFound } from 'next/navigation'
+// import { loadBook, BOOK_NAMES } from '@/lib/safan'
+// import Reader from '@/components/Reader'
+// import Navigation from '@/components/Navigation'
+/*
 interface PageProps {
   params: {
     bookId: string
@@ -20,11 +20,11 @@ export async function generateMetadata({ params }: PageProps) {
     }
   }
 
-  const bookName = BOOK_NAMES.he[bookIndex] || `Book ${bookIndex + 1}`
+  // const bookName = BOOK_NAMES.he[bookIndex] || `Book ${bookIndex + 1}`
 
   return {
-    title: `${bookName} ${chapterNumber} - SAFAN`,
-    description: `Read ${bookName} chapter ${chapterNumber} from Elias Hutter's Hebrew New Testament`,
+    title: `Book ${bookIndex + 1} ${chapterNumber} - SAFAN`,
+    description: `Read book ${bookIndex + 1} chapter ${chapterNumber} from Elias Hutter's Hebrew New Testament`,
   }
 }
 
@@ -33,39 +33,40 @@ export default async function BookChapterPage({ params }: PageProps) {
   const chapterNumber = parseInt(params.chapterId)
 
   // Validate parameters
-  if (isNaN(bookIndex) || isNaN(chapterNumber) || bookIndex < 0 || bookIndex >= 27 || chapterNumber < 1) {
-    notFound()
-  }
+  // if (isNaN(bookIndex) || isNaN(chapterNumber) || bookIndex < 0 || bookIndex >= 27 || chapterNumber < 1) {
+  //   notFound()
+  // }
 
   // Load book data (in production, this would come from your API)
-  const book = await loadBook(BOOK_NAMES.he[bookIndex], 'he')
+  // const book = await loadBook(BOOK_NAMES.he[bookIndex], 'he')
 
-  if (!book) {
-    notFound()
-  }
+  // if (!book) {
+  //   notFound()
+  // }
 
   // Check if chapter exists
-  const chapter = book.chapters.find(ch => ch.number === chapterNumber)
-  if (!chapter) {
-    notFound()
-  }
+  // const chapter = book.chapters.find((ch: { number: number }) => ch.number === chapterNumber)
+  // if (!chapter) {
+  //   notFound()
+  // }
 
   return (
     <div className="min-h-screen bg-white">
-      <Navigation
+      {/* <Navigation
         currentBook={book.name}
         currentChapter={chapterNumber}
         onBookChange={() => {}} // Will be handled by client-side navigation
         onChapterChange={() => {}} // Will be handled by client-side navigation
-      />
-
+      /> } */
+/*
       <main className="safan-container py-8">
-        <Reader
+        <h1>Book {bookIndex + 1} - Chapter {chapterNumber}</h1>
+        {/* <Reader
           book={book}
           currentChapter={chapterNumber}
           showNikud={true}
           onNikudToggle={() => {}} // Will be handled by client-side state
-        />
+        /> }
       </main>
     </div>
   )
@@ -88,3 +89,5 @@ export async function generateStaticParams() {
 
   return params
 }
+
+*/
