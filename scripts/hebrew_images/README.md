@@ -24,6 +24,8 @@ python scripts/hebrew_images/main.py all
 - Input: `data/images/raw_images/<book_name>/`
 - Output: `data/images/hebrew_images/<book_name>/` (created automatically)
 
+**Special case**: When processing `colossians`, pages 000026.png, 000028.png, and 000030.png are automatically saved to `data/images/hebrew_images/laodikim/` as they contain Paul's letter to Laodicea.
+
 **Custom directories:**
 ```bash
 python scripts/hebrew_images/main.py matthew \
@@ -75,3 +77,5 @@ extractor = HebrewTextExtractor(
 )
 extractor.process_all_images()
 ```
+
+

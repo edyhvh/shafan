@@ -21,6 +21,7 @@ import logging
 import os
 import sys
 from pathlib import Path
+from tqdm import tqdm
 
 # Handle both module and standalone execution
 try:
@@ -112,9 +113,52 @@ def process_book(book_name, input_base_dir, output_base_dir):
     logger.info(f"  Output: {output_dir}")
 
     try:
-        extractor = HebrewTextExtractor(input_dir, output_dir)
-        extractor.process_all_images()
-        logger.info(f"Successfully processed {book_name}")
+        # Special case: colossians pages 000026, 000028, 000030 are Paul's letter to Laodicea
+        laodikim_pages = ['000026.png', '000028.png', '000030.png']
+        
+        if book_name.lower() == 'colossians':
+            # Process all images normally, but exclude laodikim pages
+            extractor = HebrewTextExtractor(input_dir, output_dir)
+            
+            # Get all image files
+            image_files = []
+            for ext in ["*.png", "*.jpg", "*.jpeg", "*.tiff", "*.bmp"]:
+                image_files.extend(input_dir.glob(ext))
+            for ext in ["*.PNG", "*.JPG", "*.JPEG"]:
+                image_files.extend(input_dir.glob(ext))
+            image_files = sorted(list(set(image_files)))
+            
+            # Filter images: colossians images (excluding laodikim pages)
+            colossians_images = [img for img in image_files if img.name not in laodikim_pages]
+            
+            # Process colossians images with progress bar
+            logger.info(f"Processing {len(colossians_images)} colossians images...")
+            with tqdm(total=len(colossians_images), desc="Processing colossians", ncols=80) as pbar:
+                for image_path in colossians_images:
+                    extractor.process_single_image(image_path, use_logger=True)
+                    pbar.update(1)
+            
+            # Process laodikim pages separately to laodikim directory
+            laodikim_output_dir = Path(output_base_dir) / 'laodikim'
+            laodikim_output_dir.mkdir(parents=True, exist_ok=True)
+            
+            logger.info(f"Processing Laodicea letter pages to laodikim directory...")
+            logger.info(f"  Output: {laodikim_output_dir}")
+            
+            laodikim_images = [img for img in image_files if img.name in laodikim_pages]
+            laodikim_extractor = HebrewTextExtractor(input_dir, laodikim_output_dir)
+            
+            with tqdm(total=len(laodikim_images), desc="Processing laodikim", ncols=80) as pbar:
+                for image_path in laodikim_images:
+                    laodikim_extractor.process_single_image(image_path, use_logger=True)
+                    pbar.update(1)
+            
+            logger.info(f"Successfully processed {book_name} and Laodicea letter pages")
+        else:
+            # Normal processing for other books
+            extractor = HebrewTextExtractor(input_dir, output_dir)
+            extractor.process_all_images()
+            logger.info(f"Successfully processed {book_name}")
         return True
     except Exception as e:
         logger.error(f"Error processing {book_name}: {str(e)}")
@@ -223,3 +267,5 @@ Examples:
 
 if __name__ == "__main__":
     main()
+
+

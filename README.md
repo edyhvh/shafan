@@ -99,6 +99,24 @@ python scripts/get_images_from_pdfs.py --check-integrity
 - **Estimated Times**: Matthew (~25-35min), Acts (~45-60min), Revelation (~20-30min) at 150 DPI with batch-size 25
 - **Requirements**: `pdf2image` (uses poppler), `tqdm` for progress bars
 
+### Extract Hebrew Text Columns
+
+After converting PDFs to images, extract the Hebrew text columns from the manuscript pages:
+
+```bash
+# List all available books
+python scripts/hebrew_images/main.py --list
+
+# Process specific books (example)
+python scripts/hebrew_images/main.py matthew mark luke
+
+# Process all books
+python scripts/hebrew_images/main.py all
+```
+
+**Special Case**: When processing `colossians`, pages 000026.png, 000028.png, and 000030.png are automatically saved to the `laodikim` directory, as these pages contain Paul's letter to Laodicea.
+
+
 
 
 

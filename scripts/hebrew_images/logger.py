@@ -126,3 +126,5 @@ def log_summary(logger: logging.Logger, successful: int, total: int, skipped: in
     if failed > 0:
         logger.info(f"Failed:           {failed}")
     logger.info("="*60)
+
+
