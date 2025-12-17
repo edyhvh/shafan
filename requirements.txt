@@ -1,6 +1,6 @@
 # OCR and Computer Vision Libraries
-# paddlepaddle>=2.6.0,<3.0.0  # Uncomment if needed - large download
-# paddleocr>=2.7.0,<3.0.0     # Uncomment if needed - requires paddlepaddle
+paddlepaddle>=3.2.2 # Uncomment if needed - large download
+paddleocr>=3.3.2     # Uncomment if needed - requires paddlepaddle
 pdf2image>=1.17.0
 # opencv-python>=4.8.0  # Removed to avoid conflict with opencv-contrib-python
 opencv-contrib-python>=4.8.0
