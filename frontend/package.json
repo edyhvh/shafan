@@ -1,7 +1,7 @@
 {
-  "name": "safan-frontend",
+  "name": "shafan-frontend",
   "version": "1.0.0",
-  "description": "Ultra-minimalist web interface for SAFAN - Hebrew New Testament digital edition",
+  "description": "Ultra-minimalist web interface for shafan - Hebrew New Testament digital edition",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -35,3 +35,4 @@
     "node": ">=20.0.0"
   }
 }
+

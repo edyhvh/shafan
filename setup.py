@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-SAFAN Setup Script - One-command environment setup for OCR Project
+shafan Setup Script - One-command environment setup for OCR Project
 Run: python setup.py
 """
 
@@ -22,14 +22,14 @@ def run_command(cmd, cwd=None, check=True, capture_output=True):
             text=True if capture_output else False,
             check=check
         )
-        
+
         stdout = ""
         stderr = ""
-        
+
         if capture_output:
             stdout = result.stdout.strip() if result.stdout else ""
             stderr = result.stderr.strip() if result.stderr else ""
-            
+
         return result.returncode == 0, stdout, stderr
     except subprocess.CalledProcessError as e:
         return False, "", str(e)
@@ -150,7 +150,7 @@ def setup_direnv():
     """Setup direnv if available"""
     if shutil.which('direnv'):
         print_status("Setting up direnv...")
-        
+
         # Create .envrc if it doesn't exist
         if not os.path.exists(".envrc"):
             with open(".envrc", "w") as f:
@@ -178,12 +178,12 @@ def create_project_structure():
     init_file = "src/__init__.py"
     if not os.path.exists(init_file):
         with open(init_file, 'w') as f:
-            f.write('"""SAFAN OCR Project"""\n')
+            f.write('"""shafan OCR Project"""\n')
 
     # Create a basic example script
     example_script = """#!/usr/bin/env python3
 \"\"\"
-SAFAN OCR Example Script
+shafan OCR Example Script
 Basic OCR functionality using PaddleOCR and OpenCV
 \"\"\"
 
@@ -195,7 +195,7 @@ import re
 from pathlib import Path
 
 def main():
-    print("🔍 SAFAN OCR System Ready")
+    print("🔍 shafan OCR System Ready")
     print("Available functions:")
     print("- OCR processing with PaddleOCR")
     print("- PDF to image conversion with pdf2image")
@@ -224,7 +224,7 @@ if __name__ == "__main__":
 
 def main():
     """Main setup function"""
-    print("🚀 SAFAN Environment Setup - OCR Project")
+    print("🚀 shafan Environment Setup - OCR Project")
     print("=" * 50)
 
     if not check_requirements():
@@ -239,8 +239,8 @@ def main():
     create_project_structure()
 
     print("\n" + "=" * 50)
-    print_success("SAFAN setup complete!")
-    print("\n🎯 How to use SAFAN:")
+    print_success("shafan setup complete!")
+    print("\n🎯 How to use shafan:")
     print("1. Environment activates automatically (if direnv installed)")
     print("2. Or manually: source .venv/bin/activate")
     print("3. Run example: python scripts/example_ocr.py")

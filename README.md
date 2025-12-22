@@ -1,14 +1,14 @@
-# safan - Digital Edition of Elias Hutter's Hebrew Besorah
+# shafan - Digital Edition of Elias Hutter's Hebrew Besorah
 
-**SAFAN** is the first public, free, and completely open digital edition of the Hebrew translation of Besorah (New Testament) made by Elias Hutter in Nuremberg between 1599 and 1602—a historical text that for 426 years only existed in physical libraries or illegible scanned PDFs.
+**shafan** is the first public, free, and completely open digital edition of the Hebrew translation of Besorah (New Testament) made by Elias Hutter in Nuremberg between 1599 and 1602—a historical text that for 426 years only existed in physical libraries or illegible scanned PDFs.
 
 ## 🚀 Quick Start
 
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/edyhvh/safan.git
-cd safan
+git clone https://github.com/edyhvh/shafan.git
+cd shafan
 ```
 
 ### Prerequisites
@@ -35,11 +35,11 @@ This command will:
 
 ### Download the Source PDFs
 
-The Hutter Polyglot Bible PDFs are not included in this repository because they are very large (~7.5G total). You can download them using the provided script: 
+The Hutter Polyglot Bible PDFs are not included in this repository because they are very large (~7.5G total). You can download them using the provided script:
 
 ```bash
-# Go to safan dir first
-cd path/to/safan
+# Go to shafan dir first
+cd path/to/shafan
 
 # List all available books
 python scripts/get_hutter_pdfs.py --list
@@ -64,8 +64,8 @@ python scripts/get_hutter_pdfs.py --force matthew
 Once you have the PDF source files, you need to convert them to images for OCR processing. This script converts PDF pages to high-quality PNG images optimized for OCR:
 
 ```bash
-# Go to safan dir first
-cd path/to/safan
+# Go to shafan dir first
+cd path/to/shafan
 
 # List all available books
 python scripts/get_images_from_pdfs.py --list
@@ -116,9 +116,46 @@ python scripts/hebrew_images/main.py all
 
 **Special Case**: When processing `colossians`, pages 000026.png, 000028.png, and 000030.png are automatically saved to the `laodikim` directory, as these pages contain Paul's letter to Laodicea.
 
+### Transcribe Hebrew Text with AI
+
+After extracting the Hebrew column images, use the Gemini Vision API to transcribe the Hebrew text into structured JSON:
+
+```bash
+# Set your Gemini API key (get one at https://aistudio.google.com/app/apikey)
+export GEMINI_API_KEY="your-api-key-here"
+
+# List all available books
+python scripts/hebrew_text/main.py --list
+
+# Process specific books
+python scripts/hebrew_text/main.py --book jude
+python scripts/hebrew_text/main.py --book philemon
+
+# Process multiple books
+python scripts/hebrew_text/main.py matthew mark luke
+
+# Process all books
+python scripts/hebrew_text/main.py --all
+
+# Test with 5 images only (dry-run)
+python scripts/hebrew_text/main.py --book jude --dry-run
+
+# Resume interrupted processing
+python scripts/hebrew_text/main.py --book matthew --resume
+
+# Reprocess failed images
+python scripts/hebrew_text/main.py --book matthew --reprocess-failed
+```
+
+**Output**: JSON files are saved to `output/` with the structure: book → chapters → verses with nikud (vowel points).
+
+**Checkpoints**: Progress is saved automatically to `output/.checkpoints/`, allowing you to resume interrupted processing.
+
 ### Training Dataset
 
 The extracted Hebrew text images used for model training are hosted on Hugging Face at [https://huggingface.co/datasets/edyhvh/hutter](https://huggingface.co/datasets/edyhvh/hutter) instead of GitHub to avoid repository bloat. If you want to improve the OCR model, you can download the training images from there.
+
+
 
 
 

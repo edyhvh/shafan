@@ -1,12 +1,12 @@
-# SAFAN - First Digital Edition of Elias Hutter's Hebrew New Testament Translation
+# shafan - First Digital Edition of Elias Hutter's Hebrew New Testament Translation
 
 ## Overview
 
-**SAFAN** is the first public, free, and completely open digital edition of the Hebrew translation of the New Testament made by Elias Hutter in Nuremberg between 1599 and 1602—a historical text that for 426 years only existed in physical libraries or illegible scanned PDFs.
+**shafan** is the first public, free, and completely open digital edition of the Hebrew translation of the New Testament made by Elias Hutter in Nuremberg between 1599 and 1602—a historical text that for 426 years only existed in physical libraries or illegible scanned PDFs.
 
 ## Project Goal
 
-The project transcribes volumes 3 and 4 of Hutter's Polyglot Bible using modern OCR with PaddleOCR, cleans them, and structures them into 27 JSON files (one per book) with the option to read with or without nikud, and publishes them on an ultra-minimalist website hosted at https://safan.vercel.app.
+The project transcribes volumes 3 and 4 of Hutter's Polyglot Bible using modern OCR with PaddleOCR, cleans them, and structures them into 27 JSON files (one per book) with the option to read with or without nikud, and publishes them on an ultra-minimalist website hosted at https://shafan.vercel.app.
 
 ## Technical Features
 

@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Ultra-minimalist configuration for SAFAN
+  // Ultra-minimalist configuration for shafan
   reactStrictMode: true,
   swcMinify: true,
 
@@ -40,3 +40,4 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
+

@@ -1,5 +1,5 @@
 // import { notFound } from 'next/navigation'
-// import { loadBook, BOOK_NAMES } from '@/lib/safan'
+// import { loadBook, BOOK_NAMES } from '@/lib/shafan'
 // import Reader from '@/components/Reader'
 // import Navigation from '@/components/Navigation'
 /*
@@ -16,14 +16,14 @@ export async function generateMetadata({ params }: PageProps) {
 
   if (isNaN(bookIndex) || isNaN(chapterNumber) || bookIndex < 0 || bookIndex >= 27) {
     return {
-      title: 'Not Found - SAFAN',
+      title: 'Not Found - shafan',
     }
   }
 
   // const bookName = BOOK_NAMES.he[bookIndex] || `Book ${bookIndex + 1}`
 
   return {
-    title: `Book ${bookIndex + 1} ${chapterNumber} - SAFAN`,
+    title: `Book ${bookIndex + 1} ${chapterNumber} - shafan`,
     description: `Read book ${bookIndex + 1} chapter ${chapterNumber} from Elias Hutter's Hebrew New Testament`,
   }
 }
@@ -59,7 +59,7 @@ export default async function BookChapterPage({ params }: PageProps) {
         onChapterChange={() => {}} // Will be handled by client-side navigation
       /> } */
 /*
-      <main className="safan-container py-8">
+      <main className="shafan-container py-8">
         <h1>Book {bookIndex + 1} - Chapter {chapterNumber}</h1>
         {/* <Reader
           book={book}

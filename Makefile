@@ -8,7 +8,7 @@ PIP := .venv/bin/pip
 all: setup
 
 setup:
-	@echo "🚀 Setting up SAFAN environment..."
+	@echo "🚀 Setting up shafan environment..."
 	@python3 setup.py
 
 install: setup

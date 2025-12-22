@@ -1,5 +1,5 @@
 #!/bin/bash
-# Simple script runner for SAFAN
+# Simple script runner for shafan
 # Usage: ./run.sh <script_name> [args...]
 
 if [ $# -eq 0 ]; then

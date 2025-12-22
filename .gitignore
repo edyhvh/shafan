@@ -10,7 +10,8 @@ __pycache__/
 *.pyd
 
 # IDE
-.vscode/
+.vscode/*
+!.vscode/settings.json
 .idea/
 
 # OS
@@ -31,6 +32,9 @@ data/temp/
 # Generated images (converted from PDFs)
 data/images/
 
+# Checkpoints
+output/.checkpoints/
+
 # Logs
 *.log
 logs/
@@ -41,5 +45,7 @@ logs/
 
 # Cursor-specific configuration
 .cursorrules
+.editorconfig
+
 
 

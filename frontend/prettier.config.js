@@ -7,3 +7,4 @@ module.exports = {
   useTabs: false,
   endOfLine: 'preserve',
 }
+

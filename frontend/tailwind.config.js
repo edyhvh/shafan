@@ -12,9 +12,9 @@ module.exports = {
         'hebrew': ['Noto Sans Hebrew', 'Arial Hebrew', 'sans-serif'],
         'sans': ['Inter', 'system-ui', 'sans-serif'],
       },
-      // Custom colors for SAFAN
+      // Custom colors for shafan
       colors: {
-        'safan': {
+        'shafan': {
           'primary': '#1f2937',
           'secondary': '#374151',
           'accent': '#6b7280',
@@ -24,3 +24,4 @@ module.exports = {
   },
   plugins: [],
 }
+
