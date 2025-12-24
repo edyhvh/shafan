@@ -225,26 +225,58 @@ def build_prompt(yaml_data: Dict[str, Any]) -> str:
         "- Chapters are marked with large centered Hebrew letters."
     )
 
-    # Add critical isolation instructions
-    prompt_parts.append("\n## CRITICAL ISOLATION RULES")
+    # Add critical chapter and verse identification rules
+    prompt_parts.append("\n## CRITICAL CHAPTER AND VERSE IDENTIFICATION RULES")
     prompt_parts.append(
-        "⚠️ IMPORTANT: This is a COMPLETELY INDEPENDENT request. "
-        "DO NOT remember or reference any previous images or verses."
+        "⚠️ IMPORTANT: Correctly identify the ACTUAL chapter and verse numbers visible in the image."
     )
     prompt_parts.append(
-        "- Treat this image as the ONLY source material. Ignore any context from previous requests."
+        "### Chapter Identification:"
     )
     prompt_parts.append(
-        "- Start verse numbering from 1 for each new image, regardless of previous requests."
+        "- Chapters are marked with LARGE CENTERED Hebrew letters (א=1, ב=2, ג=3, ד=4, ה=5, ו=6, ז=7, ח=8, ט=9, י=10, יא=11, יב=12, etc.)"
+    )
+    prompt_parts.append(
+        "- If you see a large centered Hebrew letter, that indicates a NEW CHAPTER starting."
+    )
+    prompt_parts.append(
+        "- If NO chapter marker is visible, look at the verse numbers to determine the chapter."
+    )
+    prompt_parts.append(
+        "- The chapter number in your JSON output must match the ACTUAL chapter in the biblical book."
+    )
+    prompt_parts.append(
+        "### Verse Identification:"
+    )
+    prompt_parts.append(
+        "- Verse numbers are marked with Arabic numerals (1, 2, 3...) in the right margin."
+    )
+    prompt_parts.append(
+        "- Report the ACTUAL verse numbers you see, not starting from 1."
+    )
+    prompt_parts.append(
+        "- If verse 15 is the first verse visible, start from 15, not from 1."
+    )
+    prompt_parts.append(
+        "### Common Patterns:"
+    )
+    prompt_parts.append(
+        "- A page may contain multiple chapters (end of one, beginning of another)."
+    )
+    prompt_parts.append(
+        "- A page may be mid-chapter with no chapter marker visible."
+    )
+    prompt_parts.append(
+        "- When unsure of the chapter, use the verse numbers as a guide (high verse numbers like 40+ suggest a long chapter)."
+    )
+    prompt_parts.append(
+        "### Isolation:"
     )
     prompt_parts.append(
         "- Extract ONLY the Hebrew text visible in THIS SPECIFIC IMAGE."
     )
     prompt_parts.append(
-        "- Do not continue verse sequences from previous images."
-    )
-    prompt_parts.append(
-        "- If this appears to be a continuation page, still number verses starting from 1."
+        "- Do not invent or guess verses that are not visible."
     )
 
     # Add output format specification
