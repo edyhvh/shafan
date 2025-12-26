@@ -3,23 +3,25 @@
   "version": "1.0.0",
   "description": "Ultra-minimalist web interface for shafan - Hebrew New Testament digital edition",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "npm run sync-data && next dev -p 3001",
     "build": "npm run sync-data && next build",
     "start": "next start -p 3001",
-    "lint": "next lint",
+    "lint": "eslint .",
     "type-check": "tsc --noEmit",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "sync-data": "node scripts/sync-data.js"
+    "sync-data": "node scripts/sync-data.cjs"
   },
   "dependencies": {
-    "next": "^15.1.0",
+    "next": "^16.1.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.1.0",
+    "@tailwindcss/postcss": "^4.1.18",
     "@types/node": "^25.0.3",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
@@ -27,7 +29,7 @@
     "@typescript-eslint/parser": "^8.0.0",
     "autoprefixer": "^10.4.19",
     "eslint": "^9.0.0",
-    "eslint-config-next": "^15.1.0",
+    "eslint-config-next": "^16.1.1",
     "postcss": "^8.4.40",
     "prettier": "^3.3.0",
     "tailwindcss": "^4.1.18",
