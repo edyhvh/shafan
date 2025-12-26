@@ -7,6 +7,9 @@ const defaultLocale = 'he'
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
 
+  // Debug: log proxy execution
+  console.log('[Proxy] Processing:', pathname)
+
   // Skip proxy for static files and API routes
   if (
     pathname.startsWith('/_next') ||
@@ -41,19 +44,27 @@ export function proxy(request: NextRequest) {
   }
 
   // Redirect to locale-prefixed path
-  const newUrl = new URL(`/${locale}${pathname}`, request.url)
+  const redirectPath = pathname === '/' ? `/${locale}` : `/${locale}${pathname}`
+  const newUrl = new URL(redirectPath, request.url)
+  console.log('[Proxy] Redirecting to:', newUrl.pathname)
   return NextResponse.redirect(newUrl)
 }
 
 export const config = {
   matcher: [
-    // Match all pathnames except for
-    // - api routes
-    // - _next/static (static files)
-    // - _next/image (image optimization files)
-    // - favicon.ico (favicon file)
-    // - icon.svg (icon file)
-    // - data directory (static JSON files)
-    '/((?!api|_next/static|_next/image|favicon.ico|icon.svg|data).*)',
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     * - icon.svg (icon file)
+     * - data (static JSON files)
+     *
+     * The pattern uses .*? to make the trailing part optional,
+     * allowing it to match the root path '/' as well.
+     */
+    '/((?!api|_next/static|_next/image|favicon.ico|icon.svg|data).*)?',
   ],
 }
+

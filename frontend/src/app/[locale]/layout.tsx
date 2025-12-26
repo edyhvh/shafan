@@ -52,9 +52,8 @@ export async function generateMetadata({
   const title = t('page_title', locale)
 
   return {
-    title,
-    description:
-      "Open digital edition of Elias Hutter's Hebrew New Testament (1599–1602)",
+    title: 'Shafan',
+    description: "Read Elias Hutter's Hebrew Besorah Translation",
     keywords: [
       'Hebrew',
       'New Testament',
@@ -64,6 +63,16 @@ export async function generateMetadata({
       'Besorah',
       'בשורה',
     ],
+    openGraph: {
+      title: 'Shafan',
+      description: "Read Elias Hutter's Hebrew Besorah Translation",
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary',
+      title: 'Shafan',
+      description: "Read Elias Hutter's Hebrew Besorah Translation",
+    },
   }
 }
 

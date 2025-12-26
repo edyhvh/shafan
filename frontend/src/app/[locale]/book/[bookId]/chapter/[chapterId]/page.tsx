@@ -21,7 +21,18 @@ export async function generateMetadata({ params }: PageProps) {
   // Runtime validation to prevent path traversal attacks
   if (!AVAILABLE_BOOKS.includes(bookId as BookName)) {
     return {
-      title: 'Not Found - Shafan',
+      title: 'Shafan',
+      description: "Read Elias Hutter's Hebrew Besorah Translation",
+      openGraph: {
+        title: 'Shafan',
+        description: "Read Elias Hutter's Hebrew Besorah Translation",
+        type: 'website',
+      },
+      twitter: {
+        card: 'summary',
+        title: 'Shafan',
+        description: "Read Elias Hutter's Hebrew Besorah Translation",
+      },
     }
   }
 
@@ -30,19 +41,34 @@ export async function generateMetadata({ params }: PageProps) {
 
   if (isNaN(chapterNumber) || chapterNumber < 1) {
     return {
-      title: 'Not Found - Shafan',
+      title: 'Shafan',
+      description: "Read Elias Hutter's Hebrew Besorah Translation",
+      openGraph: {
+        title: 'Shafan',
+        description: "Read Elias Hutter's Hebrew Besorah Translation",
+        type: 'website',
+      },
+      twitter: {
+        card: 'summary',
+        title: 'Shafan',
+        description: "Read Elias Hutter's Hebrew Besorah Translation",
+      },
     }
   }
 
-  const displayName = BOOK_DISPLAY_NAMES[bookName] || {
-    en: bookName,
-    he: bookName,
-    es: bookName,
-  }
-
   return {
-    title: `${displayName.en} ${chapterNumber} - Shafan`,
-    description: `Read ${displayName.en} chapter ${chapterNumber} from Elias Hutter's Hebrew New Testament`,
+    title: 'Shafan',
+    description: "Read Elias Hutter's Hebrew Besorah Translation",
+    openGraph: {
+      title: 'Shafan',
+      description: "Read Elias Hutter's Hebrew Besorah Translation",
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary',
+      title: 'Shafan',
+      description: "Read Elias Hutter's Hebrew Besorah Translation",
+    },
   }
 }
 
