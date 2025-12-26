@@ -2,12 +2,9 @@ import type { Metadata } from 'next';
 
 // Root layout - redirects are handled by middleware
 export const metadata: Metadata = {
+  title: 'Shafan - ש',
   icons: {
-    icon: [
-      { url: '/icon.svg', type: 'image/svg+xml' },
-    ],
-    shortcut: '/icon.svg',
-    apple: '/icon.svg',
+    icon: '/favicon.ico',
   },
 };
 
@@ -16,6 +13,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="shortcut icon" href="/favicon.ico" />
+      {children}
+    </>
+  );
 }
 

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, Libre_Bodoni, Suez_One, Cardo, Assistant } from 'next/font/google';
 import '../globals.css';
 import Navbar from '@/components/Navbar';
+import CorrectionWarning from '@/components/CorrectionWarning';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -51,10 +52,24 @@ export default async function LocaleLayout({
   const dir = locale === 'he' ? 'rtl' : 'ltr';
 
   return (
-    <html lang={locale} dir={dir}>
+    <html lang={locale} dir={dir} data-nikud="true" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="shortcut icon" href="/icon.svg" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var nikud = localStorage.getItem('shafan-nikud-enabled');
+                  if (nikud !== null) {
+                    document.documentElement.setAttribute('data-nikud', nikud);
+                  }
+                } catch(e) {}
+              })();
+            `,
+          }}
+        />
       </head>
       <body
         className={`${inter.variable} ${libreBodoni.variable} ${suezOne.variable} ${cardo.variable} ${assistant.variable} font-ui-latin antialiased`}
@@ -62,6 +77,9 @@ export default async function LocaleLayout({
         <div className="min-h-screen bg-background">
           {/* Floating Navbar */}
           <Navbar />
+
+          {/* Correction Warning */}
+          <CorrectionWarning />
 
           {/* Main content with top padding for floating navbar */}
           <main className="w-full pt-32 pb-16">{children}</main>

@@ -1,0 +1,74 @@
+title: "[Correction] Book: Chapter:Verse"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Found an error? Let's fix it together! Please provide the following information:
+
+        **Tip**: Before submitting, verify your correction against the original manuscript images available at [Hugging Face](https://huggingface.co/datasets/edyhvh/hutter).
+
+  - type: input
+    id: book
+    attributes:
+      label: Book
+      description: Which book? (e.g., matthew, mark, luke, john, acts)
+      placeholder: matthew
+    validations:
+      required: true
+
+  - type: input
+    id: chapter
+    attributes:
+      label: Chapter
+      description: Chapter number
+      placeholder: "1"
+    validations:
+      required: true
+
+  - type: input
+    id: verse
+    attributes:
+      label: Verse
+      description: Verse number
+      placeholder: "1"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_text
+    attributes:
+      label: Current Text
+      description: Copy the current text from the verse
+      placeholder: Paste the current text here
+    validations:
+      required: true
+
+  - type: textarea
+    id: corrected_text
+    attributes:
+      label: Corrected Text
+      description: What should it say?
+      placeholder: Paste the corrected text here
+    validations:
+      required: true
+
+  - type: dropdown
+    id: error_type
+    attributes:
+      label: Type of Error
+      options:
+        - Typo (wrong characters)
+        - Nikud (wrong vowels)
+        - Wording (wrong words)
+        - Grammar
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: explanation
+    attributes:
+      label: Explanation
+      description: Why is this correction needed? Reference the original images if possible. (Optional but helpful)
+      placeholder: Explain why this correction is needed. If you checked the original images at Hugging Face, mention it here...
+

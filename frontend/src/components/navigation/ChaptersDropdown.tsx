@@ -22,13 +22,13 @@ export default function ChaptersDropdown({
   onClose,
   onCloseAll,
 }: ChaptersDropdownProps) {
-  const [hoveredChapter, setHoveredChapter] = useState<number | null>(null);
+  const [selectedChapter, setSelectedChapter] = useState<number | null>(null);
   const pathname = usePathname();
   const locale = getLocaleFromPath(pathname);
 
   if (!isOpen) return null;
 
-  const chapter = hoveredChapter ? chapters.find(c => c.number === hoveredChapter) : null;
+  const chapter = selectedChapter ? chapters.find(c => c.number === selectedChapter) : null;
 
   // If no chapters, show message
   if (!chapters || chapters.length === 0) {
@@ -42,6 +42,24 @@ export default function ChaptersDropdown({
   // Calculate grid columns based on number of chapters
   const gridCols = chapters.length === 1 ? 1 : chapters.length <= 4 ? 2 : chapters.length <= 9 ? 3 : chapters.length <= 16 ? 4 : 5;
 
+  // For single chapter books, just show link without verse selection
+  const isSingleChapter = chapters.length === 1;
+
+  const handleChapterClick = (e: React.MouseEvent, chapterNumber: number) => {
+    if (isSingleChapter) {
+      // Single chapter: navigate directly
+      return;
+    }
+
+    // Multi-chapter: toggle selection to show verses
+    e.preventDefault();
+    if (selectedChapter === chapterNumber) {
+      setSelectedChapter(null);
+    } else {
+      setSelectedChapter(chapterNumber);
+    }
+  };
+
   return (
     <div
       className="relative dropdown-panel z-[60] p-3"
@@ -52,20 +70,18 @@ export default function ChaptersDropdown({
         style={{ gridTemplateColumns: `repeat(${gridCols}, 1fr)` }}
       >
         {chapters.map((ch) => {
-          const isHovered = hoveredChapter === ch.number;
+          const isSelected = selectedChapter === ch.number;
 
           return (
             <Link
               key={ch.number}
               href={`/${locale}/book/${bookName}/chapter/${ch.number}`}
-              className={`flex items-center justify-center w-10 h-10 text-sm font-semibold text-black transition-colors rounded-lg ${
-                isHovered ? 'bg-black/15' : 'bg-black/5 hover:bg-black/10'
+              className={`flex items-center justify-center w-10 h-10 text-sm font-semibold transition-all duration-150 rounded-lg cursor-pointer ${
+                isSelected
+                  ? 'bg-gray text-white scale-105 shadow-md'
+                  : 'bg-black/5 text-black hover:bg-black/30 hover:text-black hover:scale-110 hover:shadow-sm hover:animate-pulse-subtle active:scale-95'
               } ${locale === 'he' ? 'font-ui-hebrew' : 'font-ui-latin'}`}
-              onMouseEnter={() => setHoveredChapter(ch.number)}
-              onClick={() => {
-                onClose();
-                onCloseAll?.();
-              }}
+              onClick={(e) => handleChapterClick(e, ch.number)}
             >
               {locale === 'he' ? ch.hebrew_letter : ch.number}
             </Link>
@@ -73,18 +89,17 @@ export default function ChaptersDropdown({
         })}
       </div>
 
-      {/* Verses dropdown - positioned outside the scrollable area */}
+      {/* Verses dropdown - positioned outside, appears on chapter selection */}
       {chapter && chapter.verses.length > 0 && (
         <div
-          className="absolute left-full top-0 pl-2 z-[70]"
-          onMouseEnter={() => setHoveredChapter(chapter.number)}
+          className="absolute left-full top-0 pl-2 z-[70] animate-slide-in"
         >
           <VersesDropdown
             verses={chapter.verses}
             bookName={bookName}
             chapterNumber={chapter.number}
             isOpen={true}
-            onClose={() => setHoveredChapter(null)}
+            onClose={() => setSelectedChapter(null)}
             onCloseAll={() => {
               onClose();
               onCloseAll?.();

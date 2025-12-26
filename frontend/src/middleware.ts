@@ -12,7 +12,8 @@ export function middleware(request: NextRequest) {
     pathname.startsWith('/_next') ||
     pathname.startsWith('/api') ||
     pathname.startsWith('/data') ||
-    pathname.startsWith('/favicon.ico')
+    pathname.startsWith('/favicon.ico') ||
+    pathname === '/icon.svg'
   ) {
     return NextResponse.next();
   }
@@ -51,7 +52,8 @@ export const config = {
     // - _next/static (static files)
     // - _next/image (image optimization files)
     // - favicon.ico (favicon file)
+    // - icon.svg (icon file)
     // - data directory (static JSON files)
-    '/((?!api|_next/static|_next/image|favicon.ico|data).*)',
+    '/((?!api|_next/static|_next/image|favicon.ico|icon.svg|data).*)',
   ],
 };
