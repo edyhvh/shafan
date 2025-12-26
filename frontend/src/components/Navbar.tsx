@@ -49,20 +49,20 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Donate Link */}
-          <Link
-            href={`/${locale}/donate`}
-            className="px-4 py-2 text-sm font-medium text-black/80 hover:text-black transition-all duration-200 rounded-full hover:bg-black/5"
-          >
-            {t('donate', locale)}
-          </Link>
-
           {/* Info Link */}
           <Link
             href={`/${locale}/info`}
             className="px-4 py-2 text-sm font-medium text-black/80 hover:text-black transition-all duration-200 rounded-full hover:bg-black/5"
           >
             {t('info', locale)}
+          </Link>
+
+          {/* Donate Link */}
+          <Link
+            href={`/${locale}/donate`}
+            className="px-4 py-2 text-sm font-medium text-black/80 hover:text-black transition-all duration-200 rounded-full hover:bg-black/5"
+          >
+            {t('donate', locale)}
           </Link>
         </div>
 
@@ -100,18 +100,18 @@ export default function Navbar() {
               </div>
             )}
             <Link
-              href={`/${locale}/donate`}
-              onClick={() => setMobileMenuOpen(false)}
-              className="block px-5 py-3 text-sm font-medium text-black/80 hover:text-black transition-all duration-200 hover:bg-black/5"
-            >
-              {t('donate', locale)}
-            </Link>
-            <Link
               href={`/${locale}/info`}
               onClick={() => setMobileMenuOpen(false)}
               className="block px-5 py-3 text-sm font-medium text-black/80 hover:text-black transition-all duration-200 hover:bg-black/5"
             >
               {t('info', locale)}
+            </Link>
+            <Link
+              href={`/${locale}/donate`}
+              onClick={() => setMobileMenuOpen(false)}
+              className="block px-5 py-3 text-sm font-medium text-black/80 hover:text-black transition-all duration-200 hover:bg-black/5"
+            >
+              {t('donate', locale)}
             </Link>
             <div className="border-t border-black/10 mt-2 pt-2 px-5 py-3">
               <LanguageSelector />
