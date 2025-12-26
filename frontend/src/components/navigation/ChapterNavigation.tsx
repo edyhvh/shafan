@@ -15,6 +15,10 @@ export default function ChapterNavigation({
   totalChapters,
   className = "mb-8 flex justify-between items-center px-4 sm:px-8"
 }: ChapterNavigationProps) {
+  const isRTL = locale === 'he';
+  const prevArrow = isRTL ? '→' : '←';
+  const nextArrow = isRTL ? '←' : '→';
+
   return (
     <div className={className}>
       {currentChapter > 1 ? (
@@ -23,7 +27,7 @@ export default function ChapterNavigation({
           className="w-10 h-10 flex items-center justify-center text-lg font-ui-latin border border-black/10 rounded-lg hover:bg-black/5 transition-colors"
           aria-label="Previous Chapter"
         >
-          ←
+          {prevArrow}
         </Link>
       ) : (
         <div className="w-10 h-10" />
@@ -34,7 +38,7 @@ export default function ChapterNavigation({
           className="w-10 h-10 flex items-center justify-center text-lg font-ui-latin border border-black/10 rounded-lg hover:bg-black/5 transition-colors"
           aria-label="Next Chapter"
         >
-          →
+          {nextArrow}
         </Link>
       ) : (
         <div className="w-10 h-10" />

@@ -51,7 +51,7 @@ export default function Navbar() {
             >
               {t('books', locale)}
             </button>
-            <div className="books-dropdown-float absolute top-full left-0 mt-2">
+            <div className={`books-dropdown-float absolute top-full mt-2 ${locale === 'he' ? 'right-0' : 'left-0'}`}>
               <BooksDropdown
                 isOpen={booksDropdownOpen}
                 onClose={() => setBooksDropdownOpen(false)}
