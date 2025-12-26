@@ -73,6 +73,40 @@ export const BOOK_DISPLAY_NAMES: Record<BookName, { he: string; en: string; es: 
 };
 
 /**
+ * Hebrew book names with Latin transliteration
+ * For display in English and Spanish locales
+ */
+export const BOOK_HEBREW_INFO: Record<BookName, { hebrew: string; transliteration: string }> = {
+  matthew: { hebrew: 'מתי', transliteration: 'Matai' },
+  mark: { hebrew: 'מרקוס', transliteration: 'Markus' },
+  luke: { hebrew: 'לוקס', transliteration: 'Lukas' },
+  john: { hebrew: 'יוחנן', transliteration: 'Yojanan' },
+  acts: { hebrew: 'מעשי השליחים', transliteration: 'Maase HaShelijim' },
+  romans: { hebrew: 'אל הרומים', transliteration: 'El HaRomim' },
+  corinthians1: { hebrew: 'הקורינתים א', transliteration: 'HaKorintim Alef' },
+  corinthians2: { hebrew: 'הקורינתים ב', transliteration: 'HaKorintim Bet' },
+  galatians: { hebrew: 'אל הגלטים', transliteration: 'El HaGalatim' },
+  ephesians: { hebrew: 'אל האפסים', transliteration: 'El HaEfsim' },
+  philippians: { hebrew: 'אל הפיליפים', transliteration: 'El HaFilipim' },
+  colossians: { hebrew: 'אל הקולוסים', transliteration: 'El HaKolosim' },
+  thessalonians1: { hebrew: 'התסלוניקים א', transliteration: 'HaTesalonikim Alef' },
+  thessalonians2: { hebrew: 'התסלוניקים ב', transliteration: 'HaTesalonikim Bet' },
+  timothy1: { hebrew: 'טימותיוס א', transliteration: 'Timoteos Alef' },
+  timothy2: { hebrew: 'טימותיוס ב', transliteration: 'Timoteos Bet' },
+  titus: { hebrew: 'טיטוס', transliteration: 'Titos' },
+  philemon: { hebrew: 'פילימון', transliteration: 'Filimon' },
+  hebrews: { hebrew: 'אל העברים', transliteration: 'El HaIvrim' },
+  james: { hebrew: 'יעקב', transliteration: 'Yaakov' },
+  peter1: { hebrew: 'פטרוס א', transliteration: 'Petros Alef' },
+  peter2: { hebrew: 'פטרוס ב', transliteration: 'Petros Bet' },
+  john1: { hebrew: 'יוחנן א', transliteration: 'Yojanan Alef' },
+  john2: { hebrew: 'יוחנן ב', transliteration: 'Yojanan Bet' },
+  john3: { hebrew: 'יוחנן ג', transliteration: 'Yojanan Gimel' },
+  jude: { hebrew: 'יהודה', transliteration: 'Yehuda' },
+  revelation: { hebrew: 'ההתגלות (סודות)', transliteration: 'HaHitgalut (Sodot)' },
+};
+
+/**
  * Load book data from JSON file (Client-side only)
  * Uses fetch to load from /data/ directory
  */

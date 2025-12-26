@@ -4,7 +4,7 @@ import { useState, useRef } from 'react';
 import Link from 'next/link';
 import { useClickOutside } from '@/hooks/useClickOutside';
 import { ChevronDown } from '@/components/icons';
-import { AVAILABLE_BOOKS, BOOK_DISPLAY_NAMES, type BookName } from '@/lib/books';
+import { AVAILABLE_BOOKS, BOOK_DISPLAY_NAMES, BOOK_HEBREW_INFO, type BookName } from '@/lib/books';
 
 interface ChapterTitleSelectorProps {
   bookDisplayName: string;
@@ -32,8 +32,18 @@ export default function ChapterTitleSelector({
   useClickOutside(chapterDropdownRef, () => setIsChapterOpen(false), isChapterOpen);
   useClickOutside(bookDropdownRef, () => setIsBookOpen(false), isBookOpen);
 
+  // Get Hebrew info for the current book (for en/es locales)
+  const hebrewInfo = BOOK_HEBREW_INFO[bookName as BookName];
+
   return (
     <div className="text-center mb-8 pt-12">
+      {/* Hebrew name and transliteration (only for en/es locales) */}
+      {locale !== 'he' && hebrewInfo && (
+        <div className="mb-3 text-center">
+          <div className="font-bible-hebrew text-xl text-black/70 leading-tight">{hebrewInfo.hebrew}</div>
+          <div className="text-[11px] text-black/35 font-light tracking-wide">{hebrewInfo.transliteration}</div>
+        </div>
+      )}
       <h1 className="font-ui-latin text-lg text-black mb-1 inline-flex items-center gap-2">
         {/* Book selector with click dropdown */}
         <div className="relative inline-block" ref={bookDropdownRef}>
