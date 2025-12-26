@@ -6,13 +6,13 @@
 
 ## Project Goal
 
-The project transcribes volumes 3 and 4 of Hutter's Polyglot Bible using modern OCR with PaddleOCR, cleans them, and structures them into 27 JSON files (one per book) with the option to read with or without nikud, and publishes them on an ultra-minimalist website hosted at https://shafan.vercel.app.
+The project transcribes volumes 3 and 4 of Hutter's Polyglot Bible using modern OCR with Claude, cleans them, and structures them into 27 JSON files (one per book) with the option to read with or without nikud, and publishes them on an ultra-minimalist website hosted at https://shafan.vercel.app.
 
 ## Technical Features
 
-- **Advanced OCR**: Uses PaddleOCR for optical character recognition in ancient Hebrew
+- **Advanced OCR**: Using Claude API to extract and digitized the hebrew text
 - **Data Cleaning**: Processing and correction of recognized text
-- **JSON Structure**: 27 files organized by New Testament book
+- **JSON Structure**: 27 files organized by Besorahs book
 - **Nikud Support**: Option to read with or without Hebrew diacritical marks
 - **Web Interface**: Minimalist application built with Next.js and TypeScript
 - **Multilingual**: Support for Hebrew, Spanish, and English
@@ -32,4 +32,4 @@ Everything is 100% open, without ads, without registration, without cost, and ma
 
 ## Impact
 
-This project democratizes access to an invaluable historical text, allowing students, researchers, and the general public to easily access this Hebrew translation of the New Testament without technical, economic, or geographical barriers.
+This project opens access to an invaluable historical text, allowing students, researchers, and the general public to easily access this Hebrew translation of the Besorah without technical, economic, or geographical barriers.
