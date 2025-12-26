@@ -51,7 +51,7 @@ export default async function LocaleLayout({
   const dir = locale === 'he' ? 'rtl' : 'ltr';
 
   return (
-    <html lang={locale} dir={dir}>
+    <html lang={locale} dir={dir} data-nikud="true" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="shortcut icon" href="/icon.svg" />
