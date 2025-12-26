@@ -1,11 +1,11 @@
-import Link from 'next/link';
+import Link from 'next/link'
 
 interface ChapterNavigationProps {
-  locale: string;
-  bookName: string;
-  currentChapter: number;
-  totalChapters: number;
-  className?: string;
+  locale: string
+  bookName: string
+  currentChapter: number
+  totalChapters: number
+  className?: string
 }
 
 export default function ChapterNavigation({
@@ -13,11 +13,11 @@ export default function ChapterNavigation({
   bookName,
   currentChapter,
   totalChapters,
-  className = "mb-8 flex justify-between items-center px-4 sm:px-8"
+  className = 'mb-8 flex justify-between items-center px-4 sm:px-8',
 }: ChapterNavigationProps) {
-  const isRTL = locale === 'he';
-  const prevArrow = isRTL ? '→' : '←';
-  const nextArrow = isRTL ? '←' : '→';
+  const isRTL = locale === 'he'
+  const prevArrow = isRTL ? '→' : '←'
+  const nextArrow = isRTL ? '←' : '→'
 
   return (
     <div className={className}>
@@ -44,5 +44,5 @@ export default function ChapterNavigation({
         <div className="w-10 h-10" />
       )}
     </div>
-  );
+  )
 }

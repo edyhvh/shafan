@@ -8,8 +8,8 @@
   :root {
     --color-black: #000000;
     --color-gray: #333333;
-    --color-background: #FAF6F0;
-    --color-white: #FFFFFF;
+    --color-background: #faf6f0;
+    --color-white: #ffffff;
   }
 
   html {
@@ -86,7 +86,8 @@
   }
 
   @keyframes pulseSubtle {
-    0%, 100% {
+    0%,
+    100% {
       transform: scale(1.1);
       box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.15);
     }
@@ -114,6 +115,3 @@
     background: rgba(0, 0, 0, 0.3);
   }
 }
-
-
-

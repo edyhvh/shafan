@@ -9,4 +9,4 @@ export const DONATION_CONFIG = {
     solana: 'AwEp4hWqmZbVSxXaSocxcNG3BdK3jzfL1UN2MVPSLUrc',
   },
   githubSponsor: 'https://github.com/sponsors/edyhvh',
-} as const;
+} as const

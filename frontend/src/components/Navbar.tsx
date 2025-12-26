@@ -1,29 +1,31 @@
-'use client';
+'use client'
 
-import { useState, useCallback } from 'react';
-import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
-import { getLocaleFromPath } from '@/lib/locale';
-import { t } from '@/lib/translations';
-import BooksDropdown from './navigation/BooksDropdown';
-import LanguageSelector from './LanguageSelector';
-import Logo from './Logo';
-import { MenuIcon } from './icons';
-import { getLastBookLocation } from '@/hooks/useLastBook';
+import { useState, useCallback } from 'react'
+import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
+import { getLocaleFromPath } from '@/lib/locale'
+import { t } from '@/lib/translations'
+import BooksDropdown from './navigation/BooksDropdown'
+import LanguageSelector from './LanguageSelector'
+import Logo from './Logo'
+import { MenuIcon } from './icons'
+import { getLastBookLocation } from '@/hooks/useLastBook'
 
 export default function Navbar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [booksDropdownOpen, setBooksDropdownOpen] = useState(false);
-  const pathname = usePathname();
-  const locale = getLocaleFromPath(pathname);
-  const router = useRouter();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [booksDropdownOpen, setBooksDropdownOpen] = useState(false)
+  const pathname = usePathname()
+  const locale = getLocaleFromPath(pathname)
+  const router = useRouter()
 
   const handleBooksClick = useCallback(() => {
-    const lastBook = getLastBookLocation();
+    const lastBook = getLastBookLocation()
     if (lastBook) {
-      router.push(`/${locale}/book/${lastBook.bookId}/chapter/${lastBook.chapterId}`);
+      router.push(
+        `/${locale}/book/${lastBook.bookId}/chapter/${lastBook.chapterId}`
+      )
     }
-  }, [locale, router]);
+  }, [locale, router])
 
   return (
     <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
@@ -43,15 +45,17 @@ export default function Navbar() {
               onMouseLeave={() => {
                 setTimeout(() => {
                   if (!document.querySelector('.books-dropdown-float:hover')) {
-                    setBooksDropdownOpen(false);
+                    setBooksDropdownOpen(false)
                   }
-                }, 150);
+                }, 150)
               }}
               className="px-4 py-2 text-sm font-medium text-black/80 hover:text-black transition-all duration-200 rounded-full hover:bg-black/5"
             >
               {t('books', locale)}
             </button>
-            <div className={`books-dropdown-float absolute top-full mt-2 ${locale === 'he' ? 'right-0' : 'left-0'}`}>
+            <div
+              className={`books-dropdown-float absolute top-full mt-2 ${locale === 'he' ? 'right-0' : 'left-0'}`}
+            >
               <BooksDropdown
                 isOpen={booksDropdownOpen}
                 onClose={() => setBooksDropdownOpen(false)}
@@ -97,12 +101,14 @@ export default function Navbar() {
           <div className="py-2">
             <button
               onClick={() => {
-                const lastBook = getLastBookLocation();
+                const lastBook = getLastBookLocation()
                 if (lastBook) {
-                  router.push(`/${locale}/book/${lastBook.bookId}/chapter/${lastBook.chapterId}`);
-                  setMobileMenuOpen(false);
+                  router.push(
+                    `/${locale}/book/${lastBook.bookId}/chapter/${lastBook.chapterId}`
+                  )
+                  setMobileMenuOpen(false)
                 } else {
-                  setBooksDropdownOpen(!booksDropdownOpen);
+                  setBooksDropdownOpen(!booksDropdownOpen)
                 }
               }}
               className="w-full text-left px-5 py-3 text-sm font-medium text-black/80 hover:text-black transition-all duration-200 hover:bg-black/5"
@@ -138,5 +144,5 @@ export default function Navbar() {
         </div>
       )}
     </nav>
-  );
+  )
 }

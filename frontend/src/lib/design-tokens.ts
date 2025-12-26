@@ -8,7 +8,7 @@ export const colors = {
   gray: '#333333',
   background: '#FAF6F0',
   white: '#FFFFFF',
-} as const;
+} as const
 
 export const spacing = {
   xs: '4px',
@@ -16,11 +16,11 @@ export const spacing = {
   md: '16px',
   lg: '32px',
   xl: '64px',
-} as const;
+} as const
 
 export const radius = {
   none: '0',
-} as const;
+} as const
 
 export const typography = {
   logo: {
@@ -71,16 +71,13 @@ export const typography = {
       },
     },
   },
-} as const;
+} as const
 
 export const fonts = {
   googleFontsUrl:
     'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Bodoni:wght@700&family=Suez+One&family=Cardo:wght@400;700&family=Assistant:wght@400;600&display=swap',
-} as const;
+} as const
 
-export type Colors = typeof colors;
-export type Spacing = typeof spacing;
-export type Typography = typeof typography;
-
-
-
+export type Colors = typeof colors
+export type Spacing = typeof spacing
+export type Typography = typeof typography

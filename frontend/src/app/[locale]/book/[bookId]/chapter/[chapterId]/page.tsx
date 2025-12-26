@@ -1,68 +1,77 @@
-import { notFound } from 'next/navigation';
-import { BOOK_DISPLAY_NAMES, type BookName } from '@/lib/books';
-import { loadBookServer } from '@/lib/books-server';
-import ChapterTitleSelector from '@/components/navigation/ChapterTitleSelector';
-import ChapterNavigation from '@/components/navigation/ChapterNavigation';
-import ChapterContent from '@/components/ChapterContent';
-import SaveLastBook from '@/components/navigation/SaveLastBook';
-import type { Locale } from '@/lib/locale';
+import { notFound } from 'next/navigation'
+import { BOOK_DISPLAY_NAMES, type BookName } from '@/lib/books'
+import { loadBookServer } from '@/lib/books-server'
+import ChapterTitleSelector from '@/components/navigation/ChapterTitleSelector'
+import ChapterNavigation from '@/components/navigation/ChapterNavigation'
+import ChapterContent from '@/components/ChapterContent'
+import SaveLastBook from '@/components/navigation/SaveLastBook'
+import type { Locale } from '@/lib/locale'
 
 interface PageProps {
   params: Promise<{
-    locale: string;
-    bookId: string;
-    chapterId: string;
-  }>;
+    locale: string
+    bookId: string
+    chapterId: string
+  }>
 }
 
 export async function generateMetadata({ params }: PageProps) {
-  const resolvedParams = await params;
-  const { locale, bookId, chapterId } = resolvedParams;
+  const resolvedParams = await params
+  const { locale, bookId, chapterId } = resolvedParams
 
-  const bookName = bookId as BookName;
-  const chapterNumber = parseInt(chapterId);
+  const bookName = bookId as BookName
+  const chapterNumber = parseInt(chapterId)
 
   if (isNaN(chapterNumber) || chapterNumber < 1) {
     return {
       title: 'Not Found - Shafan',
-    };
+    }
   }
 
-  const displayName = BOOK_DISPLAY_NAMES[bookName] || { en: bookName, he: bookName, es: bookName };
+  const displayName = BOOK_DISPLAY_NAMES[bookName] || {
+    en: bookName,
+    he: bookName,
+    es: bookName,
+  }
 
   return {
     title: `${displayName.en} ${chapterNumber} - Shafan`,
     description: `Read ${displayName.en} chapter ${chapterNumber} from Elias Hutter's Hebrew New Testament`,
-  };
+  }
 }
 
 export default async function BookChapterPage({ params }: PageProps) {
-  const resolvedParams = await params;
-  const { locale, bookId, chapterId } = resolvedParams;
+  const resolvedParams = await params
+  const { locale, bookId, chapterId } = resolvedParams
 
-  const bookName = bookId as BookName;
-  const chapterNumber = parseInt(chapterId);
+  const bookName = bookId as BookName
+  const chapterNumber = parseInt(chapterId)
 
   // Validate parameters
   if (isNaN(chapterNumber) || chapterNumber < 1) {
-    notFound();
+    notFound()
   }
 
   // Load book data (Server Component - use server method)
-  const book = await loadBookServer(bookName);
+  const book = await loadBookServer(bookName)
 
   if (!book) {
-    notFound();
+    notFound()
   }
 
   // Check if chapter exists
-  const chapter = book.chapters.find((ch) => ch.number === chapterNumber);
+  const chapter = book.chapters.find((ch) => ch.number === chapterNumber)
   if (!chapter) {
-    notFound();
+    notFound()
   }
 
-  const displayName = BOOK_DISPLAY_NAMES[bookName] || { en: bookName, he: bookName, es: bookName };
-  const bookDisplayName = displayName[locale as 'he' | 'es' | 'en'] || displayName.en;
+  const displayName = BOOK_DISPLAY_NAMES[bookName] || {
+    en: bookName,
+    he: bookName,
+    es: bookName,
+  }
+  const bookDisplayName =
+    displayName[locale as 'he' | 'es' | 'en'] || displayName.en
 
   return (
     <div className="max-w-4xl mx-auto">
@@ -74,7 +83,10 @@ export default async function BookChapterPage({ params }: PageProps) {
         bookDisplayName={bookDisplayName}
         currentChapter={chapterNumber}
         hebrewLetter={chapter.hebrew_letter}
-        chapters={book.chapters.map((ch) => ({ number: ch.number, hebrew_letter: ch.hebrew_letter }))}
+        chapters={book.chapters.map((ch) => ({
+          number: ch.number,
+          hebrew_letter: ch.hebrew_letter,
+        }))}
         bookName={bookName}
         locale={locale}
       />
@@ -110,5 +122,5 @@ export default async function BookChapterPage({ params }: PageProps) {
         </p>
       </div>
     </div>
-  );
+  )
 }

@@ -10,6 +10,7 @@ Frontend web application for Shafan - Hebrew New Testament digital edition.
 ## Setup
 
 1. **Install dependencies:**
+
    ```bash
    cd frontend
    npm install
@@ -66,4 +67,3 @@ frontend/
 - RTL support for Hebrew
 - Book search functionality
 - Multi-level navigation (Books → Chapters → Verses)
-

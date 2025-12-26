@@ -1,10 +1,10 @@
-'use client';
+'use client'
 
-import { useEffect } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { getLocaleFromPath } from '@/lib/locale';
-import { logger } from '@/lib/logger';
+import { useEffect } from 'react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { getLocaleFromPath } from '@/lib/locale'
+import { logger } from '@/lib/logger'
 
 /**
  * Error page for locale-specific routes
@@ -14,11 +14,11 @@ export default function LocaleError({
   error,
   reset,
 }: {
-  error: Error & { digest?: string };
-  reset: () => void;
+  error: Error & { digest?: string }
+  reset: () => void
 }) {
-  const pathname = usePathname();
-  const locale = getLocaleFromPath(pathname);
+  const pathname = usePathname()
+  const locale = getLocaleFromPath(pathname)
 
   useEffect(() => {
     // Log the error
@@ -26,8 +26,8 @@ export default function LocaleError({
       digest: error.digest,
       pathname,
       locale,
-    });
-  }, [error, pathname, locale]);
+    })
+  }, [error, pathname, locale])
 
   const translations = {
     he: {
@@ -48,9 +48,9 @@ export default function LocaleError({
       tryAgain: 'Try again',
       home: 'Back to home',
     },
-  };
+  }
 
-  const t = translations[locale as keyof typeof translations] || translations.en;
+  const t = translations[locale as keyof typeof translations] || translations.en
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-background px-4">
@@ -79,12 +79,13 @@ export default function LocaleError({
               {error.message}
             </p>
             {error.digest && (
-              <p className="text-xs text-red-600 mt-2">Digest: {error.digest}</p>
+              <p className="text-xs text-red-600 mt-2">
+                Digest: {error.digest}
+              </p>
             )}
           </div>
         )}
       </div>
     </div>
-  );
+  )
 }
-

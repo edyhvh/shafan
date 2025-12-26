@@ -13,9 +13,7 @@ Usage:
     python -m scripts.text --book matthew --resume   # Resume from checkpoint
 """
 
-from .api import ClaudeClient
-from .checkpoint import CheckpointManager
-from .prompt import load_yaml, build_prompt, get_yaml_version, calculate_yaml_hash
+# Core imports that don't require heavy dependencies
 from .validate import (
     parse_json_response,
     validate_chapter_object,
@@ -24,9 +22,36 @@ from .validate import (
     validate_verse_sequence,
     validate_chapter_sequence
 )
-from .consolidate import consolidate_book
 from .books import get_book_info, get_chapter_context, validate_chapter_number
 from .config import AVAILABLE_BOOKS
+
+# Lazy imports for modules that require PIL and other heavy dependencies
+# These are only imported when actually accessed to avoid import errors
+# when only validation functions are needed
+def __getattr__(name: str):
+    """Lazy import handler for optional dependencies."""
+    if name == 'ClaudeClient':
+        from .api import ClaudeClient
+        return ClaudeClient
+    if name == 'CheckpointManager':
+        from .checkpoint import CheckpointManager
+        return CheckpointManager
+    if name == 'consolidate_book':
+        from .consolidate import consolidate_book
+        return consolidate_book
+    if name == 'load_yaml':
+        from .prompt import load_yaml
+        return load_yaml
+    if name == 'build_prompt':
+        from .prompt import build_prompt
+        return build_prompt
+    if name == 'get_yaml_version':
+        from .prompt import get_yaml_version
+        return get_yaml_version
+    if name == 'calculate_yaml_hash':
+        from .prompt import calculate_yaml_hash
+        return calculate_yaml_hash
+    raise AttributeError(f"module '{__name__}' has no attribute '{name}'")
 
 __all__ = [
     # API
