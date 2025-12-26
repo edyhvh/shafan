@@ -1,16 +1,16 @@
-'use client';
+'use client'
 
 interface NikudToggleProps {
-  enabled: boolean;
-  onToggle: () => void;
+  enabled: boolean
+  onToggle: () => void
 }
 
 // Hebrew word "nikud" with and without vowel points
-const NIKUD_WITH_POINTS = 'נִקּוּד';
-const NIKUD_WITHOUT_POINTS = 'נקוד';
+const NIKUD_WITH_POINTS = 'נִקּוּד'
+const NIKUD_WITHOUT_POINTS = 'נקוד'
 
 export default function NikudToggle({ enabled, onToggle }: NikudToggleProps) {
-  const label = enabled ? NIKUD_WITH_POINTS : NIKUD_WITHOUT_POINTS;
+  const label = enabled ? NIKUD_WITH_POINTS : NIKUD_WITHOUT_POINTS
 
   return (
     <button
@@ -52,5 +52,5 @@ export default function NikudToggle({ enabled, onToggle }: NikudToggleProps) {
     >
       <span className="font-ui-hebrew font-bold relative z-10">{label}</span>
     </button>
-  );
+  )
 }

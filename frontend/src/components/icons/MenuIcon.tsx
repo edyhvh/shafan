@@ -1,9 +1,12 @@
 interface MenuIconProps {
-  isOpen: boolean;
-  className?: string;
+  isOpen: boolean
+  className?: string
 }
 
-export default function MenuIcon({ isOpen, className = "w-5 h-5" }: MenuIconProps) {
+export default function MenuIcon({
+  isOpen,
+  className = 'w-5 h-5',
+}: MenuIconProps) {
   return (
     <svg
       className={className}
@@ -35,5 +38,5 @@ export default function MenuIcon({ isOpen, className = "w-5 h-5" }: MenuIconProp
         </>
       )}
     </svg>
-  );
+  )
 }

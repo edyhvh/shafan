@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'next/link'
 
 /**
  * Not found page for locale-specific routes
@@ -12,9 +12,7 @@ export default function LocaleNotFound() {
     <div className="min-h-screen flex items-center justify-center bg-background px-4">
       <div className="max-w-md w-full text-center">
         <div className="text-8xl font-bold text-black/20 mb-4">404</div>
-        <h1 className="text-4xl font-bold text-black mb-4">
-          Page Not Found
-        </h1>
+        <h1 className="text-4xl font-bold text-black mb-4">Page Not Found</h1>
         <p className="text-lg text-gray mb-2">
           The page you&apos;re looking for doesn&apos;t exist.
         </p>
@@ -44,6 +42,5 @@ export default function LocaleNotFound() {
         </div>
       </div>
     </div>
-  );
+  )
 }
-

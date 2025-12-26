@@ -1,8 +1,8 @@
-'use client';
+'use client'
 
-import { useEffect } from 'react';
-import Link from 'next/link';
-import { logger } from '@/lib/logger';
+import { useEffect } from 'react'
+import Link from 'next/link'
+import { logger } from '@/lib/logger'
 
 /**
  * Global error page
@@ -12,15 +12,15 @@ export default function GlobalError({
   error,
   reset,
 }: {
-  error: Error & { digest?: string };
-  reset: () => void;
+  error: Error & { digest?: string }
+  reset: () => void
 }) {
   useEffect(() => {
     // Log the error
     logger.error('Global error', error, {
       digest: error.digest,
-    });
-  }, [error]);
+    })
+  }, [error])
 
   return (
     <html>
@@ -66,6 +66,5 @@ export default function GlobalError({
         </div>
       </body>
     </html>
-  );
+  )
 }
-

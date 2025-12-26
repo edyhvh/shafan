@@ -3,8 +3,8 @@
  * Client-safe version (no fs imports)
  */
 
-import { Book } from './types';
-import { logger } from './logger';
+import { Book } from './types'
+import { logger } from './logger'
 
 export const AVAILABLE_BOOKS = [
   'matthew',
@@ -34,15 +34,18 @@ export const AVAILABLE_BOOKS = [
   'john3',
   'jude',
   'revelation',
-] as const;
+] as const
 
-export type BookName = typeof AVAILABLE_BOOKS[number];
+export type BookName = (typeof AVAILABLE_BOOKS)[number]
 
 /**
  * Book name mappings for display
  * Maps internal book names to Hebrew display names
  */
-export const BOOK_DISPLAY_NAMES: Record<BookName, { he: string; en: string; es: string }> = {
+export const BOOK_DISPLAY_NAMES: Record<
+  BookName,
+  { he: string; en: string; es: string }
+> = {
   matthew: { he: 'מתי', en: 'Matthew', es: 'Mateo' },
   mark: { he: 'מרקוס', en: 'Mark', es: 'Marcos' },
   luke: { he: 'לוקס', en: 'Luke', es: 'Lucas' },
@@ -55,8 +58,16 @@ export const BOOK_DISPLAY_NAMES: Record<BookName, { he: string; en: string; es: 
   ephesians: { he: 'אל האפסים', en: 'Ephesians', es: 'Efesios' },
   philippians: { he: 'אל הפיליפים', en: 'Philippians', es: 'Filipenses' },
   colossians: { he: 'אל הקולוסים', en: 'Colossians', es: 'Colosenses' },
-  thessalonians1: { he: 'התסלוניקים א', en: '1 Thessalonians', es: '1 Tesalonicenses' },
-  thessalonians2: { he: 'התסלוניקים ב', en: '2 Thessalonians', es: '2 Tesalonicenses' },
+  thessalonians1: {
+    he: 'התסלוניקים א',
+    en: '1 Thessalonians',
+    es: '1 Tesalonicenses',
+  },
+  thessalonians2: {
+    he: 'התסלוניקים ב',
+    en: '2 Thessalonians',
+    es: '2 Tesalonicenses',
+  },
   timothy1: { he: 'טימותיוס א', en: '1 Timothy', es: '1 Timoteo' },
   timothy2: { he: 'טימותיוס ב', en: '2 Timothy', es: '2 Timoteo' },
   titus: { he: 'טיטוס', en: 'Titus', es: 'Tito' },
@@ -70,13 +81,16 @@ export const BOOK_DISPLAY_NAMES: Record<BookName, { he: string; en: string; es: 
   john3: { he: 'יוחנן ג', en: '3 John', es: '3 Juan' },
   jude: { he: 'יהודה', en: 'Jude', es: 'Judas' },
   revelation: { he: 'ההתגלות (סודות)', en: 'Revelation', es: 'Apocalipsis' },
-};
+}
 
 /**
  * Hebrew book names with Latin transliteration
  * For display in English and Spanish locales
  */
-export const BOOK_HEBREW_INFO: Record<BookName, { hebrew: string; transliteration: string }> = {
+export const BOOK_HEBREW_INFO: Record<
+  BookName,
+  { hebrew: string; transliteration: string }
+> = {
   matthew: { hebrew: 'מתי', transliteration: 'matai' },
   mark: { hebrew: 'מרקוס', transliteration: 'markus' },
   luke: { hebrew: 'לוקס', transliteration: 'lukas' },
@@ -89,8 +103,14 @@ export const BOOK_HEBREW_INFO: Record<BookName, { hebrew: string; transliteratio
   ephesians: { hebrew: 'אל האפסים', transliteration: 'el haefsim' },
   philippians: { hebrew: 'אל הפיליפים', transliteration: 'el hafilipim' },
   colossians: { hebrew: 'אל הקולוסים', transliteration: 'el hakolosim' },
-  thessalonians1: { hebrew: 'התסלוניקים א', transliteration: 'hatesalonikim alef' },
-  thessalonians2: { hebrew: 'התסלוניקים ב', transliteration: 'hatesalonikim bet' },
+  thessalonians1: {
+    hebrew: 'התסלוניקים א',
+    transliteration: 'hatesalonikim alef',
+  },
+  thessalonians2: {
+    hebrew: 'התסלוניקים ב',
+    transliteration: 'hatesalonikim bet',
+  },
   timothy1: { hebrew: 'טימותיוס א', transliteration: 'timoteos alef' },
   timothy2: { hebrew: 'טימותיוס ב', transliteration: 'timoteos bet' },
   titus: { hebrew: 'טיטוס', transliteration: 'titos' },
@@ -103,8 +123,11 @@ export const BOOK_HEBREW_INFO: Record<BookName, { hebrew: string; transliteratio
   john2: { hebrew: 'יוחנן ב', transliteration: 'yojanan bet' },
   john3: { hebrew: 'יוחנן ג', transliteration: 'yojanan gimel' },
   jude: { hebrew: 'יהודה', transliteration: 'yehuda' },
-  revelation: { hebrew: 'ההתגלות (סודות)', transliteration: 'hahitgalut (sodot)' },
-};
+  revelation: {
+    hebrew: 'ההתגלות (סודות)',
+    transliteration: 'hahitgalut (sodot)',
+  },
+}
 
 /**
  * Load book data from JSON file (Client-side only)
@@ -112,20 +135,24 @@ export const BOOK_HEBREW_INFO: Record<BookName, { hebrew: string; transliteratio
  */
 export async function loadBookClient(bookName: BookName): Promise<Book | null> {
   try {
-    const response = await fetch(`/data/${bookName}.json`);
+    const response = await fetch(`/data/${bookName}.json`)
     if (!response.ok) {
-      logger.error(`Failed to load book ${bookName}: ${response.statusText}`, undefined, {
-        bookName,
-        status: response.status,
-        statusText: response.statusText,
-      });
-      return null;
+      logger.error(
+        `Failed to load book ${bookName}: ${response.statusText}`,
+        undefined,
+        {
+          bookName,
+          status: response.status,
+          statusText: response.statusText,
+        }
+      )
+      return null
     }
-    const data: Book = await response.json();
-    return data;
+    const data: Book = await response.json()
+    return data
   } catch (error) {
-    logger.error(`Error loading book ${bookName}`, error, { bookName });
-    return null;
+    logger.error(`Error loading book ${bookName}`, error, { bookName })
+    return null
   }
 }
 
@@ -138,14 +165,14 @@ export function getBookMetadata(book: Book) {
     author: book.author,
     publicationYear: book.publication_year,
     displayName: BOOK_DISPLAY_NAMES[book.book_name as BookName],
-  };
+  }
 }
 
 /**
  * Get book index from book name
  */
 export function getBookIndex(bookName: BookName): number {
-  return AVAILABLE_BOOKS.indexOf(bookName);
+  return AVAILABLE_BOOKS.indexOf(bookName)
 }
 
 /**
@@ -153,23 +180,23 @@ export function getBookIndex(bookName: BookName): number {
  */
 export function getBookNameByIndex(index: number): BookName | null {
   if (index < 0 || index >= AVAILABLE_BOOKS.length) {
-    return null;
+    return null
   }
-  return AVAILABLE_BOOKS[index];
+  return AVAILABLE_BOOKS[index]
 }
 
 /**
  * Search books by name (case-insensitive)
  */
 export function searchBooks(query: string): BookName[] {
-  const lowerQuery = query.toLowerCase();
+  const lowerQuery = query.toLowerCase()
   return AVAILABLE_BOOKS.filter((bookName) => {
-    const displayNames = BOOK_DISPLAY_NAMES[bookName];
+    const displayNames = BOOK_DISPLAY_NAMES[bookName]
     return (
       bookName.toLowerCase().includes(lowerQuery) ||
       displayNames.en.toLowerCase().includes(lowerQuery) ||
       displayNames.es.toLowerCase().includes(lowerQuery) ||
       displayNames.he.includes(query)
-    );
-  });
+    )
+  })
 }

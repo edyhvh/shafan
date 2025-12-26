@@ -1,30 +1,31 @@
-'use client';
+'use client'
 
-import { usePathname, useRouter } from 'next/navigation';
-import { useState } from 'react';
-import { getLocaleFromPath, removeLocaleFromPath } from '@/lib/locale';
-import { ChevronDown } from '@/components/icons';
+import { usePathname, useRouter } from 'next/navigation'
+import { useState } from 'react'
+import { getLocaleFromPath, removeLocaleFromPath } from '@/lib/locale'
+import { ChevronDown } from '@/components/icons'
 
 const languages = [
   { code: 'he', label: 'עברית', nativeLabel: 'עברית' },
   { code: 'es', label: 'Español', nativeLabel: 'Español' },
   { code: 'en', label: 'English', nativeLabel: 'English' },
-];
+]
 
 export default function LanguageSelector() {
-  const pathname = usePathname();
-  const router = useRouter();
-  const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname()
+  const router = useRouter()
+  const [isOpen, setIsOpen] = useState(false)
 
-  const currentLocale = getLocaleFromPath(pathname);
-  const currentLanguage = languages.find((lang) => lang.code === currentLocale) || languages[0];
+  const currentLocale = getLocaleFromPath(pathname)
+  const currentLanguage =
+    languages.find((lang) => lang.code === currentLocale) || languages[0]
 
   const handleLanguageChange = (locale: string) => {
-    setIsOpen(false);
-    const pathWithoutLocale = removeLocaleFromPath(pathname);
-    const newPath = `/${locale}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`;
-    router.push(newPath);
-  };
+    setIsOpen(false)
+    const pathWithoutLocale = removeLocaleFromPath(pathname)
+    const newPath = `/${locale}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`
+    router.push(newPath)
+  }
 
   return (
     <div
@@ -39,7 +40,9 @@ export default function LanguageSelector() {
         aria-haspopup="true"
       >
         <span>{currentLanguage.nativeLabel}</span>
-        <ChevronDown className={`transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+        <ChevronDown
+          className={`transition-transform ${isOpen ? 'rotate-180' : ''}`}
+        />
       </button>
 
       {/* Invisible hover bridge - always present to extend hover area */}
@@ -53,7 +56,9 @@ export default function LanguageSelector() {
               key={lang.code}
               onClick={() => handleLanguageChange(lang.code)}
               className={`w-full text-left px-4 py-2.5 text-sm font-ui-latin hover:bg-black/5 transition-colors ${
-                currentLocale === lang.code ? 'font-bold text-black bg-black/5' : 'font-medium text-black/80'
+                currentLocale === lang.code
+                  ? 'font-bold text-black bg-black/5'
+                  : 'font-medium text-black/80'
               }`}
             >
               {lang.nativeLabel}
@@ -62,5 +67,5 @@ export default function LanguageSelector() {
         </div>
       )}
     </div>
-  );
+  )
 }

@@ -1,16 +1,16 @@
-import { t } from '@/lib/translations';
-import { Locale } from '@/lib/locale';
+import { t } from '@/lib/translations'
+import { Locale } from '@/lib/locale'
 
 interface PageProps {
   params: Promise<{
-    locale: string;
-  }>;
+    locale: string
+  }>
 }
 
 export default async function InfoPage({ params }: PageProps) {
-  const { locale } = await params;
-  const loc = locale as Locale;
-  const isRTL = loc === 'he';
+  const { locale } = await params
+  const loc = locale as Locale
+  const isRTL = loc === 'he'
 
   return (
     <div className="max-w-3xl mx-auto px-4 pb-20">
@@ -20,7 +20,10 @@ export default async function InfoPage({ params }: PageProps) {
         {t('info_title', loc)}
       </h1>
 
-      <div className={`space-y-10 ${isRTL ? 'text-right' : 'text-left'}`} dir={isRTL ? 'rtl' : 'ltr'}>
+      <div
+        className={`space-y-10 ${isRTL ? 'text-right' : 'text-left'}`}
+        dir={isRTL ? 'rtl' : 'ltr'}
+      >
         {/* Elias Hutter */}
         <section>
           <h2
@@ -28,7 +31,9 @@ export default async function InfoPage({ params }: PageProps) {
           >
             {t('info_hutter_title', loc)}
           </h2>
-          <p className={`text-black/70 leading-relaxed ${isRTL ? 'font-hebrew' : 'font-ui-latin'}`}>
+          <p
+            className={`text-black/70 leading-relaxed ${isRTL ? 'font-hebrew' : 'font-ui-latin'}`}
+          >
             {t('info_hutter_text', loc)}
           </p>
         </section>
@@ -40,7 +45,9 @@ export default async function InfoPage({ params }: PageProps) {
           >
             {t('info_polyglot_title', loc)}
           </h2>
-          <p className={`text-black/70 leading-relaxed ${isRTL ? 'font-hebrew' : 'font-ui-latin'}`}>
+          <p
+            className={`text-black/70 leading-relaxed ${isRTL ? 'font-hebrew' : 'font-ui-latin'}`}
+          >
             {t('info_polyglot_text', loc)}
           </p>
         </section>
@@ -52,7 +59,9 @@ export default async function InfoPage({ params }: PageProps) {
           >
             {t('info_besorah_title', loc)}
           </h2>
-          <p className={`text-black/70 leading-relaxed ${isRTL ? 'font-hebrew' : 'font-ui-latin'}`}>
+          <p
+            className={`text-black/70 leading-relaxed ${isRTL ? 'font-hebrew' : 'font-ui-latin'}`}
+          >
             {t('info_besorah_text', loc)}
           </p>
         </section>
@@ -64,7 +73,9 @@ export default async function InfoPage({ params }: PageProps) {
           >
             {t('info_follow', loc)}
           </h2>
-          <div className={`flex items-center gap-6 ${isRTL ? 'justify-end' : 'justify-start'}`}>
+          <div
+            className={`flex items-center gap-6 ${isRTL ? 'justify-end' : 'justify-start'}`}
+          >
             {/* GitHub */}
             <a
               href="https://github.com/edyhvh/shafan"
@@ -98,7 +109,10 @@ export default async function InfoPage({ params }: PageProps) {
               >
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
               </svg>
-              <span dir="ltr" className="text-base font-medium text-black/70 group-hover:text-black transition-colors">
+              <span
+                dir="ltr"
+                className="text-base font-medium text-black/70 group-hover:text-black transition-colors"
+              >
                 @edyhvh
               </span>
             </a>
@@ -106,5 +120,5 @@ export default async function InfoPage({ params }: PageProps) {
         </section>
       </div>
     </div>
-  );
+  )
 }

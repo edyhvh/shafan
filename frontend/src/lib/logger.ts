@@ -3,21 +3,21 @@
  * Handles logging appropriately based on environment
  */
 
-type LogLevel = 'info' | 'warn' | 'error' | 'debug';
+type LogLevel = 'info' | 'warn' | 'error' | 'debug'
 
 interface LogContext {
-  [key: string]: unknown;
+  [key: string]: unknown
 }
 
 class Logger {
-  private isDevelopment = process.env.NODE_ENV === 'development';
+  private isDevelopment = process.env.NODE_ENV === 'development'
 
   /**
    * Log info messages (only in development)
    */
   info(message: string, context?: LogContext): void {
     if (this.isDevelopment) {
-      console.info(`[INFO] ${message}`, context || '');
+      console.info(`[INFO] ${message}`, context || '')
     }
   }
 
@@ -26,10 +26,10 @@ class Logger {
    */
   warn(message: string, context?: LogContext): void {
     if (this.isDevelopment) {
-      console.warn(`[WARN] ${message}`, context || '');
+      console.warn(`[WARN] ${message}`, context || '')
     } else {
       // In production, you could send to a monitoring service like Sentry
-      this.sendToMonitoring('warn', message, context);
+      this.sendToMonitoring('warn', message, context)
     }
   }
 
@@ -38,10 +38,10 @@ class Logger {
    */
   error(message: string, error?: Error | unknown, context?: LogContext): void {
     if (this.isDevelopment) {
-      console.error(`[ERROR] ${message}`, error || '', context || '');
+      console.error(`[ERROR] ${message}`, error || '', context || '')
     } else {
       // In production, send to monitoring service
-      this.sendToMonitoring('error', message, { error, ...context });
+      this.sendToMonitoring('error', message, { error, ...context })
     }
   }
 
@@ -50,7 +50,7 @@ class Logger {
    */
   debug(message: string, context?: LogContext): void {
     if (this.isDevelopment) {
-      console.debug(`[DEBUG] ${message}`, context || '');
+      console.debug(`[DEBUG] ${message}`, context || '')
     }
   }
 
@@ -67,7 +67,7 @@ class Logger {
     // Example: Send to Sentry, LogRocket, or your monitoring service
     // For now, we'll just use a minimal console output
     if (level === 'error') {
-      console.error(message, context);
+      console.error(message, context)
     }
 
     // TODO: Implement actual monitoring service integration
@@ -81,5 +81,4 @@ class Logger {
 }
 
 // Export singleton instance
-export const logger = new Logger();
-
+export const logger = new Logger()

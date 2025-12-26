@@ -1,6 +1,6 @@
-'use client';
+'use client'
 
-import { useState } from 'react';
+import { useState } from 'react'
 
 const CopyIcon = ({ className }: { className?: string }) => (
   <svg
@@ -15,7 +15,7 @@ const CopyIcon = ({ className }: { className?: string }) => (
     <rect x="128" y="128" width="336" height="336" rx="57" ry="57" />
     <path d="M383.5 128l.5-24a56.16 56.16 0 00-56-56H112a64.19 64.19 0 00-64 64v216a56.16 56.16 0 0056 56h24" />
   </svg>
-);
+)
 
 const CheckmarkIcon = ({ className }: { className?: string }) => (
   <svg
@@ -29,22 +29,26 @@ const CheckmarkIcon = ({ className }: { className?: string }) => (
   >
     <polyline points="416 128 192 384 96 288" />
   </svg>
-);
+)
 
 interface CopyableWalletProps {
-  icon: React.ReactNode;
-  name: string;
-  address: string;
+  icon: React.ReactNode
+  name: string
+  address: string
 }
 
-export default function CopyableWallet({ icon, name, address }: CopyableWalletProps) {
-  const [copied, setCopied] = useState(false);
+export default function CopyableWallet({
+  icon,
+  name,
+  address,
+}: CopyableWalletProps) {
+  const [copied, setCopied] = useState(false)
 
   const handleCopy = async () => {
-    await navigator.clipboard.writeText(address);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
+    await navigator.clipboard.writeText(address)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
 
   return (
     <div className="flex items-center justify-center gap-3 text-lg group">
@@ -63,6 +67,5 @@ export default function CopyableWallet({ icon, name, address }: CopyableWalletPr
         )}
       </button>
     </div>
-  );
+  )
 }
-

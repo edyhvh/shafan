@@ -14,6 +14,5 @@ export default function DonateLoading() {
         </div>
       </div>
     </div>
-  );
+  )
 }
-

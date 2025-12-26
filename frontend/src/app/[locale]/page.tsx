@@ -1,15 +1,15 @@
-import { redirect } from 'next/navigation';
+import { redirect } from 'next/navigation'
 
 interface PageProps {
   params: Promise<{
-    locale: string;
-  }>;
+    locale: string
+  }>
 }
 
 export default async function HomePage({ params }: PageProps) {
-  const resolvedParams = await params;
-  const { locale } = resolvedParams;
+  const resolvedParams = await params
+  const { locale } = resolvedParams
 
   // Redirect to John chapter 1
-  redirect(`/${locale}/book/john/chapter/1`);
+  redirect(`/${locale}/book/john/chapter/1`)
 }

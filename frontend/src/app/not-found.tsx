@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'next/link'
 
 /**
  * Global not found page
@@ -42,6 +42,5 @@ export default function GlobalNotFound() {
         </div>
       </body>
     </html>
-  );
+  )
 }
-
