@@ -18,22 +18,36 @@ if (fs.existsSync(outputDir)) {
   const files = fs.readdirSync(outputDir)
   const jsonFiles = files.filter((file) => file.endsWith('.json'))
 
-  console.log(`Found ${jsonFiles.length} JSON files to sync...`)
+  if (jsonFiles.length > 0) {
+    console.log(`Found ${jsonFiles.length} JSON files to sync...`)
 
-  jsonFiles.forEach((file) => {
-    const sourcePath = path.join(outputDir, file)
-    const destPath = path.join(publicDataDir, file)
+    jsonFiles.forEach((file) => {
+      const sourcePath = path.join(outputDir, file)
+      const destPath = path.join(publicDataDir, file)
 
-    try {
-      fs.copyFileSync(sourcePath, destPath)
-      console.log(`✓ Copied ${file}`)
-    } catch (error) {
-      console.error(`✗ Error copying ${file}:`, error.message)
-    }
-  })
+      try {
+        fs.copyFileSync(sourcePath, destPath)
+        console.log(`✓ Copied ${file}`)
+      } catch (error) {
+        console.error(`✗ Error copying ${file}:`, error.message)
+      }
+    })
 
-  console.log('Data sync complete!')
+    console.log('Data sync complete!')
+  } else {
+    // Output directory exists but no JSON files - this is fine
+    console.log('No JSON files found in output directory, using existing public/data files')
+  }
 } else {
-  console.warn(`Warning: Output directory not found at ${outputDir}`)
-  console.warn('Creating empty data directory for build...')
+  // Output directory doesn't exist (e.g., in Vercel build) - this is expected
+  // The JSON files should already be in public/data from the repository
+  const existingFiles = fs.existsSync(publicDataDir)
+    ? fs.readdirSync(publicDataDir).filter((file) => file.endsWith('.json'))
+    : []
+
+  if (existingFiles.length > 0) {
+    console.log(`Using ${existingFiles.length} existing JSON files from public/data`)
+  } else {
+    console.warn('Warning: No JSON files found. Make sure public/data contains the book data files.')
+  }
 }
