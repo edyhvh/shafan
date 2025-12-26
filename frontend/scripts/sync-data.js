@@ -36,7 +36,9 @@ if (fs.existsSync(outputDir)) {
     console.log('Data sync complete!')
   } else {
     // Output directory exists but no JSON files - this is fine
-    console.log('No JSON files found in output directory, using existing public/data files')
+    console.log(
+      'No JSON files found in output directory, using existing public/data files'
+    )
   }
 } else {
   // Output directory doesn't exist (e.g., in Vercel build) - this is expected
@@ -46,8 +48,12 @@ if (fs.existsSync(outputDir)) {
     : []
 
   if (existingFiles.length > 0) {
-    console.log(`Using ${existingFiles.length} existing JSON files from public/data`)
+    console.log(
+      `Using ${existingFiles.length} existing JSON files from public/data`
+    )
   } else {
-    console.warn('Warning: No JSON files found. Make sure public/data contains the book data files.')
+    console.warn(
+      'Warning: No JSON files found. Make sure public/data contains the book data files.'
+    )
   }
 }

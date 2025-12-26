@@ -77,11 +77,9 @@ export default function BooksDropdown({ isOpen, onClose }: BooksDropdownProps) {
     >
       {/* Scrollable books list */}
       <div className="dropdown-panel max-h-[500px] overflow-y-auto py-1">
-        {AVAILABLE_BOOKS.map((bookName, index) => {
+        {AVAILABLE_BOOKS.map((bookName) => {
           const displayName = BOOK_DISPLAY_NAMES[bookName]
           const isHovered = hoveredBook === bookName
-          const isFirst = index === 0
-          const isLast = index === AVAILABLE_BOOKS.length - 1
 
           return (
             <div

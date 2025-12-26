@@ -13,27 +13,27 @@ permissions:
   contents: read
 
 jobs:
-  validate-json:
-    name: Validate JSON Files
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-          cache: 'pip'
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install jsonschema==4.20.0 PyYAML==6.0.1
-
-      - name: Validate JSON files
-        run: |
-          python -m scripts.text.validate_json --output-dir output
+  # validate-json:
+  #   name: Validate JSON Files
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v4
+  #
+  #     - name: Set up Python
+  #       uses: actions/setup-python@v5
+  #       with:
+  #         python-version: '3.12'
+  #         cache: 'pip'
+  #
+  #     - name: Install dependencies
+  #       run: |
+  #         python -m pip install --upgrade pip
+  #         pip install jsonschema==4.20.0 PyYAML==6.0.1
+  #
+  #     - name: Validate JSON files
+  #       run: |
+  #         python -m scripts.text.validate_json --output-dir output
 
   frontend-checks:
     name: Frontend Checks

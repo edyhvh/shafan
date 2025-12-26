@@ -4,18 +4,15 @@ import { removeNikud } from '@/lib/hebrew'
 import { useNikud } from '@/hooks/useNikud'
 import NikudToggle from './NikudToggle'
 import type { Verse } from '@/lib/types'
-import type { Locale } from '@/lib/locale'
 
 interface ChapterContentProps {
   hebrewLetter: string
   verses: Verse[]
-  locale: Locale
 }
 
 export default function ChapterContent({
   hebrewLetter,
   verses,
-  locale,
 }: ChapterContentProps) {
   const { nikudEnabled, toggleNikud } = useNikud()
 

@@ -25,3 +25,13 @@ clean:
 # Run the example script
 example:
 	@$(PYTHON) scripts/example_ocr.py
+
+# Frontend commands
+frontend-dev:
+	@cd frontend && npm run dev
+
+frontend-build:
+	@cd frontend && npm run build
+
+frontend-install:
+	@cd frontend && npm install

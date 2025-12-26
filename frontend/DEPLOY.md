@@ -29,16 +29,19 @@ Since the frontend is located in the `frontend/` subdirectory, you need to confi
 ### Option 2: Using Vercel CLI
 
 1. Install Vercel CLI:
+
    ```bash
    npm i -g vercel
    ```
 
 2. Navigate to the project root:
+
    ```bash
    cd /path/to/shafan
    ```
 
 3. Run:
+
    ```bash
    vercel
    ```
@@ -75,6 +78,7 @@ During deployment, Vercel will:
 4. Deploy the application
 
 The `sync-data` script will:
+
 - Try to copy files from `../../output/` if it exists (local development)
 - If not found, use existing files in `public/data/` (Vercel deployment)
 - This ensures the build works both locally and on Vercel
@@ -122,6 +126,7 @@ This is expected and handled gracefully. The script will use existing files in `
 ## Continuous Deployment
 
 Once connected, Vercel will automatically deploy:
+
 - **Production**: On push to `main` or `master` branch
 - **Preview**: On push to any other branch or pull request
 
@@ -137,6 +142,7 @@ To manually trigger a deployment:
 ## Monitoring
 
 After deployment, you can:
+
 - View deployment logs in the Vercel Dashboard
 - Monitor performance in the **Analytics** tab
 - Check function logs in the **Functions** tab (if using API routes)
@@ -144,6 +150,6 @@ After deployment, you can:
 ## Support
 
 For Vercel-specific issues, check:
+
 - [Vercel Documentation](https://vercel.com/docs)
 - [Next.js on Vercel](https://vercel.com/docs/frameworks/nextjs)
-
