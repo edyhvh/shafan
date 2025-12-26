@@ -69,7 +69,7 @@ export const BOOK_DISPLAY_NAMES: Record<BookName, { he: string; en: string; es: 
   john2: { he: 'יוחנן ב', en: '2 John', es: '2 Juan' },
   john3: { he: 'יוחנן ג', en: '3 John', es: '3 Juan' },
   jude: { he: 'יהודה', en: 'Jude', es: 'Judas' },
-  revelation: { he: 'ההתגלות', en: 'Revelation', es: 'Apocalipsis' },
+  revelation: { he: 'ההתגלות (סודות)', en: 'Revelation', es: 'Apocalipsis' },
 };
 
 /**
