@@ -1,7 +1,7 @@
 'use client';
 
-import { useState } from 'react';
 import { removeNikud } from '@/lib/hebrew';
+import { useNikud } from '@/hooks/useNikud';
 import NikudToggle from './NikudToggle';
 import type { Verse } from '@/lib/types';
 import type { Locale } from '@/lib/locale';
@@ -13,7 +13,7 @@ interface ChapterContentProps {
 }
 
 export default function ChapterContent({ hebrewLetter, verses, locale }: ChapterContentProps) {
-  const [nikudEnabled, setNikudEnabled] = useState(true);
+  const { nikudEnabled, toggleNikud } = useNikud();
 
   const getDisplayText = (text: string): string => {
     if (!text) return 'No text available';
@@ -24,7 +24,7 @@ export default function ChapterContent({ hebrewLetter, verses, locale }: Chapter
     <>
       <NikudToggle
         enabled={nikudEnabled}
-        onToggle={() => setNikudEnabled(!nikudEnabled)}
+        onToggle={toggleNikud}
       />
 
       <div className="mb-12">
