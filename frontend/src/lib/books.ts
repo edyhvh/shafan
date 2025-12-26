@@ -69,7 +69,41 @@ export const BOOK_DISPLAY_NAMES: Record<BookName, { he: string; en: string; es: 
   john2: { he: 'יוחנן ב', en: '2 John', es: '2 Juan' },
   john3: { he: 'יוחנן ג', en: '3 John', es: '3 Juan' },
   jude: { he: 'יהודה', en: 'Jude', es: 'Judas' },
-  revelation: { he: 'ההתגלות', en: 'Revelation', es: 'Apocalipsis' },
+  revelation: { he: 'ההתגלות (סודות)', en: 'Revelation', es: 'Apocalipsis' },
+};
+
+/**
+ * Hebrew book names with Latin transliteration
+ * For display in English and Spanish locales
+ */
+export const BOOK_HEBREW_INFO: Record<BookName, { hebrew: string; transliteration: string }> = {
+  matthew: { hebrew: 'מתי', transliteration: 'matai' },
+  mark: { hebrew: 'מרקוס', transliteration: 'markus' },
+  luke: { hebrew: 'לוקס', transliteration: 'lukas' },
+  john: { hebrew: 'יוחנן', transliteration: 'yojanan' },
+  acts: { hebrew: 'מעשי השליחים', transliteration: 'maase hashelijim' },
+  romans: { hebrew: 'אל הרומים', transliteration: 'el haromim' },
+  corinthians1: { hebrew: 'הקורינתים א', transliteration: 'hakorintim alef' },
+  corinthians2: { hebrew: 'הקורינתים ב', transliteration: 'hakorintim bet' },
+  galatians: { hebrew: 'אל הגלטים', transliteration: 'el hagalatim' },
+  ephesians: { hebrew: 'אל האפסים', transliteration: 'el haefsim' },
+  philippians: { hebrew: 'אל הפיליפים', transliteration: 'el hafilipim' },
+  colossians: { hebrew: 'אל הקולוסים', transliteration: 'el hakolosim' },
+  thessalonians1: { hebrew: 'התסלוניקים א', transliteration: 'hatesalonikim alef' },
+  thessalonians2: { hebrew: 'התסלוניקים ב', transliteration: 'hatesalonikim bet' },
+  timothy1: { hebrew: 'טימותיוס א', transliteration: 'timoteos alef' },
+  timothy2: { hebrew: 'טימותיוס ב', transliteration: 'timoteos bet' },
+  titus: { hebrew: 'טיטוס', transliteration: 'titos' },
+  philemon: { hebrew: 'פילימון', transliteration: 'filimon' },
+  hebrews: { hebrew: 'אל העברים', transliteration: 'el haivrim' },
+  james: { hebrew: 'יעקב', transliteration: 'yaakov' },
+  peter1: { hebrew: 'פטרוס א', transliteration: 'petros alef' },
+  peter2: { hebrew: 'פטרוס ב', transliteration: 'petros bet' },
+  john1: { hebrew: 'יוחנן א', transliteration: 'yojanan alef' },
+  john2: { hebrew: 'יוחנן ב', transliteration: 'yojanan bet' },
+  john3: { hebrew: 'יוחנן ג', transliteration: 'yojanan gimel' },
+  jude: { hebrew: 'יהודה', transliteration: 'yehuda' },
+  revelation: { hebrew: 'ההתגלות (סודות)', transliteration: 'hahitgalut (sodot)' },
 };
 
 /**

@@ -63,6 +63,56 @@
   .dropdown-panel {
     @apply bg-white/95 backdrop-blur-xl border border-black/15 shadow-[0_8px_32px_rgba(0,0,0,0.15),inset_0_1px_1px_rgba(255,255,255,0.8)] rounded-xl ring-1 ring-black/5;
   }
+
+  /* Animation utilities */
+  .animate-slide-in {
+    animation: slideIn 0.2s ease-out forwards;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Subtle pulse animation to invite clicking */
+  .hover\:animate-pulse-subtle:hover {
+    animation: pulseSubtle 0.6s ease-in-out infinite;
+  }
+
+  @keyframes pulseSubtle {
+    0%, 100% {
+      transform: scale(1.1);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.15);
+    }
+    50% {
+      transform: scale(1.12);
+      box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  /* Custom scrollbar for verses dropdown */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
 }
 
 

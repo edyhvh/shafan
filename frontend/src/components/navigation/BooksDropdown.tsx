@@ -81,11 +81,11 @@ export default function BooksDropdown({ isOpen, onClose }: BooksDropdownProps) {
                 href={`/${locale}/book/${bookName}/chapter/1`}
                 className={`flex items-center justify-between px-6 py-3 text-base font-ui-latin font-semibold text-black/90 hover:text-black hover:bg-black/5 transition-all border-b border-black/8 last:border-b-0 ${
                   isHovered ? 'bg-black/5 text-black' : ''
-                }`}
+                } ${locale === 'he' ? 'flex-row-reverse' : ''}`}
                 onClick={onClose}
               >
                 <span>{displayName[locale as 'he' | 'es' | 'en'] || displayName.en}</span>
-                <ChevronRight className="text-gray/60" />
+                <ChevronRight className={`text-gray/60 ${locale === 'he' ? 'scale-x-[-1]' : ''}`} />
               </Link>
             </div>
           );
@@ -95,7 +95,7 @@ export default function BooksDropdown({ isOpen, onClose }: BooksDropdownProps) {
       {/* Chapters dropdown - positioned next to hovered book */}
       {hoveredBook && book && book.chapters.length >= 1 && (
         <div
-          className="absolute left-full pl-2 z-[60]"
+          className={`absolute z-[60] ${locale === 'he' ? 'right-full pr-2' : 'left-full pl-2'}`}
           style={{ top: hoveredBookTop }}
           onMouseEnter={() => setHoveredBook(hoveredBook)}
         >
@@ -111,7 +111,7 @@ export default function BooksDropdown({ isOpen, onClose }: BooksDropdownProps) {
 
       {/* Loading indicator */}
       {isLoading && (
-        <div className="absolute left-full pl-2 z-[60]" style={{ top: hoveredBookTop }}>
+        <div className={`absolute z-[60] ${locale === 'he' ? 'right-full pr-2' : 'left-full pl-2'}`} style={{ top: hoveredBookTop }}>
           <div className="dropdown-panel px-6 py-4 text-sm text-black/70 min-w-[150px] flex items-center gap-3">
             <LoadingSpinner className="text-black/50" />
             <span>Loading...</span>
@@ -121,7 +121,7 @@ export default function BooksDropdown({ isOpen, onClose }: BooksDropdownProps) {
 
       {/* Book not available message */}
       {bookNotAvailable && (
-        <div className="absolute left-full pl-2 z-[60]" style={{ top: hoveredBookTop }}>
+        <div className={`absolute z-[60] ${locale === 'he' ? 'right-full pr-2' : 'left-full pl-2'}`} style={{ top: hoveredBookTop }}>
           <div className="dropdown-panel px-6 py-4 text-sm text-black/60 min-w-[150px]">
             Coming soon
           </div>
