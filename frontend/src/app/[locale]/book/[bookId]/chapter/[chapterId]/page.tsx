@@ -5,7 +5,6 @@ import ChapterTitleSelector from '@/components/navigation/ChapterTitleSelector'
 import ChapterNavigation from '@/components/navigation/ChapterNavigation'
 import ChapterContent from '@/components/ChapterContent'
 import SaveLastBook from '@/components/navigation/SaveLastBook'
-import type { Locale } from '@/lib/locale'
 
 interface PageProps {
   params: Promise<{

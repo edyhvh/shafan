@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "Ultra-minimalist web interface for shafan - Hebrew New Testament digital edition",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "npm run sync-data && next dev -p 3001",
     "build": "npm run sync-data && next build",
     "start": "next start -p 3001",
-    "lint": "next lint",
+    "lint": "eslint .",
     "type-check": "tsc --noEmit",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
