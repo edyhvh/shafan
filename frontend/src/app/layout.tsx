@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata } from 'next'
 
 // Root layout - redirects are handled by middleware
 export const metadata: Metadata = {
@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
   },
-};
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <>
@@ -19,6 +19,5 @@ export default function RootLayout({
       <link rel="shortcut icon" href="/favicon.ico" />
       {children}
     </>
-  );
+  )
 }
-

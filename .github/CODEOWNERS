@@ -1,0 +1,20 @@
+# Default owners for the entire repository
+* @edyhvh
+
+# Source of truth - JSON files in output directory
+/output/ @edyhvh
+
+# Frontend code
+/frontend/ @edyhvh
+
+# Scripts and processing code
+/scripts/ @edyhvh
+
+# Project configuration files
+/setup.py @edyhvh
+/requirements.txt @edyhvh
+/Makefile @edyhvh
+
+# GitHub configuration
+/.github/ @edyhvh
+

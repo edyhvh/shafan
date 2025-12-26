@@ -1,16 +1,16 @@
-'use client';
+'use client'
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { getLocaleFromPath } from '@/lib/locale';
-import { t } from '@/lib/translations';
-import { WarningIcon } from './icons';
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { getLocaleFromPath } from '@/lib/locale'
+import { t } from '@/lib/translations'
+import { WarningIcon } from './icons'
 
-const GITHUB_DISCUSSIONS_URL = 'https://github.com/edyhvh/shafan/discussions';
+const GITHUB_DISCUSSIONS_URL = 'https://github.com/edyhvh/shafan/discussions'
 
 export default function CorrectionWarning() {
-  const pathname = usePathname();
-  const locale = getLocaleFromPath(pathname);
+  const pathname = usePathname()
+  const locale = getLocaleFromPath(pathname)
 
   return (
     <div className="fixed top-4 left-4 z-40">
@@ -29,6 +29,5 @@ export default function CorrectionWarning() {
         </p>
       </div>
     </div>
-  );
+  )
 }
-

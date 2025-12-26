@@ -1,8 +1,10 @@
 interface WarningIconProps {
-  className?: string;
+  className?: string
 }
 
-export default function WarningIcon({ className = "w-4 h-4" }: WarningIconProps) {
+export default function WarningIcon({
+  className = 'w-4 h-4',
+}: WarningIconProps) {
   return (
     <svg
       className={className}
@@ -16,6 +18,5 @@ export default function WarningIcon({ className = "w-4 h-4" }: WarningIconProps)
         clipRule="evenodd"
       />
     </svg>
-  );
+  )
 }
-

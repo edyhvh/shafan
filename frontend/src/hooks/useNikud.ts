@@ -1,62 +1,61 @@
-'use client';
+'use client'
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react'
 
-const STORAGE_KEY = 'shafan-nikud-enabled';
+const STORAGE_KEY = 'shafan-nikud-enabled'
 
 /**
  * Get initial nikud state from data attribute (set by inline script) or localStorage
  */
 function getInitialNikudState(): boolean {
-  if (typeof window === 'undefined') return true;
+  if (typeof window === 'undefined') return true
 
   // First check the data attribute set by the inline script in layout
-  const dataAttr = document.documentElement.getAttribute('data-nikud');
+  const dataAttr = document.documentElement.getAttribute('data-nikud')
   if (dataAttr !== null) {
-    return dataAttr === 'true';
+    return dataAttr === 'true'
   }
 
   // Fallback to localStorage
   try {
-    const stored = localStorage.getItem(STORAGE_KEY);
+    const stored = localStorage.getItem(STORAGE_KEY)
     if (stored !== null) {
-      return stored === 'true';
+      return stored === 'true'
     }
   } catch {
     // Storage error
   }
 
-  return true;
+  return true
 }
 
 /**
  * Hook to manage nikud preference with localStorage persistence
  */
 export function useNikud() {
-  const [nikudEnabled, setNikudEnabled] = useState(getInitialNikudState);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [nikudEnabled, setNikudEnabled] = useState(getInitialNikudState)
+  const [isLoaded, setIsLoaded] = useState(false)
 
   // Mark as loaded on mount
   useEffect(() => {
-    setIsLoaded(true);
-  }, []);
+    setIsLoaded(true)
+  }, [])
 
   // Save to localStorage and update data attribute when value changes
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return
 
     try {
-      localStorage.setItem(STORAGE_KEY, String(nikudEnabled));
-      document.documentElement.setAttribute('data-nikud', String(nikudEnabled));
+      localStorage.setItem(STORAGE_KEY, String(nikudEnabled))
+      document.documentElement.setAttribute('data-nikud', String(nikudEnabled))
     } catch {
       // Storage error (e.g., quota exceeded)
     }
-  }, [nikudEnabled]);
+  }, [nikudEnabled])
 
   const toggleNikud = useCallback(() => {
-    setNikudEnabled((prev) => !prev);
-  }, []);
+    setNikudEnabled((prev) => !prev)
+  }, [])
 
-  return { nikudEnabled, toggleNikud, isLoaded };
+  return { nikudEnabled, toggleNikud, isLoaded }
 }
-
