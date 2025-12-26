@@ -24,7 +24,7 @@ export default function ChapterNavigation({
       {currentChapter > 1 ? (
         <Link
           href={`/${locale}/book/${bookName}/chapter/${currentChapter - 1}`}
-          className="w-10 h-10 flex items-center justify-center text-lg font-ui-latin border border-black/10 rounded-lg hover:bg-black/5 transition-colors"
+          className="w-10 h-10 flex items-center justify-center text-lg font-ui-latin rounded-lg liquid-glass transition-all duration-200"
           aria-label="Previous Chapter"
         >
           {prevArrow}
@@ -35,7 +35,7 @@ export default function ChapterNavigation({
       {currentChapter < totalChapters ? (
         <Link
           href={`/${locale}/book/${bookName}/chapter/${currentChapter + 1}`}
-          className="w-10 h-10 flex items-center justify-center text-lg font-ui-latin border border-black/10 rounded-lg hover:bg-black/5 transition-colors"
+          className="w-10 h-10 flex items-center justify-center text-lg font-ui-latin rounded-lg liquid-glass transition-all duration-200"
           aria-label="Next Chapter"
         >
           {nextArrow}

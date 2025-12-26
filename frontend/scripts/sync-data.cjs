@@ -1,5 +1,6 @@
 /**
  * Sync JSON book data from output directory to public/data for static serving
+ * Normalizes JSON formatting to avoid unnecessary copies
  */
 
 const fs = require('fs')
@@ -7,6 +8,33 @@ const path = require('path')
 
 const outputDir = path.join(__dirname, '../../output')
 const publicDataDir = path.join(__dirname, '../public/data')
+
+/**
+ * Normalize JSON by parsing and re-stringifying with consistent formatting
+ */
+function normalizeJson(content) {
+  try {
+    const parsed = JSON.parse(content)
+    return JSON.stringify(parsed, null, 2) + '\n'
+  } catch (error) {
+    // If JSON is invalid, return original content
+    return content
+  }
+}
+
+/**
+ * Compare two JSON files by their normalized content
+ */
+function jsonContentEqual(sourceContent, destContent) {
+  try {
+    const normalizedSource = normalizeJson(sourceContent)
+    const normalizedDest = normalizeJson(destContent)
+    return normalizedSource === normalizedDest
+  } catch (error) {
+    // If comparison fails, assume they're different
+    return false
+  }
+}
 
 // Create public/data directory if it doesn't exist
 if (!fs.existsSync(publicDataDir)) {
@@ -19,8 +47,6 @@ if (fs.existsSync(outputDir)) {
   const jsonFiles = files.filter((file) => file.endsWith('.json'))
 
   if (jsonFiles.length > 0) {
-    console.log(`Found ${jsonFiles.length} JSON files to sync...`)
-
     let copiedCount = 0
     let skippedCount = 0
 
@@ -35,67 +61,42 @@ if (fs.existsSync(outputDir)) {
           // Destination doesn't exist, need to copy
           needsCopy = true
         } else {
-          // Compare modification times first (faster check)
-          const sourceStats = fs.statSync(sourcePath)
-          const destStats = fs.statSync(destPath)
+          // Read and normalize both files for comparison
+          const sourceContent = fs.readFileSync(sourcePath, 'utf8')
+          const destContent = fs.readFileSync(destPath, 'utf8')
 
-          if (sourceStats.mtimeMs > destStats.mtimeMs) {
-            // Source is newer, need to copy
+          // Compare normalized JSON content
+          if (!jsonContentEqual(sourceContent, destContent)) {
             needsCopy = true
-          } else if (sourceStats.size !== destStats.size) {
-            // Different sizes, need to copy
-            needsCopy = true
-          } else {
-            // Same size and mtime, compare content to be sure
-            const sourceContent = fs.readFileSync(sourcePath, 'utf8')
-            const destContent = fs.readFileSync(destPath, 'utf8')
-            if (sourceContent !== destContent) {
-              needsCopy = true
-            }
           }
         }
 
         if (needsCopy) {
-          fs.copyFileSync(sourcePath, destPath)
-          console.log(`✓ Copied ${file}`)
+          // Read source, normalize, and write formatted JSON
+          const sourceContent = fs.readFileSync(sourcePath, 'utf8')
+          const normalizedContent = normalizeJson(sourceContent)
+          fs.writeFileSync(destPath, normalizedContent, 'utf8')
           copiedCount++
         } else {
           skippedCount++
         }
       } catch (error) {
-        console.error(`✗ Error copying ${file}:`, error.message)
+        console.error(`✗ Error processing ${file}:`, error.message)
       }
     })
 
-    if (copiedCount > 0 || skippedCount === 0) {
+    // Only show output if there were changes or if it's the first run
+    if (copiedCount > 0) {
       console.log(
-        `Data sync complete! ${copiedCount} copied, ${skippedCount} skipped (unchanged)`
-      )
-    } else {
-      console.log(
-        `Data sync complete! All ${skippedCount} files are up to date, nothing to copy.`
+        `Data sync: ${copiedCount} updated, ${skippedCount} unchanged`
       )
     }
   } else {
     // Output directory exists but no JSON files - this is fine
-    console.log(
-      'No JSON files found in output directory, using existing public/data files'
-    )
+    // Silently skip
   }
 } else {
   // Output directory doesn't exist (e.g., in Vercel build) - this is expected
   // The JSON files should already be in public/data from the repository
-  const existingFiles = fs.existsSync(publicDataDir)
-    ? fs.readdirSync(publicDataDir).filter((file) => file.endsWith('.json'))
-    : []
-
-  if (existingFiles.length > 0) {
-    console.log(
-      `Using ${existingFiles.length} existing JSON files from public/data`
-    )
-  } else {
-    console.warn(
-      'Warning: No JSON files found. Make sure public/data contains the book data files.'
-    )
-  }
+  // Silently skip
 }

@@ -8,14 +8,18 @@ export default function GlobalNotFound() {
   return (
     <html>
       <body>
-        <div className="min-h-screen flex items-center justify-center bg-[#FAF6F0] px-4">
-          <div className="max-w-md w-full text-center">
-            <div className="text-8xl font-bold text-black/20 mb-4">404</div>
-            <h1 className="text-4xl font-bold text-black mb-4">
-              Page Not Found
+        <div className="min-h-screen flex items-start justify-center bg-[#FAF6F0] px-4 pt-32">
+          <div className="max-w-2xl w-full text-center">
+            <div className="text-8xl font-bold text-black/20 mb-6">404</div>
+
+            {/* Main error message - Large text */}
+            <h1 className="text-5xl md:text-6xl font-bold text-black mb-8">
+              It seems there was an error
             </h1>
-            <p className="text-lg text-[#333333] mb-8">
-              The page you&apos;re looking for doesn&apos;t exist.
+
+            {/* Subtitle - Smaller text */}
+            <p className="text-2xl md:text-3xl text-[#333333] mb-8">
+              Keep Calm and Yeshua Ha&apos;Mashiaj
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

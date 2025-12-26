@@ -58,7 +58,8 @@ export default function ChaptersDropdown({
 
   const handleChapterClick = (e: React.MouseEvent, chapterNumber: number) => {
     if (isSingleChapter) {
-      // Single chapter: navigate directly
+      // Single chapter: navigate directly and close all dropdowns
+      onCloseAll?.()
       return
     }
 

@@ -16,12 +16,23 @@ interface PageProps {
 
 export async function generateMetadata({ params }: PageProps) {
   const resolvedParams = await params
-  const { bookId, chapterId } = resolvedParams
+  const { locale, bookId, chapterId } = resolvedParams
 
   // Runtime validation to prevent path traversal attacks
   if (!AVAILABLE_BOOKS.includes(bookId as BookName)) {
     return {
-      title: 'Not Found - Shafan',
+      title: 'Shafan',
+      description: "Read Elias Hutter's Hebrew Besorah Translation",
+      openGraph: {
+        title: 'Shafan',
+        description: "Read Elias Hutter's Hebrew Besorah Translation",
+        type: 'website',
+      },
+      twitter: {
+        card: 'summary',
+        title: 'Shafan',
+        description: "Read Elias Hutter's Hebrew Besorah Translation",
+      },
     }
   }
 
@@ -30,19 +41,45 @@ export async function generateMetadata({ params }: PageProps) {
 
   if (isNaN(chapterNumber) || chapterNumber < 1) {
     return {
-      title: 'Not Found - Shafan',
+      title: 'Shafan',
+      description: "Read Elias Hutter's Hebrew Besorah Translation",
+      openGraph: {
+        title: 'Shafan',
+        description: "Read Elias Hutter's Hebrew Besorah Translation",
+        type: 'website',
+      },
+      twitter: {
+        card: 'summary',
+        title: 'Shafan',
+        description: "Read Elias Hutter's Hebrew Besorah Translation",
+      },
     }
   }
 
+  // Get book display name based on locale
   const displayName = BOOK_DISPLAY_NAMES[bookName] || {
     en: bookName,
     he: bookName,
     es: bookName,
   }
+  const bookDisplayName =
+    displayName[locale as 'he' | 'es' | 'en'] || displayName.en
+
+  const pageTitle = `Shafan - ${bookDisplayName}`
 
   return {
-    title: `${displayName.en} ${chapterNumber} - Shafan`,
-    description: `Read ${displayName.en} chapter ${chapterNumber} from Elias Hutter's Hebrew New Testament`,
+    title: pageTitle,
+    description: "Read Elias Hutter's Hebrew Besorah Translation",
+    openGraph: {
+      title: pageTitle,
+      description: "Read Elias Hutter's Hebrew Besorah Translation",
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary',
+      title: pageTitle,
+      description: "Read Elias Hutter's Hebrew Besorah Translation",
+    },
   }
 }
 

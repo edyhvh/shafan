@@ -10,6 +10,7 @@ type TranslationKey =
   | 'info'
   | 'home'
   | 'nikud'
+  | 'page_title'
   // Info page
   | 'info_title'
   | 'info_hutter_title'
@@ -19,6 +20,7 @@ type TranslationKey =
   | 'info_besorah_title'
   | 'info_besorah_text'
   | 'info_follow'
+  | 'info_youtube_title'
   // Correction warning
   | 'correction_warning_text'
   | 'correction_warning_link'
@@ -30,6 +32,7 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     info: 'Info',
     home: 'Home',
     nikud: 'Nikud',
+    page_title: 'Hebrew Besorah',
     // Info page
     info_title: 'Info',
     info_hutter_title: 'Who was Elias Hutter?',
@@ -42,6 +45,7 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     info_besorah_text:
       'Besorah (בְּשׂוֹרָה) means "Good News" or "Gospel" in Hebrew. This digital edition presents Hutter\'s Hebrew translation of the Greek New Testament. Unlike later translations, Hutter\'s work was created during a period of renewed interest in biblical languages, making it a unique historical document that bridges Greek Christian scripture with the Hebrew linguistic tradition.',
     info_follow: 'Follow the project',
+    info_youtube_title: "Yeshua the Messiah's Besorah",
     correction_warning_text:
       'You may see errors in words, letters, or grammar. Help us improve',
     correction_warning_link: 'here',
@@ -52,6 +56,7 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     info: 'Info',
     home: 'Inicio',
     nikud: 'Nikud',
+    page_title: 'Besorah Hebrea',
     // Info page
     info_title: 'Info',
     info_hutter_title: '¿Quién fue Elias Hutter?',
@@ -64,6 +69,7 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     info_besorah_text:
       'Besorah (בְּשׂוֹרָה) significa "Buenas Nuevas" o "Evangelio" en hebreo. Esta edición digital presenta la traducción hebrea de Hutter del Nuevo Testamento griego. A diferencia de traducciones posteriores, la obra de Hutter fue creada durante un período de renovado interés en las lenguas bíblicas, convirtiéndola en un documento histórico único que une las escrituras cristianas griegas con la tradición lingüística hebrea.',
     info_follow: 'Sigue el proyecto',
+    info_youtube_title: 'La Besorah de Yeshúa el Mesías',
     correction_warning_text:
       'Es posible que encuentres errores de palabras, letras o gramática. Ayúdanos a mejorar',
     correction_warning_link: 'aquí',
@@ -74,6 +80,7 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     info: 'מידע',
     home: 'בית',
     nikud: 'ניקוד',
+    page_title: 'בְּשׂוֹרָה עברית',
     // Info page
     info_title: 'מידע',
     info_hutter_title: 'מי היה אליאס הוטר?',
@@ -86,6 +93,7 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     info_besorah_text:
       'בְּשׂוֹרָה פירושה "חדשות טובות" או "גוספל" בעברית. מהדורה דיגיטלית זו מציגה את תרגומו העברי של הוטר מהברית החדשה היוונית. בניגוד לתרגומים מאוחרים יותר, עבודתו של הוטר נוצרה בתקופה של התעניינות מחודשת בשפות המקרא, מה שהופך אותה למסמך היסטורי ייחודי המגשר בין הכתבים הנוצריים היווניים למסורת הלשונית העברית.',
     info_follow: 'עקבו אחרי הפרויקט',
+    info_youtube_title: 'בְּשׂוֹרַת יֵשׁוּעַ הַמָּשִׁיחַ',
     correction_warning_text:
       'ייתכן שתראו שגיאות במילים, אותיות או דקדוק. עזרו לנו לשפר',
     correction_warning_link: 'כאן',

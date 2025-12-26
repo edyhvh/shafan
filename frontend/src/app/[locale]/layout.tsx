@@ -40,19 +40,42 @@ const assistant = Assistant({
   weight: ['400', '600'],
 })
 
-export const metadata: Metadata = {
-  title: 'Shafan - Hebrew New Testament',
-  description:
-    "Open digital edition of Elias Hutter's Hebrew New Testament (1599–1602)",
-  keywords: [
-    'Hebrew',
-    'New Testament',
-    'Bible',
-    'Elias Hutter',
-    'Shafan',
-    'Besorah',
-    'בשורה',
-  ],
+export async function generateMetadata({
+  params: _params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  return {
+    title: 'Shafan',
+    description: "Read Elias Hutter's Hebrew Besorah Translation",
+    keywords: [
+      'Hebrew',
+      'New Testament',
+      'Bible',
+      'Elias Hutter',
+      'Shafan',
+      'Besorah',
+      'בשורה',
+      'Yeshua',
+      'Mashiaj',
+      'Mashiach',
+      'Tanaj',
+      'Tanakh',
+      'משיח',
+      'ישוע',
+      'ישועה',
+    ],
+    openGraph: {
+      title: 'Shafan',
+      description: "Read Elias Hutter's Hebrew Besorah Translation",
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary',
+      title: 'Shafan',
+      description: "Read Elias Hutter's Hebrew Besorah Translation",
+    },
+  }
 }
 
 export default async function LocaleLayout({

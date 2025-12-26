@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 
-// Root layout - redirects are handled by middleware
+// Root layout - redirects are handled by proxy
 export const metadata: Metadata = {
   title: 'Shafan - ש',
   icons: {
-    icon: '/favicon.ico',
+    icon: '/icon.svg',
   },
 }
 
@@ -15,8 +15,8 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="shortcut icon" href="/favicon.ico" />
+      <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+      <link rel="shortcut icon" href="/icon.svg" />
       {children}
     </>
   )

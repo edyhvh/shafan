@@ -69,12 +69,11 @@ export default function ChapterTitleSelector({
               h-[36px] px-3
               flex items-center justify-center
               font-semibold text-base
-              bg-black/5 hover:bg-black/10
-              border border-black/10 hover:border-black/20
               rounded-lg
               cursor-pointer
               transition-all duration-200
-              ${isBookOpen ? 'bg-black/10 border-black/20 shadow-sm' : ''}
+              liquid-glass
+              ${isBookOpen ? 'bg-white/40 border-white/50' : ''}
             `}
             aria-expanded={isBookOpen}
             aria-haspopup="listbox"
@@ -126,12 +125,11 @@ export default function ChapterTitleSelector({
               min-w-[36px] h-[36px] px-2
               flex items-center justify-center
               font-semibold text-base
-              bg-black/5 hover:bg-black/10
-              border border-black/10 hover:border-black/20
               rounded-lg
               cursor-pointer
               transition-all duration-200
-              ${isChapterOpen ? 'bg-black/10 border-black/20 shadow-sm' : ''}
+              liquid-glass
+              ${isChapterOpen ? 'bg-white/40 border-white/50' : ''}
             `}
             aria-expanded={isChapterOpen}
             aria-haspopup="listbox"

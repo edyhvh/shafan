@@ -24,7 +24,7 @@ python setup.py
 
 This will set up mise, install Python 3.12 + Node.js 20, create a virtual environment, install all dependencies, and configure direnv for automatic environment activation.
 
-## 📋 Workflow Overview
+## Workflow Overview
 
 The project follows a pipeline to convert historical PDF manuscripts into a digital edition:
 
@@ -34,7 +34,7 @@ The project follows a pipeline to convert historical PDF manuscripts into a digi
 4. **Transcribe Text** → Use AI to transcribe Hebrew text into structured JSON
 5. **Web Interface** → Browse and read the digital edition in the frontend
 
-## 📚 Detailed Documentation
+## Detailed Documentation
 
 For detailed instructions and options for each step, see the README files in each directory:
 
@@ -44,7 +44,7 @@ For detailed instructions and options for each step, see the README files in eac
 - **[scripts/text/README.md](scripts/text/README.md)** - Transcribing Hebrew text with AI
 - **[frontend/README.md](frontend/README.md)** - Running the web application
 
-## 🎯 Quick Commands
+## Quick Commands
 
 ```bash
 # Download PDFs
@@ -64,7 +64,7 @@ python -m scripts.text --all
 cd frontend && npm run dev
 ```
 
-## 📦 Training Dataset
+## Training Dataset
 
 The extracted Hebrew text images used for model training are hosted on Hugging Face at [https://huggingface.co/datasets/edyhvh/hutter](https://huggingface.co/datasets/edyhvh/hutter) instead of GitHub to avoid repository bloat.
 

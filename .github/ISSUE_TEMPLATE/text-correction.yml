@@ -1,0 +1,113 @@
+name: "Text Correction"
+description: "Report a correction needed in the Hebrew text"
+title: "[Correction] Book Chapter:Verse"
+labels: ["correction", "text-error"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Found an error? Help us fix it! Please provide the following information.
+
+        **Tip**: Before submitting, verify your correction against the original manuscript images available at [Hugging Face](https://huggingface.co/datasets/edyhvh/hutter).
+
+  - type: dropdown
+    id: book
+    attributes:
+      label: Book
+      description: Which book?
+      options:
+        - matthew
+        - mark
+        - luke
+        - john
+        - acts
+        - romans
+        - corinthians1
+        - corinthians2
+        - galatians
+        - ephesians
+        - philippians
+        - colossians
+        - thessalonians1
+        - thessalonians2
+        - timothy1
+        - timothy2
+        - titus
+        - philemon
+        - hebrews
+        - james
+        - peter1
+        - peter2
+        - john1
+        - john2
+        - john3
+        - jude
+        - revelation
+    validations:
+      required: true
+
+  - type: input
+    id: chapter
+    attributes:
+      label: Chapter
+      description: Chapter number
+      placeholder: "1"
+    validations:
+      required: true
+
+  - type: input
+    id: verse
+    attributes:
+      label: Verse
+      description: Verse number
+      placeholder: "1"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_text
+    attributes:
+      label: Current Text
+      description: Copy the current text from the verse
+      placeholder: Paste the current text here
+    validations:
+      required: true
+
+  - type: textarea
+    id: corrected_text
+    attributes:
+      label: Corrected Text
+      description: What should it say?
+      placeholder: Paste the corrected text here
+    validations:
+      required: true
+
+  - type: dropdown
+    id: error_type
+    attributes:
+      label: Type of Error
+      options:
+        - Typo (wrong characters)
+        - Nikud (wrong vowels)
+        - Wording (wrong words)
+        - Grammar
+        - Missing text
+        - Extra text
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: explanation
+    attributes:
+      label: Explanation
+      description: Why is this correction needed? Reference the original images if possible.
+      placeholder: Explain why this correction is needed. If you checked the original images at Hugging Face, mention it here...
+
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Verification
+      options:
+        - label: I have verified this correction against the original manuscript images at Hugging Face
+          required: false

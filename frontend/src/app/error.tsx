@@ -25,14 +25,16 @@ export default function GlobalError({
   return (
     <html>
       <body>
-        <div className="min-h-screen flex items-center justify-center bg-background px-4">
-          <div className="max-w-md w-full text-center">
-            <h1 className="text-4xl font-bold text-black mb-4">
-              Something went wrong
+        <div className="min-h-screen flex items-start justify-center bg-background px-4 pt-32">
+          <div className="max-w-2xl w-full text-center">
+            {/* Main error message - Large text */}
+            <h1 className="text-5xl md:text-6xl font-bold text-black mb-8">
+              It seems there was an error
             </h1>
-            <p className="text-lg text-gray mb-8">
-              We&apos;re sorry, but an unexpected error occurred. Please try
-              refreshing the page.
+
+            {/* Subtitle - Smaller text */}
+            <p className="text-2xl md:text-3xl text-gray mb-8">
+              Keep Calm and Yeshua Ha&apos;Mashiaj
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

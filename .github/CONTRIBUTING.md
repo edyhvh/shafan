@@ -4,9 +4,9 @@ Found an error? Great! Here's how to help:
 
 ## Step 1: Report the Error
 
-1. Go to [Discussions](https://github.com/edyhvh/shafan/discussions)
-2. Click "New discussion"
-3. Select "Correction" template
+1. Go to [Issues](https://github.com/edyhvh/shafan/issues)
+2. Click "New issue"
+3. Select "Text Correction" template
 4. Fill in the information:
    - Book, Chapter, Verse
    - Current text (copy from the website)
@@ -29,7 +29,7 @@ If you want to fix it yourself:
    - Otherwise, the sync happens automatically when the PR is merged
 5. Commit: `git commit -m "Fix [book] [chapter]:[verse]"`
 6. Push and create a Pull Request
-7. Link to the discussion in your PR (if applicable)
+7. Reference the issue number in your PR (if applicable)
 
 ## What Gets Corrected?
 
@@ -40,5 +40,5 @@ If you want to fix it yourself:
 
 ## Questions?
 
-Just ask in Discussions! We're here to help.
+Just create an issue! We're here to help.
 
