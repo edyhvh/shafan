@@ -12,7 +12,7 @@
     "type-check": "tsc --noEmit",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "sync-data": "node scripts/sync-data.js"
+    "sync-data": "node scripts/sync-data.cjs"
   },
   "dependencies": {
     "next": "^16.1.1",
