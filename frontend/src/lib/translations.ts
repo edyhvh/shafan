@@ -63,7 +63,7 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     info_besorah_text:
       'Besorah (בְּשׂוֹרָה) significa "Buenas Nuevas" o "Evangelio" en hebreo. Esta edición digital presenta la traducción hebrea de Hutter del Nuevo Testamento griego. A diferencia de traducciones posteriores, la obra de Hutter fue creada durante un período de renovado interés en las lenguas bíblicas, convirtiéndola en un documento histórico único que une las escrituras cristianas griegas con la tradición lingüística hebrea.',
     info_follow: 'Sigue el proyecto',
-    correction_warning_text: 'Pueden ver errores de palabras, letras o gramática. Ayúdanos a mejorar',
+    correction_warning_text: 'Es posible que encuentres errores de palabras, letras o gramática. Ayúdanos a mejorar',
     correction_warning_link: 'aquí',
   },
   he: {
