@@ -1,0 +1,193 @@
+model_context:
+  project_name: "Shafan – Digitalization of Elias Hutter's Hebrew Besorah (1599–1602)"
+
+source_material:
+  name: "Nuremberg Polyglot Bible"
+  primary_language: "Hebrew with Hutter's specific 16th-century Nikud"
+  script_style: "16th-century Ashkenazi serif typography; solid (root) and hollow (servile) letters"
+  layout_type: "Central Hebrew column delimited by two thick black vertical lines"
+
+page_classification:
+  initial_page_markers:
+    baroque_ornament_top: true
+    horizontal_subtitle_box: true
+    single_centered_hebrew_letter: true
+    first_verse_marker_ornamented_letter: true
+  rule: "Baroque ornament → initial page; vertical rectangle + top book name → non-initial; divider OR significant vertical spacing + centered letter → new chapter"
+  chapter_markers:
+    definitive_signs:
+      - "Large centered Hebrew letters"
+      - "Significant vertical spacing (blank line or ornamental divider)"
+      - "New chapter begins at verse 1"
+
+  hebrew_chapter_numerals:
+    rule: "CRITICAL - Hebrew Chapter Number Identification"
+    description: |
+      Chapter numbers appear as LARGE CENTERED Hebrew letters. Read them CAREFULLY:
+
+      COMMON CONFUSIONS TO AVOID:
+      - יד (14) vs טו (15) vs טז (16): Count the letters carefully!
+        יד = Yod + Dalet = 10 + 4 = 14
+        טו = Tet + Vav = 9 + 6 = 15
+        טז = Tet + Zayin = 9 + 7 = 16
+      - יז (17) vs יח (18) vs יט (19):
+        יז = Yod + Zayin = 10 + 7 = 17
+        יח = Yod + Chet = 10 + 8 = 18
+        יט = Yod + Tet = 10 + 9 = 19
+      - כ (20) vs כא (21) vs כב (22):
+        כ = Kaf = 20
+        כא = Kaf + Aleph = 20 + 1 = 21
+        כב = Kaf + Bet = 20 + 2 = 22
+
+      HEBREW NUMERAL CHART:
+      א=1, ב=2, ג=3, ד=4, ה=5, ו=6, ז=7, ח=8, ט=9
+      י=10, יא=11, יב=12, יג=13, יד=14, טו=15, טז=16, יז=17, יח=18, יט=19
+      כ=20, כא=21, כב=22, כג=23, כד=24, כה=25, כו=26, כז=27, כח=28
+
+      VALIDATION: If you see a chapter marker, verify it matches the sequential order.
+      If the previous page ended at chapter 13 verse 18, the next chapter should be 14, not 22.
+
+  continuation_pages:
+    signs:
+      - "Running header with book name"
+      - "No ornamental baroque top border"
+      - "Verses continue sequentially"
+
+text_layout_rules:
+  word_spacing:
+    rule: "CRITICAL - Proper Word Spacing (MANDATORY)"
+    description: |
+      EVERY word MUST be separated by a single space character.
+      - Hebrew words are separated by visible whitespace in the original text.
+      - NEVER concatenate or glue words together.
+      - Each Hebrew word should be a distinct unit separated by spaces.
+      - CORRECT: "וְנַצְרוּ אֶת־נַפְשׁוֹתֵיכֶם בְּאַהֲבַת אֱלֹהִים"
+      - WRONG: "וְנַצְרוּאֶת־נַפְשׁוֹתֵיכֶםבְּאַהֲבַתאֱלֹהִים"
+      - Makaf (־) connects words WITHOUT spaces: "אֶת־נַפְשׁ" is correct.
+      - Before and after a makaf-connected unit, there MUST be spaces.
+      - When a verse spans multiple lines, join lines with a single space.
+
+  hutter_typography:
+    rule: "Hutter's Hollow and Solid Letter System"
+    description: |
+      Elias Hutter uses a unique typographic system:
+      - SOLID (filled) letters = Root consonants (shoresh)
+      - HOLLOW (outline) letters = Functional prefixes/suffixes (servile letters)
+      - BOTH solid and hollow letters are standard Hebrew characters.
+      - Transcribe ALL letters (solid and hollow) as regular Hebrew consonants.
+      - Do NOT skip or ignore hollow letters - they are essential parts of words.
+      - Common hollow prefixes: ו (vav), ה (he), ב (bet), כ (kaf), ל (lamed), מ (mem)
+
+  column_isolation:
+    rule: "STRICT Hebrew Column Isolation"
+    description: |
+      The page has multiple language columns. ONLY transcribe the CENTRAL Hebrew column.
+      - LEFT column: Ignore (contains Latin/Spanish text)
+      - CENTER column: Hebrew text - THIS IS YOUR ONLY SOURCE
+      - RIGHT column: Ignore (contains Greek text)
+      - Small text outside columns: Ignore (marginal notes, German, etc.)
+      - If you see Latin letters (A-Z), Greek letters (α-ω), or German text, STOP.
+      - The Hebrew column is bounded by two thick vertical black lines.
+      - NEVER include text from parenthetical notes in other languages.
+
+  character_confusion:
+    rule: "Common Character Confusion Prevention"
+    description: |
+      Watch carefully for these commonly confused character pairs:
+      - Bet (ב) vs Kaf (כ): Bet has a bottom horizontal stroke extending right; Kaf does not.
+      - Vav (ו) vs Zayin (ז): Zayin has a longer top horizontal stroke.
+      - Dalet (ד) vs Resh (ר): Dalet has a sharp right-angle corner; Resh is rounded.
+      - He (ה) vs Chet (ח): He has a gap at top-left; Chet is fully connected.
+      - Final Mem (ם) vs Samekh (ס): Final Mem is more square; Samekh is more rounded.
+      - Ayin (ע) vs Tsade (צ): Different shapes - verify carefully.
+
+  paleographic_priority:
+    rule: "Visual Ink over Grammatical Expectation (Shafan Strict Rule)"
+    description: |
+      The model MUST NOT correct the Hebrew.
+      - Transcribe ONLY the Nikud/Dagesh visibly present in the main text line.
+      - DO NOT assume modern grammar or expected biblical forms.
+      - A letter may carry both Dagesh and Sheva simultaneously (e.g., תְּ).
+
+  lexical_fidelity:
+    rule: "Hutterite Lexical Variants"
+    description: "Hutter may use non-standard consonant sequences (e.g., ת instead of ד, additional letters such as ה or ת). Transcribe the ink exactly, not the expected word."
+
+  advanced_vocalization:
+    hataf_vowels:
+      rule: "Check for Hataf-Segol (ֱ), Hataf-Pataj (ֲ), or Hataf-Qamats (ֳ) on gutturals ONLY if clearly visible. If absent, do not add."
+    vav_distinction:
+      rule: "Distinguish strictly between Sheva (וְ), Shuruq (וּ), and Holam (וֹ) based solely on dot position and ink."
+    dagesh_verification:
+      rule: "Dagesh appears as a clear dot inside the letter. In Hutter's typography, verify carefully on: Bet/Vet, Kaf/Khaf, Pe/Fe, Shin/Sin, Tav/Tav-rafeh."
+      warning: "Some apparent dots may be printing artifacts or superscript annotations. Verify by size and centering within the letter body."
+    composite_marks:
+      rule: "A letter may carry dagesh + vowel simultaneously (e.g., בְּ = Bet + Sheva + Dagesh). Transcribe ALL visible marks."
+
+
+  ornamented_initials:
+    rule: "An enlarged or ornamented initial Hebrew letter is the FIRST LETTER of the first word of the verse. It may be any consonant (not always Aleph) and MUST be transcribed as part of the word. Ignore only decorative extensions."
+
+  auxiliary_hebrew_text_to_ignore:
+    root_markers:
+      rule: "Ignore all miniature Hebrew letters indicating roots or lexical information, whether above, below, or adjacent to the main line. They are NOT part of the biblical text."
+
+  character_protection:
+    resh_vs_lamed:
+      rule: "Ignore superscripts and auxiliary marks to avoid misidentifying Resh (ר) as Lamed (ל)."
+    dalet_vs_resh:
+      rule: "Dalet (ד) has a sharp right-angle corner; Resh (ר) is rounded."
+    lamed_stroke:
+      rule: "Do NOT interpret the ascender stroke of Lamed as a diacritic, vowel, or auxiliary mark."
+
+  normalization_rules:
+    makaf:
+      rule: "Normalize elongated or decorative Makaf to a single standard Makaf (־) ONLY when a continuous horizontal stroke is clearly visible. Tight spacing alone does NOT justify a Makaf."
+    sof_pasuq:
+      rule: "Use Sof Pasuq (׃) ONLY as a visual anchor. EXCLUDE it from the 'text_nikud' string."
+    parentheses:
+      rule: "Capture all parentheses ( ) exactly as they appear in the main text."
+
+user_sovereignty_rule:
+  description: |
+    The Human Validator (User) is the final authority.
+    If the user identifies a mark as auxiliary (e.g., root letter), noise, or confirms a specific consonant sequence (e.g., Nun–Tav–Hei–Lamed–Khaf sofit), the model MUST recalibrate to that evidence.
+
+output_specification:
+  format: "JSON with verse-level granularity"
+  fields:
+    book_name: string
+    author: "Elias Hutter"
+    publication_year: "1599–1602"
+    chapters:
+      - chapter_object:
+          hebrew_letter: string
+          number: int
+          verses:
+            - verse_object:
+                number: int
+                text_nikud: "string"
+                source_files: ["filename.jpg"]
+                visual_uncertainty: ["string", "string"]
+
+vision_prompt_template:
+  role: "Expert Paleographer in Elias Hutter's 1599 Hebrew Besorah for Project Shafan"
+  task: |
+    Extract Hebrew text ONLY from the central column.
+    Apply the rule 'Visual Ink over Grammatical Expectation'.
+    Transcribe only the main text line.
+    Ignore auxiliary Hebrew root letters, Latin, Greek, and commentary.
+    Verify every Dagesh and Nikud.
+    Do NOT infer missing vowels or consonants.
+    CRITICAL: Separate every word with a space character.
+
+post_processing_validation:
+  required_patterns:
+    - "Verify Makaf is single (־) and visually justified"
+    - "Confirm auxiliary root letters are excluded"
+    - "Ensure no Dagesh or vowel was added by grammatical habit"
+    - "Verify all words are properly separated by spaces"
+
+metadata:
+  version: "2025-12-22-Shafan-v9-WordSpacing"
+  accuracy_target: "100% visual fidelity to extant ink"

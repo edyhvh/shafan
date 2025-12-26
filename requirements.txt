@@ -29,8 +29,12 @@ python-dotenv>=1.0.0  # For loading .env files securely
 PyYAML>=6.0.0  # YAML configuration file support
 
 # Google Gemini API
-google-genai>=0.2.0  # Gemini API client (new package)
+# google-genai>=0.2.0  # Gemini API client (new package)
 # google-generativeai>=0.3.0  # Deprecated, use google-genai instead
+# won't use it since claude proved to be better so far
+
+# Anthropic Claude API
+anthropic>=0.39.0  # Claude API client for vision tasks
 
 # JSON schema validation
 jsonschema>=4.0.0  # JSON schema validation
