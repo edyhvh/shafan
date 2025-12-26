@@ -13,7 +13,7 @@ if (!fs.existsSync(publicDataDir)) {
   fs.mkdirSync(publicDataDir, { recursive: true })
 }
 
-// Copy all JSON files from output to public/data
+// Copy all JSON files from output to public/data (only if changed)
 if (fs.existsSync(outputDir)) {
   const files = fs.readdirSync(outputDir)
   const jsonFiles = files.filter((file) => file.endsWith('.json'))
@@ -21,19 +21,61 @@ if (fs.existsSync(outputDir)) {
   if (jsonFiles.length > 0) {
     console.log(`Found ${jsonFiles.length} JSON files to sync...`)
 
+    let copiedCount = 0
+    let skippedCount = 0
+
     jsonFiles.forEach((file) => {
       const sourcePath = path.join(outputDir, file)
       const destPath = path.join(publicDataDir, file)
 
       try {
-        fs.copyFileSync(sourcePath, destPath)
-        console.log(`✓ Copied ${file}`)
+        let needsCopy = false
+
+        if (!fs.existsSync(destPath)) {
+          // Destination doesn't exist, need to copy
+          needsCopy = true
+        } else {
+          // Compare modification times first (faster check)
+          const sourceStats = fs.statSync(sourcePath)
+          const destStats = fs.statSync(destPath)
+
+          if (sourceStats.mtimeMs > destStats.mtimeMs) {
+            // Source is newer, need to copy
+            needsCopy = true
+          } else if (sourceStats.size !== destStats.size) {
+            // Different sizes, need to copy
+            needsCopy = true
+          } else {
+            // Same size and mtime, compare content to be sure
+            const sourceContent = fs.readFileSync(sourcePath, 'utf8')
+            const destContent = fs.readFileSync(destPath, 'utf8')
+            if (sourceContent !== destContent) {
+              needsCopy = true
+            }
+          }
+        }
+
+        if (needsCopy) {
+          fs.copyFileSync(sourcePath, destPath)
+          console.log(`✓ Copied ${file}`)
+          copiedCount++
+        } else {
+          skippedCount++
+        }
       } catch (error) {
         console.error(`✗ Error copying ${file}:`, error.message)
       }
     })
 
-    console.log('Data sync complete!')
+    if (copiedCount > 0 || skippedCount === 0) {
+      console.log(
+        `Data sync complete! ${copiedCount} copied, ${skippedCount} skipped (unchanged)`
+      )
+    } else {
+      console.log(
+        `Data sync complete! All ${skippedCount} files are up to date, nothing to copy.`
+      )
+    }
   } else {
     // Output directory exists but no JSON files - this is fine
     console.log(

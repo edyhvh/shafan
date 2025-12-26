@@ -1,23 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Bodoni:wght@700&family=Suez+One&family=Cardo:wght@400;700&family=Assistant:wght@400;600&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+/* stylelint-disable-next-line at-rule-no-unknown */
+@theme {
+  --color-black: #000000;
+  --color-gray: #333333;
+  --color-background: #faf6f0;
+  --color-white: #ffffff;
+}
 
 @layer base {
-  :root {
-    --color-black: #000000;
-    --color-gray: #333333;
-    --color-background: #faf6f0;
-    --color-white: #ffffff;
-  }
-
   html {
-    @apply bg-background text-black;
+    background-color: var(--color-background);
+    color: var(--color-black);
     scroll-behavior: smooth;
   }
 
   body {
+    /* stylelint-disable-next-line at-rule-no-unknown */
     @apply font-sans antialiased;
   }
 
@@ -34,6 +35,11 @@
 }
 
 @layer utilities {
+  /* Background color utility */
+  .bg-background {
+    background-color: var(--color-background);
+  }
+
   /* Typography utilities */
   .font-logo-latin {
     font-family: 'Libre Bodoni', serif;
@@ -61,6 +67,7 @@
 
   /* Dropdown panel styles */
   .dropdown-panel {
+    /* stylelint-disable-next-line at-rule-no-unknown */
     @apply bg-white/95 backdrop-blur-xl border border-black/15 shadow-[0_8px_32px_rgba(0,0,0,0.15),inset_0_1px_1px_rgba(255,255,255,0.8)] rounded-xl ring-1 ring-black/5;
   }
 
