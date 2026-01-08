@@ -122,6 +122,12 @@
     background: rgba(0, 0, 0, 0.3);
   }
 
+  /* Enhanced smooth scrolling for dropdowns with iOS momentum */
+  .scroll-smooth-enhanced {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* Momentum scrolling for iOS */
+  }
+
   /* Liquid glass effect for buttons - light gray background */
   .liquid-glass {
     background: rgba(0, 0, 0, 0.05);

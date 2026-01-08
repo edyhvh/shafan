@@ -1,6 +1,6 @@
 'use client'
 
-import { removeNikud } from '@/lib/hebrew'
+import { removeNikud, removeWordSeparators } from '@/lib/hebrew'
 import { useNikud } from '@/hooks/useNikud'
 import NikudToggle from './NikudToggle'
 import type { Verse } from '@/lib/types'
@@ -18,7 +18,8 @@ export default function ChapterContent({
 
   const getDisplayText = (text: string): string => {
     if (!text) return 'No text available'
-    return nikudEnabled ? text : removeNikud(text)
+    const displayText = removeWordSeparators(text) // Always remove word separators
+    return nikudEnabled ? displayText : removeNikud(displayText)
   }
 
   return (

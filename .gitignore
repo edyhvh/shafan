@@ -23,6 +23,9 @@ Thumbs.db
 # models/
 # output/
 
+# Local Tanaj source data directory
+tanaj_source/
+
 # PDF files (downloaded source files are large and should not be committed)
 *.pdf
 

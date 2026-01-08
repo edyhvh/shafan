@@ -6,8 +6,9 @@ const nextConfig = {
   // Optimize for mobile and slow connections
   // Note: optimizeCss is now stable in Next.js 15, no longer experimental
 
-  // i18n is handled by proxy.ts for App Router
+  // i18n is handled by middleware.ts for App Router
   // Locales: he (Hebrew), es (Spanish), en (English)
+  // Automatic locale detection from browser Accept-Language header
 
   // Static optimization - remove standalone for Vercel compatibility
   // output: 'standalone',

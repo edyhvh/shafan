@@ -17,3 +17,11 @@ export function removeNikud(text: string): string {
     ''
   )
 }
+
+/**
+ * Removes word separators (forward slashes) from Hebrew text.
+ * Word separators are used in some Hebrew text formats to separate words.
+ */
+export function removeWordSeparators(text: string): string {
+  return text.replace(/\//g, '')
+}

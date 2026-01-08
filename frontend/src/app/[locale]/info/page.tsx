@@ -66,6 +66,20 @@ export default async function InfoPage({ params }: PageProps) {
           </p>
         </section>
 
+        {/* Tanaj */}
+        <section>
+          <h2
+            className={`text-xl font-semibold mb-3 text-black ${isRTL ? 'font-hebrew' : 'font-ui-latin'}`}
+          >
+            {t('info_tanaj_title', loc)}
+          </h2>
+          <p
+            className={`text-black/70 leading-relaxed ${isRTL ? 'font-hebrew' : 'font-ui-latin'}`}
+          >
+            {t('info_tanaj_text', loc)}
+          </p>
+        </section>
+
         {/* Social Links */}
         <section className="mt-16 pt-10 border-t border-black/10">
           <h2

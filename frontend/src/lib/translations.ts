@@ -19,6 +19,8 @@ type TranslationKey =
   | 'info_polyglot_text'
   | 'info_besorah_title'
   | 'info_besorah_text'
+  | 'info_tanaj_title'
+  | 'info_tanaj_text'
   | 'info_follow'
   | 'info_youtube_title'
   // Correction warning
@@ -44,6 +46,9 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     info_besorah_title: 'What is Besorah?',
     info_besorah_text:
       'Besorah (בְּשׂוֹרָה) means "Good News" or "Gospel" in Hebrew. This digital edition presents Hutter\'s Hebrew translation of the Greek New Testament. Unlike later translations, Hutter\'s work was created during a period of renewed interest in biblical languages, making it a unique historical document that bridges Greek Christian scripture with the Hebrew linguistic tradition.',
+    info_tanaj_title: 'Tanakh',
+    info_tanaj_text:
+      'This project also includes the Hebrew Bible (Tanakh) from the Masoretic Text, the authoritative Hebrew text of the Jewish Bible that has been meticulously preserved through centuries of careful transmission by Jewish scribes.',
     info_follow: 'Follow the project',
     info_youtube_title: "Yeshua the Messiah's Besorah",
     correction_warning_text:
@@ -68,6 +73,9 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     info_besorah_title: '¿Qué es Besorah?',
     info_besorah_text:
       'Besorah (בְּשׂוֹרָה) significa "Buenas Nuevas" o "Evangelio" en hebreo. Esta edición digital presenta la traducción hebrea de Hutter del Nuevo Testamento griego. A diferencia de traducciones posteriores, la obra de Hutter fue creada durante un período de renovado interés en las lenguas bíblicas, convirtiéndola en un documento histórico único que une las escrituras cristianas griegas con la tradición lingüística hebrea.',
+    info_tanaj_title: 'Tanaj',
+    info_tanaj_text:
+      'Este proyecto también incluye la Biblia hebrea (Tanaj) del Texto Masorético, el texto hebreo autorizado de la Biblia judía que ha sido meticulosamente preservado a través de siglos de transmisión cuidadosa por parte de escribas judíos.',
     info_follow: 'Sigue el proyecto',
     info_youtube_title: 'La Besorah de Yeshúa el Mesías',
     correction_warning_text:
@@ -92,6 +100,9 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     info_besorah_title: 'מהי בשורה?',
     info_besorah_text:
       'בְּשׂוֹרָה פירושה "חדשות טובות" או "גוספל" בעברית. מהדורה דיגיטלית זו מציגה את תרגומו העברי של הוטר מהברית החדשה היוונית. בניגוד לתרגומים מאוחרים יותר, עבודתו של הוטר נוצרה בתקופה של התעניינות מחודשת בשפות המקרא, מה שהופך אותה למסמך היסטורי ייחודי המגשר בין הכתבים הנוצריים היווניים למסורת הלשונית העברית.',
+    info_tanaj_title: 'תנ״ך',
+    info_tanaj_text:
+      'פרויקט זה כולל גם את התנ״ך מהטקסט המסורתי, הטקסט העברי הרשמי של התנ״ך היהודי ששומר בקפידה במשך מאות שנים על ידי סופרי היהודים.',
     info_follow: 'עקבו אחרי הפרויקט',
     info_youtube_title: 'בְּשׂוֹרַת יֵשׁוּעַ הַמָּשִׁיחַ',
     correction_warning_text:
