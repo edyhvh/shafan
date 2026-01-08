@@ -151,6 +151,7 @@ export default async function BookChapterPage({ params }: PageProps) {
       <ChapterContent
         hebrewLetter={chapter.hebrew_letter}
         verses={chapter.verses}
+        bookName={bookName}
       />
 
       {/* Chapter Navigation Footer */}

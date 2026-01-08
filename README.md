@@ -2,7 +2,15 @@
 
 **shafan** is the first public, free, and completely open digital edition of the Hebrew translation of Besorah (New Testament) made by Elias Hutter in Nuremberg between 1599 and 1602—a historical text that for 426 years only existed in physical libraries or illegible scanned PDFs.
 
-## 🚀 Quick Start
+## Data Sources
+
+### Tanaj (Hebrew Bible)
+The Tanaj data used in this project comes from the Open Scriptures Hebrew Bible project. We use the morphological analysis from [morphhb](https://github.com/openscriptures/morphhb), which provides lemma and morphology information for Hebrew Bible texts.
+
+### Besorah (Delitzsch)
+The Besorah data used in this project comes from Franz Delitzsch's Hebrew New Testament. We obtained the data from [hebrew-bible.github.io](https://github.com/hebrew-bible/hebrew-bible.github.io), which provides a complete Hebrew Bible including the New Testament.
+
+## Quick Start
 
 ### Prerequisites
 

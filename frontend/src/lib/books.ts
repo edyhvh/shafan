@@ -302,6 +302,15 @@ export function getBookMetadata(book: Book) {
 }
 
 /**
+ * Check if a book is part of the New Testament (Besorah)
+ */
+export function isNewTestament(bookName: BookName): boolean {
+  const ntStartIndex = AVAILABLE_BOOKS.indexOf('matthew')
+  const bookIndex = AVAILABLE_BOOKS.indexOf(bookName)
+  return bookIndex >= ntStartIndex
+}
+
+/**
  * Get book index from book name
  */
 export function getBookIndex(bookName: BookName): number {
