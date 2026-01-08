@@ -5,6 +5,7 @@
 export interface Verse {
   number: number
   text_nikud: string
+  text_nikud_delitzsch?: string
   source_files: string[]
   visual_uncertainty: string[]
 }

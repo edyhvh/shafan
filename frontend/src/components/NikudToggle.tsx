@@ -21,7 +21,7 @@ export default function NikudToggle({ enabled, onToggle }: NikudToggleProps) {
       <div
         className={`
           relative flex items-center
-          w-[72px] h-[32px]
+          w-[88px] h-[32px]
           rounded-full
           border-2
           transition-all duration-300 ease-out
@@ -34,12 +34,13 @@ export default function NikudToggle({ enabled, onToggle }: NikudToggleProps) {
       >
         {/* Label text */}
         <span
+          dir="rtl"
           className={`
-            absolute inset-0 flex items-center
+            absolute top-0 bottom-0 flex items-center
             font-ui-hebrew font-semibold text-sm
             transition-all duration-300 ease-out
             select-none
-            ${enabled ? 'justify-start pl-2.5 text-white/90' : 'justify-end pr-2.5 text-gray/60'}
+            ${enabled ? 'left-0 pl-[30px] text-white/90' : 'right-0 pr-[30px] text-gray/60'}
           `}
         >
           {NIKUD_LABEL}

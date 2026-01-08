@@ -19,6 +19,8 @@ type TranslationKey =
   | 'info_polyglot_text'
   | 'info_besorah_title'
   | 'info_besorah_text'
+  | 'info_delitzsch_title'
+  | 'info_delitzsch_text'
   | 'info_tanaj_title'
   | 'info_tanaj_text'
   | 'info_follow'
@@ -46,9 +48,12 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     info_besorah_title: 'What is Besorah?',
     info_besorah_text:
       'Besorah (בְּשׂוֹרָה) means "Good News" or "Gospel" in Hebrew. This digital edition presents Hutter\'s Hebrew translation of the Greek New Testament. Unlike later translations, Hutter\'s work was created during a period of renewed interest in biblical languages, making it a unique historical document that bridges Greek Christian scripture with the Hebrew linguistic tradition.',
+    info_delitzsch_title: 'Delitzsch Translation',
+    info_delitzsch_text:
+      "This project also includes the Hebrew translation of the New Testament by Franz Delitzsch (1813–1890), a renowned German Lutheran theologian and Hebraist. Delitzsch's work represents a scholarly approach to Hebrew translation, drawing from his deep knowledge of both biblical Hebrew and rabbinic literature. His translation, completed in the 19th century, provides an alternative perspective to Hutter's Renaissance-era work.",
     info_tanaj_title: 'Tanakh',
     info_tanaj_text:
-      'This project also includes the Hebrew Bible (Tanakh) from the Masoretic Text, the authoritative Hebrew text of the Jewish Bible that has been meticulously preserved through centuries of careful transmission by Jewish scribes.',
+      "This project also includes the Hebrew Bible (Tanakh) from the Masoretic Text, the authoritative Hebrew text of the Bible that has been meticulously preserved through centuries of careful transmission by Israel's scribes.",
     info_follow: 'Follow the project',
     info_youtube_title: "Yeshua the Messiah's Besorah",
     correction_warning_text:
@@ -73,9 +78,12 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     info_besorah_title: '¿Qué es Besorah?',
     info_besorah_text:
       'Besorah (בְּשׂוֹרָה) significa "Buenas Nuevas" o "Evangelio" en hebreo. Esta edición digital presenta la traducción hebrea de Hutter del Nuevo Testamento griego. A diferencia de traducciones posteriores, la obra de Hutter fue creada durante un período de renovado interés en las lenguas bíblicas, convirtiéndola en un documento histórico único que une las escrituras cristianas griegas con la tradición lingüística hebrea.',
+    info_delitzsch_title: 'Traducción de Delitzsch',
+    info_delitzsch_text:
+      'Este proyecto también incluye la traducción hebrea del Nuevo Testamento de Franz Delitzsch (1813–1890), un reconocido teólogo luterano alemán y hebraísta. La obra de Delitzsch representa un enfoque académico de la traducción al hebreo, basado en su profundo conocimiento tanto del hebreo bíblico como de la literatura rabínica. Su traducción, completada en el siglo XIX, proporciona una perspectiva alternativa al trabajo de la era del Renacimiento de Hutter.',
     info_tanaj_title: 'Tanaj',
     info_tanaj_text:
-      'Este proyecto también incluye la Biblia hebrea (Tanaj) del Texto Masorético, el texto hebreo autorizado de la Biblia judía que ha sido meticulosamente preservado a través de siglos de transmisión cuidadosa por parte de escribas judíos.',
+      'Este proyecto también incluye la Biblia hebrea (Tanaj) del Texto Masorético, el texto hebreo autorizado de la Biblia que ha sido meticulosamente preservado a través de siglos de transmisión cuidadosa por parte de escribas de Israel.',
     info_follow: 'Sigue el proyecto',
     info_youtube_title: 'La Besorah de Yeshúa el Mesías',
     correction_warning_text:
@@ -100,9 +108,12 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     info_besorah_title: 'מהי בשורה?',
     info_besorah_text:
       'בְּשׂוֹרָה פירושה "חדשות טובות" או "גוספל" בעברית. מהדורה דיגיטלית זו מציגה את תרגומו העברי של הוטר מהברית החדשה היוונית. בניגוד לתרגומים מאוחרים יותר, עבודתו של הוטר נוצרה בתקופה של התעניינות מחודשת בשפות המקרא, מה שהופך אותה למסמך היסטורי ייחודי המגשר בין הכתבים הנוצריים היווניים למסורת הלשונית העברית.',
+    info_delitzsch_title: 'תרגום דליצש',
+    info_delitzsch_text:
+      'פרויקט זה כולל גם את התרגום העברי של הברית החדשה מאת פרנץ דליצש (1813–1890), תיאולוג לותרני גרמני מוכר וחוקר עברית. עבודתו של דליצש מייצגת גישה אקדמית לתרגום עברי, המבוססת על ידיעתו העמוקה הן בעברית המקראית והן בספרות הרבנית. תרגומו, שהושלם במאה התשע עשרה, מספק פרספקטיבה חלופית לעבודתו של הוטר מתקופת הרנסנס.',
     info_tanaj_title: 'תנ״ך',
     info_tanaj_text:
-      'פרויקט זה כולל גם את התנ״ך מהטקסט המסורתי, הטקסט העברי הרשמי של התנ״ך היהודי ששומר בקפידה במשך מאות שנים על ידי סופרי היהודים.',
+      'פרויקט זה כולל גם את התנ״ך מהטקסט המסורתי, הטקסט העברי הרשמי של התנ״ך ששומר בקפידה במשך מאות שנים על ידי סופרי ישראל.',
     info_follow: 'עקבו אחרי הפרויקט',
     info_youtube_title: 'בְּשׂוֹרַת יֵשׁוּעַ הַמָּשִׁיחַ',
     correction_warning_text:

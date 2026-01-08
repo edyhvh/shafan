@@ -90,7 +90,13 @@ export default async function LocaleLayout({
   const dir = locale === 'he' ? 'rtl' : 'ltr'
 
   return (
-    <html lang={locale} dir={dir} data-nikud="true" suppressHydrationWarning>
+    <html
+      lang={locale}
+      dir={dir}
+      data-nikud="true"
+      data-text-source="hutter"
+      suppressHydrationWarning
+    >
       <head>
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="shortcut icon" href="/icon.svg" />
@@ -102,6 +108,10 @@ export default async function LocaleLayout({
                   var nikud = localStorage.getItem('shafan-nikud-enabled');
                   if (nikud !== null) {
                     document.documentElement.setAttribute('data-nikud', nikud);
+                  }
+                  var textSource = localStorage.getItem('shafan-text-source');
+                  if (textSource !== null) {
+                    document.documentElement.setAttribute('data-text-source', textSource);
                   }
                 } catch(e) {}
               })();

@@ -2,29 +2,40 @@
 
 import { removeNikud, removeWordSeparators } from '@/lib/hebrew'
 import { useNikud } from '@/hooks/useNikud'
-import NikudToggle from './NikudToggle'
+import { useTextSource } from '@/hooks/useTextSource'
+import { type BookName } from '@/lib/books'
+import ReadingControls from './ReadingControls'
 import type { Verse } from '@/lib/types'
 
 interface ChapterContentProps {
   hebrewLetter: string
   verses: Verse[]
+  bookName: BookName
 }
 
 export default function ChapterContent({
   hebrewLetter,
   verses,
+  bookName: _bookName,
 }: ChapterContentProps) {
-  const { nikudEnabled, toggleNikud } = useNikud()
+  const { nikudEnabled } = useNikud()
+  const { textSource } = useTextSource()
 
-  const getDisplayText = (text: string): string => {
-    if (!text) return 'No text available'
-    const displayText = removeWordSeparators(text) // Always remove word separators
+  const getDisplayText = (verse: Verse): string => {
+    // Select text source: Hutter (text_nikud) or Delitzsch (text_nikud_delitzsch)
+    const sourceText =
+      textSource === 'delitzsch' && verse.text_nikud_delitzsch
+        ? verse.text_nikud_delitzsch
+        : verse.text_nikud
+
+    if (!sourceText) return 'No text available'
+    const displayText = removeWordSeparators(sourceText) // Always remove word separators
     return nikudEnabled ? displayText : removeNikud(displayText)
   }
 
   return (
     <>
-      <NikudToggle enabled={nikudEnabled} onToggle={toggleNikud} />
+      <ReadingControls />
 
       <div className="mb-12">
         <h2 className="font-bible-hebrew text-[64px] text-center mb-8 text-black">
@@ -43,9 +54,7 @@ export default function ChapterContent({
                   {verse.number}
                 </span>
               )}
-              <span className="font-bible-hebrew">
-                {getDisplayText(verse.text_nikud)}
-              </span>
+              <span className="font-bible-hebrew">{getDisplayText(verse)}</span>
             </div>
           ))}
         </div>

@@ -64,7 +64,7 @@ export function proxy(request: NextRequest) {
   // Redirect to locale-prefixed path
   const redirectPath = pathname === '/' ? `/${locale}` : `/${locale}${pathname}`
   const newUrl = new URL(redirectPath, request.url)
-  console.log('[Proxy] Redirecting to:', newUrl.pathname)
+  // Redirect without logging in production (proxy runs on every request)
   return NextResponse.redirect(newUrl)
 }
 
