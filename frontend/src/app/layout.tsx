@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 // Root layout - locale detection and redirects are handled by middleware.ts
 export const metadata: Metadata = {
-  title: 'Shafan - ש',
+  title: 'Shafan',
   icons: {
     icon: '/icon.svg',
   },

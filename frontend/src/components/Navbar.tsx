@@ -27,13 +27,42 @@ export default function Navbar() {
     }
   }, [locale, router])
 
+  const handleLogoClick = useCallback(
+    (e: React.MouseEvent) => {
+      // Check if we're already on a chapter page
+      const isOnChapterPage = /\/book\/[^/]+\/chapter\/[^/]+/.test(pathname)
+
+      // If already on a chapter page, do nothing (stay on same page)
+      if (isOnChapterPage) {
+        e.preventDefault()
+        return
+      }
+
+      // Otherwise, navigate to the last book/chapter or default to john/1
+      e.preventDefault()
+      const lastBook = getLastBookLocation()
+      if (lastBook) {
+        router.push(
+          `/${locale}/book/${lastBook.bookId}/chapter/${lastBook.chapterId}`
+        )
+      } else {
+        router.push(`/${locale}/book/john/chapter/1`)
+      }
+    },
+    [locale, pathname, router]
+  )
+
   return (
     <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
       <div className="flex items-center gap-2 px-3 py-2 rounded-full bg-gradient-to-b from-white/35 to-white/20 backdrop-blur-3xl backdrop-saturate-200 border border-white/40 shadow-[0_8px_32px_rgba(0,0,0,0.08),inset_0_1px_1px_rgba(255,255,255,0.6)] ring-1 ring-white/30">
         {/* Logo */}
-        <div className="px-2">
+        <button
+          onClick={handleLogoClick}
+          className="px-2 cursor-pointer hover:opacity-80 transition-opacity duration-200"
+          aria-label="Go to chapter"
+        >
           <Logo size="compact" />
-        </div>
+        </button>
 
         {/* Navigation Links - Desktop */}
         <div className="hidden md:flex items-center">

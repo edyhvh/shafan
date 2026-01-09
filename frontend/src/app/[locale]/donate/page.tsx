@@ -1,9 +1,14 @@
 import { DONATION_CONFIG } from '@/lib/config'
 import CopyableWallet from '@/components/CopyableWallet'
+import type { Metadata } from 'next'
 
 // Pre-render this page for all locales at build time
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'es' }, { locale: 'he' }]
+}
+
+export const metadata: Metadata = {
+  title: 'Shafan',
 }
 
 // Inline SVG icons - rendered on server, no client JS needed

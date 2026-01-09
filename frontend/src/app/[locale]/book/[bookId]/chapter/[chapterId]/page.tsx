@@ -5,6 +5,7 @@ import ChapterTitleSelector from '@/components/navigation/ChapterTitleSelector'
 import ChapterNavigation from '@/components/navigation/ChapterNavigation'
 import ChapterContent from '@/components/ChapterContent'
 import SaveLastBook from '@/components/navigation/SaveLastBook'
+import AuthorInfo from '@/components/AuthorInfo'
 
 interface PageProps {
   params: Promise<{
@@ -65,7 +66,7 @@ export async function generateMetadata({ params }: PageProps) {
   const bookDisplayName =
     displayName[locale as 'he' | 'es' | 'en'] || displayName.en
 
-  const pageTitle = `Shafan - ${bookDisplayName}`
+  const pageTitle = `${bookDisplayName} ${chapterNumber}`
 
   return {
     title: pageTitle,
@@ -164,11 +165,11 @@ export default async function BookChapterPage({ params }: PageProps) {
       />
 
       {/* Author info at the end */}
-      <div className="mt-12 text-center">
-        <p className="font-ui-latin text-sm text-gray">
-          {book.author} ({book.publication_year})
-        </p>
-      </div>
+      <AuthorInfo
+        bookName={bookName}
+        hutterAuthor={book.author}
+        hutterYear={book.publication_year}
+      />
     </div>
   )
 }

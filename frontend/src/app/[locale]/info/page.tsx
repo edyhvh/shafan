@@ -1,10 +1,17 @@
 import { t } from '@/lib/translations'
 import { Locale } from '@/lib/locale'
+import type { Metadata } from 'next'
 
 interface PageProps {
   params: Promise<{
     locale: string
   }>
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'Shafan',
+  }
 }
 
 export default async function InfoPage({ params }: PageProps) {
@@ -120,28 +127,6 @@ export default async function InfoPage({ params }: PageProps) {
               </svg>
               <span className="text-base font-medium text-black/70 group-hover:text-black transition-colors">
                 GitHub
-              </span>
-            </a>
-
-            {/* X (Twitter) */}
-            <a
-              href="https://x.com/edyhvh"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 px-5 py-3 rounded-full bg-black/5 hover:bg-black/10 transition-colors group"
-            >
-              <svg
-                className="w-6 h-6 text-black/70 group-hover:text-black transition-colors"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-              </svg>
-              <span
-                dir="ltr"
-                className="text-base font-medium text-black/70 group-hover:text-black transition-colors"
-              >
-                @edyhvh
               </span>
             </a>
 
