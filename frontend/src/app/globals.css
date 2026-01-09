@@ -238,41 +238,41 @@
   .neumorphism {
     background: var(--color-background);
     border: none;
-    border-radius: 12px;
+    border-radius: 8px;
     box-shadow:
-      -6px -6px 14px rgba(255, 255, 255, 0.7),
-      6px 6px 14px rgba(166, 152, 134, 0.25);
+      -6px -6px 12px rgba(255, 255, 255, 1),
+      6px 6px 12px rgba(180, 160, 140, 0.5);
     transition: all 0.2s ease;
   }
 
   .neumorphism:hover {
     box-shadow:
-      -8px -8px 18px rgba(255, 255, 255, 0.8),
-      8px 8px 18px rgba(166, 152, 134, 0.3);
+      -8px -8px 16px rgba(255, 255, 255, 1),
+      8px 8px 16px rgba(180, 160, 140, 0.6);
   }
 
   .neumorphism:active,
   .neumorphism.active {
     box-shadow:
-      inset -4px -4px 10px rgba(255, 255, 255, 0.6),
-      inset 4px 4px 10px rgba(166, 152, 134, 0.2);
+      inset -4px -4px 8px rgba(255, 255, 255, 0.9),
+      inset 4px 4px 8px rgba(180, 160, 140, 0.4);
   }
 
   /* Neumorphism pressed/inset state */
   .neumorphism-inset {
     background: var(--color-background);
     border: none;
-    border-radius: 12px;
+    border-radius: 8px;
     box-shadow:
-      inset -4px -4px 10px rgba(255, 255, 255, 0.6),
-      inset 4px 4px 10px rgba(166, 152, 134, 0.2);
+      inset -4px -4px 8px rgba(255, 255, 255, 0.9),
+      inset 4px 4px 8px rgba(180, 160, 140, 0.4);
     transition: all 0.2s ease;
   }
 
   .neumorphism-inset:hover {
     box-shadow:
-      inset -3px -3px 8px rgba(255, 255, 255, 0.5),
-      inset 3px 3px 8px rgba(166, 152, 134, 0.15);
+      inset -3px -3px 6px rgba(255, 255, 255, 0.8),
+      inset 3px 3px 6px rgba(180, 160, 140, 0.35);
   }
 
   /* Liquid glass effect for dark buttons (nikud) - inactive/grayed state */
