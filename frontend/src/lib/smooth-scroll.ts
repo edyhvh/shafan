@@ -9,7 +9,10 @@
  * @returns void
  * @throws {Error} If element is null or undefined
  */
-export function smoothScrollToElement(element: Element | null, offset = 0): void {
+export function smoothScrollToElement(
+  element: Element | null,
+  offset = 0
+): void {
   if (!element) {
     console.warn('smoothScrollToElement: element is null or undefined')
     return
@@ -24,7 +27,7 @@ export function smoothScrollToElement(element: Element | null, offset = 0): void
 
   window.scrollTo({
     top: targetPosition,
-    behavior: 'smooth'
+    behavior: 'smooth',
   })
 }
 
@@ -51,7 +54,9 @@ export function scrollToVerse(verseNumber: number, offset = 128): void {
   if (verseElement) {
     smoothScrollToElement(verseElement, validOffset)
   } else {
-    console.warn(`scrollToVerse: verse element not found: ${sanitizedVerseNumber}`)
+    console.warn(
+      `scrollToVerse: verse element not found: ${sanitizedVerseNumber}`
+    )
   }
 }
 
@@ -62,7 +67,7 @@ export function scrollToVerse(verseNumber: number, offset = 128): void {
 export function scrollToTop(): void {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth'
+    behavior: 'smooth',
   })
 }
 
@@ -72,12 +77,15 @@ export function scrollToTop(): void {
  * @param behavior - The scroll behavior ('smooth' or 'auto', default: 'smooth')
  * @returns void
  */
-export function scrollToPosition(top: number, behavior: ScrollBehavior = 'smooth'): void {
+export function scrollToPosition(
+  top: number,
+  behavior: ScrollBehavior = 'smooth'
+): void {
   // Validate top is a finite number and not negative
   const validTop = Number.isFinite(top) ? Math.max(0, top) : 0
 
   window.scrollTo({
     top: validTop,
-    behavior
+    behavior,
   })
 }

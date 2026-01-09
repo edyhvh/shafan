@@ -178,18 +178,48 @@ export const BOOK_HEBREW_INFO: Record<
   { hebrew: string; transliteration: { en: string; es: string } }
 > = {
   // Tanaj (Hebrew Bible/Old Testament)
-  genesis: { hebrew: 'בראשית', transliteration: { en: 'bereshit', es: 'bereshit' } },
+  genesis: {
+    hebrew: 'בראשית',
+    transliteration: { en: 'bereshit', es: 'bereshit' },
+  },
   exodus: { hebrew: 'שמות', transliteration: { en: 'shemot', es: 'shemot' } },
-  leviticus: { hebrew: 'ויקרא', transliteration: { en: 'vayikra', es: 'vayikra' } },
-  numbers: { hebrew: 'במדבר', transliteration: { en: 'bamidbar', es: 'bamidbar' } },
-  deuteronomy: { hebrew: 'דברים', transliteration: { en: 'devarim', es: 'devarim' } },
-  joshua: { hebrew: 'יהושע', transliteration: { en: 'yehoshua', es: 'yehoshua' } },
-  judges: { hebrew: 'שופטים', transliteration: { en: 'shoftim', es: 'shoftim' } },
+  leviticus: {
+    hebrew: 'ויקרא',
+    transliteration: { en: 'vayikra', es: 'vayikra' },
+  },
+  numbers: {
+    hebrew: 'במדבר',
+    transliteration: { en: 'bamidbar', es: 'bamidbar' },
+  },
+  deuteronomy: {
+    hebrew: 'דברים',
+    transliteration: { en: 'devarim', es: 'devarim' },
+  },
+  joshua: {
+    hebrew: 'יהושע',
+    transliteration: { en: 'yehoshua', es: 'yehoshua' },
+  },
+  judges: {
+    hebrew: 'שופטים',
+    transliteration: { en: 'shoftim', es: 'shoftim' },
+  },
   ruth: { hebrew: 'רות', transliteration: { en: 'rut', es: 'rut' } },
-  isamuel: { hebrew: 'שמואל א', transliteration: { en: 'shmuel alef', es: 'shmuel alef' } },
-  iisamuel: { hebrew: 'שמואל ב', transliteration: { en: 'shmuel bet', es: 'shmuel bet' } },
-  ikings: { hebrew: 'מלכים א', transliteration: { en: 'melakhim alef', es: 'melajim alef' } },
-  iikings: { hebrew: 'מלכים ב', transliteration: { en: 'melakhim bet', es: 'melajim bet' } },
+  isamuel: {
+    hebrew: 'שמואל א',
+    transliteration: { en: 'shmuel alef', es: 'shmuel alef' },
+  },
+  iisamuel: {
+    hebrew: 'שמואל ב',
+    transliteration: { en: 'shmuel bet', es: 'shmuel bet' },
+  },
+  ikings: {
+    hebrew: 'מלכים א',
+    transliteration: { en: 'melakhim alef', es: 'melajim alef' },
+  },
+  iikings: {
+    hebrew: 'מלכים ב',
+    transliteration: { en: 'melakhim bet', es: 'melajim bet' },
+  },
   ichronicles: {
     hebrew: 'דברי הימים א',
     transliteration: { en: 'divrei hayamim alef', es: 'divrei hayamim alef' },
@@ -199,43 +229,109 @@ export const BOOK_HEBREW_INFO: Record<
     transliteration: { en: 'divrei hayamim bet', es: 'divrei hayamim bet' },
   },
   ezra: { hebrew: 'עזרא', transliteration: { en: 'ezra', es: 'ezra' } },
-  nehemiah: { hebrew: 'נחמיה', transliteration: { en: 'nechemia', es: 'nejemiah' } },
+  nehemiah: {
+    hebrew: 'נחמיה',
+    transliteration: { en: 'nechemia', es: 'nejemiah' },
+  },
   esther: { hebrew: 'אסתר', transliteration: { en: 'ester', es: 'ester' } },
   job: { hebrew: 'איוב', transliteration: { en: 'iyov', es: 'iyov' } },
-  psalms: { hebrew: 'תהלים', transliteration: { en: 'tehillim', es: 'tehillim' } },
-  proverbs: { hebrew: 'משלי', transliteration: { en: 'mishlei', es: 'mishlei' } },
-  ecclesiastes: { hebrew: 'קהלת', transliteration: { en: 'kohelet', es: 'kohelet' } },
-  songofsolomon: { hebrew: 'שיר השירים', transliteration: { en: 'shir hashirim', es: 'shir hashirim' } },
-  isaiah: { hebrew: 'ישעיה', transliteration: { en: 'yeshayahu', es: 'yeshayahu' } },
-  jeremiah: { hebrew: 'ירמיה', transliteration: { en: 'yirmeyahu', es: 'yirmeyahu' } },
-  lamentations: { hebrew: 'איכה', transliteration: { en: 'eicha', es: 'eicha' } },
-  ezekiel: { hebrew: 'יחזקאל', transliteration: { en: 'yechezkel', es: 'yejezkel' } },
+  psalms: {
+    hebrew: 'תהלים',
+    transliteration: { en: 'tehillim', es: 'tehillim' },
+  },
+  proverbs: {
+    hebrew: 'משלי',
+    transliteration: { en: 'mishlei', es: 'mishlei' },
+  },
+  ecclesiastes: {
+    hebrew: 'קהלת',
+    transliteration: { en: 'kohelet', es: 'kohelet' },
+  },
+  songofsolomon: {
+    hebrew: 'שיר השירים',
+    transliteration: { en: 'shir hashirim', es: 'shir hashirim' },
+  },
+  isaiah: {
+    hebrew: 'ישעיה',
+    transliteration: { en: 'yeshayahu', es: 'yeshayahu' },
+  },
+  jeremiah: {
+    hebrew: 'ירמיה',
+    transliteration: { en: 'yirmeyahu', es: 'yirmeyahu' },
+  },
+  lamentations: {
+    hebrew: 'איכה',
+    transliteration: { en: 'eicha', es: 'eicha' },
+  },
+  ezekiel: {
+    hebrew: 'יחזקאל',
+    transliteration: { en: 'yechezkel', es: 'yejezkel' },
+  },
   daniel: { hebrew: 'דניאל', transliteration: { en: 'daniel', es: 'daniel' } },
   hosea: { hebrew: 'הושע', transliteration: { en: 'hoshea', es: 'hosheah' } },
   joel: { hebrew: 'יואל', transliteration: { en: 'yoel', es: 'yoel' } },
   amos: { hebrew: 'עמוס', transliteration: { en: 'amos', es: 'amos' } },
-  obadiah: { hebrew: 'עובדיה', transliteration: { en: 'ovadia', es: 'ovadiah' } },
+  obadiah: {
+    hebrew: 'עובדיה',
+    transliteration: { en: 'ovadia', es: 'ovadiah' },
+  },
   jonah: { hebrew: 'יונה', transliteration: { en: 'yonah', es: 'yonah' } },
   micah: { hebrew: 'מיכה', transliteration: { en: 'michah', es: 'mijah' } },
   nahum: { hebrew: 'נחום', transliteration: { en: 'nachum', es: 'najum' } },
-  habakkuk: { hebrew: 'חבקוק', transliteration: { en: 'chavakuk', es: 'javakuk' } },
-  zephaniah: { hebrew: 'צפניה', transliteration: { en: 'tsefaniah', es: 'tsefaniah' } },
+  habakkuk: {
+    hebrew: 'חבקוק',
+    transliteration: { en: 'chavakuk', es: 'javakuk' },
+  },
+  zephaniah: {
+    hebrew: 'צפניה',
+    transliteration: { en: 'tsefaniah', es: 'tsefaniah' },
+  },
   haggai: { hebrew: 'חגי', transliteration: { en: 'chagai', es: 'jagai' } },
-  zechariah: { hebrew: 'זכריה', transliteration: { en: 'zechariah', es: 'zejariah' } },
-  malachi: { hebrew: 'מלאכי', transliteration: { en: 'malachi', es: 'malaji' } },
+  zechariah: {
+    hebrew: 'זכריה',
+    transliteration: { en: 'zechariah', es: 'zejariah' },
+  },
+  malachi: {
+    hebrew: 'מלאכי',
+    transliteration: { en: 'malachi', es: 'malaji' },
+  },
   // Besorah (New Testament)
   matthew: { hebrew: 'מתי', transliteration: { en: 'matai', es: 'matai' } },
   mark: { hebrew: 'מרקוס', transliteration: { en: 'markus', es: 'markus' } },
   luke: { hebrew: 'לוקס', transliteration: { en: 'lukas', es: 'lukas' } },
   john: { hebrew: 'יוחנן', transliteration: { en: 'yochanan', es: 'yojanan' } },
-  acts: { hebrew: 'מעשי השליחים', transliteration: { en: 'maase hashelichim', es: 'maase hashelijim' } },
-  romans: { hebrew: 'אל הרומים', transliteration: { en: 'el haromim', es: 'el haromim' } },
-  corinthians1: { hebrew: 'הקורינתים א', transliteration: { en: 'hakorintim alef', es: 'hakorintim alef' } },
-  corinthians2: { hebrew: 'הקורינתים ב', transliteration: { en: 'hakorintim bet', es: 'hakorintim bet' } },
-  galatians: { hebrew: 'אל הגלטים', transliteration: { en: 'el hagalatim', es: 'el hagalatim' } },
-  ephesians: { hebrew: 'אל האפסים', transliteration: { en: 'el haefsim', es: 'el haefsim' } },
-  philippians: { hebrew: 'אל הפיליפים', transliteration: { en: 'el hafilipim', es: 'el hafilipim' } },
-  colossians: { hebrew: 'אל הקולוסים', transliteration: { en: 'el hakolosim', es: 'el hakolosim' } },
+  acts: {
+    hebrew: 'מעשי השליחים',
+    transliteration: { en: 'maase hashelichim', es: 'maase hashelijim' },
+  },
+  romans: {
+    hebrew: 'אל הרומים',
+    transliteration: { en: 'el haromim', es: 'el haromim' },
+  },
+  corinthians1: {
+    hebrew: 'הקורינתים א',
+    transliteration: { en: 'hakorintim alef', es: 'hakorintim alef' },
+  },
+  corinthians2: {
+    hebrew: 'הקורינתים ב',
+    transliteration: { en: 'hakorintim bet', es: 'hakorintim bet' },
+  },
+  galatians: {
+    hebrew: 'אל הגלטים',
+    transliteration: { en: 'el hagalatim', es: 'el hagalatim' },
+  },
+  ephesians: {
+    hebrew: 'אל האפסים',
+    transliteration: { en: 'el haefsim', es: 'el haefsim' },
+  },
+  philippians: {
+    hebrew: 'אל הפיליפים',
+    transliteration: { en: 'el hafilipim', es: 'el hafilipim' },
+  },
+  colossians: {
+    hebrew: 'אל הקולוסים',
+    transliteration: { en: 'el hakolosim', es: 'el hakolosim' },
+  },
   thessalonians1: {
     hebrew: 'התסלוניקים א',
     transliteration: { en: 'hatesalonikim alef', es: 'hatesalonikim alef' },
@@ -244,17 +340,44 @@ export const BOOK_HEBREW_INFO: Record<
     hebrew: 'התסלוניקים ב',
     transliteration: { en: 'hatesalonikim bet', es: 'hatesalonikim bet' },
   },
-  timothy1: { hebrew: 'טימותיוס א', transliteration: { en: 'timoteos alef', es: 'timoteos alef' } },
-  timothy2: { hebrew: 'טימותיוס ב', transliteration: { en: 'timoteos bet', es: 'timoteos bet' } },
+  timothy1: {
+    hebrew: 'טימותיוס א',
+    transliteration: { en: 'timoteos alef', es: 'timoteos alef' },
+  },
+  timothy2: {
+    hebrew: 'טימותיוס ב',
+    transliteration: { en: 'timoteos bet', es: 'timoteos bet' },
+  },
   titus: { hebrew: 'טיטוס', transliteration: { en: 'titos', es: 'titos' } },
-  philemon: { hebrew: 'פילימון', transliteration: { en: 'filimon', es: 'filimon' } },
-  hebrews: { hebrew: 'אל העברים', transliteration: { en: 'el haivrim', es: 'el haivrim' } },
+  philemon: {
+    hebrew: 'פילימון',
+    transliteration: { en: 'filimon', es: 'filimon' },
+  },
+  hebrews: {
+    hebrew: 'אל העברים',
+    transliteration: { en: 'el haivrim', es: 'el haivrim' },
+  },
   james: { hebrew: 'יעקב', transliteration: { en: 'yaakov', es: 'yaakov' } },
-  peter1: { hebrew: 'פטרוס א', transliteration: { en: 'petros alef', es: 'petros alef' } },
-  peter2: { hebrew: 'פטרוס ב', transliteration: { en: 'petros bet', es: 'petros bet' } },
-  john1: { hebrew: 'יוחנן א', transliteration: { en: 'yochanan alef', es: 'yojanan alef' } },
-  john2: { hebrew: 'יוחנן ב', transliteration: { en: 'yochanan bet', es: 'yojanan bet' } },
-  john3: { hebrew: 'יוחנן ג', transliteration: { en: 'yochanan gimel', es: 'yojanan gimel' } },
+  peter1: {
+    hebrew: 'פטרוס א',
+    transliteration: { en: 'petros alef', es: 'petros alef' },
+  },
+  peter2: {
+    hebrew: 'פטרוס ב',
+    transliteration: { en: 'petros bet', es: 'petros bet' },
+  },
+  john1: {
+    hebrew: 'יוחנן א',
+    transliteration: { en: 'yochanan alef', es: 'yojanan alef' },
+  },
+  john2: {
+    hebrew: 'יוחנן ב',
+    transliteration: { en: 'yochanan bet', es: 'yojanan bet' },
+  },
+  john3: {
+    hebrew: 'יוחנן ג',
+    transliteration: { en: 'yochanan gimel', es: 'yojanan gimel' },
+  },
   jude: { hebrew: 'יהודה', transliteration: { en: 'yehuda', es: 'yehudah' } },
   revelation: {
     hebrew: 'ההתגלות (סודות)',

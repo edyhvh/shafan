@@ -15,16 +15,10 @@
     background-color: var(--color-background);
     color: var(--color-black);
     scroll-behavior: smooth;
-    /* Enhanced smooth scrolling with custom timing */
-    scroll-behavior: cubic-bezier(0.4, 0, 0.2, 1);
     /* Momentum scrolling for iOS devices */
     -webkit-overflow-scrolling: touch;
-    /* Reduce scroll friction on touch devices */
-    -webkit-scroll-friction: 0.001;
     /* Better scroll performance */
     scroll-padding-top: 2rem;
-    /* Smooth scrolling duration */
-    scroll-behavior-duration: 300ms;
   }
 
   body {
@@ -34,8 +28,6 @@
     -webkit-overflow-scrolling: touch;
     /* Smooth momentum scrolling */
     overscroll-behavior-y: contain;
-    /* Better scroll performance */
-    will-change: scroll-position;
   }
 
   /* RTL support for Hebrew */
@@ -172,14 +164,10 @@
   /* Enhanced smooth scrolling for dropdowns with iOS momentum */
   .scroll-smooth-enhanced {
     scroll-behavior: smooth;
-    /* Custom cubic-bezier timing for smoother feel */
-    scroll-behavior: cubic-bezier(0.25, 0.46, 0.45, 0.94);
     -webkit-overflow-scrolling: touch; /* Momentum scrolling for iOS */
     /* Additional smooth scrolling properties */
     overscroll-behavior: contain;
     scroll-padding: 1rem;
-    /* Smooth scroll duration */
-    scroll-behavior-duration: 250ms;
   }
 
   /* Liquid glass effect for buttons - light gray background */

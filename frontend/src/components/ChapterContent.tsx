@@ -1,6 +1,5 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import dynamic from 'next/dynamic'
 import {
   removeNikud,
@@ -31,11 +30,13 @@ export default function ChapterContent({
   bookName: _bookName,
 }: ChapterContentProps) {
   const { nikudEnabled, isLoaded: nikudLoaded } = useNikud()
-  const { cantillationEnabled, isLoaded: cantillationLoaded } = useCantillation()
+  const { cantillationEnabled, isLoaded: cantillationLoaded } =
+    useCantillation()
   const { textSource, isLoaded: textSourceLoaded } = useTextSource()
 
   // Wait for all preference hooks to be loaded before rendering to prevent hydration mismatches
-  const allPreferencesLoaded = nikudLoaded && cantillationLoaded && textSourceLoaded
+  const allPreferencesLoaded =
+    nikudLoaded && cantillationLoaded && textSourceLoaded
 
   const getDisplayText = (verse: Verse): string => {
     // Select text source: Hutter (text_nikud) or Delitzsch (text_nikud_delitzsch)
@@ -45,16 +46,19 @@ export default function ChapterContent({
         : verse.text_nikud
 
     if (!sourceText) return 'No text available'
-    let displayText = removeWordSeparators(sourceText) // Always remove word separators
 
-    // Apply nikud filtering
-    if (!nikudEnabled) {
-      displayText = removeNikud(displayText)
-    }
+    // Always remove word separators first
+    let displayText = removeWordSeparators(sourceText)
 
-    // Apply cantillation filtering
+    // Apply cantillation filtering first (before nikud) to preserve correct order
+    // Cantillation marks should be removed before nikud marks for proper rendering
     if (!cantillationEnabled) {
       displayText = removeCantillation(displayText)
+    }
+
+    // Apply nikud filtering after cantillation
+    if (!nikudEnabled) {
+      displayText = removeNikud(displayText)
     }
 
     return displayText
