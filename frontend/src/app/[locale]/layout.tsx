@@ -94,6 +94,7 @@ export default async function LocaleLayout({
       lang={locale}
       dir={dir}
       data-nikud="true"
+      data-cantillation="false"
       data-text-source="hutter"
       suppressHydrationWarning
     >
@@ -108,6 +109,10 @@ export default async function LocaleLayout({
                   var nikud = localStorage.getItem('shafan-nikud-enabled');
                   if (nikud !== null) {
                     document.documentElement.setAttribute('data-nikud', nikud);
+                  }
+                  var cantillation = localStorage.getItem('shafan-cantillation-enabled');
+                  if (cantillation !== null) {
+                    document.documentElement.setAttribute('data-cantillation', cantillation);
                   }
                   var textSource = localStorage.getItem('shafan-text-source');
                   if (textSource !== null) {

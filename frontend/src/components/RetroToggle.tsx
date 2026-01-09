@@ -54,11 +54,15 @@ export default function RetroToggle({
         <span
           dir={textDirection}
           className={`
-            absolute inset-0 flex items-center
+            absolute top-0 bottom-0 flex items-center
             ${labelFontClass} font-semibold text-sm
             transition-all duration-300 ease-out
             select-none
-            ${enabled ? 'justify-start pl-2.5 text-white/90' : 'justify-end pr-2.5 text-gray/60'}
+            ${
+              enabled
+                ? 'left-0 right-0 justify-start pl-2.5 text-white/90'
+                : 'left-[32px] right-[8px] justify-end text-gray/60'
+            }
           `}
         >
           {enabled ? labelLeft : labelRight}

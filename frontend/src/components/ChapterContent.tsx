@@ -1,11 +1,23 @@
 'use client'
 
-import { removeNikud, removeWordSeparators } from '@/lib/hebrew'
+import { useEffect, useState } from 'react'
+import dynamic from 'next/dynamic'
+import {
+  removeNikud,
+  removeCantillation,
+  removeWordSeparators,
+} from '@/lib/hebrew'
 import { useNikud } from '@/hooks/useNikud'
+import { useCantillation } from '@/hooks/useCantillation'
 import { useTextSource } from '@/hooks/useTextSource'
 import { type BookName } from '@/lib/books'
-import ReadingControls from './ReadingControls'
 import type { Verse } from '@/lib/types'
+
+// Dynamically import ReadingControls with SSR disabled to prevent hydration issues
+const ReadingControls = dynamic(() => import('./ReadingControls'), {
+  ssr: false,
+  loading: () => null,
+})
 
 interface ChapterContentProps {
   hebrewLetter: string
@@ -18,8 +30,12 @@ export default function ChapterContent({
   verses,
   bookName: _bookName,
 }: ChapterContentProps) {
-  const { nikudEnabled } = useNikud()
-  const { textSource } = useTextSource()
+  const { nikudEnabled, isLoaded: nikudLoaded } = useNikud()
+  const { cantillationEnabled, isLoaded: cantillationLoaded } = useCantillation()
+  const { textSource, isLoaded: textSourceLoaded } = useTextSource()
+
+  // Wait for all preference hooks to be loaded before rendering to prevent hydration mismatches
+  const allPreferencesLoaded = nikudLoaded && cantillationLoaded && textSourceLoaded
 
   const getDisplayText = (verse: Verse): string => {
     // Select text source: Hutter (text_nikud) or Delitzsch (text_nikud_delitzsch)
@@ -29,8 +45,19 @@ export default function ChapterContent({
         : verse.text_nikud
 
     if (!sourceText) return 'No text available'
-    const displayText = removeWordSeparators(sourceText) // Always remove word separators
-    return nikudEnabled ? displayText : removeNikud(displayText)
+    let displayText = removeWordSeparators(sourceText) // Always remove word separators
+
+    // Apply nikud filtering
+    if (!nikudEnabled) {
+      displayText = removeNikud(displayText)
+    }
+
+    // Apply cantillation filtering
+    if (!cantillationEnabled) {
+      displayText = removeCantillation(displayText)
+    }
+
+    return displayText
   }
 
   return (
@@ -54,7 +81,9 @@ export default function ChapterContent({
                   {verse.number}
                 </span>
               )}
-              <span className="font-bible-hebrew">{getDisplayText(verse)}</span>
+              <span className="font-bible-hebrew">
+                {allPreferencesLoaded ? getDisplayText(verse) : '...'}
+              </span>
             </div>
           ))}
         </div>

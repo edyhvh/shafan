@@ -43,6 +43,10 @@ export default function ChapterTitleSelector({
 
   // Get Hebrew info for the current book (for en/es locales)
   const hebrewInfo = BOOK_HEBREW_INFO[bookName as BookName]
+  const transliteration =
+    locale === 'es'
+      ? hebrewInfo?.transliteration.es
+      : hebrewInfo?.transliteration.en
 
   return (
     <div className="text-center mb-8 pt-12">
@@ -53,7 +57,7 @@ export default function ChapterTitleSelector({
             {hebrewInfo.hebrew}
           </div>
           <div className="text-[11px] text-black/35 font-light tracking-wide">
-            {hebrewInfo.transliteration}
+            {transliteration}
           </div>
         </div>
       )}
