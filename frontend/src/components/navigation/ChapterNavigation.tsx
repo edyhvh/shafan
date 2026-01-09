@@ -15,30 +15,29 @@ export default function ChapterNavigation({
   totalChapters,
   className = 'mb-8 flex justify-between items-center px-4 sm:px-8',
 }: ChapterNavigationProps) {
-  const isRTL = locale === 'he'
-  const prevArrow = isRTL ? '→' : '←'
-  const nextArrow = isRTL ? '←' : '→'
+  const prevArrow = '→'
+  const nextArrow = '←'
 
   return (
     <div className={className}>
-      {currentChapter > 1 ? (
+      {currentChapter < totalChapters ? (
         <Link
-          href={`/${locale}/book/${bookName}/chapter/${currentChapter - 1}`}
-          className="w-10 h-10 flex items-center justify-center text-lg font-ui-latin rounded-lg liquid-glass transition-all duration-200"
-          aria-label="Previous Chapter"
+          href={`/${locale}/book/${bookName}/chapter/${currentChapter + 1}`}
+          className="w-10 h-10 flex items-center justify-center text-lg font-ui-latin neumorphism transition-all duration-200"
+          aria-label="Next Chapter"
         >
-          {prevArrow}
+          {nextArrow}
         </Link>
       ) : (
         <div className="w-10 h-10" />
       )}
-      {currentChapter < totalChapters ? (
+      {currentChapter > 1 ? (
         <Link
-          href={`/${locale}/book/${bookName}/chapter/${currentChapter + 1}`}
-          className="w-10 h-10 flex items-center justify-center text-lg font-ui-latin rounded-lg liquid-glass transition-all duration-200"
-          aria-label="Next Chapter"
+          href={`/${locale}/book/${bookName}/chapter/${currentChapter - 1}`}
+          className="w-10 h-10 flex items-center justify-center text-lg font-ui-latin neumorphism transition-all duration-200"
+          aria-label="Previous Chapter"
         >
-          {nextArrow}
+          {prevArrow}
         </Link>
       ) : (
         <div className="w-10 h-10" />

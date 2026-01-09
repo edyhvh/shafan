@@ -15,11 +15,19 @@
     background-color: var(--color-background);
     color: var(--color-black);
     scroll-behavior: smooth;
+    /* Momentum scrolling for iOS devices */
+    -webkit-overflow-scrolling: touch;
+    /* Better scroll performance */
+    scroll-padding-top: 2rem;
   }
 
   body {
     /* stylelint-disable-next-line at-rule-no-unknown */
     @apply font-sans antialiased;
+    /* Enhanced scrolling for the entire page */
+    -webkit-overflow-scrolling: touch;
+    /* Smooth momentum scrolling */
+    overscroll-behavior-y: contain;
   }
 
   /* RTL support for Hebrew */
@@ -104,7 +112,38 @@
     }
   }
 
-  /* Custom scrollbar for verses dropdown */
+  /* Enhanced smooth scrollbar for the entire website */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  /* Firefox scrollbar styling */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.05);
+  }
+
+  /* Custom scrollbar for verses dropdown (kept for specificity) */
   .scrollbar-thin::-webkit-scrollbar {
     width: 6px;
   }
@@ -126,6 +165,9 @@
   .scroll-smooth-enhanced {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch; /* Momentum scrolling for iOS */
+    /* Additional smooth scrolling properties */
+    overscroll-behavior: contain;
+    scroll-padding: 1rem;
   }
 
   /* Liquid glass effect for buttons - light gray background */
@@ -190,6 +232,47 @@
       inset 0 1px 0 rgba(255, 255, 255, 0.2),
       inset 0 -1px 0 rgba(0, 0, 0, 0.4);
     transform: translateY(0);
+  }
+
+  /* Neumorphism effect - soft embossed style */
+  .neumorphism {
+    background: var(--color-background);
+    border: none;
+    border-radius: 8px;
+    box-shadow:
+      -6px -6px 12px rgba(255, 255, 255, 1),
+      6px 6px 12px rgba(180, 160, 140, 0.5);
+    transition: all 0.2s ease;
+  }
+
+  .neumorphism:hover {
+    box-shadow:
+      -8px -8px 16px rgba(255, 255, 255, 1),
+      8px 8px 16px rgba(180, 160, 140, 0.6);
+  }
+
+  .neumorphism:active,
+  .neumorphism.active {
+    box-shadow:
+      inset -4px -4px 8px rgba(255, 255, 255, 0.9),
+      inset 4px 4px 8px rgba(180, 160, 140, 0.4);
+  }
+
+  /* Neumorphism pressed/inset state */
+  .neumorphism-inset {
+    background: var(--color-background);
+    border: none;
+    border-radius: 8px;
+    box-shadow:
+      inset -4px -4px 8px rgba(255, 255, 255, 0.9),
+      inset 4px 4px 8px rgba(180, 160, 140, 0.4);
+    transition: all 0.2s ease;
+  }
+
+  .neumorphism-inset:hover {
+    box-shadow:
+      inset -3px -3px 6px rgba(255, 255, 255, 0.8),
+      inset 3px 3px 6px rgba(180, 160, 140, 0.35);
   }
 
   /* Liquid glass effect for dark buttons (nikud) - inactive/grayed state */

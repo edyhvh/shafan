@@ -94,7 +94,9 @@ export default async function LocaleLayout({
       lang={locale}
       dir={dir}
       data-nikud="true"
+      data-cantillation="false"
       data-text-source="hutter"
+      data-sefer="true"
       suppressHydrationWarning
     >
       <head>
@@ -109,9 +111,17 @@ export default async function LocaleLayout({
                   if (nikud !== null) {
                     document.documentElement.setAttribute('data-nikud', nikud);
                   }
+                  var cantillation = localStorage.getItem('shafan-cantillation-enabled');
+                  if (cantillation !== null) {
+                    document.documentElement.setAttribute('data-cantillation', cantillation);
+                  }
                   var textSource = localStorage.getItem('shafan-text-source');
                   if (textSource !== null) {
                     document.documentElement.setAttribute('data-text-source', textSource);
+                  }
+                  var sefer = localStorage.getItem('shafan-sefer-enabled');
+                  if (sefer !== null) {
+                    document.documentElement.setAttribute('data-sefer', sefer);
                   }
                 } catch(e) {}
               })();
