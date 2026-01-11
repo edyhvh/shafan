@@ -10,6 +10,7 @@ interface RetroToggleProps {
   title?: string
   labelFontClass?: string
   textDirection?: 'ltr' | 'rtl' | 'auto'
+  className?: string
 }
 
 /**
@@ -26,11 +27,12 @@ export default function RetroToggle({
   title,
   labelFontClass = 'font-ui-latin',
   textDirection = 'auto',
+  className = '',
 }: RetroToggleProps) {
   return (
     <button
       onClick={onToggle}
-      className={`${position ? `fixed ${position} z-40` : ''} cursor-pointer group`}
+      className={`${position ? `fixed ${position} z-40` : ''} cursor-pointer group ${className}`}
       aria-label={ariaLabel}
       aria-pressed={enabled}
       title={title || ariaLabel}
@@ -43,11 +45,7 @@ export default function RetroToggle({
           bg-background
           transition-all duration-300 ease-out
           group-hover:scale-105
-          ${
-            enabled
-              ? 'shadow-[inset_4px_4px_8px_rgba(180,160,140,0.5),inset_-4px_-4px_8px_rgba(255,255,255,1)] group-hover:shadow-[inset_3px_3px_6px_rgba(180,160,140,0.4),inset_-3px_-3px_6px_rgba(255,255,255,0.95)]'
-              : 'shadow-[6px_6px_12px_rgba(180,160,140,0.5),-6px_-6px_12px_rgba(255,255,255,1)] group-hover:shadow-[8px_8px_16px_rgba(180,160,140,0.6),-8px_-8px_16px_rgba(255,255,255,1)]'
-          }
+          ${enabled ? 'toggle-outer-pressed' : 'toggle-outer-raised'}
         `}
         style={{ width: '100px', height: '32px' }}
       >
@@ -61,8 +59,8 @@ export default function RetroToggle({
             select-none
             ${
               enabled
-                ? 'left-0 right-0 justify-start pl-2.5 text-gray/80'
-                : 'left-[42px] right-[8px] justify-end text-gray/60'
+                ? 'left-0 right-0 justify-start pl-2.5 text-secondary'
+                : 'left-[42px] right-[8px] justify-end text-muted'
             }
           `}
         >
@@ -72,16 +70,12 @@ export default function RetroToggle({
         {/* Neumorphic sliding knob */}
         <div
           className={`
-            absolute top-[3px]
+            absolute top-[5px]
             w-[22px] h-[22px]
             rounded-full
             transition-all duration-300 ease-out
             group-hover:scale-110
-            ${
-              enabled
-                ? 'right-[3px] bg-gray shadow-[inset_1px_1px_2px_rgba(0,0,0,0.3)] group-hover:shadow-[inset_1px_1px_3px_rgba(0,0,0,0.4)]'
-                : 'left-[3px] bg-background shadow-[inset_2px_2px_4px_rgba(180,160,140,0.4),inset_-2px_-2px_4px_rgba(255,255,255,0.9)] group-hover:shadow-[inset_2px_2px_5px_rgba(180,160,140,0.5),inset_-2px_-2px_5px_rgba(255,255,255,1)]'
-            }
+            ${enabled ? 'right-[3px] bg-primary toggle-inner-dark' : 'left-[3px] bg-background toggle-inner-light'}
           `}
         />
       </div>

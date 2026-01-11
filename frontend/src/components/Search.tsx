@@ -42,7 +42,7 @@ export default function Search() {
         onChange={(e) => setQuery(e.target.value)}
         onFocus={() => query.trim() && setIsOpen(true)}
         placeholder="Search books..."
-        className="w-full px-0 py-2 text-base font-ui-latin text-black bg-transparent border-b border-black/20 focus:outline-none focus:border-black/40 transition-colors placeholder:text-gray/50"
+        className="w-full px-0 py-2 text-base font-ui-latin text-primary bg-transparent border-b border-primary/20 focus:outline-none focus:border-primary/40 transition-colors placeholder:text-secondary/50"
       />
       {isOpen && results.length > 0 && (
         <div className="absolute top-full left-0 right-0 mt-2 dropdown-panel max-h-80 overflow-y-auto z-50 rounded-sm">
@@ -52,12 +52,12 @@ export default function Search() {
               <button
                 key={bookName}
                 onClick={() => handleBookSelect(bookName)}
-                className="w-full text-left px-6 py-3 text-base font-ui-latin text-black hover:bg-black/5 transition-colors border-b border-black/5 last:border-b-0"
+                className="w-full text-left px-6 py-3 text-base font-ui-latin text-primary hover:bg-primary/5 transition-colors border-b border-primary/5 last:border-b-0"
               >
                 <div className="font-medium">
                   {displayName[locale as 'he' | 'es' | 'en'] || displayName.en}
                 </div>
-                <div className="text-sm text-gray/60 mt-1">{bookName}</div>
+                <div className="text-sm text-muted mt-1">{bookName}</div>
               </button>
             )
           })}

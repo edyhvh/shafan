@@ -6,12 +6,14 @@ interface TextSourceToggleProps {
   enabled: boolean
   onToggle: () => void
   position?: string
+  className?: string
 }
 
 export default function TextSourceToggle({
   enabled,
   onToggle,
   position,
+  className,
 }: TextSourceToggleProps) {
   return (
     <RetroToggle
@@ -24,6 +26,7 @@ export default function TextSourceToggle({
       title="Toggle text source"
       labelFontClass="font-ui-latin"
       textDirection="ltr"
+      className={className}
     />
   )
 }

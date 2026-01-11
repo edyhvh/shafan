@@ -153,6 +153,7 @@ export default async function BookChapterPage({ params }: PageProps) {
         hebrewLetter={chapter.hebrew_letter}
         verses={chapter.verses}
         bookName={bookName}
+        chapterNumber={chapterNumber}
       />
 
       {/* Chapter Navigation Footer */}

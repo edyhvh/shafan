@@ -451,16 +451,30 @@ export function getBookNameByIndex(index: number): BookName | null {
 }
 
 /**
- * Search books by name (case-insensitive)
+ * Normalize text by removing accents/diacritics
+ * This allows searching Spanish text without requiring accents
+ */
+function normalizeText(text: string): string {
+  return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '') // Remove combining diacritical marks
+}
+
+/**
+ * Search books by name (case-insensitive, accent-insensitive for Spanish)
  */
 export function searchBooks(query: string): BookName[] {
   const lowerQuery = query.toLowerCase()
+  const normalizedQuery = normalizeText(lowerQuery)
+
   return AVAILABLE_BOOKS.filter((bookName) => {
     const displayNames = BOOK_DISPLAY_NAMES[bookName]
+    const normalizedBookName = normalizeText(bookName.toLowerCase())
+    const normalizedEn = normalizeText(displayNames.en.toLowerCase())
+    const normalizedEs = normalizeText(displayNames.es.toLowerCase())
+
     return (
-      bookName.toLowerCase().includes(lowerQuery) ||
-      displayNames.en.toLowerCase().includes(lowerQuery) ||
-      displayNames.es.toLowerCase().includes(lowerQuery) ||
+      normalizedBookName.includes(normalizedQuery) ||
+      normalizedEn.includes(normalizedQuery) ||
+      normalizedEs.includes(normalizedQuery) ||
       displayNames.he.includes(query)
     )
   })

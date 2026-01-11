@@ -8,6 +8,12 @@ export const colors = {
   gray: '#333333',
   background: '#FAF6F0',
   white: '#FFFFFF',
+  // Dark theme colors
+  dark: {
+    background: '#3c3836',
+    hebrew: '#d5c4a1',
+    ui: '#bdae93',
+  },
 } as const
 
 export const spacing = {

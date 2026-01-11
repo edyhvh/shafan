@@ -97,6 +97,7 @@ export default async function LocaleLayout({
       data-cantillation="false"
       data-text-source="hutter"
       data-sefer="true"
+      data-theme="light"
       suppressHydrationWarning
     >
       <head>
@@ -123,6 +124,10 @@ export default async function LocaleLayout({
                   if (sefer !== null) {
                     document.documentElement.setAttribute('data-sefer', sefer);
                   }
+                  var theme = localStorage.getItem('shafan-theme');
+                  if (theme !== null) {
+                    document.documentElement.setAttribute('data-theme', theme);
+                  }
                 } catch(e) {}
               })();
             `,
@@ -136,7 +141,7 @@ export default async function LocaleLayout({
           {/* Floating Navbar */}
           <Navbar />
 
-          {/* Correction Warning */}
+          {/* Correction Warning - Fixed at top */}
           <CorrectionWarning />
 
           {/* Main content with top padding for floating navbar */}

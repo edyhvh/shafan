@@ -40,7 +40,7 @@ export default function NikudToggle({ enabled, onToggle }: NikudToggleProps) {
             font-ui-hebrew font-semibold text-sm
             transition-all duration-300 ease-out
             select-none
-            ${enabled ? 'left-0 pl-[30px] text-white/90' : 'right-0 pr-[30px] text-gray/60'}
+            ${enabled ? 'left-0 pl-[30px] text-white/90' : 'right-0 pr-[30px] text-muted'}
           `}
         >
           {NIKUD_LABEL}
@@ -49,14 +49,14 @@ export default function NikudToggle({ enabled, onToggle }: NikudToggleProps) {
         {/* Sliding knob */}
         <div
           className={`
-            absolute top-[3px]
+            absolute top-[5px]
             w-[22px] h-[22px]
             rounded-full
             transition-all duration-300 ease-out
             shadow-[0_1px_3px_rgba(0,0,0,0.2)]
             ${
               enabled
-                ? 'right-[3px] bg-white'
+                ? 'right-[3px] bg-primary'
                 : 'left-[3px] bg-gray/40 group-hover:bg-gray/60'
             }
           `}

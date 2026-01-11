@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { getLocaleFromPath } from '@/lib/locale'
 import { t } from '@/lib/translations'
+import { useScrollState } from '@/hooks/useScrollState'
 import { WarningIcon } from './icons'
 
 const GITHUB_ISSUES_URL = 'https://github.com/edyhvh/shafan/issues'
@@ -12,6 +13,7 @@ const GITHUB_ISSUES_URL = 'https://github.com/edyhvh/shafan/issues'
 export default function CorrectionWarning() {
   const pathname = usePathname()
   const locale = getLocaleFromPath(pathname)
+  const { shouldHideForContent } = useScrollState()
   const [isErrorPage, setIsErrorPage] = useState(false)
 
   // Detect if we're on an error page by checking for error-specific content
@@ -51,17 +53,22 @@ export default function CorrectionWarning() {
     return null
   }
 
+  // Hide when scrolled down
+  if (shouldHideForContent) {
+    return null
+  }
+
   return (
-    <div className="fixed top-4 left-4 z-40">
-      <div className="bg-yellow-200/80 backdrop-blur-sm border-2 border-yellow-300/60 rounded-lg px-2 py-2.5 shadow-lg flex items-start gap-1.5 max-w-[200px]">
-        <WarningIcon className="w-4 h-4 text-black flex-shrink-0 mt-0.5" />
-        <p className="text-[10px] sm:text-[11px] text-black font-medium leading-tight">
+    <div className="fixed top-4 left-4 z-40 transition-all duration-300 ease-out animate-in fade-in slide-in-from-top-2">
+      <div className="bg-yellow-200/80 backdrop-blur-sm border-2 border-yellow-300/60 rounded-lg px-1.5 py-2 shadow-lg flex items-start gap-1.5 max-w-[180px]">
+        <WarningIcon className="w-3.5 h-3.5 warning-text flex-shrink-0 mt-0.5" />
+        <p className="text-[9px] sm:text-[10px] warning-text font-medium leading-tight">
           {t('correction_warning_text', locale)}{' '}
           <Link
             href={GITHUB_ISSUES_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="underline font-semibold hover:text-black/80 transition-colors"
+            className="underline font-semibold warning-text hover:opacity-80 transition-opacity"
           >
             {t('correction_warning_link', locale)}
           </Link>

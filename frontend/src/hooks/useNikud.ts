@@ -1,29 +1,20 @@
 'use client'
 
-import { useCallback } from 'react'
-import { usePreference } from './usePreference'
-
-const STORAGE_KEY = 'shafan-nikud-enabled'
-const DATA_ATTRIBUTE = 'data-nikud'
-const DEFAULT_VALUE = 'true' as const
-
-type NikudValue = 'true' | 'false'
+import { useBooleanPreference } from './useBooleanPreference'
 
 /**
  * Hook to manage nikud preference with localStorage persistence
  */
 export function useNikud() {
-  const { value, setPreference, isLoaded } = usePreference<NikudValue>(
-    STORAGE_KEY,
-    DEFAULT_VALUE,
-    DATA_ATTRIBUTE
-  )
-
-  const nikudEnabled = value === 'true'
-
-  const toggleNikud = useCallback(() => {
-    setPreference(nikudEnabled ? 'false' : 'true')
-  }, [nikudEnabled, setPreference])
+  const {
+    enabled: nikudEnabled,
+    toggle: toggleNikud,
+    isLoaded,
+  } = useBooleanPreference({
+    storageKey: 'shafan-nikud-enabled',
+    dataAttribute: 'data-nikud',
+    defaultValue: true,
+  })
 
   return { nikudEnabled, toggleNikud, isLoaded }
 }

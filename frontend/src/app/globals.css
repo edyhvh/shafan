@@ -2,12 +2,36 @@
 
 @import 'tailwindcss';
 
+/* Custom dark variant - only activate when data-theme="dark" is set */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* Semantic color variables - Light theme (default) */
+:root {
+  --color-primary: #000000; /* Primary text (black) */
+  --color-secondary: #333333; /* Secondary/UI text (gray) */
+  --color-muted: rgba(0, 0, 0, 0.6); /* Muted text */
+  --color-background: #faf6f0; /* Page background */
+  --color-white: #ffffff;
+}
+
+/* Semantic color variables - Dark theme */
+[data-theme='dark'] {
+  --color-primary: #d5c4a1; /* Primary text (sand/hebrew) */
+  --color-secondary: #bdae93; /* Secondary/UI text */
+  --color-muted: rgba(189, 174, 147, 0.7); /* Muted text */
+  --color-background: #3c3836; /* Page background */
+}
+
 /* stylelint-disable-next-line at-rule-no-unknown */
 @theme {
-  --color-black: #000000;
-  --color-gray: #333333;
-  --color-background: #faf6f0;
+  --color-black: var(--color-primary);
+  --color-gray: var(--color-secondary);
+  --color-background: var(--color-background);
   --color-white: #ffffff;
+  /* Legacy dark theme colors - kept for backward compatibility */
+  --color-dark-background: #3c3836;
+  --color-dark-hebrew: #d5c4a1;
+  --color-dark-ui: #bdae93;
 }
 
 @layer base {
@@ -19,6 +43,16 @@
     -webkit-overflow-scrolling: touch;
     /* Better scroll performance */
     scroll-padding-top: 2rem;
+    /* Smooth theme transitions */
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+  }
+
+  /* Dark theme styles */
+  html[data-theme='dark'] {
+    background-color: var(--color-background);
+    color: var(--color-primary);
   }
 
   body {
@@ -28,6 +62,19 @@
     -webkit-overflow-scrolling: touch;
     /* Smooth momentum scrolling */
     overscroll-behavior-y: contain;
+    /* Smooth theme transitions */
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+  }
+
+  /* Keep warning text always black */
+  .warning-text {
+    color: #000000 !important;
+  }
+
+  html[data-theme='dark'] .warning-text {
+    color: #000000 !important;
   }
 
   /* RTL support for Hebrew */
@@ -43,8 +90,46 @@
 }
 
 @layer utilities {
+  /* Semantic text color utilities */
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  .text-secondary {
+    color: var(--color-secondary);
+  }
+
+  .text-muted {
+    color: var(--color-muted);
+  }
+
+  /* Semantic background color utilities */
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+
   /* Background color utility */
   .bg-background {
+    background-color: var(--color-background);
+    transition: background-color 0.3s ease;
+  }
+
+  .bg-gray {
+    background-color: var(--color-secondary);
+    transition: background-color 0.3s ease;
+    opacity: 0.3;
+  }
+
+  html[data-theme='dark'] .bg-gray {
+    opacity: 0.3;
+  }
+
+  .bg-white {
+    background-color: var(--color-white);
+    transition: background-color 0.3s ease;
+  }
+
+  html[data-theme='dark'] .bg-white {
     background-color: var(--color-background);
   }
 
@@ -77,6 +162,15 @@
   .dropdown-panel {
     /* stylelint-disable-next-line at-rule-no-unknown */
     @apply bg-white/95 backdrop-blur-xl border border-black/15 shadow-[0_8px_32px_rgba(0,0,0,0.15),inset_0_1px_1px_rgba(255,255,255,0.8)] rounded-xl ring-1 ring-black/5;
+    transition:
+      background-color 0.3s ease,
+      border-color 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  html[data-theme='dark'] .dropdown-panel {
+    /* stylelint-disable-next-line at-rule-no-unknown */
+    @apply bg-[#3c3836]/95 border border-[#d5c4a1]/20 shadow-[0_8px_32px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(213,196,161,0.1)] ring-1 ring-[#d5c4a1]/10;
   }
 
   /* Animation utilities */
@@ -112,6 +206,56 @@
     }
   }
 
+  /* Slide in animations for controls */
+  @keyframes slideInFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInFromTop {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-in {
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+  }
+
+  .fade-in {
+    animation-name: fadeIn;
+  }
+
+  .slide-in-from-right-4 {
+    animation-name: slideInFromRight;
+  }
+
+  .slide-in-from-top-2 {
+    animation-name: slideInFromTop;
+  }
+
   /* Enhanced smooth scrollbar for the entire website */
   ::-webkit-scrollbar {
     width: 8px;
@@ -143,6 +287,27 @@
     scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.05);
   }
 
+  /* Dark theme scrollbar */
+  html[data-theme='dark'] ::-webkit-scrollbar-track {
+    background: rgba(213, 196, 161, 0.05);
+  }
+
+  html[data-theme='dark'] ::-webkit-scrollbar-thumb {
+    background: rgba(213, 196, 161, 0.3);
+  }
+
+  html[data-theme='dark'] ::-webkit-scrollbar-thumb:hover {
+    background: rgba(213, 196, 161, 0.4);
+  }
+
+  html[data-theme='dark'] ::-webkit-scrollbar-thumb:active {
+    background: rgba(213, 196, 161, 0.5);
+  }
+
+  html[data-theme='dark'] * {
+    scrollbar-color: rgba(213, 196, 161, 0.3) rgba(213, 196, 161, 0.05);
+  }
+
   /* Custom scrollbar for verses dropdown (kept for specificity) */
   .scrollbar-thin::-webkit-scrollbar {
     width: 6px;
@@ -159,6 +324,14 @@
 
   .scrollbar-thin::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 0, 0, 0.3);
+  }
+
+  html[data-theme='dark'] .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: rgba(213, 196, 161, 0.3);
+  }
+
+  html[data-theme='dark'] .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: rgba(213, 196, 161, 0.4);
   }
 
   /* Enhanced smooth scrolling for dropdowns with iOS momentum */
@@ -258,6 +431,62 @@
       inset 4px 4px 8px rgba(180, 160, 140, 0.4);
   }
 
+  /* Dark theme neumorphism */
+  html[data-theme='dark'] .neumorphism {
+    background: var(--color-dark-background);
+    box-shadow:
+      -6px -6px 12px rgba(80, 73, 69, 0.7),
+      6px 6px 12px rgba(29, 32, 33, 0.9);
+  }
+
+  html[data-theme='dark'] .neumorphism:hover {
+    box-shadow:
+      -8px -8px 16px rgba(80, 73, 69, 0.8),
+      8px 8px 16px rgba(29, 32, 33, 1);
+  }
+
+  html[data-theme='dark'] .neumorphism:active,
+  html[data-theme='dark'] .neumorphism.active {
+    box-shadow:
+      inset -4px -4px 8px rgba(29, 32, 33, 0.7),
+      inset 4px 4px 8px rgba(29, 32, 33, 0.5);
+  }
+
+  /* Prevent active state on navbar container to avoid blinking */
+  .navbar-container:active {
+    box-shadow:
+      -6px -6px 12px rgba(255, 255, 255, 1),
+      6px 6px 12px rgba(180, 160, 140, 0.5);
+  }
+
+  html[data-theme='dark'] .navbar-container:active {
+    box-shadow:
+      -6px -6px 12px rgba(80, 73, 69, 0.7),
+      6px 6px 12px rgba(29, 32, 33, 0.9);
+  }
+
+  /* Books dropdown float positioning */
+  .books-dropdown-float {
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: all 0.2s ease-out;
+    /* Keep pointer-events active during transition */
+  }
+
+  .books-dropdown-float.open {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Hide dropdown content when not open, but keep wrapper for mouse events */
+  .books-dropdown-float:not(.open) > * {
+    pointer-events: none;
+  }
+
+  .books-dropdown-float.open > * {
+    pointer-events: auto;
+  }
+
   /* Neumorphism pressed/inset state */
   .neumorphism-inset {
     background: var(--color-background);
@@ -273,6 +502,20 @@
     box-shadow:
       inset -3px -3px 6px rgba(255, 255, 255, 0.8),
       inset 3px 3px 6px rgba(180, 160, 140, 0.35);
+  }
+
+  /* Dark theme neumorphism inset */
+  html[data-theme='dark'] .neumorphism-inset {
+    background: var(--color-dark-background);
+    box-shadow:
+      inset -4px -4px 8px rgba(29, 32, 33, 0.7),
+      inset 4px 4px 8px rgba(29, 32, 33, 0.5);
+  }
+
+  html[data-theme='dark'] .neumorphism-inset:hover {
+    box-shadow:
+      inset -3px -3px 6px rgba(29, 32, 33, 0.6),
+      inset 3px 3px 6px rgba(29, 32, 33, 0.4);
   }
 
   /* Liquid glass effect for dark buttons (nikud) - inactive/grayed state */
@@ -307,5 +550,97 @@
       inset 0 1px 0 rgba(255, 255, 255, 0.1),
       inset 0 -1px 0 rgba(0, 0, 0, 0.2);
     transform: translateY(0);
+  }
+
+  /* Toggle button styles - Light theme */
+  .toggle-outer-raised {
+    box-shadow:
+      6px 6px 12px rgba(180, 160, 140, 0.5),
+      -6px -6px 12px rgba(255, 255, 255, 1);
+  }
+
+  .toggle-outer-raised:hover {
+    box-shadow:
+      8px 8px 16px rgba(180, 160, 140, 0.6),
+      -8px -8px 16px rgba(255, 255, 255, 1);
+  }
+
+  .toggle-outer-pressed {
+    box-shadow:
+      inset 4px 4px 8px rgba(180, 160, 140, 0.5),
+      inset -4px -4px 8px rgba(255, 255, 255, 1);
+  }
+
+  .toggle-outer-pressed:hover {
+    box-shadow:
+      inset 3px 3px 6px rgba(180, 160, 140, 0.4),
+      inset -3px -3px 6px rgba(255, 255, 255, 0.95);
+  }
+
+  .toggle-inner-dark {
+    background-color: var(--color-primary);
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .toggle-inner-dark:hover {
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.4);
+  }
+
+  .toggle-inner-light {
+    box-shadow:
+      inset 2px 2px 4px rgba(180, 160, 140, 0.4),
+      inset -2px -2px 4px rgba(255, 255, 255, 0.9);
+  }
+
+  .toggle-inner-light:hover {
+    box-shadow:
+      inset 2px 2px 5px rgba(180, 160, 140, 0.5),
+      inset -2px -2px 5px rgba(255, 255, 255, 1);
+  }
+
+  /* Toggle button styles - Dark theme */
+  html[data-theme='dark'] .toggle-outer-raised {
+    box-shadow:
+      6px 6px 12px rgba(29, 32, 33, 0.9),
+      -6px -6px 12px rgba(80, 73, 69, 0.7);
+  }
+
+  html[data-theme='dark'] .toggle-outer-raised:hover {
+    box-shadow:
+      8px 8px 16px rgba(29, 32, 33, 1),
+      -8px -8px 16px rgba(80, 73, 69, 0.8);
+  }
+
+  html[data-theme='dark'] .toggle-outer-pressed {
+    box-shadow:
+      inset 4px 4px 8px rgba(29, 32, 33, 0.9),
+      inset -4px -4px 8px rgba(80, 73, 69, 0.3);
+  }
+
+  html[data-theme='dark'] .toggle-outer-pressed:hover {
+    box-shadow:
+      inset 3px 3px 6px rgba(29, 32, 33, 0.8),
+      inset -3px -3px 6px rgba(80, 73, 69, 0.25);
+  }
+
+  html[data-theme='dark'] .toggle-inner-dark {
+    background-color: var(--color-primary);
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  html[data-theme='dark'] .toggle-inner-dark:hover {
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.6);
+  }
+
+  html[data-theme='dark'] .toggle-inner-light {
+    box-shadow:
+      inset 2px 2px 4px rgba(29, 32, 33, 0.6),
+      inset -2px -2px 4px rgba(80, 73, 69, 0.2);
+  }
+
+  html[data-theme='dark'] .toggle-inner-light:hover {
+    box-shadow:
+      inset 2px 2px 5px rgba(29, 32, 33, 0.7),
+      inset -2px -2px 5px rgba(80, 73, 69, 0.25);
   }
 }

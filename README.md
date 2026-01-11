@@ -10,6 +10,9 @@ The Tanaj data used in this project comes from the Open Scriptures Hebrew Bible 
 ### Besorah (Delitzsch)
 The Besorah data used in this project comes from Franz Delitzsch's Hebrew New Testament. We obtained the data from [hebrew-bible.github.io](https://github.com/hebrew-bible/hebrew-bible.github.io), which provides a complete Hebrew Bible including the New Testament.
 
+### Versification Mapping
+Versification mapping data is obtained from the [Copenhagen Alliance](https://github.com/Copenhagen-Alliance/copenhagen-alliance.github.io) project, which provides standardized mappings between Hebrew (Masoretic) and English (KJV-style) versification systems. This data is used to handle differences in verse numbering between Hebrew and English traditions, particularly for Tanakh books where verse numbers differ (e.g., Psalms where Hebrew counts psalm titles as verse 1, while English starts content as verse 1). The mapping data is processed and simplified for use in the frontend to enable accurate cross-referencing between Hebrew and English verse numbers.
+
 ## Quick Start
 
 ### Prerequisites

@@ -48,7 +48,7 @@ export function scrollToVerse(verseNumber: number, offset = 128): void {
   const validOffset = Number.isFinite(offset) ? offset : 128
 
   // Sanitize verse number to prevent any injection issues
-  const sanitizedVerseNumber = Math.floor(Math.abs(verseNumber))
+  const sanitizedVerseNumber = Math.floor(verseNumber)
   const verseElement = document.getElementById(`verse-${sanitizedVerseNumber}`)
 
   if (verseElement) {

@@ -1,23 +1,147 @@
 'use client'
 
+import { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { useNikud } from '@/hooks/useNikud'
 import { useCantillation } from '@/hooks/useCantillation'
 import { useTextSource } from '@/hooks/useTextSource'
 import { useSefer } from '@/hooks/useSefer'
+import { useTheme } from '@/hooks/useTheme'
 import { usePathname } from 'next/navigation'
 import { isNewTestament, AVAILABLE_BOOKS, type BookName } from '@/lib/books'
+import { useScrollState } from '@/hooks/useScrollState'
 import TextSourceToggle from './TextSourceToggle'
+import SunIcon from './icons/SunIcon'
+
+interface ToggleButtonProps {
+  enabled: boolean
+  onClick: () => void
+  label: string
+  ariaLabel: string
+  topPosition: string
+  animationDelay?: string
+}
+
+/**
+ * Reusable toggle button component for reading controls
+ */
+function ToggleButton({
+  enabled,
+  onClick,
+  label,
+  ariaLabel,
+  topPosition,
+  animationDelay = '0ms',
+}: ToggleButtonProps) {
+  return (
+    <div
+      className={`!fixed right-5 z-40 flex flex-col items-center gap-1 transition-all duration-300 ease-out animate-in fade-in slide-in-from-right-4`}
+      style={{ top: topPosition, animationDelay }}
+    >
+      <button
+        onClick={onClick}
+        className="cursor-pointer group relative"
+        aria-label={ariaLabel}
+        aria-pressed={enabled}
+        title={ariaLabel}
+      >
+        {/* Neumorphic outer ring */}
+        <div
+          className={`
+            w-[40px] h-[40px]
+            rounded-full
+            transition-all duration-300 ease-out
+            bg-background
+            group-hover:scale-105
+            ${enabled ? 'toggle-outer-pressed' : 'toggle-outer-raised'}
+          `}
+        >
+          {/* Inner circle - black when ON */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div
+              className={`
+                w-[16px] h-[16px]
+                rounded-full
+                transition-all duration-300 ease-out
+                group-hover:scale-110
+                ${enabled ? 'bg-primary toggle-inner-dark' : 'bg-background toggle-inner-light'}
+              `}
+            />
+          </div>
+        </div>
+      </button>
+      {/* Label below button */}
+      <span className="text-[10px] font-ui-hebrew font-bold text-secondary select-none">
+        {label}
+      </span>
+    </div>
+  )
+}
+
+/**
+ * Theme toggle button component - uses sun icon instead of circle
+ */
+function ThemeToggle({
+  enabled,
+  onClick,
+  ariaLabel,
+  topPosition,
+  animationDelay = '0ms',
+}: Omit<ToggleButtonProps, 'label'>) {
+  return (
+    <div
+      className={`!fixed right-5 z-40 flex flex-col items-center transition-all duration-300 ease-out animate-in fade-in slide-in-from-right-4`}
+      style={{ top: topPosition, animationDelay }}
+    >
+      <button
+        onClick={onClick}
+        className="cursor-pointer group relative"
+        aria-label={ariaLabel}
+        aria-pressed={enabled}
+        title={ariaLabel}
+      >
+        {/* Neumorphic outer ring */}
+        <div
+          className={`
+            w-[40px] h-[40px]
+            rounded-full
+            transition-all duration-300 ease-out
+            bg-background
+            group-hover:scale-105
+            ${enabled ? 'toggle-outer-pressed' : 'toggle-outer-raised'}
+          `}
+        >
+          {/* Sun icon - adapts to theme */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <SunIcon
+              className="
+                transition-all duration-300 ease-out
+                group-hover:scale-110
+                text-primary
+              "
+            />
+          </div>
+        </div>
+      </button>
+    </div>
+  )
+}
 
 /**
  * Component for reading controls (nikud and text source toggles)
- * Positioned as floating controls in the top right
+ * Positioned as fixed controls at the top, always visible
  */
 export default function ReadingControls() {
   const { nikudEnabled, toggleNikud } = useNikud()
   const { cantillationEnabled, toggleCantillation } = useCantillation()
   const { textSource, toggleTextSource } = useTextSource()
   const { seferEnabled, toggleSefer } = useSefer()
+  const { theme, toggleTheme } = useTheme()
   const pathname = usePathname()
+  const [mounted, setMounted] = useState(false)
+
+  // Import scroll state hook
+  const { shouldHideForContent } = useScrollState()
 
   // Extract bookId from pathname to check if it's New Testament
   const pathParts = pathname.split('/')
@@ -33,7 +157,16 @@ export default function ReadingControls() {
   const showTextSourceToggle = bookName && isNewTestament(bookName)
   const showCantillationToggle = bookName && !isNewTestament(bookName)
 
-  return (
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  // Hide controls when scrolled down (like navbar)
+  if (shouldHideForContent) {
+    return null
+  }
+
+  const controlsContent = (
     <>
       {/* Text Source Toggle (Hutter/Delitzsch) - Only for New Testament */}
       {showTextSourceToggle && (
@@ -41,160 +174,66 @@ export default function ReadingControls() {
           enabled={textSource === 'hutter'}
           onToggle={toggleTextSource}
           position="top-6 right-5"
+          className="transition-all duration-300 ease-out animate-in fade-in slide-in-from-right-4"
         />
       )}
 
       {/* Nikud Button - Always shown, positioned below text source toggle if both are visible */}
-      <div
-        className={`fixed ${showTextSourceToggle ? 'top-[72px]' : 'top-6'} right-5 z-40 flex flex-col items-center gap-1`}
-      >
-        <button
-          onClick={toggleNikud}
-          className="cursor-pointer group relative"
-          aria-label="Toggle nikud (vowel points)"
-          aria-pressed={nikudEnabled}
-          title="Toggle nikud"
-        >
-          {/* Neumorphic outer ring */}
-          <div
-            className={`
-              w-[40px] h-[40px]
-              rounded-full
-              transition-all duration-300 ease-out
-              bg-background
-              group-hover:scale-105
-              ${
-                nikudEnabled
-                  ? 'shadow-[inset_4px_4px_8px_rgba(180,160,140,0.5),inset_-4px_-4px_8px_rgba(255,255,255,1)] group-hover:shadow-[inset_3px_3px_6px_rgba(180,160,140,0.4),inset_-3px_-3px_6px_rgba(255,255,255,0.95)]'
-                  : 'shadow-[6px_6px_12px_rgba(180,160,140,0.5),-6px_-6px_12px_rgba(255,255,255,1)] group-hover:shadow-[8px_8px_16px_rgba(180,160,140,0.6),-8px_-8px_16px_rgba(255,255,255,1)]'
-              }
-            `}
-          >
-            {/* Inner circle - dark when ON */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div
-                className={`
-                  w-[16px] h-[16px]
-                  rounded-full
-                  transition-all duration-300 ease-out
-                  group-hover:scale-110
-                  ${
-                    nikudEnabled
-                      ? 'bg-gray shadow-[inset_1px_1px_2px_rgba(0,0,0,0.3)] group-hover:shadow-[inset_1px_1px_3px_rgba(0,0,0,0.4)]'
-                      : 'bg-background shadow-[inset_2px_2px_4px_rgba(180,160,140,0.4),inset_-2px_-2px_4px_rgba(255,255,255,0.9)] group-hover:shadow-[inset_2px_2px_5px_rgba(180,160,140,0.5),inset_-2px_-2px_5px_rgba(255,255,255,1)]'
-                  }
-                `}
-              />
-            </div>
-          </div>
-        </button>
-        {/* Label below button */}
-        <span className="text-[10px] font-ui-hebrew font-bold text-gray/70 select-none">
-          נקוד
-        </span>
-      </div>
+      {/* Text source ends at 56px, so Nikud starts at 72px with 16px gap */}
+      <ToggleButton
+        enabled={nikudEnabled}
+        onClick={toggleNikud}
+        label="נקוד"
+        ariaLabel="Toggle nikud (vowel points)"
+        topPosition={showTextSourceToggle ? '72px' : '24px'}
+        animationDelay="50ms"
+      />
+
+      {/* Sefer Button - Always shown, positioned below nikud button */}
+      {/* Each button component is ~56px tall (40px button + 4px gap + 12px label) */}
+      {/* Using 64px spacing between button tops for consistent visual separation */}
+      <ToggleButton
+        enabled={seferEnabled}
+        onClick={toggleSefer}
+        label="ספר"
+        ariaLabel="Toggle sefer (continuous paragraph) display"
+        topPosition={showTextSourceToggle ? '136px' : '88px'}
+        animationDelay="100ms"
+      />
 
       {/* Cantillation Button - Only shown for Tanaj books, positioned below sefer button */}
       {showCantillationToggle && (
-        <div
-          className={`fixed ${showTextSourceToggle ? 'top-[200px]' : 'top-[154px]'} right-5 z-40 flex flex-col items-center gap-1`}
-        >
-          <button
-            onClick={toggleCantillation}
-            className="cursor-pointer group relative"
-            aria-label="Toggle cantillation marks"
-            aria-pressed={cantillationEnabled}
-            title="Toggle cantillation marks"
-          >
-            {/* Neumorphic outer ring */}
-            <div
-              className={`
-                w-[40px] h-[40px]
-                rounded-full
-                transition-all duration-300 ease-out
-                bg-background
-                group-hover:scale-105
-                ${
-                  cantillationEnabled
-                    ? 'shadow-[inset_4px_4px_8px_rgba(180,160,140,0.5),inset_-4px_-4px_8px_rgba(255,255,255,1)] group-hover:shadow-[inset_3px_3px_6px_rgba(180,160,140,0.4),inset_-3px_-3px_6px_rgba(255,255,255,0.95)]'
-                    : 'shadow-[6px_6px_12px_rgba(180,160,140,0.5),-6px_-6px_12px_rgba(255,255,255,1)] group-hover:shadow-[8px_8px_16px_rgba(180,160,140,0.6),-8px_-8px_16px_rgba(255,255,255,1)]'
-                }
-              `}
-            >
-              {/* Inner circle - dark when ON */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div
-                  className={`
-                    w-[16px] h-[16px]
-                    rounded-full
-                    transition-all duration-300 ease-out
-                    group-hover:scale-110
-                    ${
-                      cantillationEnabled
-                        ? 'bg-gray shadow-[inset_1px_1px_2px_rgba(0,0,0,0.3)] group-hover:shadow-[inset_1px_1px_3px_rgba(0,0,0,0.4)]'
-                        : 'bg-background shadow-[inset_2px_2px_4px_rgba(180,160,140,0.4),inset_-2px_-2px_4px_rgba(255,255,255,0.9)] group-hover:shadow-[inset_2px_2px_5px_rgba(180,160,140,0.5),inset_-2px_-2px_5px_rgba(255,255,255,1)]'
-                    }
-                  `}
-                />
-              </div>
-            </div>
-          </button>
-          {/* Label below button */}
-          <span className="text-[10px] font-ui-hebrew font-bold text-gray/70 select-none">
-            טעמים
-          </span>
-        </div>
+        <ToggleButton
+          enabled={cantillationEnabled}
+          onClick={toggleCantillation}
+          label="טעמים"
+          ariaLabel="Toggle cantillation marks"
+          topPosition={showTextSourceToggle ? '200px' : '152px'}
+          animationDelay="150ms"
+        />
       )}
 
-      {/* Sefer Button - Always shown, positioned below nikud button */}
-      <div
-        className={`fixed ${showTextSourceToggle ? 'top-[140px]' : 'top-[94px]'} right-5 z-40 flex flex-col items-center gap-1`}
-      >
-        <button
-          onClick={toggleSefer}
-          className="cursor-pointer group relative"
-          aria-label="Toggle sefer (continuous paragraph) display"
-          aria-pressed={seferEnabled}
-          title="Toggle sefer (continuous text) display"
-        >
-          {/* Neumorphic outer ring */}
-          <div
-            className={`
-              w-[40px] h-[40px]
-              rounded-full
-              transition-all duration-300 ease-out
-              bg-background
-              group-hover:scale-105
-              ${
-                seferEnabled
-                  ? 'shadow-[inset_4px_4px_8px_rgba(180,160,140,0.5),inset_-4px_-4px_8px_rgba(255,255,255,1)] group-hover:shadow-[inset_3px_3px_6px_rgba(180,160,140,0.4),inset_-3px_-3px_6px_rgba(255,255,255,0.95)]'
-                  : 'shadow-[6px_6px_12px_rgba(180,160,140,0.5),-6px_-6px_12px_rgba(255,255,255,1)] group-hover:shadow-[8px_8px_16px_rgba(180,160,140,0.6),-8px_-8px_16px_rgba(255,255,255,1)]'
-              }
-            `}
-          >
-            {/* Inner circle - dark when ON */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div
-                className={`
-                  w-[16px] h-[16px]
-                  rounded-full
-                  transition-all duration-300 ease-out
-                  group-hover:scale-110
-                  ${
-                    seferEnabled
-                      ? 'bg-gray shadow-[inset_1px_1px_2px_rgba(0,0,0,0.3)] group-hover:shadow-[inset_1px_1px_3px_rgba(0,0,0,0.4)]'
-                      : 'bg-background shadow-[inset_2px_2px_4px_rgba(180,160,140,0.4),inset_-2px_-2px_4px_rgba(255,255,255,0.9)] group-hover:shadow-[inset_2px_2px_5px_rgba(180,160,140,0.5),inset_-2px_-2px_5px_rgba(255,255,255,1)]'
-                  }
-                `}
-              />
-            </div>
-          </div>
-        </button>
-        {/* Label below button */}
-        <span className="text-[10px] font-ui-hebrew font-bold text-gray/70 select-none">
-          ספר
-        </span>
-      </div>
+      {/* Theme Toggle Button - Always shown, positioned below the last button */}
+      <ThemeToggle
+        enabled={theme === 'light'}
+        onClick={toggleTheme}
+        ariaLabel="Toggle theme (light/dark)"
+        topPosition={
+          showCantillationToggle
+            ? showTextSourceToggle
+              ? '264px'
+              : '216px'
+            : showTextSourceToggle
+              ? '200px'
+              : '152px'
+        }
+        animationDelay="200ms"
+      />
     </>
   )
+
+  // Use portal to render controls directly in body, outside any scrollable containers
+  if (!mounted) return null
+
+  return createPortal(controlsContent, document.body)
 }

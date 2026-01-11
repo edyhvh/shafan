@@ -1,11 +1,11 @@
 'use client'
 
-import { useState, useRef } from 'react'
-import Link from 'next/link'
+import { useState, useRef, useEffect } from 'react'
 import { useClickOutside } from '@/hooks/useClickOutside'
-import { ChevronDown } from '@/components/icons'
+import { useBookSearch } from '@/hooks/useBookSearch'
+import { useChapterSearch } from '@/hooks/useChapterSearch'
+import SearchableDropdown from '@/components/SearchableDropdown'
 import {
-  AVAILABLE_BOOKS,
   BOOK_DISPLAY_NAMES,
   BOOK_HEBREW_INFO,
   type BookName,
@@ -16,7 +16,7 @@ interface ChapterTitleSelectorProps {
   currentChapter: number
   hebrewLetter?: string
   chapters: { number: number; hebrew_letter: string }[]
-  bookName: string
+  bookName: BookName
   locale: string
 }
 
@@ -33,6 +33,29 @@ export default function ChapterTitleSelector({
   const chapterDropdownRef = useRef<HTMLDivElement>(null)
   const bookDropdownRef = useRef<HTMLDivElement>(null)
 
+  // Use custom hooks for search functionality
+  const {
+    bookSearchQuery,
+    setBookSearchQuery,
+    filteredBooks,
+    clearBookSearch,
+  } = useBookSearch()
+  const {
+    chapterSearchQuery,
+    setChapterSearchQuery,
+    filteredChapters,
+    clearChapterSearch,
+  } = useChapterSearch(chapters)
+
+  // Clear search when closing dropdowns
+  useEffect(() => {
+    if (!isBookOpen) clearBookSearch()
+  }, [isBookOpen, clearBookSearch])
+
+  useEffect(() => {
+    if (!isChapterOpen) clearChapterSearch()
+  }, [isChapterOpen, clearChapterSearch])
+
   // Close dropdowns when clicking outside
   useClickOutside(
     chapterDropdownRef,
@@ -42,7 +65,7 @@ export default function ChapterTitleSelector({
   useClickOutside(bookDropdownRef, () => setIsBookOpen(false), isBookOpen)
 
   // Get Hebrew info for the current book (for en/es locales)
-  const hebrewInfo = BOOK_HEBREW_INFO[bookName as BookName]
+  const hebrewInfo = BOOK_HEBREW_INFO[bookName]
   const transliteration =
     locale === 'es'
       ? hebrewInfo?.transliteration.es
@@ -53,125 +76,77 @@ export default function ChapterTitleSelector({
       {/* Hebrew name and transliteration (only for en/es locales) */}
       {locale !== 'he' && hebrewInfo && (
         <div className="mb-3 text-center">
-          <div className="font-bible-hebrew text-xl text-black/70 leading-tight">
+          <div className="font-bible-hebrew text-xl text-black/70 dark:text-[#d5c4a1]/80 leading-tight">
             {hebrewInfo.hebrew}
           </div>
-          <div className="text-[11px] text-black/35 font-light tracking-wide">
+          <div className="text-[11px] text-black/35 dark:text-[#d5c4a1]/50 font-light tracking-wide">
             {transliteration}
           </div>
         </div>
       )}
-      <h1 className="font-ui-latin text-lg text-black mb-1 inline-flex items-center gap-2">
-        {/* Book selector with click dropdown */}
-        <div className="relative inline-block" ref={bookDropdownRef}>
-          <button
-            onClick={() => {
+      <h1 className="font-ui-latin text-lg text-black dark:text-[#d5c4a1] mb-1 inline-flex items-center gap-2">
+        {/* Book selector with SearchableDropdown */}
+        <div ref={bookDropdownRef}>
+          <SearchableDropdown
+            triggerLabel={bookDisplayName}
+            triggerClassName={`h-[36px] px-3 flex items-center justify-center font-semibold text-base cursor-pointer transition-all duration-200 neumorphism ${
+              locale === 'he' ? 'font-ui-hebrew' : ''
+            }`}
+            triggerAriaLabel="Select book"
+            isOpen={isBookOpen}
+            onToggle={() => {
               setIsBookOpen(!isBookOpen)
               setIsChapterOpen(false)
             }}
-            className={`
-              h-[36px] px-3
-              flex items-center justify-center
-              font-semibold text-base
-              cursor-pointer
-              transition-all duration-200
-              neumorphism
-              ${isBookOpen ? 'active' : ''}
-            `}
-            aria-expanded={isBookOpen}
-            aria-haspopup="listbox"
-          >
-            <span className={locale === 'he' ? 'font-ui-hebrew' : ''}>
-              {bookDisplayName}
-            </span>
-            <ChevronDown
-              className={`ml-1 transition-transform duration-200 ${isBookOpen ? 'rotate-180' : ''}`}
-            />
-          </button>
-
-          {/* Books dropdown */}
-          {isBookOpen && (
-            <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 dropdown-panel overflow-hidden z-50 min-w-[200px] max-h-[400px] overflow-y-auto">
-              <div className="py-1">
-                {AVAILABLE_BOOKS.map((book) => {
-                  const displayName = BOOK_DISPLAY_NAMES[book]
-                  const isCurrentBook = book === bookName
-                  return (
-                    <Link
-                      key={book}
-                      href={`/${locale}/book/${book}/chapter/1`}
-                      onClick={() => setIsBookOpen(false)}
-                      className={`block px-4 py-2 text-sm font-semibold transition-all duration-200 ${
-                        isCurrentBook
-                          ? 'bg-black text-white'
-                          : 'text-black hover:bg-black/5'
-                      } ${locale === 'he' ? 'font-ui-hebrew text-right' : ''}`}
-                    >
-                      {displayName[locale as 'he' | 'es' | 'en'] ||
-                        displayName.en}
-                    </Link>
-                  )
-                })}
-              </div>
-            </div>
-          )}
+            searchQuery={bookSearchQuery}
+            onSearchChange={setBookSearchQuery}
+            searchPlaceholder="Search for..."
+            items={filteredBooks.map((book) => {
+              const displayName = BOOK_DISPLAY_NAMES[book]
+              return {
+                id: book,
+                label:
+                  displayName[locale as 'he' | 'es' | 'en'] || displayName.en,
+                href: `/${locale}/book/${book}/chapter/1`,
+                isCurrent: book === bookName,
+                onClick: () => setIsBookOpen(false),
+              }
+            })}
+            emptyMessage="No books found"
+          />
         </div>
 
-        {/* Chapter selector with click dropdown */}
-        <div className="relative inline-block" ref={chapterDropdownRef}>
-          <button
-            onClick={() => {
+        {/* Chapter selector with SearchableDropdown */}
+        <div ref={chapterDropdownRef}>
+          <SearchableDropdown
+            triggerLabel={
+              locale === 'he' && hebrewLetter
+                ? hebrewLetter
+                : currentChapter.toString()
+            }
+            triggerClassName={`min-w-[36px] h-[36px] px-2 flex items-center justify-center font-semibold text-base cursor-pointer transition-all duration-200 neumorphism ${
+              locale === 'he' && hebrewLetter ? 'font-ui-hebrew' : ''
+            }`}
+            triggerAriaLabel="Select chapter"
+            isOpen={isChapterOpen && chapters.length > 1}
+            onToggle={() => {
               setIsChapterOpen(!isChapterOpen)
               setIsBookOpen(false)
             }}
-            className={`
-              min-w-[36px] h-[36px] px-2
-              flex items-center justify-center
-              font-semibold text-base
-              cursor-pointer
-              transition-all duration-200
-              neumorphism
-              ${isChapterOpen ? 'active' : ''}
-            `}
-            aria-expanded={isChapterOpen}
-            aria-haspopup="listbox"
-          >
-            {locale === 'he' && hebrewLetter ? (
-              <span className="font-ui-hebrew">{hebrewLetter}</span>
-            ) : (
-              currentChapter
-            )}
-            <ChevronDown
-              className={`ml-1 transition-transform duration-200 ${isChapterOpen ? 'rotate-180' : ''}`}
-            />
-          </button>
-
-          {/* Chapters dropdown */}
-          {isChapterOpen && chapters.length > 1 && (
-            <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 dropdown-panel overflow-hidden z-50 min-w-[180px] max-h-[400px] overflow-y-auto">
-              <div className="py-2">
-                <div className="px-4 py-2 text-xs font-medium text-black/50 uppercase tracking-wide border-b border-black/5">
-                  Chapters
-                </div>
-                <div className="grid grid-cols-4 gap-1 p-2">
-                  {chapters.map((chapter) => (
-                    <Link
-                      key={chapter.number}
-                      href={`/${locale}/book/${bookName}/chapter/${chapter.number}`}
-                      onClick={() => setIsChapterOpen(false)}
-                      className={`flex items-center justify-center p-2 text-sm font-semibold rounded-lg transition-all duration-200 ${
-                        chapter.number === currentChapter
-                          ? 'bg-black text-white'
-                          : 'text-black hover:bg-black/5'
-                      }`}
-                    >
-                      {chapter.number}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
-          )}
+            searchQuery={chapterSearchQuery}
+            onSearchChange={setChapterSearchQuery}
+            searchPlaceholder="Search for..."
+            items={filteredChapters.map((chapter) => ({
+              id: chapter.number.toString(),
+              label: chapter.number.toString(),
+              href: `/${locale}/book/${bookName}/chapter/${chapter.number}`,
+              isCurrent: chapter.number === currentChapter,
+              onClick: () => setIsChapterOpen(false),
+            }))}
+            emptyMessage="No chapters found"
+            gridCols={4}
+            dropdownClassName="dropdown-panel"
+          />
         </div>
       </h1>
     </div>

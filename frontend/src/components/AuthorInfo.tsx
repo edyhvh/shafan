@@ -2,6 +2,7 @@
 
 import { useTextSource } from '@/hooks/useTextSource'
 import { isNewTestament, type BookName } from '@/lib/books'
+import { useState, useEffect } from 'react'
 
 interface AuthorInfoProps {
   bookName: BookName
@@ -19,8 +20,14 @@ export default function AuthorInfo({
   hutterAuthor,
   hutterYear,
 }: AuthorInfoProps) {
-  const { textSource } = useTextSource()
+  const { textSource, isLoaded } = useTextSource()
   const isNT = isNewTestament(bookName)
+  const [mounted, setMounted] = useState(false)
+
+  // Ensure component is mounted before rendering dynamic content
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   // For New Testament: show Hutter or Delitzsch based on textSource
   // For Tanaj: show Masoretic Text info
@@ -28,7 +35,9 @@ export default function AuthorInfo({
   let year: string
 
   if (isNT) {
-    if (textSource === 'delitzsch') {
+    // During SSR and initial render, use hutter to match server
+    // After hydration, use the actual textSource
+    if (mounted && isLoaded && textSource === 'delitzsch') {
       author = 'Franz Delitzsch'
       year = '1877'
     } else {
@@ -48,7 +57,10 @@ export default function AuthorInfo({
 
   return (
     <div className="mt-12 flex justify-center">
-      <p className="font-ui-latin text-sm text-gray text-center">
+      <p
+        className="font-ui-latin text-sm text-gray text-center"
+        suppressHydrationWarning
+      >
         {author}
         {year && ` (${year})`}
       </p>

@@ -7,14 +7,14 @@ export default function Logo({ className = '', size = 'default' }: LogoProps) {
   const isCompact = size === 'compact'
 
   const hebrewSize = isCompact
-    ? 'text-[24px] md:text-[28px]'
+    ? 'text-[20px] md:text-[22px]'
     : 'text-[52px] md:text-[52px]'
 
   const latinSize = isCompact
-    ? 'text-[22px] md:text-[26px]'
+    ? 'text-[18px] md:text-[20px]'
     : 'text-[48px] md:text-[48px]'
 
-  const gap = isCompact ? 'gap-1.5' : 'gap-3'
+  const gap = isCompact ? 'gap-1' : 'gap-3'
 
   return (
     <div className={`flex items-baseline ${gap} ${className}`}>
