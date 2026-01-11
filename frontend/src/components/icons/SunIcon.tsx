@@ -5,7 +5,7 @@ interface SunIconProps {
 export default function SunIcon({ className = '' }: SunIconProps) {
   return (
     <svg
-      className={`w-4 h-4 ${className}`}
+      className={`w-6 h-6 ${className}`}
       fill="currentColor"
       viewBox="0 0 24 24"
     >
