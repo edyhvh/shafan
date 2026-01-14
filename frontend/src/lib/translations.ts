@@ -41,7 +41,7 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     info_title: 'Info',
     info_hutter_title: 'Who was Elias Hutter?',
     info_hutter_text:
-      'Elias Hutter (c. 1553–1605) was a German Hebraist, linguist, and printer from Görlitz. His translation of the New Testament into Hebrew, published between 1599 and 1602 as part of the Nuremberg Polyglot, represents one of the first complete Hebrew New Testaments ever printed. Note: This OCR transcription from the original printed work contains some inaccuracies and is still being refined.',
+      "Elias Hutter (c. 1553–1605) was a German Hebraist, linguist, and printer from Görlitz. His translation of the New Testament into Hebrew, published between 1599 and 1602 as part of the Nuremberg Polyglot, represents one of the first complete Hebrew New Testaments ever printed. Please note that Hutter's translation is not linguistically accurate and contains numerous errors. We are actively working to improve and correct these texts through ongoing research and community contributions.",
     info_polyglot_title: 'The Nuremberg Polyglot',
     info_polyglot_text:
       'The Nuremberg Polyglot New Testament, published between 1599 and 1602, is a monumental work presenting the New Testament in twelve languages arranged in parallel columns. Among these languages, Hutter included his own Hebrew translation, making it one of the first complete Hebrew New Testaments ever printed. This work represents a remarkable achievement in biblical scholarship and early modern printing.',
@@ -71,7 +71,7 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     info_title: 'Info',
     info_hutter_title: '¿Quién fue Elias Hutter?',
     info_hutter_text:
-      'Elias Hutter (c. 1553–1605) fue un hebraísta, lingüista e impresor alemán de Görlitz. Su traducción del Nuevo Testamento al hebreo, publicada entre 1599 y 1602 como parte de la Políglota de Núremberg, representa uno de los primeros Nuevos Testamentos hebreos completos jamás impresos. Nota: Esta transcripción OCR de la obra impresa original contiene algunas inexactitudes y aún está siendo refinada.',
+      'Elias Hutter (c. 1553–1605) fue un hebraísta, lingüista e impresor alemán de Görlitz. Su traducción del Nuevo Testamento al hebreo, publicada entre 1599 y 1602 como parte de la Políglota de Núremberg, representa uno de los primeros Nuevos Testamentos hebreos completos jamás impresos. Por favor note que la traducción de Hutter no es lingüísticamente precisa y contiene numerosos errores. Estamos trabajando activamente para mejorar y corregir estos textos mediante investigación continua y contribuciones de la comunidad.',
     info_polyglot_title: 'La Políglota de Núremberg',
     info_polyglot_text:
       'La Políglota del Nuevo Testamento de Núremberg, publicada entre 1599 y 1602, es una obra monumental que presenta el Nuevo Testamento en doce idiomas dispuestos en columnas paralelas. Entre estos idiomas, Hutter incluyó su propia traducción al hebreo, convirtiéndola en uno de los primeros Nuevos Testamentos hebreos completos jamás impresos. Esta obra representa un logro notable en los estudios bíblicos y la impresión moderna temprana.',
@@ -101,7 +101,7 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     info_title: 'מידע',
     info_hutter_title: 'מי היה אליאס הוטר?',
     info_hutter_text:
-      'אליאס הוטר (1553–1605 לערך) היה חוקר עברית, בלשן ומדפיס גרמני מגרליץ. תרגומו של הברית החדשה לעברית, שפורסם בין 1599 ל-1602 כחלק מהפוליגלוטה של נירנברג, מייצג אחד מהברית החדשות העבריות המלאות הראשונות שהודפסו אי פעם. הערה: תמלול ה-OCR הזה מהעבודה המודפסת המקורית מכיל חלק מהחוסרים וממשיך להיות משוכלל.',
+      'אליאס הוטר (1553–1605 לערך) היה חוקר עברית, בלשן ומדפיס גרמני מגרליץ. תרגומו של הברית החדשה לעברית, שפורסם בין 1599 ל-1602 כחלק מהפוליגלוטה של נירנברג, מייצג אחד מהברית החדשות העבריות המלאות הראשונות שהודפסו אי פעם. אנא שימו לב שתרגומו של הוטר אינו מדויק לשונית וכולל שגיאות רבות. אנו עובדים באופן פעיל לשפר ולתקן טקסטים אלה באמצעות מחקר מתמשך ותרומות הקהילה.',
     info_polyglot_title: 'הפוליגלוטה של נירנברג',
     info_polyglot_text:
       'הברית החדשה הפוליגלוטית של נירנברג, שפורסמה בין 1599 ל-1602, היא יצירה מונומנטלית המציגה את הברית החדשה בשתים עשרה שפות המסודרות בעמודות מקבילות. בין שפות אלו, הוטר כלל את תרגומו העברי שלו, והפך אותה לאחת מהברית החדשות העבריות המלאות הראשונות שהודפסו אי פעם. יצירה זו מייצגת הישג מרשים במדעי המקרא ובדפוס המודרני המוקדם.',
