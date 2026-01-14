@@ -45,6 +45,20 @@ export default async function InfoPage({ params }: PageProps) {
           </p>
         </section>
 
+        {/* Delitzsch Translation */}
+        <section>
+          <h2
+            className={`text-xl font-semibold mb-3 text-black ${isRTL ? 'font-hebrew' : 'font-ui-latin'}`}
+          >
+            {t('info_delitzsch_title', loc)}
+          </h2>
+          <p
+            className={`text-black/70 leading-relaxed ${isRTL ? 'font-hebrew' : 'font-ui-latin'}`}
+          >
+            {t('info_delitzsch_text', loc)}
+          </p>
+        </section>
+
         {/* Nuremberg Polyglot */}
         <section>
           <h2
@@ -70,20 +84,6 @@ export default async function InfoPage({ params }: PageProps) {
             className={`text-black/70 leading-relaxed ${isRTL ? 'font-hebrew' : 'font-ui-latin'}`}
           >
             {t('info_besorah_text', loc)}
-          </p>
-        </section>
-
-        {/* Delitzsch Translation */}
-        <section>
-          <h2
-            className={`text-xl font-semibold mb-3 text-black ${isRTL ? 'font-hebrew' : 'font-ui-latin'}`}
-          >
-            {t('info_delitzsch_title', loc)}
-          </h2>
-          <p
-            className={`text-black/70 leading-relaxed ${isRTL ? 'font-hebrew' : 'font-ui-latin'}`}
-          >
-            {t('info_delitzsch_text', loc)}
           </p>
         </section>
 

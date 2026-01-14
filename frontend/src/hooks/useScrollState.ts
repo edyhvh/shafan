@@ -25,11 +25,16 @@ export function useScrollState(): ScrollState {
     // A good threshold is around 70-80px of scroll
     const shouldHideForContent = currentScrollY > 70
 
+    // Only update scroll direction if there's actual movement
+    const scrollDelta = currentScrollY - lastScrollY
+    const newScrollDirection =
+      Math.abs(scrollDelta) > 1 ? (scrollDelta > 0 ? 'down' : 'up') : null
+
     setScrollState((prev) => ({
       ...prev,
       isAtTop,
       shouldHideForContent,
-      scrollDirection: currentScrollY > lastScrollY ? 'down' : 'up',
+      scrollDirection: newScrollDirection || prev.scrollDirection,
     }))
 
     setLastScrollY(currentScrollY)

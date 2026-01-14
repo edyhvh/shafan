@@ -10,6 +10,7 @@ import LanguageSelector from './LanguageSelector'
 import Logo from './Logo'
 import { MenuIcon } from './icons'
 import { getLastBookLocation } from '@/hooks/useLastBook'
+import { useScrollState } from '@/hooks/useScrollState'
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -19,6 +20,7 @@ export default function Navbar() {
   const pathname = usePathname()
   const locale = getLocaleFromPath(pathname)
   const router = useRouter()
+  const { shouldHideForContent } = useScrollState()
 
   // Clear timeouts on unmount
   useEffect(() => {
@@ -88,8 +90,17 @@ export default function Navbar() {
     [locale, pathname, router]
   )
 
+  // Determine if navbar should be hidden
+  const shouldHideNavbar = shouldHideForContent
+
   return (
-    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
+    <nav
+      className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ease-in-out ${
+        shouldHideNavbar
+          ? '-translate-y-[calc(100%+2rem)] opacity-0'
+          : 'translate-y-0 opacity-100'
+      }`}
+    >
       <div className="flex items-center gap-2 px-3 py-2 rounded-lg neumorphism navbar-container">
         {/* Logo */}
         <button
