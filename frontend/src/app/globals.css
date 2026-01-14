@@ -643,4 +643,9 @@
       inset 2px 2px 5px rgba(29, 32, 33, 0.7),
       inset -2px -2px 5px rgba(80, 73, 69, 0.25);
   }
+
+  /* Crypto icon internal lines - dark theme */
+  html[data-theme='dark'] .crypto-icon-internal {
+    fill: var(--color-dark-background);
+  }
 }
