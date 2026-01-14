@@ -15,7 +15,7 @@ import hebrew_tokens
 
 def test_model():
     # Load model
-    model_path = Path(__file__).parent / 'models' / 'soferim_stage2_finetuned.pt'
+    model_path = Path(__file__).parent.parent.parent / 'models' / 'soferim_stage2_finetuned.pt'
     if not model_path.exists():
         print(f"Model not found at {model_path}")
         return

@@ -327,7 +327,7 @@ def train_two_stage(project_root=None, device='cpu', resume_stage1_from=None, re
     )
 
     # Path for stage 1 model
-    stage1_model_path = project_root / 'scripts' / 'soferim' / 'models' / 'soferim_stage1_pretrained.pt'
+    stage1_model_path = project_root / 'models' / 'soferim_stage1_pretrained.pt'
 
     # Check if stage 1 is already completed
     if stage1_model_path.exists() and resume_stage1_from is None:
@@ -384,7 +384,7 @@ def train_two_stage(project_root=None, device='cpu', resume_stage1_from=None, re
         )
 
     # Fine-tune on Hutter data
-    stage2_model_path = project_root / 'scripts' / 'soferim' / 'models' / 'soferim_stage2_finetuned.pt'
+    stage2_model_path = project_root / 'models' / 'soferim_stage2_finetuned.pt'
 
     stage2_history = train_model(
         model=soferim_model,
@@ -415,7 +415,7 @@ def main():
     parser.add_argument('--num-layers', type=int, default=3, help='Number of LSTM layers')
     parser.add_argument('--dropout', type=float, default=0.2, help='Dropout probability')
     parser.add_argument('--max-length', type=int, default=128, help='Maximum sequence length')
-    parser.add_argument('--output-dir', type=str, default='scripts/soferim/models', help='Output directory')
+    parser.add_argument('--output-dir', type=str, default='models', help='Output directory')
     parser.add_argument('--model-name', type=str, default='soferim.pt', help='Model filename')
     parser.add_argument('--device', type=str, default='auto', help='Device (cpu/cuda/auto)')
     parser.add_argument('--two-stage', action='store_true', help='Use two-stage training')
