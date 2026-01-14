@@ -171,7 +171,7 @@ export default function ReadingControls() {
       {/* Text Source Toggle (Hutter/Delitzsch) - Only for New Testament */}
       {showTextSourceToggle && (
         <TextSourceToggle
-          enabled={textSource === 'hutter'}
+          enabled={textSource === 'delitzsch'}
           onToggle={toggleTextSource}
           position="top-6 right-5"
           className="transition-all duration-300 ease-out animate-in fade-in slide-in-from-right-4"

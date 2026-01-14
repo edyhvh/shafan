@@ -1,0 +1,3602 @@
+{
+  "book": "john1",
+  "total_verses": 105,
+  "verses_with_corrections": 72,
+  "confidence_threshold": 0.5,
+  "top_k": 3,
+  "model_used": "real_model",
+  "corrections": [
+    {
+      "book": "john1",
+      "chapter": 1,
+      "verse": 1,
+      "original_text": "אֲשֶׁר הָיָה מֵרֹאשִׁית אֲשֶׁר שָׁמַעְנוּ וְרָאִינוּ בְּעֵינֵינוּ אֲשֶׁר הִבַּטְנוּ וְיָדֵינוּ מִשְׁשׁוּ עַל דְּבַר הַחַיִּים",
+      "delitzsch_reference": "אֵת אֲשֶׁר הָיָה מֵרׂאשׁ אֲשֶׁר שָׁמַעְנוּ וּבְעֵינֵינוּ רָאִינוּ אֲשֶׁר הִבַּטְנוּ וַאֲשֶׁר מִשֲׁשׁוּ יָדֵינוּ עַל־דְּבַר הַחַיִּים׃",
+      "corrections": [
+        {
+          "word_index": 1,
+          "original_word": "הָיָה",
+          "error_confidence": 0.6796615123748779,
+          "suggestions": [
+            {
+              "word": "אֲשֶׁר",
+              "confidence": 0.7622796893119812
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 1,
+      "verse": 2,
+      "original_text": "וְהַחַיִּים נִגְלוּ וְרָאִינוּ וּמַעִידִים אֲנַחְנוּ וּמַבְשְׂרִים אֶתְכֶם אֶת־חַיֵּי עוֹלָם אֲשֶׁר הָיָה אֵת־אָב וַיִּגָּלֶה לָנוּ",
+      "delitzsch_reference": "וְהַחַיִּים נִגְלוּ וַנֵּרֶא וּמְעִידִים אֲנַחְנוּ וּמוֹדִיעִים לָכֶם אֶת־חַיֵּי הָעוֹלָמִים אֲשֶׁר הָיוּ עִם־הָאָב וְנִגְלוּ לָנוּ׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 1,
+      "verse": 3,
+      "original_text": "אוֹתוֹ אֲשֶׁר רָאִינוּ וְשָׁמַעְנוּ בַּבְשָׂרִים אֲנַחְנוּ אֶתְכֶם אֲשֶׁר גַּם לָכֶם תִּהְיֶה חִבּוּר לָנוּ וְחִבּוּרֵנוּ עִם־הָאָב וְעִם בְּנוֹ יֵשׁוּעַ הַמָּשִׁיחַ",
+      "delitzsch_reference": "אֵת אֲשֶׁר רָאִינוּ וְשָׁמַעְנוּ נוֹדִיעָה לָכֶם לְמַעַן תִּתְחַבְּרוּ לָנוּ גַּם־אַתֶּם וְנִתְחַבַּרְנוּ עִם־הָאָב וְעִם־בְּנוֹ יֵשׁוּעַ הַמָּשִׁיחַ׃",
+      "corrections": [
+        {
+          "word_index": 0,
+          "original_word": "אוֹתוֹ",
+          "error_confidence": 0.7201895713806152,
+          "suggestions": [
+            {
+              "word": "אֲשֶׁר",
+              "confidence": 0.5136162042617798
+            }
+          ]
+        },
+        {
+          "word_index": 5,
+          "original_word": "אֲנַחְנוּ",
+          "error_confidence": 0.7842604517936707,
+          "suggestions": [
+            {
+              "word": "אֲשֶׁר",
+              "confidence": 0.12072090804576874
+            }
+          ]
+        },
+        {
+          "word_index": 6,
+          "original_word": "אֶתְכֶם",
+          "error_confidence": 0.7961909174919128,
+          "suggestions": [
+            {
+              "word": "אֲשֶׁר",
+              "confidence": 0.919765293598175
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 1,
+      "verse": 4,
+      "original_text": "וְאֶת־הָאֵלֶּה כּוֹתְבִים אֲנַחְנוּ אֲלֵיכֶם אֲשֶׁר הַמָּלֵא שִׂמְחַתְכֶם",
+      "delitzsch_reference": "וְזׂאת כּׂתְבִים אֲנַחְנוּ לָכֶם לְמַעַן תִּהְיֶה שִׂמְחַתְכֶם שְׁלֵמָה׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 1,
+      "verse": 5,
+      "original_text": "וְזֹאת הִיא הַבְּשׂוֹרָה אֲשֶׁר שָׁמַעְנוּ מִמֶּנּוּ וּמְבַשְּׂרִים אֶתְכֶם כִּי אֱלֹהִים אוֹר הוּא וְחֹשֶׁךְ לֹא יֶשׁ־בּוֹ גַּם אֶחָד",
+      "delitzsch_reference": "וְזׂאת הַשְּׁמוּעָה אֲשֶׁר שָׁמַעְנוּ מִמֶּנּוּ וַנַּגֵּד לָכֶם שֶׁהָאֱלׂהִים אוֹר הוּא וְכָל־חׂשֶׁךְ אֵין בּוֹ׃",
+      "corrections": [
+        {
+          "word_index": 14,
+          "original_word": "יֶשׁ",
+          "error_confidence": 0.7359665036201477,
+          "suggestions": [
+            {
+              "word": "לֹא",
+              "confidence": 0.3391212522983551
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 1,
+      "verse": 6,
+      "original_text": "אִישׁ נֶאֱמָד כִּי־הַבְכָּה לָנוּ מֵעַל וּבָחָפֶר נִתְרַחֵל נֵרוּב וְלֹא נַעֲשׂוֹה אֱמֶת",
+      "delitzsch_reference": "אִם־נׂאמַר כִּי יֶשׁ־לָנוּ הִתְחַבְּרוּת עִמּוֹ וְנִתְהַלֵּךְ בַּחׂשֶׁךְ דּׂבְרֵי שֶׁקֶר אֲנַחְנוּ וְלׂא פּׂעֲלֵי הָאֱמֶת׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 1,
+      "verse": 7,
+      "original_text": "אִישׁ נִתְהַלֵּךְ בָּאוֹר כְּבוֹדוֹ שֶׁבָּאוֹר אוּן־הַבְכָּה בֵינֵינוּ וְדָם יֵשׁוּעַ הַמָּשִׁיחַ בְּנוֹ יִשַׂהֲרֵנוּ מִכָּל־חַטָּאת",
+      "delitzsch_reference": "אֲבָל אִם־נִתְהַלֵּךְ בָּאוֹר כַּאֲשֶׁר הוּא בָאוֹר הִנֵּה נִתְחַבַּרְנוּ יָחַד וְדַם־יֵשׁוּעַ הַמָּשִׁיחַ בְּנוֹ יְטַהֲרֵנוּ מִכָּל־חֵטְא׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 1,
+      "verse": 8,
+      "original_text": "אִם נֹּאמַר כִּי־אֵין־לָנוּ חַטָּאת נַעֲצָה אֶת־נַפְשֵׁנוּ וֶאֱמֶת אֵינֵהּ בָּנוּ",
+      "delitzsch_reference": "אִם־נׂאמַר שֶׁאֵין־בָּנוּ חֵטְא מַתְעִים אֲנַחְנוּ נַפְשֵׁנוּ וְהָאֱמֶת אֵין בָּנוּ׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 1,
+      "verse": 9,
+      "original_text": "אִם נְּוַדֶּה אֶת־חַטֹּאתֵינוּ נֶאֱמָן וְצַדִּיק הוּא לִסְלוֹחַ לָנוּ אֶת־הַטֹּאת וְיִשַׂהֲרֵנוּ מִכָּל־רְשָׁעָה",
+      "delitzsch_reference": "וְאִם־נִתְוַדֶּה אֶת־חַטּׂאתֵינוּ נֶאֱמָן הוּא וְצַדִּיק לִסְלׂחַ לְחַטּׂאתֵינוּ וּלְטַהֲרֵנוּ מִכָּל־עָוֹן׃",
+      "corrections": [
+        {
+          "word_index": 3,
+          "original_word": "חַטֹּאתֵינוּ",
+          "error_confidence": 0.958737850189209,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.3886295557022095
+            }
+          ]
+        },
+        {
+          "word_index": 5,
+          "original_word": "וְצַדִּיק",
+          "error_confidence": 0.9760644435882568,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.20143848657608032
+            }
+          ]
+        },
+        {
+          "word_index": 6,
+          "original_word": "הוּא",
+          "error_confidence": 0.9060853719711304,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.14569799602031708
+            }
+          ]
+        },
+        {
+          "word_index": 7,
+          "original_word": "לִסְלוֹחַ",
+          "error_confidence": 0.9724929928779602,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.4457448124885559
+            }
+          ]
+        },
+        {
+          "word_index": 8,
+          "original_word": "לָנוּ",
+          "error_confidence": 0.9161258339881897,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.7217869162559509
+            }
+          ]
+        },
+        {
+          "word_index": 10,
+          "original_word": "הַטֹּאת",
+          "error_confidence": 0.9599772691726685,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.40288418531417847
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 1,
+      "verse": 10,
+      "original_text": "אִם נֹּאמַר כִּי־לֹא חָטָאנוּ נַעֲשָׂה אוֹתוֹ לְכֹזֵב וּדְבָרוֹ אֵינֶנּוּ בָּנוּ",
+      "delitzsch_reference": "וְאִם־נׂאמַר שֶׁלּא חָטָאנוּ לְכׂזֵב נְשִׂימֶנּוּ וּדְבָרוֹ אֵין בָּנוּ׃",
+      "corrections": [
+        {
+          "word_index": 0,
+          "original_word": "אִם",
+          "error_confidence": 0.6415179967880249,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.2090056836605072
+            }
+          ]
+        },
+        {
+          "word_index": 1,
+          "original_word": "נֹּאמַר",
+          "error_confidence": 0.9706801176071167,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.10080471634864807
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 1,
+      "original_text": "בָּנַי אֶת־מַאֲלֶה כּוֹתֵב אֲנִי אֲלֵיכֶם בְּעָן הַחֵטֵאוּ וְאִם־חָטָא אִישׁ יֵשׁ־לָנוּ מַיִם לִפְנֵי הָאָב יֵשׁוּעַ הַמָּשִׁיחַ הַצַּדִּיק",
+      "delitzsch_reference": "בָּנַי הִנְנִי כׂתֵב אֲלֵיכֶם אֶת־הַדְּבָרִים הָאֵלֶּה לְבִלְתִּי תֶחֱטָאוּ וְאִם־יֶחֱטָא אִישׁ יֶשׁ־לָנוּ לִפְנֵי אָבִינוּ מֵלִיץ יֵשׁוּעַ הַמָּשִׁיחַ הַצַּדִּיק׃",
+      "corrections": [
+        {
+          "word_index": 9,
+          "original_word": "חָטָא",
+          "error_confidence": 0.9828758835792542,
+          "suggestions": [
+            {
+              "word": "אִישׁ",
+              "confidence": 0.35864368081092834
+            },
+            {
+              "word": "אֶת",
+              "confidence": 0.13425585627555847
+            }
+          ]
+        },
+        {
+          "word_index": 10,
+          "original_word": "אִישׁ",
+          "error_confidence": 0.9377347230911255,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.16854898631572723
+            }
+          ]
+        },
+        {
+          "word_index": 11,
+          "original_word": "יֵשׁ",
+          "error_confidence": 0.9304452538490295,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.2308177649974823
+            },
+            {
+              "word": "עָשָׂה",
+              "confidence": 0.11821543425321579
+            },
+            {
+              "word": "לוֹ",
+              "confidence": 0.10676310211420059
+            }
+          ]
+        },
+        {
+          "word_index": 14,
+          "original_word": "לִפְנֵי",
+          "error_confidence": 0.7562404870986938,
+          "suggestions": [
+            {
+              "word": "לא",
+              "confidence": 0.13706612586975098
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 2,
+      "original_text": "וְהוּא הָיָה כָבֵד עַל־הַשָּׁאֲרָנוּ וְלֹא לָבַד עַל־שָׁאֲרָנוּ אִם עַל־חֲטָאת כָּל־הָעוֹלָם",
+      "delitzsch_reference": "וְהוּא כַּפָּרָה עַל־חַטּׂאתֵינוּ וְלׂא עַל־חַטּׂאתֵינוּ בִלְבַד כִּי גַּם־עַל־חַטּׂאת כָּל־הָעוֹלָם׃",
+      "corrections": [
+        {
+          "word_index": 4,
+          "original_word": "הַשָּׁאֲרָנוּ",
+          "error_confidence": 0.9566125273704529,
+          "suggestions": [
+            {
+              "word": "עַל",
+              "confidence": 0.1371476650238037
+            }
+          ]
+        },
+        {
+          "word_index": 5,
+          "original_word": "וְלֹא",
+          "error_confidence": 0.582048773765564,
+          "suggestions": [
+            {
+              "word": "עַל",
+              "confidence": 0.7733731269836426
+            }
+          ]
+        },
+        {
+          "word_index": 6,
+          "original_word": "לָבַד",
+          "error_confidence": 0.9549064636230469,
+          "suggestions": [
+            {
+              "word": "עַל",
+              "confidence": 0.12291590124368668
+            }
+          ]
+        },
+        {
+          "word_index": 9,
+          "original_word": "אִם",
+          "error_confidence": 0.6794772148132324,
+          "suggestions": [
+            {
+              "word": "עַל",
+              "confidence": 0.5051652193069458
+            }
+          ]
+        },
+        {
+          "word_index": 12,
+          "original_word": "כָּל",
+          "error_confidence": 0.660423755645752,
+          "suggestions": [
+            {
+              "word": "עַל",
+              "confidence": 0.18815724551677704
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 3,
+      "original_text": "וּבַזֹּאת יָדַעְנוּ אָנֹּו כִּי יְדַעְנוּהוּ אִם נִשְׁמֹר אֶת־מִצְוֹתָיו",
+      "delitzsch_reference": "וּבָזׂאת נֵדַע כִּי הִכַּרְנוּ אוֹתוֹ אִם־נִשְׁמׂר אֶת־מִצְוֹתָיו׃",
+      "corrections": [
+        {
+          "word_index": 1,
+          "original_word": "יָדַעְנוּ",
+          "error_confidence": 0.9382567405700684,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.20353862643241882
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 4,
+      "original_text": "הָאֹמֵר יָדַעְתִּיו וְאֶת־מִצְוֹתָיו אֵינֶנּוּ שֹׁמֵר כָּזָב הוּא וּבָאֵשׁ הָוּא לֹא יְשׁוֹעֶת",
+      "delitzsch_reference": "הָאׂמֵר הִכַּרְתִּיו וְאֶת־מִצְוֹתָיו לׂא יִשְׁמׂר דּׂבֵר שֶׁקֶר הוּא וְהָאֱמֶת אֵין בּוֹ׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 5,
+      "original_text": "וַאֲשֶׁר יִשְׁמֹר אֶת־דְּבָרוֹ בֶּאֱמֶת כִּי בֵּאשׁ אַהֲבַת אֱלֹהִים נִשְׁלְמָה הִיא בּוֹ הַזֶּה יוֹדְעִים אֲנַחְנוּ כִּי בּוֹ הוֹיִים אֲנַחְנוּ",
+      "delitzsch_reference": "אֲבָל הַשּׁׂמֵר אֶת־דְּבָרוֹ בּוֹ נִשְׁלְמָה בֶאֱמֶת אַהֲבַת אֱלׂהִים וּבָזׂאת נֵדַע כִּי־בוֹ אֲנָחְנוּ׃",
+      "corrections": [
+        {
+          "word_index": 3,
+          "original_word": "דְּבָרוֹ",
+          "error_confidence": 0.9364016652107239,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.5072336196899414
+            }
+          ]
+        },
+        {
+          "word_index": 4,
+          "original_word": "בֶּאֱמֶת",
+          "error_confidence": 0.9629673361778259,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.11492948979139328
+            }
+          ]
+        },
+        {
+          "word_index": 6,
+          "original_word": "בֵּאשׁ",
+          "error_confidence": 0.9417789578437805,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.42031019926071167
+            }
+          ]
+        },
+        {
+          "word_index": 9,
+          "original_word": "נִשְׁלְמָה",
+          "error_confidence": 0.6579409837722778,
+          "suggestions": [
+            {
+              "word": "אֱלֹהִים",
+              "confidence": 0.11174925416707993
+            }
+          ]
+        },
+        {
+          "word_index": 12,
+          "original_word": "הַזֶּה",
+          "error_confidence": 0.7511932849884033,
+          "suggestions": [
+            {
+              "word": "בּוֹ",
+              "confidence": 0.6780576705932617
+            }
+          ]
+        },
+        {
+          "word_index": 13,
+          "original_word": "יוֹדְעִים",
+          "error_confidence": 0.6039589047431946,
+          "suggestions": [
+            {
+              "word": "אֱלֹהִים",
+              "confidence": 0.2292899787425995
+            },
+            {
+              "word": "עַם",
+              "confidence": 0.14579430222511292
+            }
+          ]
+        },
+        {
+          "word_index": 14,
+          "original_word": "אֲנַחְנוּ",
+          "error_confidence": 0.7391106486320496,
+          "suggestions": [
+            {
+              "word": "אֱלֹהִים",
+              "confidence": 0.14769180119037628
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 6,
+      "original_text": "הָאֹמֵר לְעוֹדָד בּוֹ יַעֲנֶה לוֹ לְהִתְהַלֵּךְ בְּהִלּוּכֵיהוּ בִּדְרָכָיו בְּמִסְלוֹתָיו בַּעֲקֻבּוֹתָיו",
+      "delitzsch_reference": "הָאׂמֵר שֶׁהוּא עׂמֵד בּוֹ כַּאֲשֶׁר הִתְהַלֵּךְ הוּא כֵּן יִתְהַלָּךְ׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 7,
+      "original_text": "אַחַי אֵינִי כֹתֵב אֱלֵיכֶם אֶת־מִצְוָה חֲדָשָׁה כִּי אִם מִצְוָת אֲשֶׁר הָיְתָה לָכֶם בְּרֵאשִׁית מִצְוַת יְשָׁנָה יְשׁ־עֵדֵד אֲשֶׁר שְׁמַעְתֶּם בֵּרֵאשִׁית",
+      "delitzsch_reference": "אַחַי לׂא מִצְוָה חֲדָשָׁה כּׂתֵב אֲנִי לָכֶם כִּי אִם־מִצְוָה יְשָׁנָה אֲשֶׁר הָיְתָה לָכֶם מֵרׂאשׁ וְהַמִּצְוָה הַיְשָׁנָה הִיא הַדָּבָר אֲשֶׁר שְׁמַעְתֶּם׃",
+      "corrections": [
+        {
+          "word_index": 5,
+          "original_word": "מִצְוָה",
+          "error_confidence": 0.9492693543434143,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.15623430907726288
+            }
+          ]
+        },
+        {
+          "word_index": 8,
+          "original_word": "אִם",
+          "error_confidence": 0.891193151473999,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.11753128468990326
+            }
+          ]
+        },
+        {
+          "word_index": 9,
+          "original_word": "מִצְוָת",
+          "error_confidence": 0.9548028707504272,
+          "suggestions": [
+            {
+              "word": "אֲשֶׁר",
+              "confidence": 0.378098726272583
+            }
+          ]
+        },
+        {
+          "word_index": 11,
+          "original_word": "הָיְתָה",
+          "error_confidence": 0.958634078502655,
+          "suggestions": [
+            {
+              "word": "אֲשֶׁר",
+              "confidence": 0.4117053151130676
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 8,
+      "original_text": "נֶאֱסַף מִבְּצֵא חֲרָשָׁה כִּתַהֲב אֲנִי־אֱלֵיהֶם שָׁאַבֲא אִמְּהָ בּוֹ וַכְּבִישִׁים עַתָּה נֶסַבְ תַּהֲוְאוּ נְבוּן עֲפָהּ נֶגְבֵּהּ",
+      "delitzsch_reference": "וְעוֹד מִצְוָה חֲדָשָׁה אֲנִי כׂתֵב לָכֶם וְהִיא נֶאֱמָנָה גַּם־בּוֹ גַּם־בָּכֶם מִפְּנֵי שֶׁהַחׂשֶׁךְ עׂבֵר וְהָאוֹר הָאֲמִתִּי כְּבָר זָרָח׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 9,
+      "original_text": "הָאוֹמֵר כִּי דְּוֹנָא בְאוֹר נִשְׁאַנָּא אֶת־אָחִיו בַּחֹשֶׁךְ הוּא עַד־עַתָּה",
+      "delitzsch_reference": "הָאוֹמֵר בָּאוֹר אָנִי וְהוּא שׂנֵא אֶת־אָחִיו עוֹדֶנּוּ בַּחׂשֶׁךְ׃",
+      "corrections": [
+        {
+          "word_index": 9,
+          "original_word": "עַד",
+          "error_confidence": 0.774919867515564,
+          "suggestions": [
+            {
+              "word": "אֱלֹהִים",
+              "confidence": 0.7197477221488953
+            }
+          ]
+        },
+        {
+          "word_index": 10,
+          "original_word": "עַתָּה",
+          "error_confidence": 0.7938953638076782,
+          "suggestions": [
+            {
+              "word": "אֱלֹהִים",
+              "confidence": 0.3394753038883209
+            },
+            {
+              "word": "הַשְּׁלִיחִים",
+              "confidence": 0.12130273878574371
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 10,
+      "original_text": "וַאֲשֶׁר נֶאֱסַף אֶת־אָחִיו מְעוֹסַד בָּאוֹר וּבְכַשְׁלוֹן אֵינוֹ בוֹ",
+      "delitzsch_reference": "הָאׂהֵב אֶת־אָחִיו עׂמֵד בָּאוֹר וּמִכְשׁוֹל אֵין בּוֹ׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 11,
+      "original_text": "וַאֲשֶׁר שָׁונֵא אֶת־אָחִיו בַּחֹשֶׁךְ הוּא וּבַחֹשֶׁךְ מִתְהַלֵּךְ וְלֹא יֵדַע אָנָה הוֹלֵךְ כִּי הַחֹשֶׁךְ עִוַּר אֶת־עֵינָיו",
+      "delitzsch_reference": "וְהַשּׂנֵא אֶת־אָחִיו בַּחׂשֶׁךְ הוּא וּבַחׂשֶׁךְ יִתְהַלֵּךְ וְלׂא יֵדַע אָנָה הוּא הׂלֵךְ כִּי הַחׂשֶׁךְ עִוֵּר אֶת־עֵינָיו׃",
+      "corrections": [
+        {
+          "word_index": 9,
+          "original_word": "יֵדַע",
+          "error_confidence": 0.9502261877059937,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.19144749641418457
+            }
+          ]
+        },
+        {
+          "word_index": 13,
+          "original_word": "הַחֹשֶׁךְ",
+          "error_confidence": 0.9460347890853882,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.19375570118427277
+            }
+          ]
+        },
+        {
+          "word_index": 16,
+          "original_word": "עֵינָיו",
+          "error_confidence": 0.6346092820167542,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.4262065589427948
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 12,
+      "original_text": "כּוֹתֵב אֲנִי אֲלֵיכֶם בָּנִים כִּי נִשְׂאוּ לָכֶם הַחֲטָאִים בִּשְׁמוֹ",
+      "delitzsch_reference": "הִנְנִי כׂתֵב אֲלֵיכֶם הַבָּנִים יַעַן כִּי־נִסְלְחוּ לָכֶם חַטּׂאתֵיכֶם לְמַעַן שְׁמוֹ׃",
+      "corrections": [
+        {
+          "word_index": 0,
+          "original_word": "כּוֹתֵב",
+          "error_confidence": 0.5446332693099976,
+          "suggestions": [
+            {
+              "word": "תִּהְיֶה",
+              "confidence": 0.11964452266693115
+            }
+          ]
+        },
+        {
+          "word_index": 2,
+          "original_word": "אֲלֵיכֶם",
+          "error_confidence": 0.7720608115196228,
+          "suggestions": [
+            {
+              "word": "אֶל",
+              "confidence": 0.40483570098876953
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 13,
+      "original_text": "כּוֹתֵב אֲנִי אֲלֵיכֶם אֲבוֹת כִּי־יְדַעְתֶּם אוֹתוֹ אֲשֶׁר הָיָה מִבְּרֵאשִׁית כּוֹתֵב אֲנִי אֲלֵיכֶם בַּחוּרִים כִּי גְבַרְתֶּם מֵרַע",
+      "delitzsch_reference": "כּׂתֵב אֲנִי אֲלֵיכֶם הָאָבוֹת יַעַן כִּי הִכַּרְתֶּם אֵת אֲשֶׁר־מֵרׂאשׁ כּׂתֵב אֲנִי אֲלֵיכֶם הַבַּחוּרִים יַעַן כִּי הִתְגַּבַּרְתֶּם עַל־הָרָע כָּתַבְתִּי אֲלֵיכֶם הַיְלָדִים יַעַן כִּי־הִכַּרְתֶּם אֶת־הָאָב׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 14,
+      "original_text": "כִּתְבִי אֲלֵיכֶם תַּעֲלָיִם מִצְּבִי כִּי־יְדַעְתֶּם אֶת־הָאָב מִכְּתְבִי אֲלֵיכֶם נַעֲרֵים כִּי־יְדַעְתֶּם אוֹתוֹ אֲשֶׁר מֵרֹאשׁ בְּרִאשִׁית כִּתְבִי אֲלֵיכֶם וּבַחוּרִים כִּי גִּבּוֹרִים אַתֶּם וּדְבַר אֱלֹהִים קַיֵּם בָּכֶם וּנְקַּמְתֶּם עַל־הֶרָשָׁע",
+      "delitzsch_reference": "כָּתַבְתִּי אֲלֵיכֶם הָאָבוֹת יַעַן כִּי הִכַּרְתֶּם אֵת אֲשֶׁר־מֵרׂאשׁ כָּתַבְתִּי אֲלֵיכֶם הַבַּחוּרִים יַעַן כִּי־חֲזַקְתֶּם וּדְבַר הָאֱלׂהִים שׁׂכֵן בְּקִרְבְּכֶם וְהִתְגַּבַּרְתֶּם עַל־הָרָע׃",
+      "corrections": [
+        {
+          "word_index": 5,
+          "original_word": "יְדַעְתֶּם",
+          "error_confidence": 0.9137834310531616,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.19731394946575165
+            }
+          ]
+        },
+        {
+          "word_index": 12,
+          "original_word": "יְדַעְתֶּם",
+          "error_confidence": 0.950247049331665,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.4546247720718384
+            }
+          ]
+        },
+        {
+          "word_index": 13,
+          "original_word": "אוֹתוֹ",
+          "error_confidence": 0.950617790222168,
+          "suggestions": [
+            {
+              "word": "אֲשֶׁר",
+              "confidence": 0.6732437610626221
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 15,
+      "original_text": "אַל תֶּאֶהֲבוּ אֶת־הָעוֹלָם וְאֶת דְּבַר הָעוֹלָם אִם יְאַהֵב אִישׁ אֶת־הָעוֹלָם אַהֲבַת הָאָב אֵינֶנָּה בוֹ",
+      "delitzsch_reference": "אַל תְּאֵהֲבוּ אֶת־הָעוֹלָם וְאֶת־דִּבְרֵי הָעוֹלָם אִישׁ כִּי־יֶאֱהַב אֶת־הָעוֹלָם אֵין־בּוֹ אַהֲבַת הָאָב׃",
+      "corrections": [
+        {
+          "word_index": 4,
+          "original_word": "וְאֶת",
+          "error_confidence": 0.6954973340034485,
+          "suggestions": [
+            {
+              "word": "וּכִי",
+              "confidence": 0.32814016938209534
+            },
+            {
+              "word": "מִטִּיב",
+              "confidence": 0.2192908674478531
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 16,
+      "original_text": "כִּי כָּל אֲשֶׁר בָּעוֹלָם הוּא הַתְּבֶשֶׁר הוּא וְתַאֲוַת עֵינַיִם תַּאֲוַת אֲוַת מִן־תַּאֲוָה מִן־מִתְגַּאֲוַת אִינֶנָּה מִן־הָאָב כִּי־אִם מִן־הָעוֹלָם",
+      "delitzsch_reference": "כִּי כּׂל אֲשֶׁר בָּעוֹלָם חֵשֶׁק הַבָּשָׂר וְתַאֲוַת הָעֵינַיִם וְגֵאוּת הַנְּכָסִים לׂא מִן־אָבִינוּ הוּא כִּי אִם־מִן־הָעוֹלָם׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 17,
+      "original_text": "וְהָעוֹלָם עֹבֵר וְתַאֲוָתוֹ וְעֹשֵׂה רְצוֹן אֱלֹהִים יָקוּם לְעוֹלָם",
+      "delitzsch_reference": "וְהָעוֹלָם עָבוֹר יַעֲבֹר עִם־תַּאֲוֹתָיו וְהָעׂשֶׂה רְצוֹן אֱלׂהִים יַעֲמׂד לָעַד׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 18,
+      "original_text": "בָּנַי עַת קֵץ הַיא וְכַאֲשֶׁר שְׁמַעְתֶּם כִּי יָבוֹא מָשִׁיחַ שָׁקֶר וְעַתָּה מְשִׁיחֵי שְׁקָדִים רַבִּים הָיוּ מִזֶּאנוּ יוֹדְעִים אֲנַחְנוּ כִּי־עַת קֵץ הִיא",
+      "delitzsch_reference": "יְלָדַי הִנֵּה הַשָּׁעָה הָאַחֲרוֹנָה בָּאָה וְכַאֲשֶׁר שְׁמַעְתֶּם שֶׁיָּבֹא שׂטֵן הַמָּשִׁיחַ כֵּן עַתָּה רַבּוּ שׂטְנֵי הַמָּשִׁיחַ וּבָזׂאת נֵדַע שֶׁהִיא הַשָּׁעָה הָאַחֲרוֹנָה׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 19,
+      "original_text": "מַעֲנֵנוּ יֵשׁוּעַ וַיֹּאמַר אֵלַי הֵן לֹא הִי בְּימֵי וּאִם הִי בְּימֵי בְּאָהָלָה קֵץ זְמַנִּי כִּי אִם אֲשֶׁר יַגִּיד כִּי לָכֵם לֹא הִי בְּימֵי",
+      "delitzsch_reference": "מִקִּרְבֵּנוּ יָצְאוּ אֲבָל לׂא־מֵאִתָּנוּ הָיוּ כִּי לוּ הָיוּ מֵאִתָּנוּ כִּי אָז הָיוּ עׂמְדִים עִמָּנוּ אַךְ יָצְאוּ לְמַעַן יִוָּדַע כִּי לׂא כֻלָּם מֵאִתָּנוּ הֵמָּה׃",
+      "corrections": [
+        {
+          "word_index": 13,
+          "original_word": "זְמַנִּי",
+          "error_confidence": 0.9657655954360962,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.15216253697872162
+            }
+          ]
+        },
+        {
+          "word_index": 15,
+          "original_word": "אִם",
+          "error_confidence": 0.9302435517311096,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.14492549002170563
+            }
+          ]
+        },
+        {
+          "word_index": 17,
+          "original_word": "יַגִּיד",
+          "error_confidence": 0.9439730644226074,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.617677628993988
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 20,
+      "original_text": "וְהָאַלָּה לִזְכֹּר אֵת הַמַּשְׁחָה מִקְדָשׁ יוֹדְעֵיהֶם כֹּל",
+      "delitzsch_reference": "וְאַתֶּם לָכֶם הַמִּשְׁחָה מֵאֵת הַקָּדוֹשׁ וִידַעְתֶּם הַכּׂל׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 21,
+      "original_text": "לֹא כְתַבְתִּי אֲלֵיכֶם כִּי לֹא יִדְעָתֶם אֶת־אֱמֶת כִּי אִם כִּי יְדַעְתֶּם וְכֹל כָּזֵב בָּאֱמֶת אֵינֶנּוּ",
+      "delitzsch_reference": "לׂא כָתַבְתִּי אֲלֵיכֶם מִפְּנֵי שֶׁלּא־יְדַעְתֶּם אֶת־הָאֱמֶת כִּי־יְדַעְתֶּם אׂתָהּ וִידַעְתֶּם שֶׁכָּל־דְּבַר שֶׁקֶר לׂא מִן־הָאֱמֶת הוּא׃",
+      "corrections": [
+        {
+          "word_index": 7,
+          "original_word": "אֱמֶת",
+          "error_confidence": 0.9517150521278381,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.787093997001648
+            }
+          ]
+        },
+        {
+          "word_index": 9,
+          "original_word": "אִם",
+          "error_confidence": 0.8214480876922607,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.7441999912261963
+            }
+          ]
+        },
+        {
+          "word_index": 11,
+          "original_word": "יְדַעְתֶּם",
+          "error_confidence": 0.8765022158622742,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.2567228078842163
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 22,
+      "original_text": "מִי הוּא הַכּוֹזֵב בִּלְתִּי אִם יְכַחֵשׁ אֵינֶנּוּ הַמָּשִׁיחַ זֶה הוּא אֶרְץ הַמָּשִׁיחַ מְבַקֵּשׁ אֶת־הָאָב וְאֶת־הַבֵּן",
+      "delitzsch_reference": "מִי הוּא הַדּׂבֵר שֶׁקֶר כִּי אִם־הַמְכַחֵשׁ בְּיֵשׁוּעַ לֵאמׂר לׂא הַמָּשִׁיחַ הוּא זֶה הוּא שׂוֹטֵן הַמָּשִׁיחַ הַמְכַחֵשׁ בָּאָב וּבַבֵּן׃",
+      "corrections": [
+        {
+          "word_index": 11,
+          "original_word": "הַמָּשִׁיחַ",
+          "error_confidence": 0.9777702689170837,
+          "suggestions": [
+            {
+              "word": "לוֹ",
+              "confidence": 0.18795520067214966
+            }
+          ]
+        },
+        {
+          "word_index": 12,
+          "original_word": "מְבַקֵּשׁ",
+          "error_confidence": 0.9840506911277771,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.7202857732772827
+            }
+          ]
+        },
+        {
+          "word_index": 14,
+          "original_word": "הָאָב",
+          "error_confidence": 0.9445670247077942,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.7628719806671143
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 23,
+      "original_text": "כָּל־אֲשֶׁר מְכַחֵשׁ אֶת־הַבֵּנוּ לֹא יִשׁ לוֹ הָאָב וְהַמְּוַדֶּה אֶת־הַבֵּן גַּם יִשׁ לוֹ אָבִי",
+      "delitzsch_reference": "כָּל־הַמְכַחֵשׁ בַּבֵּן גַּם־הָאָב אֵין־לוֹ וְהַמּוֹדֶה בַבֵּן לוֹ גַּם־הָאָב׃",
+      "corrections": [
+        {
+          "word_index": 5,
+          "original_word": "לֹא",
+          "error_confidence": 0.5011411905288696,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.1810373067855835
+            }
+          ]
+        },
+        {
+          "word_index": 6,
+          "original_word": "יִשׁ",
+          "error_confidence": 0.6519418954849243,
+          "suggestions": [
+            {
+              "word": "לוֹ",
+              "confidence": 0.1546226143836975
+            }
+          ]
+        },
+        {
+          "word_index": 11,
+          "original_word": "הַבֵּן",
+          "error_confidence": 0.9214596152305603,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.5990094542503357
+            }
+          ]
+        },
+        {
+          "word_index": 12,
+          "original_word": "גַּם",
+          "error_confidence": 0.7231629490852356,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.6129279732704163
+            },
+            {
+              "word": "לוֹ",
+              "confidence": 0.17088674008846283
+            }
+          ]
+        },
+        {
+          "word_index": 13,
+          "original_word": "יִשׁ",
+          "error_confidence": 0.7780877947807312,
+          "suggestions": [
+            {
+              "word": "לוֹ",
+              "confidence": 0.20771126449108124
+            },
+            {
+              "word": "אֱלֹהִים",
+              "confidence": 0.1765463948249817
+            },
+            {
+              "word": "אֶת",
+              "confidence": 0.11006467789411545
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 24,
+      "original_text": "וְאָתָה שְׁמַעְתֶּם מֵרֵאשִׁית עוֹדֵד בָּכֶם אִם יוֹסֵד בָּכֶם אֲשֶׁר בָּרֵאשִׁית הַשְׁמַעְתֶּם גַּם אַתֶּם בַּבֵּן וּבָאֶב תּוּסְדוּ",
+      "delitzsch_reference": "וְאַתֶּם יָקָם־נָא בָכֶם הַדָּבָר אֲשֶׁר שְׁמַעְתֶּם מֵרׂאשׁ וְאִם־יָקוּם בָּכֶם אֲשֶׁר שְׁמַעְתֶּם מֵרׂאשׁ גַּם־אַתֶּם תָּקוּמוּ בַּבֵּן וּבָאָב׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 25,
+      "original_text": "וְזֹאת הִיא הַבְּשׂוֹרָה אֲשֶׁר הוּא בִשַּׂר אוֹתָנוּ חַיֵּי עוֹלָם",
+      "delitzsch_reference": "וְהַהַבְטָחָה אֲשֶׁר הִבְטִיחָנוּ הִיא חַיֵּי הָעוֹלָמִים׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 26,
+      "original_text": "אֵת־הָאֵלֶּה כָּתַבְתִּי אֲלֵיכֶם עַל־מַתְעֵיכֶם",
+      "delitzsch_reference": "זׂאת כָּתַבְתִּי אֲלֵיכֶם מִפְּנֵי הַמַּתְעִים אֶתְכֶם׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 27,
+      "original_text": "וְהַמְּשִׁיחָה אֲשֶׁר לְקַחְתֶּם מִמֶּנּוּ תֵּעוֹד בָּכֶם וְלֹא תַחֲטֵיאוּן כִּי אִישׁ יוֹרֶכֶם אֶתְכֶם כִּי אִם־כַּמּוֹ הַמְּשִׁיחָה הוֹוָת מְלַמֶּדֶת אֶתְכֶם עַל כָּל וֶאֱמֶת הִיא וְאֵינֶנָּה כָּזָב וְגַם לִמְדָתְכֶם לִמְדוּ בָהּ",
+      "delitzsch_reference": "וְאַתֶּם הַמִּשְׁחָה אֲשֶׁר קִבַּלְתֶּם מֵאִתּוֹ עׂמֶדֶת בָּכֶם וְלׂא תִצְטָרֲכוּ לְאִישׁ שֶׁיְּלַמֵּד אֶתְכֶם כִּי אִם־כַּאֲשֶׁר תְּלַמֶּדְכֶם הַמִּשְׁחָה לְכָל־דָּבָר הוּא הָאֱמֶת וְלׂא שֶׁקֶר וְכַאֲשֶׁר לִמְּדָה אֶתְכֶם כֵּן תַּעַמְדוּ בוֹ׃",
+      "corrections": [
+        {
+          "word_index": 5,
+          "original_word": "בָּכֶם",
+          "error_confidence": 0.7732588052749634,
+          "suggestions": [
+            {
+              "word": "עַל",
+              "confidence": 0.14527149498462677
+            }
+          ]
+        },
+        {
+          "word_index": 6,
+          "original_word": "וְלֹא",
+          "error_confidence": 0.8105108141899109,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.279402494430542
+            }
+          ]
+        },
+        {
+          "word_index": 7,
+          "original_word": "תַחֲטֵיאוּן",
+          "error_confidence": 0.9640281796455383,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.5562431216239929
+            }
+          ]
+        },
+        {
+          "word_index": 9,
+          "original_word": "אִישׁ",
+          "error_confidence": 0.9394060969352722,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.13683193922042847
+            }
+          ]
+        },
+        {
+          "word_index": 10,
+          "original_word": "יוֹרֶכֶם",
+          "error_confidence": 0.9700120687484741,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.43173813819885254
+            }
+          ]
+        },
+        {
+          "word_index": 13,
+          "original_word": "אִם",
+          "error_confidence": 0.9119174480438232,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.17266115546226501
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 28,
+      "original_text": "וְעַתָּה בָּנָי עִמְדוּ בוֹ אֲשֶׁר אָם־יִגָּלֶה יִהְיֶה לָנוּ בִּטָּחוֹן וְלֹא נֵבוֹשׁ מִמֶּנּוּ בְּבוֹאוֹ",
+      "delitzsch_reference": "וְעַתָּה בָנִים עִמְדוּ בוֹ לְמַעַן יֶאֱמַץ לִבֵּנוּ בְּהֵרָאוֹתוֹ וְלׂא־נֵבוֹשׁ מִפָּנָיו בְּבוֹאוֹ׃",
+      "corrections": [
+        {
+          "word_index": 8,
+          "original_word": "לָנוּ",
+          "error_confidence": 0.780846893787384,
+          "suggestions": [
+            {
+              "word": "יִהְיֶה",
+              "confidence": 0.10598579794168472
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 29,
+      "original_text": "אִם יְדַעְתֶּם כִּי־צַדִּיק הוּא דַע כִּי כָּל־מַעֲשֵׂה־צֶדֶק נוֹלַד מִמֶּנּוּ",
+      "delitzsch_reference": "אִם־יְדַעְתֶּם כִּי־צַדִּיק הוּא דְּעוּ־נָא כִּי כָּל־עׂשֵׂה צְדָקָה נוֹלָד מִמֶּנּוּ׃",
+      "corrections": [
+        {
+          "word_index": 1,
+          "original_word": "יְדַעְתֶּם",
+          "error_confidence": 0.6931622624397278,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.32484808564186096
+            },
+            {
+              "word": "לֵאמֹר",
+              "confidence": 0.11538451164960861
+            }
+          ]
+        },
+        {
+          "word_index": 4,
+          "original_word": "הוּא",
+          "error_confidence": 0.5295522212982178,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.5111497640609741
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 1,
+      "original_text": "רְאוּ בַּמָּה אֲהֵבַנוּ לָנוּ הָאָב אֲשֶׁר בְּנֵי אֱלֹהִים נִקְרָא בַעֲבוּר אוֹת הָעוֹלָם אֵינְנוּ יוֹדֵעַ פִּי־לֹא יָדַע אוֹתוֹ",
+      "delitzsch_reference": "רְאוּ מַה־גָּדְלָה אַהֲבַת הָאָב אֲשֶׁר נָתַן לָנוּ לְהִקָּרֵא בְּנֵי הָאֱלׂהִים וּבָנָיו אֲנָחְנוּ עַל־כֵּן הָעוֹלָם אֵינֶנּוּ יׂדֵעַ אׂתָנוּ יַעַן כִּי־אוֹתוֹ לׂא יָדָע׃",
+      "corrections": [
+        {
+          "word_index": 6,
+          "original_word": "בְּנֵי",
+          "error_confidence": 0.8994437456130981,
+          "suggestions": [
+            {
+              "word": "עַם",
+              "confidence": 0.1396782398223877
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 2,
+      "original_text": "אֲהוּבַי עַתָּה הוֹיִים צֹאוֹתֵינוּ בְּנַי אֱלֹהִים נַעַד יְהוָה לֹא נִגְלָה מָה נִהְיֶה יָדַעְנוּ אִם יִתְגַּלֶּה כִּתְמוּנָם לוֹ נִהְיֶה כִּי נַרְאֵיתָהוּ בְּמִינָם אֵל כְּמוֹ כַּמוֹתוֹ",
+      "delitzsch_reference": "יְדִידַי עַתָּה בָּנִים לֵאלׂהִים אֲנַחְנוּ וְעוֹד לׂא נִגְלָה מַה־נִּהְיֶה אֲבָל יָדַעְנוּ כִּי בְהִגָּלוֹתוֹ נִהְיֶה דׂמִים־לוֹ כִּי נִרְאֵהוּ כְּמוֹ שֶׁהוּא׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 3,
+      "original_text": "וְכָל אֲשֶׁר יֶשׁ לוֹ הַתִּקְוָה הַזּאֹת אֵלָיו בּוֹ מְקַדֵּשׁ אֶת־נַפְשׁוֹ כַּאֲשֶׁר קָדוֹשׁ הוּא",
+      "delitzsch_reference": "וְכָל־אֲשֶׁר לוֹ הַתִּקְוָה הַזּׂאת יְטַהֵר אֶת־עַצְמוֹ כַּאֲשֶׁר טָהוֹר גַּם־הוּא׃",
+      "corrections": [
+        {
+          "word_index": 2,
+          "original_word": "יֶשׁ",
+          "error_confidence": 0.5679240822792053,
+          "suggestions": [
+            {
+              "word": "לוֹ",
+              "confidence": 0.2884683310985565
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 4,
+      "original_text": "כָּל אֲשֶׁר עֹשֶׂה אֶת־חַטָּאָה גַּם פֹּשֵׁעַ אֶת־עֹוְלָה וְהַחֲטָאָה עֹוְלָה הִיא",
+      "delitzsch_reference": "כָּל־חׂטֵא פּׂשֵׁעַ בַּתּוֹרָה הוּא וְהַחֵטְא פְּשִׁיעָה בַתּוֹרָה׃",
+      "corrections": [
+        {
+          "word_index": 4,
+          "original_word": "חַטָּאָה",
+          "error_confidence": 0.9533529877662659,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.7893733382225037
+            }
+          ]
+        },
+        {
+          "word_index": 5,
+          "original_word": "גַּם",
+          "error_confidence": 0.8621136546134949,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.8440061211585999
+            }
+          ]
+        },
+        {
+          "word_index": 6,
+          "original_word": "פֹּשֵׁעַ",
+          "error_confidence": 0.9740885496139526,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.5227037668228149
+            }
+          ]
+        },
+        {
+          "word_index": 8,
+          "original_word": "עֹוְלָה",
+          "error_confidence": 0.9522887468338013,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.22126257419586182
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 5,
+      "original_text": "וִידַעְתֶּם כִּי הוּא נִגְלָה לְהָסִיר אֶת־חַטֹּאתֵינוּ נַחְטָאָה אֵינֶה בוֹ",
+      "delitzsch_reference": "וִידַעְתֶּם כִּי הוּא נִגְלָה לָשֵׂאת אֶת־חֲטָאֵינוּ וּבוֹ אֵין חֵטְא׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 6,
+      "original_text": "כָּל אֲשֶׁר עוֹמֵד בּוֹ אֵינֶנּוּ חוֹטֵא כָּל אֲשֶׁר חוֹטֵא לֹא רָאָה אוֹתוֹ וְלֹא יְדָעוֹ",
+      "delitzsch_reference": "כָּל־הָעׂמֵד בּוֹ לׂא יֶחֱטָא כָּל־הַחוֹטֵא לׂא רָאָהוּ אַף־לׂא יְדָעוֹ׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 7,
+      "original_text": "בָּנַי אִישׁ לֹא יַעֲטֶה אַתְכֶם אֲשֶׁר עוֹשֶׂה צִדְקָה צַדִּיק הוּא כַּאֲשֶׁר צַדִּיק הוּא",
+      "delitzsch_reference": "בָּנַי אַל־יַתְעֶה אֶתְכֶם אִישׁ הָעׂשֶׂה צְדָקָה צַדִּיק הוּא כַּאֲשֶׁר הוּא צַדִּיק׃",
+      "corrections": [
+        {
+          "word_index": 10,
+          "original_word": "כַּאֲשֶׁר",
+          "error_confidence": 0.5532988905906677,
+          "suggestions": [
+            {
+              "word": "אֲשֶׁר",
+              "confidence": 0.44453614950180054
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 8,
+      "original_text": "הָעֹשֶׂה חַטָּאָה מִשָּׂטָן הוּא כִּי מֵרֵאשִׁית חָטָא הַשָּׂטָן לְזֹאת נִגְלָה בֶן־אֱלֹהִים אֲשֶׁר יִשְׁבֹּר אֶת־מַעֲשֵׂי הַשָּׂטָן",
+      "delitzsch_reference": "וְהַחׂטֵא מִן־הַשָּׂטָן הוּא כִּי הַשָּׂטָן רִאשׁוֹן לַחׂטְאִים וּבַעֲבוּר זׂאת נִגְלָה בֶן־הָאֱלׂהִים לְהָפֵר אֶת־פְּעֻלּוֹת הַשָּׂטָן׃",
+      "corrections": [
+        {
+          "word_index": 13,
+          "original_word": "יִשְׁבֹּר",
+          "error_confidence": 0.9289203882217407,
+          "suggestions": [
+            {
+              "word": "אֱלֹהִים",
+              "confidence": 0.2913932800292969
+            },
+            {
+              "word": "אֶת",
+              "confidence": 0.2339736670255661
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 9,
+      "original_text": "כָּל־אֲשֶׁר נוֹלַד מֵאֱלֹהִים אֵינוֹ חֹטֵאת לֹא עֹשֶׂה כִּי זַרְעוֹ בַּעֲבוּדוֹ בוֹ וְלֹא יוּכַל לַחֲטוֹא כִּי מֵאֱלֹהִים גִּילָד הוּא",
+      "delitzsch_reference": "כָּל־הַנּוֹלָד מֵאֱלׂהִים לׂא יֶחֱטָא כִּי זַרְעוֹ בּוֹ יִשָּׁאֵר וְלׂא יוּכַל לַחֲטׂא כִּי מֵאֱלׂהִים נוֹלַד׃",
+      "corrections": [
+        {
+          "word_index": 0,
+          "original_word": "כָּל",
+          "error_confidence": 0.5314785242080688,
+          "suggestions": [
+            {
+              "word": "אֲשֶׁר",
+              "confidence": 0.21605998277664185
+            }
+          ]
+        },
+        {
+          "word_index": 13,
+          "original_word": "יוּכַל",
+          "error_confidence": 0.9295106530189514,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.2248193323612213
+            }
+          ]
+        },
+        {
+          "word_index": 14,
+          "original_word": "לַחֲטוֹא",
+          "error_confidence": 0.9709852933883667,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.7518820762634277
+            }
+          ]
+        },
+        {
+          "word_index": 16,
+          "original_word": "מֵאֱלֹהִים",
+          "error_confidence": 0.9295711517333984,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.6090371012687683
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 10,
+      "original_text": "בְּאוֹת נִבְדָּלִים בְּנֵיאֱלֹהִים וּבְנֵי הַשָּׂטָן כָּל אֲשֶׁר לֹא עֹשֶׂה צְדָקָה אֵינֶנּוּ מֵאֱלֹהִים וַאֲשֶׁר לֹא אֹהֵב אֶת־אָחִיו",
+      "delitzsch_reference": "וּבָזׂאת נוֹדְעוּ בְּנֵי הָאֱלׂהִים וּבְנֵי הַשָּׂטָן כָּל־אִישׁ אֲשֶׁר לׂא־יַעֲשֶׂה צְדָקָה אֵינֶנּוּ מֵאֱלׂהִים וְכֵן כָּל־אֲשֶׁר לׂא־יֶאֱהַב אֶת־אָחִיו׃",
+      "corrections": [
+        {
+          "word_index": 16,
+          "original_word": "אָחִיו",
+          "error_confidence": 0.7761359810829163,
+          "suggestions": [
+            {
+              "word": "הַיַּרְדֵּן",
+              "confidence": 0.12999452650547028
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 11,
+      "original_text": "כִּי־זֹאת הִיא הַבְּטַחָה אֲשֶׁר שְׁמַעְתֶּם מֵרֹאשִׁית אֲשֶׁר נֹאהֵב אִישׁ אֶת־רֵעֵהוּ",
+      "delitzsch_reference": "כִּי זׂאת הַשְּׁמוּעָה אֲשֶׁר שְׁמַעְתֶּם מֵרׂאשׁ לְאַהֲבָה אִישׁ אֶת־רֵעֵהוּ׃",
+      "corrections": [
+        {
+          "word_index": 5,
+          "original_word": "שְׁמַעְתֶּם",
+          "error_confidence": 0.5565299391746521,
+          "suggestions": [
+            {
+              "word": "אֲשֶׁר",
+              "confidence": 0.7160035371780396
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 12,
+      "original_text": "לֹא כְּמוֹ קַיִן אֲשֶׁר מִן־הָרָע וַיַּהֲרֹג אֶת־אָחִיו וְעַל־מָה־הָרַג אֹתוֹ מֵעֲשָׂיו רָעִים הָיוּ וּמַעֲשֵׂי אָחִיו צַדִּיקִים",
+      "delitzsch_reference": "לׂא כְקַיִן אֲשֶׁר הָיָה מִן־הָרָע וְהָרַג אֶת־אָחִיו וּמַדּוּעַ הֲרָגוֹ יַעַן כִּי־מַעֲשָׂיו הָיוּ רָעִים וּמַעֲשֵׂי אָחִיו מַעֲשֵׂי־צֶדֶק׃",
+      "corrections": [
+        {
+          "word_index": 8,
+          "original_word": "אָחִיו",
+          "error_confidence": 0.9349268674850464,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.815601646900177
+            }
+          ]
+        },
+        {
+          "word_index": 9,
+          "original_word": "וְעַל",
+          "error_confidence": 0.7991127967834473,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.9091730713844299
+            }
+          ]
+        },
+        {
+          "word_index": 10,
+          "original_word": "מָה",
+          "error_confidence": 0.8826037645339966,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.3955158591270447
+            }
+          ]
+        },
+        {
+          "word_index": 11,
+          "original_word": "הָרַג",
+          "error_confidence": 0.9668868780136108,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.31521549820899963
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 13,
+      "original_text": "אַל תִּתְמַהוּ אַחַי אִם שׂוֹנְאִם עֹלָם",
+      "delitzsch_reference": "אַל־תִּתְמְהוּ אֶחָי אִם־יִשְׂנָא אֶתְכֶם הָעוֹלָם׃",
+      "corrections": [
+        {
+          "word_index": 2,
+          "original_word": "אַחַי",
+          "error_confidence": 0.7241628170013428,
+          "suggestions": [
+            {
+              "word": "אַל",
+              "confidence": 0.1490788459777832
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 14,
+      "original_text": "אֲנַחְנוּ יוֹדְעֵי כִּי עָלֵינוּ בַּמּוֹת אֶל נַחְיִים כִּי־אֹהֲבִים אֲנַחְנוּ אֶת־הָאַחִים אֲשֶׁר לֹא אֹהֵב אֶת־אָחִיו עֹמֵד בַּמָּוֶת",
+      "delitzsch_reference": "אֲנַחְנוּ יָדַעְנוּ כִּי עָבַרְנוּ מִן־הַמָּוֶת אֶל־הַחַיִּים בַּאֲשֶׁר אָהַבְנוּ אֶת־אַחֵינוּ אִישׁ אֲשֶׁר לׂא־יֶאֱהַב יִשָּׁאֵר בַּמָּוֶת׃",
+      "corrections": [
+        {
+          "word_index": 1,
+          "original_word": "יוֹדְעֵי",
+          "error_confidence": 0.9608486890792847,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.3753049671649933
+            }
+          ]
+        },
+        {
+          "word_index": 3,
+          "original_word": "עָלֵינוּ",
+          "error_confidence": 0.8818456530570984,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.4467671811580658
+            }
+          ]
+        },
+        {
+          "word_index": 4,
+          "original_word": "בַּמּוֹת",
+          "error_confidence": 0.9783596396446228,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.23736786842346191
+            }
+          ]
+        },
+        {
+          "word_index": 6,
+          "original_word": "נַחְיִים",
+          "error_confidence": 0.9593645930290222,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.8600658774375916
+            }
+          ]
+        },
+        {
+          "word_index": 8,
+          "original_word": "אֹהֲבִים",
+          "error_confidence": 0.9740647077560425,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.4575166404247284
+            }
+          ]
+        },
+        {
+          "word_index": 11,
+          "original_word": "הָאַחִים",
+          "error_confidence": 0.9327415227890015,
+          "suggestions": [
+            {
+              "word": "אֲשֶׁר",
+              "confidence": 0.23714348673820496
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 15,
+      "original_text": "כָּל־שׂוֹנֵא אָחִיו רוֹצֵחַ הוּא כִּי כָל־יוֹדְעִים אַתֶּם לֹא חַיֵי עוֹלָם לְהִתְעַדֵּד בְּנַפְשׁוֹ",
+      "delitzsch_reference": "כָּל־הַשּׂנֵא אֶת אָחִיו רׂצֵחַ הוּא וִידַעְתֶּם כִּי כָל־רׂצֵחַ לׂא יִתְקַיְּמוּ־בוֹ חַיֵּי עוֹלָם׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 16,
+      "original_text": "כִּי־זֹאת יָדַעְנוּ אֶת־הָאַהֲבָה כִּי הוּא שָׂם עָלָיו אֶת־נַפְשׁוֹ וַחֹבִים אֲנַחְנוּ לָשׂוּם אֶת־נַפְשֹׁתֵינוּ עַל־אַחֵינוּ",
+      "delitzsch_reference": "בָּזׂאת יָדַעְנוּ אֶת־הָאַהֲבָה כִּי הוּא נָתַן אֶת־נַפְשׁוֹ בַּעֲדֵנוּ גַּם־אֲנַחְנוּ חַיָּבִים לָתֵת אֶת־נַפְשׁׂתֵינוּ בְּעַד אַחֵינוּ׃",
+      "corrections": [
+        {
+          "word_index": 4,
+          "original_word": "הָאַהֲבָה",
+          "error_confidence": 0.583180844783783,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.32719096541404724
+            }
+          ]
+        },
+        {
+          "word_index": 10,
+          "original_word": "נַפְשׁוֹ",
+          "error_confidence": 0.939506471157074,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.20386725664138794
+            }
+          ]
+        },
+        {
+          "word_index": 11,
+          "original_word": "וַחֹבִים",
+          "error_confidence": 0.9808899164199829,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.5896841287612915
+            }
+          ]
+        },
+        {
+          "word_index": 12,
+          "original_word": "אֲנַחְנוּ",
+          "error_confidence": 0.9630236029624939,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.3145003616809845
+            }
+          ]
+        },
+        {
+          "word_index": 13,
+          "original_word": "לָשׂוּם",
+          "error_confidence": 0.9783875942230225,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.7477542161941528
+            }
+          ]
+        },
+        {
+          "word_index": 15,
+          "original_word": "נַפְשֹׁתֵינוּ",
+          "error_confidence": 0.9530041217803955,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.41915515065193176
+            },
+            {
+              "word": "הַיַּרְדֵּן",
+              "confidence": 0.11134875565767288
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 17,
+      "original_text": "וְאָשֵׁר יֵשׁ־לוֹ קִנְיַן הָעוֹלָם וְרָאָה אֶת־אָחִיו כִּי חָסֵר הוּא וְיִסְגֹּר אֶת־דְּמָעָיו מִמֶּנּוּ אֵיכָכָה עֹמֶדֶת אַהֲבַת אֱלֹהִים בּוֹ",
+      "delitzsch_reference": "וְאִישׁ אֲשֶׁר־לוֹ נִכְסֵי הָעוֹלָם הַזֶּה וְהוּא רׂאֶה אֶת־אָחִיו חֲסַר־לֶחֶם וְקׂפֵץ אֶת־רַחֲמָיו מִמֶּנּוּ אֵיךְ תַּעֲמָד־בּוֹ אַהֲבַת אֱלׂהִים׃",
+      "corrections": [
+        {
+          "word_index": 7,
+          "original_word": "אָחִיו",
+          "error_confidence": 0.97617506980896,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.2018759697675705
+            }
+          ]
+        },
+        {
+          "word_index": 11,
+          "original_word": "וְיִסְגֹּר",
+          "error_confidence": 0.9846003651618958,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.6682244539260864
+            }
+          ]
+        },
+        {
+          "word_index": 13,
+          "original_word": "דְּמָעָיו",
+          "error_confidence": 0.976915717124939,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.4371851086616516
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 18,
+      "original_text": "בָּנַי אַל־נֹאהַב בַּדֶּבֶר וּבַלָּשׁוֹן כִּי אִם־בְּמַעֲשֶׂה וּבֶאֱמֶת",
+      "delitzsch_reference": "בָּנַי אַל־נָא נֶאֱהַב בְּמִלִּין וּבַלָּשׁוֹן כִּי אִם־בְּפׂעַל וּבֶאֱמֶת׃",
+      "corrections": [
+        {
+          "word_index": 0,
+          "original_word": "בָּנַי",
+          "error_confidence": 0.6984760761260986,
+          "suggestions": [
+            {
+              "word": "אַל",
+              "confidence": 0.41883447766304016
+            }
+          ]
+        },
+        {
+          "word_index": 2,
+          "original_word": "נֹאהַב",
+          "error_confidence": 0.9228951334953308,
+          "suggestions": [
+            {
+              "word": "אַל",
+              "confidence": 0.10740897804498672
+            }
+          ]
+        },
+        {
+          "word_index": 6,
+          "original_word": "אִם",
+          "error_confidence": 0.6309852600097656,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.2716224491596222
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 19,
+      "original_text": "וּבְזֹאת יוֹדְעִים אֲנוּ כִּי־מֵאֱמֶת הֹוָם אֲנַחְנוּ וְלִפְנֵי־פָנָיו נַכְנִיעַ אֶת־לְבָבֵנוּ",
+      "delitzsch_reference": "וּבָזׂאת נֵדְעָה כִּי מִן־הָאֱמֶת אֲנָחְנוּ וּלְפָנָיו נַשְׁקִיט אֶת־לִבּוֹתֵינוּ׃",
+      "corrections": [
+        {
+          "word_index": 2,
+          "original_word": "אֲנוּ",
+          "error_confidence": 0.9524512887001038,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.5326155424118042
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 20,
+      "original_text": "כִּי אִם־לְבָבֵנוּ יִרְאֵב אוֹתָנוּ בְּמָה דְּגַדּוֹל הָאֱלֹהִים מִלְּבַבֵּנוּ וְיוֹדֵעַ אֶת־כָּל־דָּבָר",
+      "delitzsch_reference": "כִּי אִם־לִבֵּנוּ יַרְשִׁיעַ אׂתָנוּ הָאֱלׂהִים נִשְׂגָּב הוּא מִלִּבֵּנוּ וְיׂדֵעַ אֶת־כּׂל׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 21,
+      "original_text": "אֲהוּבַי אִם־לְבָּנוּ לֹא יָרִיב אוֹתָנוּ בִּבְטָחוֹן נִגְשַׁהּ אֶל־אֱלֹהִים",
+      "delitzsch_reference": "יְדִידַי אִם־לִבֵּנוּ לׂא־יַרְשִׁיעֵנוּ עׂז לָנוּ בֵּאלׂהִים׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 22,
+      "original_text": "וְכָל־אֲשֶׁר נִּשְׁאַל יָקַּח מֵאִתּוֹ כִּי מִצְוֹתָיו שָׁמָרִים וְהַנָּצוּא לְפָנָיו פֹּעֲלִים אֲנָחְנוּ",
+      "delitzsch_reference": "וְכָל־אֲשֶׁר נִשְׁאַל מֵאִתּוֹ יִנָּתֶן־לָנוּ כִּי־נִשְׁמׂר אֶת־מִצְוֹתָיו וְנַעֲשֶׂה אֶת־הַיָּשָׁר בְּעֵינָיו׃",
+      "corrections": [
+        {
+          "word_index": 0,
+          "original_word": "וְכָל",
+          "error_confidence": 0.6364455819129944,
+          "suggestions": [
+            {
+              "word": "אֲשֶׁר",
+              "confidence": 0.2501908540725708
+            },
+            {
+              "word": "תִּהְיֶה",
+              "confidence": 0.1130891814827919
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 23,
+      "original_text": "וְזֹאת הִיא מִצְוָתוֹ אֲשֶׁר נֶאֱמִין בְּשֵׁם בְּנוֹ יֵשׁוּעַ הַמָּשִׁיחַ וְנֶאֱהַב אִישׁ אֶת־אָחִיו כַּאֲשֶׁר צִוָּה אֹתָנוּ",
+      "delitzsch_reference": "וְזׂאת מִצְוָתוֹ לְהַאֲמִין בְּשֶׁם־בְּנוֹ יֵשׁוּעַ הַמָּשִׁיחַ וּלְאַהֲבָה אִישׁ אֶת־רֵעֵהוּ כַּאֲשֶׁר צִוָּנוּ׃",
+      "corrections": [
+        {
+          "word_index": 1,
+          "original_word": "הִיא",
+          "error_confidence": 0.8809369802474976,
+          "suggestions": [
+            {
+              "word": "גַם",
+              "confidence": 0.47000327706336975
+            }
+          ]
+        },
+        {
+          "word_index": 2,
+          "original_word": "מִצְוָתוֹ",
+          "error_confidence": 0.9475972056388855,
+          "suggestions": [
+            {
+              "word": "גַם",
+              "confidence": 0.16628509759902954
+            }
+          ]
+        },
+        {
+          "word_index": 5,
+          "original_word": "בְּשֵׁם",
+          "error_confidence": 0.9504748582839966,
+          "suggestions": [
+            {
+              "word": "אַתָּה",
+              "confidence": 0.1412423998117447
+            }
+          ]
+        },
+        {
+          "word_index": 12,
+          "original_word": "אָחִיו",
+          "error_confidence": 0.9500749707221985,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.6510934829711914
+            }
+          ]
+        },
+        {
+          "word_index": 14,
+          "original_word": "צִוָּה",
+          "error_confidence": 0.8996496796607971,
+          "suggestions": [
+            {
+              "word": "הַיַּרְדֵּן",
+              "confidence": 0.20418179035186768
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 24,
+      "original_text": "וְהַשֹּׁמֵר אֶת־מִצְוֹתָיו מְעוֹנָה בּוֹ וְהוּא בוֹ וּבָזֹאת נֵדַע כִּי מְעוֹנֶה בָּנוּ בָּרוּחַ אֲשֶׁר נָתַן לָנוּ",
+      "delitzsch_reference": "וְהַשּׁׂמֵר אֶת־מִצְוֹתָיו יָקוּם בּוֹ וְהוּא בוֹ וּבָזׂאת נֵדַע כִּי־הוּא שׁׂכֵן בָּנוּ בָּרוּחַ אֲשֶׁר־נָתַן לָנוּ׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 1,
+      "original_text": "אֲהוּבַי אַל־תַּאֲמִינוּ לְכָל־רוּחַ כִּי אִם בְּחָנוּ אֶת־רוּחוֹת אִם אֱלֹהִים הֵנָּה כִּי נְבִיאֵי שְׁקָרִים רַבִּים בָּאוּ בָּעוֹלָם",
+      "delitzsch_reference": "יְדִידַי אַל־תַּאֲמִינוּ לְכָל־רוּחַ כִּי אִם־בַּחֲנוּ הָרוּחוֹת אִם־מֵאֱלׂהִים הֵמָּה כִּי נְבִיאֵי שֶׁקֶר רַבִּים בָּאוּ לָעוֹלָם׃",
+      "corrections": [
+        {
+          "word_index": 2,
+          "original_word": "תַּאֲמִינוּ",
+          "error_confidence": 0.9574766159057617,
+          "suggestions": [
+            {
+              "word": "אַל",
+              "confidence": 0.26396381855010986
+            }
+          ]
+        },
+        {
+          "word_index": 9,
+          "original_word": "רוּחוֹת",
+          "error_confidence": 0.9677414894104004,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.216216042637825
+            },
+            {
+              "word": "כִּי",
+              "confidence": 0.15280340611934662
+            }
+          ]
+        },
+        {
+          "word_index": 12,
+          "original_word": "הֵנָּה",
+          "error_confidence": 0.9684670567512512,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.24199947714805603
+            }
+          ]
+        },
+        {
+          "word_index": 14,
+          "original_word": "נְבִיאֵי",
+          "error_confidence": 0.9701467752456665,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.30756422877311707
+            }
+          ]
+        },
+        {
+          "word_index": 15,
+          "original_word": "שְׁקָרִים",
+          "error_confidence": 0.95865398645401,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.25177207589149475
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 2,
+      "original_text": "בְּזֹאת נוֹדַעַת רוּחַ אֱלֹהִים כָּל־רוּחַ הַמּוֹדֶה כִּי־יֵשׁוּעַ הַמָּשִׁיחַ בָּא בַבָּשָׂר בֵּאלֹהִים הוּא",
+      "delitzsch_reference": "בָּזׂאת תַּכִּירוּ אֶת־רוּחַ אֱלׂהִים כָּל־רוּחַ הַמּוֹדֶה בְּיֵשׁוּעַ הַמָּשִׁיחַ הַבָּא בַבָּשָׂר מֵאֱלׂהִים הוּא׃",
+      "corrections": [
+        {
+          "word_index": 9,
+          "original_word": "הַמָּשִׁיחַ",
+          "error_confidence": 0.5860926508903503,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.16544054448604584
+            },
+            {
+              "word": "יֵשׁוּעַ",
+              "confidence": 0.1385153830051422
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 3,
+      "original_text": "וְכָל־רוּחַ אֲשֶׁר אֵינֶנָּה מוֹדָה כִּי־יֵשׁוּעַ הַמָּשִׁיחַ בָּא בַבָּשָׂר אֵינֶנָּה בֵאלֹהִים וְזֹאת הִיא רוּחַ מַשִּׂיחַ שֶׁקֶר אֲשֶׁר שְׁמַעְתֶּם כִּי תָבוֹא וְעַתָּה בָּעוֹלָם הִיא",
+      "delitzsch_reference": "וְכָל־רוּחַ אֲשֶׁר אֵינֶנּוּ מוֹדֶה בְּיֵשׁוּעַ (הַמָּשִׁיחַ הַבָּא בַבָּשָׂר) לׂא מֵאֱלׂהִים הוּא וְזֶה הוּא רוּחַ שׂוֹטֵן הַמָּשִׁיחַ אֲשֶׁר שְׁמַעְתֶּם כִּי־יָבֹא וְעַתָּה הִנֵּה־הוּא בָעוֹלָם׃",
+      "corrections": [
+        {
+          "word_index": 6,
+          "original_word": "יֵשׁוּעַ",
+          "error_confidence": 0.6891991496086121,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.2752811908721924
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 4,
+      "original_text": "אָנֻם מֵאֱלֹהִים הוֹיֵם בָּנַי וַתְבַרְכֵם עֲלֵיהֶם כִּי גָדוֹל הוּא אֲשֶר כָּכֵם מֵאֲשֶר בָּעוֹלָם",
+      "delitzsch_reference": "אַתֶּם הַבָּנִים מֵאֱלׂהִים אַתֶּם וְנִצַּחְתֶּם אׂתָם כִּי־אֲשֶׁר בָּכֶם גָּדוֹל הוּא מֵאֲשֶׁר בָּעוֹלָם׃",
+      "corrections": [
+        {
+          "word_index": 4,
+          "original_word": "וַתְבַרְכֵם",
+          "error_confidence": 0.911454975605011,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.8054796457290649
+            }
+          ]
+        },
+        {
+          "word_index": 7,
+          "original_word": "גָדוֹל",
+          "error_confidence": 0.8223138451576233,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.22483500838279724
+            }
+          ]
+        },
+        {
+          "word_index": 9,
+          "original_word": "אֲשֶר",
+          "error_confidence": 0.9322729706764221,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.521395206451416
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 5,
+      "original_text": "הֵם מֵהָעוֹלָם מְדַבְּרִים עַל כֵּן יְשַׁמַּע קוֹלָם הָעוֹלָם",
+      "delitzsch_reference": "הֵמָּה מִן־הָעוֹלָם עַל־כֵּן מֵהָעוֹלָם יְדַבֵּרוּ וְהָעוֹלָם יִשְׁמַע אֲלֵיהֶם׃",
+      "corrections": [
+        {
+          "word_index": 0,
+          "original_word": "הֵם",
+          "error_confidence": 0.5070635080337524,
+          "suggestions": [
+            {
+              "word": "תִּהְיֶה",
+              "confidence": 0.107537642121315
+            }
+          ]
+        },
+        {
+          "word_index": 4,
+          "original_word": "כֵּן",
+          "error_confidence": 0.7005307674407959,
+          "suggestions": [
+            {
+              "word": "עַל",
+              "confidence": 0.25310465693473816
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 6,
+      "original_text": "אֲנַחְנוּ מֵאֱלֹהִים הַיּוֹדֵעַ אֱלֹהִים שׁוֹמֵעַ אֵלֵינוּ אֲשֶר אֵינֶנּוּ מֵאֱלֹהִים לֹא שׁוֹמֵעַ לָנוּ בְּזֹאת יוֹדְעִים אֲנַחְנוּ אֶת־רוּחַ הָאֱמֶת וְאֶת־רוּחַ הַתָּעוֹת",
+      "delitzsch_reference": "וַאֲנַחְנוּ מֵאֱלׂהִים הַיּוֹדֵעַ אֶת־הָאֱלׂהִים יִשְׁמַע אֵלֵינוּ וַאֲשֶׁר אֵינֶנּוּ מֵאֱלׂהִים לׂא יִשְׁמַע אֵלֵינוּ בָּזׂאת נַכִּיר אֶת־רוּחַ הָאֱמֶת וְאֶת־רוּחַ הַתּוֹעָה׃",
+      "corrections": [
+        {
+          "word_index": 13,
+          "original_word": "יוֹדְעִים",
+          "error_confidence": 0.7644662261009216,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.4092683792114258
+            },
+            {
+              "word": "אֱלֹהִים",
+              "confidence": 0.17049100995063782
+            }
+          ]
+        },
+        {
+          "word_index": 14,
+          "original_word": "אֲנַחְנוּ",
+          "error_confidence": 0.8954260349273682,
+          "suggestions": [
+            {
+              "word": "אֱלֹהִים",
+              "confidence": 0.39383018016815186
+            },
+            {
+              "word": "אֶת",
+              "confidence": 0.22648420929908752
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 7,
+      "original_text": "אֲהוּבָי נֵאַהֲבָה אִישׁ אֶת־רֵעֵהוּ כִּי הָאַהֲבָה מֵאֱלֹהִים הוּא וְכָל אוֹהֵב אֶת־רֵעֵהוּ מֵאֱלֹהִים נוֹלָד וְיוֹדֵעַ אֶת־הָאֱלֹהִים",
+      "delitzsch_reference": "יְדִידַי נֶאֱהַב־נָא אִישׁ אֶת־רֵעֵהוּ כִּי הָאַהֲבָה מֵאֱלׂהִים הִיא וְכָל־אֲשֶׁר יֶאֱהַב נוֹלָד מֵאֱלׂהִים וְיׂדֵעַ אֵת הָאֱלׂהִים׃",
+      "corrections": [
+        {
+          "word_index": 4,
+          "original_word": "רֵעֵהוּ",
+          "error_confidence": 0.9553265571594238,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.31856727600097656
+            }
+          ]
+        },
+        {
+          "word_index": 7,
+          "original_word": "מֵאֱלֹהִים",
+          "error_confidence": 0.9771981239318848,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.16531945765018463
+            }
+          ]
+        },
+        {
+          "word_index": 9,
+          "original_word": "וְכָל",
+          "error_confidence": 0.9251407980918884,
+          "suggestions": [
+            {
+              "word": "אֶל",
+              "confidence": 0.10624746978282928
+            }
+          ]
+        },
+        {
+          "word_index": 12,
+          "original_word": "רֵעֵהוּ",
+          "error_confidence": 0.9701869487762451,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.22637809813022614
+            }
+          ]
+        },
+        {
+          "word_index": 13,
+          "original_word": "מֵאֱלֹהִים",
+          "error_confidence": 0.9526756405830383,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.16560326516628265
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 8,
+      "original_text": "אֲשֶר אֵינֶנּוּ אוֹהֵב אֶת־רֵעֵהוּ לֹא יָדַע אֶת־אֱלֹהִים הוּא הָאַהֲבָה",
+      "delitzsch_reference": "וַאֲשֶׁר אֵינֶנּוּ אׂהֵב לׂא יָדַע אֶת־הָאֱלׂהִים כִּי הָאֱלׂהִים הוּא אַהֲבָה׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 9,
+      "original_text": "בְּזֹאת גִּלָּה אַהֲבָת אֱלֹהִים בָּנוּ שְׁלַח אֱלֹהִים אֶת־בְּנוֹ יְחִידוֹ אֶל־הָעוֹלָם אֲשֶר נִחְיֶה בְּיָדוֹ",
+      "delitzsch_reference": "בָּזׂאת נִרְאֲתָה אַהֲבַת הָאֱלׂהִים לָנוּ אֲשֶׁר־שָׁלַח הָאֱלׂהִים אֶת־בְּנוֹ אֶת־יְחִידוֹ לָעוֹלָם לְמַעַן נִחְיֶה עַל־יָדוֹ׃",
+      "corrections": [
+        {
+          "word_index": 6,
+          "original_word": "אֱלֹהִים",
+          "error_confidence": 0.9295163154602051,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.1089886873960495
+            }
+          ]
+        },
+        {
+          "word_index": 8,
+          "original_word": "בְּנוֹ",
+          "error_confidence": 0.9712371230125427,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.23017971217632294
+            }
+          ]
+        },
+        {
+          "word_index": 9,
+          "original_word": "יְחִידוֹ",
+          "error_confidence": 0.9791716933250427,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.13046720623970032
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 10,
+      "original_text": "בְּזֹאת הִיא הָאַהֲבָה לֹא כִי אֲנַחְנוּ אָהַבְנוּ אֶת־אֱלֹהִים כִּי הוּא אֲהֵבָנוּ וְשָׁלַח אֶת־בְּנוֹ לִכְפֹּר עַל־חַטֹּאתֵינוּ",
+      "delitzsch_reference": "זׂאת הִיא הָאַהֲבָה לׂא שֶׁאֲנַחְנוּ אָהַבְנוּ אֶת־הָאֱלׂהִים כִּי אִם־הוּא אָהַב אוֹתָנוּ וַיִּשְׁלַח אֶת־בְּנוֹ לְכַפָּרָה עַל־חַטּׂאתֵינוּ׃",
+      "corrections": [
+        {
+          "word_index": 8,
+          "original_word": "אֱלֹהִים",
+          "error_confidence": 0.8948545455932617,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.16136498749256134
+            }
+          ]
+        },
+        {
+          "word_index": 14,
+          "original_word": "בְּנוֹ",
+          "error_confidence": 0.9603945016860962,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.6195951104164124
+            }
+          ]
+        },
+        {
+          "word_index": 15,
+          "original_word": "לִכְפֹּר",
+          "error_confidence": 0.9637229442596436,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.45694923400878906
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 11,
+      "original_text": "אָהוּבִי אִם כֹּה אֱהֵבָֽנוּ אֱלֹהִים גַּם אֲנַֽחְנוּ חוֹבִים לֶאֱהֹב אִישׁ אֶת־רֵעֵהוּ",
+      "delitzsch_reference": "יְדִידַי אִם־כָּכָה אָהַב אׂתָנוּ הָאֱלׂהִים גַּם־אֲנַחְנוּ חַיָּבִים לְאַהֲבָה אִישׁ אֶת־רֵעֵהוּ׃",
+      "corrections": [
+        {
+          "word_index": 4,
+          "original_word": "אֱלֹהִים",
+          "error_confidence": 0.8890635371208191,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.12859374284744263
+            }
+          ]
+        },
+        {
+          "word_index": 5,
+          "original_word": "גַּם",
+          "error_confidence": 0.8033316731452942,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.22708900272846222
+            }
+          ]
+        },
+        {
+          "word_index": 11,
+          "original_word": "רֵעֵהוּ",
+          "error_confidence": 0.7044371366500854,
+          "suggestions": [
+            {
+              "word": "הַיַּרְדֵּן",
+              "confidence": 0.26490136981010437
+            },
+            {
+              "word": "אֶת",
+              "confidence": 0.142884761095047
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 12,
+      "original_text": "לֹא רָאָה אִישׁ אֶת־אֱלֹהִים בְּכָל עֵת לֹא רָאָה אִם נֶאֱהַב אִישׁ אֶת־רֵעֵהוּ אוֹ מְעוֹדֵד אֱלֹהִים בָּֽנוּ וְאַהֲבָתוֹ שְׁלֵמָה הִיא בָּֽנוּ",
+      "delitzsch_reference": "אֶת־הָאֱלׂהִים לׂא־רָאָה אִישׁ מֵעוֹלָם וְאִם־נֶאֱהַב אִישׁ אֶת־רֵעֵהוּ הָאֱלׂהִים יַעֲמׂד בְּקִרְבֵּנוּ וְאַהֲבָתוֹ נִשְׁלְמָה־בָּנוּ׃",
+      "corrections": [
+        {
+          "word_index": 13,
+          "original_word": "רֵעֵהוּ",
+          "error_confidence": 0.9545520544052124,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.16855959594249725
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 13,
+      "original_text": "בְּזֹאת יָדַֽעְנוּ כִּי־יוֹעֵֽדְנוּ בּוֹ וְהוּא בָֽנוּ כִּי־נָתַן לָֽנוּ מֵרוּחוֹ",
+      "delitzsch_reference": "בָּזׂאת נֵדַע אֲשֶׁר־בּוֹ נִשְׁכּׂן וְהוּא בָנוּ כִּי־נָתַן לָנוּ מֵרוּחוֹ׃",
+      "corrections": [
+        {
+          "word_index": 0,
+          "original_word": "בְּזֹאת",
+          "error_confidence": 0.8192468881607056,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.13412663340568542
+            }
+          ]
+        },
+        {
+          "word_index": 1,
+          "original_word": "יָדַֽעְנוּ",
+          "error_confidence": 0.9600727558135986,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.6958931684494019
+            }
+          ]
+        },
+        {
+          "word_index": 3,
+          "original_word": "יוֹעֵֽדְנוּ",
+          "error_confidence": 0.9686514735221863,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.37507984042167664
+            }
+          ]
+        },
+        {
+          "word_index": 4,
+          "original_word": "בּוֹ",
+          "error_confidence": 0.8090687990188599,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.45383986830711365
+            }
+          ]
+        },
+        {
+          "word_index": 5,
+          "original_word": "וְהוּא",
+          "error_confidence": 0.827449381351471,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.5080108046531677
+            }
+          ]
+        },
+        {
+          "word_index": 6,
+          "original_word": "בָֽנוּ",
+          "error_confidence": 0.9614145159721375,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.7109489440917969
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 14,
+      "original_text": "וַאֲנַֽחְנוּ רָאִֽינוּ וּמְעִידִים כִּי הָאָב שָׁלַח אֶת־בְּנוֹ לְמוֹשִֽׁיעַ הָעוֹלָם",
+      "delitzsch_reference": "וַאֲנַחְנוּ חָזִינוּ וַנָּעִידָה כִּי הָאָב שָׁלַח אֶת־הַבֵּן מוֹשִׁיעַ הָעוֹלָם׃",
+      "corrections": [
+        {
+          "word_index": 1,
+          "original_word": "רָאִֽינוּ",
+          "error_confidence": 0.9465667605400085,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.24297574162483215
+            }
+          ]
+        },
+        {
+          "word_index": 4,
+          "original_word": "הָאָב",
+          "error_confidence": 0.8997645378112793,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.23133595287799835
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 15,
+      "original_text": "לְכֹל כָּל אֲשֶׁר יְהוָֹדֶה כִּי יֵשׁוּעַ הוּא בֶּן־אֱלֹהִים הוּא בְעוֹמְדוֹ בֵאלֹהִים וֵאלֹהִים בּוֹ",
+      "delitzsch_reference": "כָּל־הַמּוֹדֶה כִּי יֵשׁוּעַ הוּא בֶן־הָאֱלׂהִים הָאֱלׂהִים שׁׂכֵן בּוֹ וְהוּא בֵּאלׂהִים׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 16,
+      "original_text": "וַאֲנַֽחְנוּ תָאַֽמְנוּ וַיָּדַֽעְנוּ אֶת אַהֲבַת אֲשֶׁר יֵשׁ לֵאלֹהִים אֵלֵֽינוּ אֱלֹהִים הוּא אַהֲבָה וְהָעוֹמֵד בְּאַהֲבָה עוֹמֵד בֵּאלֹהִים וֵאלֹהִים בּוֹ",
+      "delitzsch_reference": "וַאֲנַחְנוּ יָדַעְנוּ וַנַּאֲמֵן בָּאַהֲבָה אֲשֶׁר אֱלׂהִים אָהַב אׂתָנוּ הָאֱלׂהִים הוּא אַהֲבָה וְהָעׂמֵד בָּאַהֲבָה עׂמֵד בֵּאלׂהִים וְהָאֱלׂהִים עׂמֵד בּוֹ׃",
+      "corrections": [
+        {
+          "word_index": 4,
+          "original_word": "אַהֲבַת",
+          "error_confidence": 0.9525021910667419,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.15003536641597748
+            }
+          ]
+        },
+        {
+          "word_index": 6,
+          "original_word": "יֵשׁ",
+          "error_confidence": 0.8365147113800049,
+          "suggestions": [
+            {
+              "word": "אֲשֶׁר",
+              "confidence": 0.1471896469593048
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 17,
+      "original_text": "בְּזֹאת נִשְׁלְמָה הָאַהֲבָה לְבַטְחֵֽנוּ אֲשֶׁר נִּתְרֵֽי־לָֽנוּ בְּיוֹם הַדִּין כִּי־כְמוֹתוֹ הֵנָּה גַם הוֹיֽנוּ אֲנַֽחְנוּ בָּעוֹלָם הַזֶּה",
+      "delitzsch_reference": "וּבָזׂאת נִשְׁלְמָה־בָּנוּ הָאַהֲבָה בִּהְיוֹת לָנוּ פִּתְחוֹן פֶּה לְיוֹם הַדִּין כִּי כָמׂהוּ כֵּן גַּם־אֲנַחְנוּ בָּעוֹלָם הַזֶּה׃",
+      "corrections": [
+        {
+          "word_index": 10,
+          "original_word": "כְמוֹתוֹ",
+          "error_confidence": 0.9315599799156189,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.2701322138309479
+            }
+          ]
+        },
+        {
+          "word_index": 13,
+          "original_word": "הוֹיֽנוּ",
+          "error_confidence": 0.934028685092926,
+          "suggestions": [
+            {
+              "word": "עֹרֶב",
+              "confidence": 0.10881071537733078
+            }
+          ]
+        },
+        {
+          "word_index": 14,
+          "original_word": "אֲנַֽחְנוּ",
+          "error_confidence": 0.8122456073760986,
+          "suggestions": [
+            {
+              "word": "עֹרֶב",
+              "confidence": 0.22266484797000885
+            }
+          ]
+        },
+        {
+          "word_index": 15,
+          "original_word": "בָּעוֹלָם",
+          "error_confidence": 0.6874613165855408,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.12255370616912842
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 18,
+      "original_text": "זֶה יָדַע אֵינֶנָה בְּאַהֲבָה כִּלְאָה אַהֲבָה שְׁלֵמָה נִגְלֵיתָה אֶת־יִרְאָה כִּי־יִרְאָה שֶׁל־לָהּ מִכְשׁוֹל וְנִשֵּׁא לָא אֵינֶנוֹ שָׁלֵם בְּאַהֲבָה",
+      "delitzsch_reference": "אֵין פַּחַד לָאַהֲבָה כִּי הָאַהֲבָה הַשְּׁלֵמָה תְּגָרֵשׁ אֶת־הַפָּחַד כִּי הַפַּחַד הוּא פַחַד מִן־הָעׂנֶשׁ וְהַמְפַחֵד אֵינֶנּוּ שָׁלֵם בָּאַהֲבָה׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 19,
+      "original_text": "אֲנַחְנוּ אוֹהֲבִים אוֹתָהּ כִּי הוּא בָּרֹאשׁוֹנָה אָהַב אוֹתָנוּ",
+      "delitzsch_reference": "אֲנַחְנוּ אׂהֲבִים אׂתוֹ כִּי הוּא קִדֵּם לְאַהֲבָה אׂתָנוּ׃",
+      "corrections": [
+        {
+          "word_index": 1,
+          "original_word": "אוֹהֲבִים",
+          "error_confidence": 0.9385461211204529,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.3488951623439789
+            }
+          ]
+        },
+        {
+          "word_index": 4,
+          "original_word": "הוּא",
+          "error_confidence": 0.6772745251655579,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.3008127808570862
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 20,
+      "original_text": "אִם־אִישׁ יֹאמַר כִּי־אוֹהֵב אֲנִי אֶת־אֱלֹהִים וְשׂוֹנֵא אֶת־אָחִיו כּוֹזֵב הוּא כִּי אֲשֶׁר לֹא אָהַב אֶת־אָחִיו אֲשֶׁר רָאָה אֵיכָכָה יוּכַל לֶאֱהֹב אֶת־אֱלֹהִים אֲשֶׁר לֹא רָאָה אוֹתוֹ",
+      "delitzsch_reference": "כִּי־יׂאמַר אִישׁ אׂהֵב אֲנִי אֶת־הָאֱלׂהִים וְהוּא שׂׂנֵא אֶת־אָחִיו שֶׁקֶר הוּא מְדַבֵּר כִּי אֲשֶׁר לׂא יֶאֱהַב אֶת־אָחִיו אֲשֶׁר הוּא רׂאֶה אֵיכָכָה יוּכַל לֶאֱהׂב אֶת־הָאֱלׂהִים אֲשֶׁר הוּא אֵינֶנּוּ רׂאֶה אׂתוֹ׃",
+      "corrections": [
+        {
+          "word_index": 2,
+          "original_word": "יֹאמַר",
+          "error_confidence": 0.9819180965423584,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.16639263927936554
+            }
+          ]
+        },
+        {
+          "word_index": 10,
+          "original_word": "אָחִיו",
+          "error_confidence": 0.9556296467781067,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.20256194472312927
+            }
+          ]
+        },
+        {
+          "word_index": 11,
+          "original_word": "כּוֹזֵב",
+          "error_confidence": 0.9730169773101807,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.10950184613466263
+            }
+          ]
+        },
+        {
+          "word_index": 20,
+          "original_word": "רָאָה",
+          "error_confidence": 0.8964694738388062,
+          "suggestions": [
+            {
+              "word": "אֲשֶׁר",
+              "confidence": 0.6304369568824768
+            }
+          ]
+        },
+        {
+          "word_index": 23,
+          "original_word": "לֶאֱהֹב",
+          "error_confidence": 0.9600679278373718,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.2605140805244446
+            }
+          ]
+        },
+        {
+          "word_index": 25,
+          "original_word": "אֱלֹהִים",
+          "error_confidence": 0.8369894623756409,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.14022444188594818
+            },
+            {
+              "word": "אֲשֶׁר",
+              "confidence": 0.1194479912519455
+            }
+          ]
+        },
+        {
+          "word_index": 27,
+          "original_word": "לֹא",
+          "error_confidence": 0.5793554186820984,
+          "suggestions": [
+            {
+              "word": "אֲשֶׁר",
+              "confidence": 0.11179795116186142
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 21,
+      "original_text": "וְאֶת־הַמִּצְוָה הַזֹּאת לָקַחְנוּ מִמֶּנוּ כִּי כָּל־אִישׁ אֲשֶׁר אוֹהֵב אֶת־אֱלֹהִים גַּם אָהַב אֶת־אָחִיו",
+      "delitzsch_reference": "וְזׂאת הַמִּצְוָה מֵאִתּוֹ לָנוּ כִּי הָאׂהֵב אֶת־הָאֱלׂהִים יֶאֱהַב גַּם־אֶת־אָחִיו׃",
+      "corrections": [
+        {
+          "word_index": 6,
+          "original_word": "כָּל",
+          "error_confidence": 0.8910395503044128,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.39373117685317993
+            }
+          ]
+        },
+        {
+          "word_index": 9,
+          "original_word": "אוֹהֵב",
+          "error_confidence": 0.962753176689148,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.13051147758960724
+            }
+          ]
+        },
+        {
+          "word_index": 11,
+          "original_word": "אֱלֹהִים",
+          "error_confidence": 0.877503514289856,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.9024165272712708
+            }
+          ]
+        },
+        {
+          "word_index": 12,
+          "original_word": "גַּם",
+          "error_confidence": 0.8751723170280457,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.8291882276535034
+            }
+          ]
+        },
+        {
+          "word_index": 13,
+          "original_word": "אָהַב",
+          "error_confidence": 0.9588291049003601,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.7206820845603943
+            }
+          ]
+        },
+        {
+          "word_index": 15,
+          "original_word": "אָחִיו",
+          "error_confidence": 0.6905325651168823,
+          "suggestions": [
+            {
+              "word": "הַיַּרְדֵּן",
+              "confidence": 0.1390494555234909
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 1,
+      "original_text": "כָּל־אֲשֶׁר מַאֲמִין כִּי־יֵשׁוּעַ הוּא הַמָּשִׁיחַ גָּלוּל מֵאֱלֹהִים וְכָל־אֲשֶׁר אוֹהֵב אֶת־יֹלֵד גַּם אָהַב אוֹתוֹ הַנּוֹלָד מִמֶּנּוּ",
+      "delitzsch_reference": "כָּל־הַמַּאֲמִין כִּי יֵשׁוּעַ הוּא הַמָּשִׁיחַ הוּא נוֹלָד מֵאֱלׂהִים וְכָל־הָאׂהֵב אֶת־מוֹלִידוֹ יֶאֱהַב גַּם אֶת־הַנּוֹלָד מֵאִתּוֹ׃",
+      "corrections": [
+        {
+          "word_index": 5,
+          "original_word": "הוּא",
+          "error_confidence": 0.786529541015625,
+          "suggestions": [
+            {
+              "word": "אֲשֶׁר",
+              "confidence": 0.14603778719902039
+            }
+          ]
+        },
+        {
+          "word_index": 13,
+          "original_word": "יֹלֵד",
+          "error_confidence": 0.9673754572868347,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.9667853713035583
+            }
+          ]
+        },
+        {
+          "word_index": 14,
+          "original_word": "גַּם",
+          "error_confidence": 0.9308042526245117,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.5760695338249207
+            }
+          ]
+        },
+        {
+          "word_index": 15,
+          "original_word": "אָהַב",
+          "error_confidence": 0.9695359468460083,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.7448127865791321
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 2,
+      "original_text": "בְּזֹאת יָדַעְנוּ כִּי־אוֹהֲבִים אֲנַחְנוּ בְּנֵי אֱלֹהִים כַּאֲשֶׁר אוֹהֵב אֲנַחְנוּ אֶת־אֱלֹהִים וְאֶת־מִצְוֹתָיו נִשְׁמוֹר",
+      "delitzsch_reference": "בְּזׂאת נֵדַע כִּי נֶאֱהַב אֶת־בְּנֵי הָאֱלׂהִים בְּאַהֲבָתֵנוּ אֶת־הָאֱלׂהִים וּבְשָׁמְרֵנוּ אֶת־מִצְוֹתָיו׃",
+      "corrections": [
+        {
+          "word_index": 1,
+          "original_word": "יָדַעְנוּ",
+          "error_confidence": 0.9537885785102844,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.5820293426513672
+            }
+          ]
+        },
+        {
+          "word_index": 3,
+          "original_word": "אוֹהֲבִים",
+          "error_confidence": 0.9494687914848328,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.12080854922533035
+            }
+          ]
+        },
+        {
+          "word_index": 5,
+          "original_word": "בְּנֵי",
+          "error_confidence": 0.7959040403366089,
+          "suggestions": [
+            {
+              "word": "אֱלֹהִים",
+              "confidence": 0.23793824017047882
+            },
+            {
+              "word": "אֲנַחְנוּ",
+              "confidence": 0.21718837320804596
+            }
+          ]
+        },
+        {
+          "word_index": 7,
+          "original_word": "כַּאֲשֶׁר",
+          "error_confidence": 0.8754845857620239,
+          "suggestions": [
+            {
+              "word": "אֱלֹהִים",
+              "confidence": 0.11618329584598541
+            },
+            {
+              "word": "אֲשֶׁר",
+              "confidence": 0.10465680807828903
+            }
+          ]
+        },
+        {
+          "word_index": 9,
+          "original_word": "אֲנַחְנוּ",
+          "error_confidence": 0.79243004322052,
+          "suggestions": [
+            {
+              "word": "אֱלֹהִים",
+              "confidence": 0.5539467334747314
+            },
+            {
+              "word": "אֶת",
+              "confidence": 0.22727403044700623
+            }
+          ]
+        },
+        {
+          "word_index": 10,
+          "original_word": "אֶת",
+          "error_confidence": 0.800569474697113,
+          "suggestions": [
+            {
+              "word": "אֱלֹהִים",
+              "confidence": 0.24054889380931854
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 3,
+      "original_text": "כִּי זֹאת הִיא אַהֲבָה אֱלֹהִים אֲשֶׁר נִשְׁמֹר אֶת־מִצְוֹתָיו וּמִצְוֹתָיו אֵין כִּכְבֵדוֹת הֵנָּה",
+      "delitzsch_reference": "כִּי זׂאת אַהֲבַת אֱלׂהִים אֲשֶׁר נִשְׁמׂר אֶת־מִצְוֹתָיו וּמִצְוֹתָיו בִּלְתִּי קָשׁוֹת הֵנָּה׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 4,
+      "original_text": "כִּי כָל־אֲשֶׁר נוֹלַד מֵאֱלֹהִים נֹצֵחַ הָעוֹלָם הַנִּצָּחוֹן תִּקְוֹתֵנוּ עַל הָעוֹלָם הִיא אֱמוּנָתֵנוּ",
+      "delitzsch_reference": "כִּי־כׂל הַנּוֹלָד מֵאֵת הָאֱלׂהִים מְנַצֵּחַ אֶת־הָעוֹלָם וֶאֱמוּנָתֵנוּ הִיא הַנִּצָּחוֹן הַמְּנַצֵּחַ אֶת־הָעוֹלָם׃",
+      "corrections": [
+        {
+          "word_index": 1,
+          "original_word": "כָל",
+          "error_confidence": 0.5436249375343323,
+          "suggestions": [
+            {
+              "word": "אֲשֶׁר",
+              "confidence": 0.5201439261436462
+            }
+          ]
+        },
+        {
+          "word_index": 10,
+          "original_word": "הָעוֹלָם",
+          "error_confidence": 0.6994353532791138,
+          "suggestions": [
+            {
+              "word": "שָׁב",
+              "confidence": 0.18125095963478088
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 5,
+      "original_text": "מִי הִוּא הַנֹּצֵחַ עַל הָעוֹלָם מִלְּבַד הַמַּאֲמִין כִּי יֵשׁוּעַ בֶּן אֱלֹהִים הוּא",
+      "delitzsch_reference": "מִי הַמְּנַצֵּחַ אֶת־הָעוֹלָם כִּי אִם־הַמַּאֲמִין בְּיֵשׁוּעַ שֶׁהוּא בֶּן־הָאֱלׂהִים׃",
+      "corrections": [
+        {
+          "word_index": 4,
+          "original_word": "הָעוֹלָם",
+          "error_confidence": 0.6534612774848938,
+          "suggestions": [
+            {
+              "word": "עַל",
+              "confidence": 0.3496290445327759
+            }
+          ]
+        },
+        {
+          "word_index": 8,
+          "original_word": "יֵשׁוּעַ",
+          "error_confidence": 0.619251012802124,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.7308419346809387
+            }
+          ]
+        },
+        {
+          "word_index": 9,
+          "original_word": "בֶּן",
+          "error_confidence": 0.6904407739639282,
+          "suggestions": [
+            {
+              "word": "שָׁב",
+              "confidence": 0.14106018841266632
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 6,
+      "original_text": "זֶה הוּא הַבָּא בְּמַיִם (נֹדִים) יֵשׁוּעַ הַמָּשִׁיחַ אֵינֶנוּ בַמַּיִם לְבַדָּם כִּי בַמַּיִם וּבַדָּם וְהָרוּחַ בַּעֵידָה (כִּי הַמָּשִׁיחַ) אֱמֶת הוּא",
+      "delitzsch_reference": "זֶה הוּא אֲשֶׁר־בָּא בְּמַיִם וּבְדָם (וּבְרוּחַ) יֵשׁוּעַ הַמָּשִׁיחַ לׂא בְּמַיִם בִּלְבַד כִּי אִם־בַּמַּיִם וּבַדָּם וְהָרוּחַ הוּא הַמֵּעִיד כִּי הָרוּחַ הוּא הָאֱמֶת׃",
+      "corrections": [
+        {
+          "word_index": 1,
+          "original_word": "הוּא",
+          "error_confidence": 0.6216802000999451,
+          "suggestions": [
+            {
+              "word": "אֶל",
+              "confidence": 0.18058854341506958
+            },
+            {
+              "word": "וְלֹא",
+              "confidence": 0.12352283298969269
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 7,
+      "original_text": "(כִּי שְׁלֹשָׁה הֵם הַמְעִידִים בַּשָּׁמַיִם הָאָב וְהַדָּבָר וְרוּחַ הַקֹּדֶשׁ וּשְׁלֹשָׁה הָאֵלֶּה אֶחָד נֶפֶשׁ)",
+      "delitzsch_reference": "כִּי שְׁלׂשָׁה הַמְּעִידִים בַּשָּׁמַיִם הָאָב הַדָּבָר וְרוּחַ הַקּׂדֶשׁ וּשְׁלָשְׁתָּם אֶחָד הֵמָּה׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 8,
+      "original_text": "וּשְׁלֹשָׁה הֵם מְעִידוֹת בָּאָרֶץ (כְּאֶחָד) הָרוּחַ וְהַמַּיִם וְהַדָּם (נֹדִים) הָאֵלֶּה לְאֶחָד נֶפֶשׁ",
+      "delitzsch_reference": "וּשְׁלׂשָׁה הֵמָּה הַמְּעִידִים בָּאָרֶץ הָרוּחַ הַמַּיִם וְהַדָּם וּשְׁלָשְׁתָּם עֵדוּת אֶחָת׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 9,
+      "original_text": "אִם אֶת־עֵדֻת בְּנֵי אָדָם נִקַּח עֵדֻת אֱלֹהִים גְּדוֹלָה הִיא כִּי־זֹאת הִיא עֵדֻת אֱלֹהִים אֲשֶׁר הֵעִידָה עַל־בְּנוֹ",
+      "delitzsch_reference": "הֵן־נְקַבֵּל עֵדוּת בְּנֵי אָדָם וְעֵדוּת הָאֱלׂהִים הֲלׂא גְדוֹלָה מִמֶּנָּה כִּי זׂאת הִיא עֵדוּת הָאֱלׂהִים אֲשֶׁר הֵעִיד עַל־בְּנוֹ׃",
+      "corrections": [
+        {
+          "word_index": 3,
+          "original_word": "בְּנֵי",
+          "error_confidence": 0.8390730619430542,
+          "suggestions": [
+            {
+              "word": "וּכִי",
+              "confidence": 0.10435163974761963
+            }
+          ]
+        },
+        {
+          "word_index": 11,
+          "original_word": "זֹאת",
+          "error_confidence": 0.971589207649231,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.18153153359889984
+            }
+          ]
+        },
+        {
+          "word_index": 13,
+          "original_word": "עֵדֻת",
+          "error_confidence": 0.9744351506233215,
+          "suggestions": [
+            {
+              "word": "אֱלֹהִים",
+              "confidence": 0.34353408217430115
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 10,
+      "original_text": "הַמַּאֲמִין בִּבְנוֹ יֵשׁוּעַ לוֹ עֵדָה בְּנַפְשׁוֹ וַאֲשֶׁר אֵינֶנּוּ מַאֲמִין לֵאלֹהִים עָשָׂהוּ לְכוֹזֵב כִּי־לֹא הֶאֱמִין בַּעֵדֻת אֲשֶׁר הֵעִיד הָאֱלֹהִים עַל־בְּנוֹ",
+      "delitzsch_reference": "הַמַּאֲמִין בְּבֶן־הָאֱלׂהִים יֶשׁ־לוֹ עֵדוּת בְּנַפְשׁוֹ וַאֲשֶׁר לׂא יַאֲמִין לֵאלׂהִים לְכׂזֵב שָׂמָהוּ יַעַן לׂא־הֶאֱמִין בָּעֵדוּת אֲשֶׁר הֵעִיד הָאֱלׂהִים עַל־בְּנוֹ׃",
+      "corrections": [
+        {
+          "word_index": 8,
+          "original_word": "מַאֲמִין",
+          "error_confidence": 0.9704335331916809,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.13485632836818695
+            }
+          ]
+        },
+        {
+          "word_index": 14,
+          "original_word": "הֶאֱמִין",
+          "error_confidence": 0.9579386115074158,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.25527289509773254
+            }
+          ]
+        },
+        {
+          "word_index": 18,
+          "original_word": "הָאֱלֹהִים",
+          "error_confidence": 0.8113778829574585,
+          "suggestions": [
+            {
+              "word": "עַל",
+              "confidence": 0.18809954822063446
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 11,
+      "original_text": "וְזֹאת הִיא הָעֵדֻת כִּי חַיֵּי עוֹלָם נָתַן לָנוּ אֶת־הַיֵּי עוֹלָם וְהַחַיִּים הָאֵלֶּה הֵם בִּבְנוֹ",
+      "delitzsch_reference": "וְזׂאת הִיא הָעֵדוּת כִּי חַיֵּי עוֹלָם נָתַן לָנוּ הָאֱלׂהִים וְהַחַיִּים הָאֵלֶּה בִּבְנוֹ הֵמָּה׃",
+      "corrections": [
+        {
+          "word_index": 4,
+          "original_word": "חַיֵּי",
+          "error_confidence": 0.7458818554878235,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.181757390499115
+            }
+          ]
+        },
+        {
+          "word_index": 5,
+          "original_word": "עוֹלָם",
+          "error_confidence": 0.7701088786125183,
+          "suggestions": [
+            {
+              "word": "מִטִּיב",
+              "confidence": 0.1351846158504486
+            }
+          ]
+        },
+        {
+          "word_index": 6,
+          "original_word": "נָתַן",
+          "error_confidence": 0.735690176486969,
+          "suggestions": [
+            {
+              "word": "מִטִּיב",
+              "confidence": 0.1418638378381729
+            }
+          ]
+        },
+        {
+          "word_index": 7,
+          "original_word": "לָנוּ",
+          "error_confidence": 0.8756887912750244,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.1289319545030594
+            }
+          ]
+        },
+        {
+          "word_index": 9,
+          "original_word": "הַיֵּי",
+          "error_confidence": 0.9686601758003235,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.22667062282562256
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 12,
+      "original_text": "אֲשֶׁר לוֹ הַבֵּן יֶשׁ־לוֹ הַחַיִּים אֲשֶׁר לֹא יֶשׁ־לוֹ בֶן אֱלֹהִים גַּם לֹא־יִהְיוּ לוֹ הַחַיִּים",
+      "delitzsch_reference": "אֲשֶׁר יֶשׁ־לוֹ הַבֵּן יֶשׁ־לוֹ הַחַיִּים וַאֲשֶׁר אֵין־לוֹ בֶּן־הָאֱלׂהִים אֵין לוֹ הַחַיִּים׃",
+      "corrections": [
+        {
+          "word_index": 8,
+          "original_word": "יֶשׁ",
+          "error_confidence": 0.6305699348449707,
+          "suggestions": [
+            {
+              "word": "לוֹ",
+              "confidence": 0.2095872014760971
+            }
+          ]
+        },
+        {
+          "word_index": 11,
+          "original_word": "אֱלֹהִים",
+          "error_confidence": 0.8332164287567139,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.16952583193778992
+            }
+          ]
+        },
+        {
+          "word_index": 12,
+          "original_word": "גַּם",
+          "error_confidence": 0.8718230128288269,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.2896271347999573
+            },
+            {
+              "word": "לוֹ",
+              "confidence": 0.12800702452659607
+            }
+          ]
+        },
+        {
+          "word_index": 14,
+          "original_word": "יִהְיוּ",
+          "error_confidence": 0.9153188467025757,
+          "suggestions": [
+            {
+              "word": "לוֹ",
+              "confidence": 0.18212808668613434
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 13,
+      "original_text": "אֵלֶּה כָתַבְתִּי לְמַאֲמִינִים בַּשֵּׁם בֶּן־אֱלֹהִים אֲשֶׁר הוּא הַיֵּשׁוּעַ כִּי־תֵדְעוּ כִי־יֵשׁ לָכֶם חַיֵּי עוֹלָם וּבַעֲבוּר כִּי תַאֲמִינוּ בְשֵׁם בֶּן־הָאֱלֹהִים",
+      "delitzsch_reference": "זׂאת כָּתַבְתִּי אֲלֵיכֶם לְמַעַן תֵּדְעוּן שֶׁחַיֵּי עוֹלָם לָכֶם הַמַּאֲמִינִים בְּשֵׁם בֶּן־הָאֱלׂהִים׃",
+      "corrections": [
+        {
+          "word_index": 10,
+          "original_word": "תֵדְעוּ",
+          "error_confidence": 0.946276843547821,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.5880628824234009
+            }
+          ]
+        },
+        {
+          "word_index": 11,
+          "original_word": "כִי",
+          "error_confidence": 0.9705608487129211,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.1529988944530487
+            }
+          ]
+        },
+        {
+          "word_index": 13,
+          "original_word": "לָכֶם",
+          "error_confidence": 0.9496138095855713,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.3070676028728485
+            }
+          ]
+        },
+        {
+          "word_index": 14,
+          "original_word": "חַיֵּי",
+          "error_confidence": 0.9595156908035278,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.5102348327636719
+            }
+          ]
+        },
+        {
+          "word_index": 15,
+          "original_word": "עוֹלָם",
+          "error_confidence": 0.9531180262565613,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.8188028931617737
+            }
+          ]
+        },
+        {
+          "word_index": 16,
+          "original_word": "וּבַעֲבוּר",
+          "error_confidence": 0.9730589389801025,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.5465616583824158
+            },
+            {
+              "word": "וְאַחֲרֵיהֶם",
+              "confidence": 0.10230010747909546
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 14,
+      "original_text": "וְזֹאת הִיא הַבִּטָּחוֹן אֲשֶׁר־נֶפֶשׁ לָנוּ אֵלָיו כִּי־כָל־דָּבָר נֶאֱמָן נִשְׁאַל מִמֶּנּוּ כִרְצוֹנוֹ שָׁמֵעַ אֱלֵינוּ",
+      "delitzsch_reference": "וּבִטְחוֹנֵנוּ בוֹ שֶׁאִם־נִשְׁאַל דָּבָר כִּרְצוֹנוֹ יִשְׁמַע בְּקוֹלֵנוּ׃",
+      "corrections": [
+        {
+          "word_index": 6,
+          "original_word": "אֵלָיו",
+          "error_confidence": 0.7013440728187561,
+          "suggestions": [
+            {
+              "word": "אֲשֶׁר",
+              "confidence": 0.34453079104423523
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 15,
+      "original_text": "וְאִם יָדַעְנוּ כִּי־שֹׁמֵעַ אֵלֵינוּ בְּכָל־אֲשֶׁר נִשְׁאַל מִמֶּנּוּ יָדַעְנוּ כִּי־קִבַּלְנוּ אֶת מִמֶּנּוּ אֵת כׇּל־הַמִּשְׁאָלוֹת לִבֵּנוּ",
+      "delitzsch_reference": "וּלְפִי שֶׁיּׂדְעִים אֲנַחְנוּ כִּי יִשְׁמַע בְּקוֹלֵנוּ לְכָל־אֲשֶׁר נִשְׁאָל נֵדַע גַּם־זׂאת כִּי הוּא מְמַלֵּא מִשְׁאֲלוֹתֵינוּ׃",
+      "corrections": [
+        {
+          "word_index": 1,
+          "original_word": "יָדַעְנוּ",
+          "error_confidence": 0.9731342792510986,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.12790989875793457
+            }
+          ]
+        },
+        {
+          "word_index": 3,
+          "original_word": "שֹׁמֵעַ",
+          "error_confidence": 0.9799197316169739,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.1057257428765297
+            }
+          ]
+        },
+        {
+          "word_index": 7,
+          "original_word": "נִשְׁאַל",
+          "error_confidence": 0.9743205904960632,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.12268448621034622
+            }
+          ]
+        },
+        {
+          "word_index": 9,
+          "original_word": "יָדַעְנוּ",
+          "error_confidence": 0.9794027209281921,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.1687927395105362
+            }
+          ]
+        },
+        {
+          "word_index": 13,
+          "original_word": "מִמֶּנּוּ",
+          "error_confidence": 0.9189379811286926,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.16334855556488037
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 16,
+      "original_text": "אִם־אִישׁ יֵדַע כִּי־אָחִיו חוֹטֵא אֶת־הַחֲטָאָה לֹא לְמָוֶת וְיִתֵּן לוֹ אֶת־נַחְיִים אֵת הַחֹטֵא אֲשֶׁר חַטָּאתוֹ לֹא לְמָוֶת אִישׁ־חֹטֵא לְמָוֶת עָלָיו אֵינִי אֹמֵר לְשָׁאֵל",
+      "delitzsch_reference": "אִישׁ כִּי־יִרְאֶה אֶת־אָחִיו חוֹטֵא חַטָּאת אֲשֶׁר אֵינֶנָּה לַמָּוֶת שָׁאׂל יִשְׁאַל בַּעֲדוֹ וְיִתֶּן־לוֹ חַיִּים לְכָל־אֲשֶׁר חָטְאוּ וְלׂא לַמָּוֶת הֶן־יֵשׁ חֵטְא מָוֶת עַל־זֶה לׂא אׂמַר לִשְׁאוֹל בַּעֲדוֹ׃",
+      "corrections": [
+        {
+          "word_index": 2,
+          "original_word": "יֵדַע",
+          "error_confidence": 0.9764377474784851,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.11985328793525696
+            }
+          ]
+        },
+        {
+          "word_index": 13,
+          "original_word": "נַחְיִים",
+          "error_confidence": 0.9783032536506653,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.22458310425281525
+            }
+          ]
+        },
+        {
+          "word_index": 15,
+          "original_word": "הַחֹטֵא",
+          "error_confidence": 0.9797480702400208,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.1574116200208664
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 17,
+      "original_text": "כׇּל־עַוְלָה חַטָּאת הִוא נֵשׁ חַטָּאת לֹא לְמָוֶת",
+      "delitzsch_reference": "כָּל־מַעֲשֵׂה עָוֶל חֵטְא הִיא וְיֵשׁ חַטָּאת אֲשֶׁר אֵינֶנָּהּ לַמָּוֶת׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 18,
+      "original_text": "יָדַעְנוּ כִּי כׇל־הַנּוֹלָד מֵאֱלֹהִים לֹא יֶחֱטָא כִּי־נוֹלַד מֵאֱלֹהִים נָצַר אֶת־נַפְשׁוֹ וְהַטֵּף אֵינֶנּוּ נֹגֵעַ בּוֹ",
+      "delitzsch_reference": "יָדַעְנוּ כִּי כָל־הַנּוֹלָד מֵאֵת הָאֱלׂהִים לׂא יֶחֱטָא כִּי אֲשֶׁר יֻלַּד מֵאֵת הָאֱלׂהִים יִשְׁמׂר אֶת־נַפְשׁוֹ וְהָרַע לׂא־יִגַּע בּוֹ׃",
+      "corrections": [
+        {
+          "word_index": 2,
+          "original_word": "כׇל",
+          "error_confidence": 0.9526998400688171,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.13109441101551056
+            }
+          ]
+        },
+        {
+          "word_index": 6,
+          "original_word": "יֶחֱטָא",
+          "error_confidence": 0.9680242538452148,
+          "suggestions": [
+            {
+              "word": "כִּי",
+              "confidence": 0.23798497021198273
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 19,
+      "original_text": "יָדַעְנוּ כִּי מֵאֱלֹהִים אֲנַחְנוּ וְהָעֹלָם כֻּלּוֹ בָּרָע הַשֵּׁם",
+      "delitzsch_reference": "יָדַעְנוּ כִּי מֵאֱלׂהִים אֲנָחְנוּ וְכָל־הָעוֹלָם בְּרָע הוּא׃",
+      "corrections": [],
+      "requires_manual_review": false
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 20,
+      "original_text": "כִּי יְהוָֹה אֱלֹהִים נֹתֵן לָנוּ אֶת־הַבִּינָה אֲשֶׁר נֵדַע אֶת־אֱלֹהֵי הָאֱמֶת וִהְיִינוּ בְאֶמֶת בִּבְנוֹ יֵשׁוּעַ הַמָּשִׁיחַ הוּא הוּא אֱלֹהֵי אֱמֶת וְחַיֵּי עוֹלָם׃",
+      "delitzsch_reference": "וְיָדַעְנוּ כִּי בָא בֶּן־אֱלׂהִים וַיִּתֶּן־לָנוּ בִינָה לָדַעַת אֶת־הָאֲמִתִּי וּבָאֲמִתִּי אֲנַחְנוּ בִּבְנוֹ יֵשׁוּעַ הַמָּשִׁיחַ זֶה הוּא הָאֵל הָאֲמִתִּי וְחַיֵּי הָעוֹלָמִים׃",
+      "corrections": [
+        {
+          "word_index": 4,
+          "original_word": "לָנוּ",
+          "error_confidence": 0.795503556728363,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.5323304533958435
+            }
+          ]
+        },
+        {
+          "word_index": 6,
+          "original_word": "הַבִּינָה",
+          "error_confidence": 0.9473680853843689,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.2402937263250351
+            }
+          ]
+        },
+        {
+          "word_index": 8,
+          "original_word": "נֵדַע",
+          "error_confidence": 0.9445084929466248,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.1430661678314209
+            }
+          ]
+        },
+        {
+          "word_index": 10,
+          "original_word": "אֱלֹהֵי",
+          "error_confidence": 0.8019136190414429,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.15171721577644348
+            }
+          ]
+        },
+        {
+          "word_index": 16,
+          "original_word": "הַמָּשִׁיחַ",
+          "error_confidence": 0.8747463226318359,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.5430374145507812
+            }
+          ]
+        },
+        {
+          "word_index": 17,
+          "original_word": "הוּא",
+          "error_confidence": 0.8312072157859802,
+          "suggestions": [
+            {
+              "word": "אֶת",
+              "confidence": 0.33759430050849915
+            }
+          ]
+        },
+        {
+          "word_index": 18,
+          "original_word": "הוּא",
+          "error_confidence": 0.9058636426925659,
+          "suggestions": [
+            {
+              "word": "אֶל",
+              "confidence": 0.13048705458641052
+            }
+          ]
+        }
+      ],
+      "requires_manual_review": true
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 21,
+      "original_text": "בָּנַי שִׁמְרוּ נַפְשְׁכֶם מֵאֱלִילִים אָמֵן׃",
+      "delitzsch_reference": "בָּנַי הִשָּׁמְרוּ לָכֶם מִן־הָאֱלִילִים אָמֵן׃",
+      "corrections": [],
+      "requires_manual_review": false
+    }
+  ]
+}

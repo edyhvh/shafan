@@ -5,7 +5,7 @@ import { usePreference } from './usePreference'
 
 const STORAGE_KEY = 'shafan-text-source'
 const DATA_ATTRIBUTE = 'data-text-source'
-const DEFAULT_VALUE = 'hutter' as const
+const DEFAULT_VALUE = 'delitzsch' as const
 
 type TextSource = 'hutter' | 'delitzsch'
 

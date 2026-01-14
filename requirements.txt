@@ -40,6 +40,10 @@ lxml>=4.9.0  # Fast XML/HTML parser backend
 # Anthropic Claude API
 anthropic>=0.39.0  # Claude API client for vision tasks
 
+# xAI Grok API
+openai>=1.0.0  # Grok API client (compatible interface)
+httpx>=0.25.0  # HTTP client for API calls
+
 # JSON schema validation
 jsonschema>=4.0.0  # JSON schema validation
 
@@ -53,3 +57,8 @@ matplotlib>=3.7.0  # For visualization/debugging
 
 # Caching and performance
 diskcache>=5.6.0  # High-performance disk-based caching
+
+# AI libraries for nakdimon
+wandb>=0.17.0
+prettytable>=3.6.0
+torch>=2.0.0

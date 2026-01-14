@@ -560,8 +560,11 @@
         },
         {
           "number": 5,
-          "text_nikud": "וְנַתְעִים מַסְכִּיב בַּחֲמָרָא נִשְׁווּחַח עַל כַּהָוָא כְכֻלָּם וְאָבַד לְבָחֵין וְאַסַר לוֹ מִבָר פְּשַׁט אַיְךְ וּפְשַׁט וַיְהִי אֵידְהּ",
+          "text_nikud": "וַיְבִיטָם מַסָבִיב בְּחֵמָה וַיִּשְׁתּוֹחַחַ עַל־כֻּהַת לְבִבָהֶם וַיֵּׂאמֶר אֶל־הָאִישׁ הַטֵׂה אֶת־יָדֶךָ וַיָט וְתוֹשֵׁב יָדוֹ בְּרִיאָה כָּמוֹ הָאֲחֶרֶתּ",
           "source_files": ["000024.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "verse 5: Hutter's typeface makes some letters ambiguous; transcribed visible ink exactly"
           ],
@@ -590,8 +593,11 @@
         },
         {
           "number": 9,
-          "text_nikud": "וַיֹּאמֶר לְתַלְמִידָיו לְהַעֲמִיד לוֹ אֵלָיו עַמֻּד תָּם בֶּן יוֹנוּ",
+          "text_nikud": "וַיּׂאמֶר לְתַלְמִידָיו לְהַקְרִיב אֵלָיו אֳנִיָּה בַּעֲבוֹּר הָעָם פֶּן־יוֹנוּהוּ",
           "source_files": ["000024.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "verse 9: Final word יוֹנוּ - transcribed visible nikud exactly"
           ],
@@ -829,8 +835,11 @@
         },
         {
           "number": 7,
-          "text_nikud": "וְאַחֵד נָפַל בַּקּוֹצִים וַיַּעֲלוּ הַקּוֹצִים וַיְחַנְּקוּהוּ וּמַיִם לֹא נָתַן פְּרִי עָלָה וְצוּבַת וְעָלָה",
+          "text_nikud": "וְאַחֵר נָפַל בַּקוֹצִים וַיַּעֲלוּ הַקּוֹצִים וַיְּחַנְּקוּהוּ וּפָרָיו לָא נָתֵּן",
           "source_files": ["000032.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "וְצוּבַת - second-to-last word, unusual form"
           ],
@@ -915,8 +924,11 @@
         },
         {
           "number": 19,
-          "text_nikud": "וְנִדְגְּאוֹת הַצֹּאנִם הֵרָה וּמִזְבַּחַת חָחוֹן וּמִזַּמְּדֵי עֵינֵי עַל אַחֲדֵיהֶם יְבוֹאוּ בְּתוֹסְפֶּת אֱת הַדָּבָר וּמָחוּלָא יִשְׁטֶה",
+          "text_nikud": "וְהַדְּׂאֲגוֹת הָעוֹלָם הַזֶּה וּמֻרְמַת הַהוֹן וּמַחֲמְדִּי עַין עַל־אֲחֲרִיתֶם יָבוֹאוּ וַיַּחַנָּקוּ אֶת־הַדָּבָר וּפִרָיוֹ לָא יַעֲשֶׂה",
           "source_files": ["000036.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "Verse 19: Complex vocalization, some letters unclear due to printing quality"
           ],
@@ -961,8 +973,11 @@
         },
         {
           "number": 25,
-          "text_nikud": "כִּי כָל אֲשֶׁר הָיָה לוֹ יִנָּתֵן לוֹ וְנֹאסֵף לוֹ דִבְּרֵי גַם אֶת־אֲשֶׁר לוֹ יִקֵּח מִמֶּנּוּ",
+          "text_nikud": "כִּי כָּל־אֲשֶׁר הָיָה לוֹ יִנָּתֶּן לוֹ וַאֲשֶׁר אֵינֶנּוּ לוֹ דָּבָּר גַּם אֶת־אֲשֶׁר לוֹ יֻקַּח מִמֶּנּוּ",
           "source_files": ["000036.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "Verse 25: Some vocalization marks are faint or unclear"
           ],
@@ -1130,8 +1145,11 @@
         },
         {
           "number": 7,
-          "text_nikud": "וַיִּזְעַק בְּקוֹל גָּדוֹל לֵאמֹר מַה־לִּי וָלָךְ יֵשׁוּעַ בֶּן־אֱלֹהֵי הָעֶלְיוֹן אַשְׁבִּיעֲךָ בֵּאלֹהִים אַל־תְּשַׁמְּעֵנִי",
+          "text_nikud": "וַיִּזְעַק בְּקוֹל גָּדוֹל לְאמׂר מָה לִי וָלְךְ יֵשׁוּעַ בֶּן־אֱלׂהֵי הֶעֱלָיוֹן אֲשְׁבִּיעָה בֵּאֱלׂהִים פֶּן־תַּשְׁמֵׂנִי",
           "source_files": ["000042.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": ["אַשְׁבִּיעֲךָ"],
           "text_nikud_delitzsch": "וַיִּזְעַק קוֹל גָּדוֹל וַיּׂאמֶר מַה־לִי וָלָךְ יֵשׁוּעַ בֶּן־אֵל עֶלְיוֹן הִנְנִי מַשְׁבִּיעֲךָ בֵּאלׂהִים אֲשֶׁר לׂא תְעַנֵּנִי׃"
         },
@@ -1340,8 +1358,11 @@
         },
         {
           "number": 37,
-          "text_nikud": "וְלֹא הָיְתָה אִישׁ לָבוֹא אַחֲרֵי כִּי אִם אֶת־פִּיּתֵא בְּיַעֲקֹב יִרְתֵּן אַת יַעֲקֹב",
+          "text_nikud": "וְלָא הִנִּיחַ אִישׁ לָבוֹא אַחֲרָיו כִּי אִם אֶת־כִּיפָׂה וַיַּעֲקֵׂב וְיוֹחָנָן אֲחִי יַעֲקֵׂב",
           "source_files": ["000052.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "verse 37: word 'פִּיּתֵא' - unusual lexical form, transcribed exactly as visible"
           ],
@@ -1370,8 +1391,11 @@
         },
         {
           "number": 41,
-          "text_nikud": "וַיְתַפֵּשׂ בְּיַד הַנַּעֲרָה וַיֹּאמֶר לָהּ טַלִיתָא קוּמִי וְהוּא מִתַּרְגֵּם אֲנִי לָךְ קוֹמִי",
+          "text_nikud": "וַיֶּׂחֱזֵּׂק בְּיַד הַנַּעֲרָה וַיֵּׂאמֶר לָהּ טְלִיתָא קוֹמִי וְהוּא מִתְרְגֵּם הַנַּעֲרָה אוֹמַר אֲנִי לְךְ קוֹמִי",
           "source_files": ["000052.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "verse 41: 'טַלִיתָא' - Aramaic transliteration, transcribed as visible"
           ],
@@ -1460,8 +1484,11 @@
         },
         {
           "number": 9,
-          "text_nikud": "כִּי אִם לְהַנְעִיל אֵת מַעֲנִילִים וְלֹא לִלְבּשׁ שְׁנֵי שָׁנִים כַּנַּוָת",
+          "text_nikud": "כִּי אִם לְהִנְעִיל אֵת מֻנְּעֲלִים ולָא לְלְבוֹשׁ שְׁתַּיִם כֻּתֳּנּוֹת",
           "source_files": ["000056.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "Verse 9: Partial verse, vocalization uncertain in several words"
           ],
@@ -1469,8 +1496,11 @@
         },
         {
           "number": 10,
-          "text_nikud": "וַיֹּאמֶר לָהֶם אֶל־בַּיִת בְּאֵיכָה יְהוּדָה שֵׁם שֵׁם עַד כִּי נַפְשַׁא מִשָּׁם",
+          "text_nikud": "וַיּׂאמֶר לָהֶם אִם תָּבוֹאוּ בֵיְתָה שָׁבוּ שָׁם עַד כִּי תָצְאוּ מִשָּׁם",
           "source_files": ["000056.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "Verse 10: Multiple problematic readings, especially 'נַפְשַׁא'"
           ],
@@ -1478,8 +1508,11 @@
         },
         {
           "number": 11,
-          "text_nikud": "וְכָל אֲשֶׁר לֹא יְהוּדָה אֶתְכֶם וְלֹא יִשְׁמְעוּ אֶתְכֶם שָׁאוּ מִשָּׁם וְהַנְעֲרוּ גַּם אֶת־עָפָר אֲשֶׁר תַּחַת רַגְלֵיכֶם לְעֵדוּת לָהֶם אָמַר אֲנִי אֹמֵר לָכֶם מְדַרְבָּה תִּהְיֶה סְדוֹם וַעֲמוֹרָה בַּיּוֹם דִּין מִצַּיִד לְסִיר מִסְּעָה הַהִיא",
+          "text_nikud": "וְכֵׂל אֲשֶׁר לָא יִקְּחוּ אֶתְכֶם וְלְא יִשְׁמְעוּ אֶתְכֶם צְאוּ מִשָּׁם וַתִּנָּפְצוּ גַּם אֶת־עֲפֶר אֲשֶׁר תַּחַת רַגְלֵיכֶם לְעֵדוּת לָהֶם אָמֵן אֲנִי אוֹּמֵר לָכֶם נִרְפָּׂה תִּהְיֶה לִסְדוֹם וְעֲמוֹּרָה בַּיּוֹם דַּין מֵעִיר הַזּׂאת",
           "source_files": ["000056.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "Verse 11: Very long verse with multiple uncertain readings",
             "Particularly uncertain: 'מְדַרְבָּה', 'מִצַּיִד לְסִיר מִסְּעָה'"
@@ -1488,8 +1521,11 @@
         },
         {
           "number": 12,
-          "text_nikud": "וְהָיָה הַקּוֹרֵא לַשִׁבְעָנִים וַעֲשַׁרְתּוּן",
+          "text_nikud": "וַיֵּצְאוּ וַיִּקְרְאוּ לַעֲשׂוֹתָם תְּשׁוּבָה",
           "source_files": ["000056.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": ["Verse 12: Short verse, last word uncertain"],
           "text_nikud_delitzsch": "וַיֵּצְאוּ וַיִּקְרְאוּ לָשׁוּב בִּתְשׁוּבָה׃"
         },
@@ -1740,8 +1776,11 @@
         },
         {
           "number": 48,
-          "text_nikud": "וַיִּקְרָא אֶל־הָעָם וַיֹּאמֶר אֲלֵיהֶם רְאוּ כִּי הַיְהוֹדִים כֹּה לָהֶם הַחֵץ וְהַמִּשְׁנֶה תַאֲבִיעִים נִתְלָה בָּא אֶלָיִם בִּימוֹלָו עַל־יָהֵם וְאָהֲבָה לַעֲבֹד אוֹתָם",
+          "text_nikud": "וַיַּרְא כִּי־הִשְׁתּוֹמֲמוּ־בְּהִתְדַפְּקָם כִּי־הָיְתָה רוּחַ לָהֶם לְהָפֵׂךְ וּבְמִּשְׁמֻרָת הָאַרְבָּעִית הַלַּיְלָה בָּא אֲלֵיהֶם מִתְהַלֵּךְ עַל־הַיּוֹם וְאָבָה לַעֲׂבֹר אוֹתָם",
           "source_files": ["000068.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "verse 48: some characters unclear due to print quality"
           ],
@@ -2274,8 +2313,11 @@
         },
         {
           "number": 29,
-          "text_nikud": "וְהוּא אָמַר לָהֶם וְאַתֶּם מִי אֲנִי אָמַר לָהֶם אֹמְרִים כִּי אַתָּה יֵשׁוּעַ מָשִׁיחַ בְּחִירַתּוֹ אַל־הוּא וְתַגִּיד",
+          "text_nikud": "וְהוּא אָׂמֵר לָהֶם וְאַתֶּם אֶת־מִי אוֹמְרִים כִּי אֲנִי הוָה וַיַעַן כִּיפָׂה וַיֵּׂאמֶר לוֹ אֵת הוֶה הַמָּשִׁיחַ",
           "source_files": ["000088.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "The word 'מָשִׁיחַ' appears with unusual vocalization"
           ],
@@ -2429,8 +2471,11 @@
         },
         {
           "number": 12,
-          "text_nikud": "כִּי נֵּעוֹל נֶאֱבַד לֶחֶם אֱלֹהֵינוּ יָבוֹא בְּרֵאשׁוֹנָה וִישׁוּבֵב כָּל־כַּן־אֲשֶׁר נִכְתַּב עַל־הָאָדָם כָּל־יָד יִבְעַר יִבְעֶה וְיֵעָנֶה",
+          "text_nikud": "וַיַּעַן וַיֵּׂאמֶר לָהֶם וֶאֱלִיָּהוּ יָבוֹא בָּרִאשׁוֹנָה וַיָּשׁוּבֵב כֻּלָּם וְכַאֲשֶׁר נִכְתָּב עַל־בֶּן־הָאָדָם כֵּן־יִנָּגַּע יָכֶה וַיְּעֻנֶּה",
           "source_files": ["000096.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "verse 12: complex vocalization on multiple words, some marks difficult to distinguish clearly"
           ],
@@ -3224,8 +3269,11 @@
         },
         {
           "number": 21,
-          "text_nikud": "וַיָּשָׁב פֵּיטֵר יַאֲמֹר לוֹ רַבִּי רְאֵה וְהַתְּאֵנָה אֲשֶׁר אָרַת יְבֵשָׁה",
+          "text_nikud": "וַיּוֹכֵר כִּיָּפָׂה וַיֵּׂאמֶר לוֹ רַבִּי רָׂאֶה וְהִתְאֲנָּה אֲשֶׁר אָרוֹּת יְבָּשֶׁה",
           "source_files": ["000128.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "פֵּיטֵר - first vowel could be Tsere or Segol"
           ],
@@ -3498,8 +3546,11 @@
         },
         {
           "number": 26,
-          "text_nikud": "וְעַל הַמֵּתִים כִּי יָקוּמוּ הֲלֹא קְרָאתֶם בְּסֵפֶר מֹשֶׁה בְּסִפּוּר הַסְּנֶה לֵאמֹר וַיֹּאמֶר יְהוָֹה אֱלֹהִים מִתּוֹךְ הַסְּנֶה וַיֹּאמַד אָנֹכִי אֱלֹהֵי אַבְרָהָם וֵאלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב",
+          "text_nikud": "וְעַל־הַמֵּתִים כִּי יָקוּמוּ הֲלֵא קִרָאַׂתָּם בְּסֵּפֶר מֻׂשֶׁה לֵאמׂר וַיִּקְרָא אֵלָיו אֱלׂהִים מִתּוֹךְ הַסְּנָה וַיּׂאמַר אָנְׂכִי אֱלׂהֵי אַבְרָהָם וְאֱלׂהֵי יִצְחָק וְאֱלׂהֵי יַעֲקֵׂב",
           "source_files": ["000140.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "Line 26 contains a very long verse spanning multiple text blocks"
           ],
@@ -3648,8 +3699,11 @@
         },
         {
           "number": 2,
-          "text_nikud": "וַיֹּאמְרוּ שִׁמְעוּ אֶת־בְּנֵי יִשְׂרָאֵל נַעֲשֶׂה וַיֹּאמֶר לוֹ הָרוֹאֶה אֲנִי אֶת־בְּנֵי הָאֱלֹהִים הַאֵלֶּה הָרוֹאֵי עַל אֲבִי עַל־אֲבִי עַל־מַלְכוּת אֲשֶׁר לֹא נֶחֱרַם",
+          "text_nikud": "וַיַּעַן יֵשׁוּעַ וַיֵּׂאמֶר לוֹ הָרוּאָה אֶת־בְּנִינַים הָאֵלֶּה הַגְּדוֹלִים לְא תִּנַּח אֶבֶן עַל־אֶבֶן עַל־מַכֻּנֻתָּהּ אֲשֶׁר לָא תְהַרֵס",
           "source_files": ["000148.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "Line 2: Text heavily damaged and partially illegible",
             "Multiple words unclear due to print quality",
@@ -3659,8 +3713,11 @@
         },
         {
           "number": 3,
-          "text_nikud": "וַיִּשָּׁבְחוּ עַל־הָהָר מִזְרָחָה לְבַד הַחֵיבֶל שָׁאוֹל לוֹ בְּלַבָּדִים לִפֵּה בְּיַעֲקֹב וְיַתֵּחַ אֶמְדָּעִים",
+          "text_nikud": "וּבַשָּׁבָּתוּ עַל־הַר הַזֵּיתִים לְנֶגֶד הַהֵיכָל שְׁאֲלוּ בִּלְבְדָם כִּיפָׂה וַיַּעֲקֵׂב וְיוֹחָנָן וַאֲנִדְרָאוּס",
           "source_files": ["000148.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "Line 3: Several words unclear",
             "Nikud marks ambiguous in multiple positions"
@@ -3669,8 +3726,11 @@
         },
         {
           "number": 4,
-          "text_nikud": "אָבִי לָנוּ בֵּין הָאָדָם בּוּמָה הָאוֹת מִי־בָכָל שָׁאוֹל לוֹ בְּלַבָּדִים הֵיא בְּנַי הַמְלָכִים בַּאֲבָם",
+          "text_nikud": "אָׂמֵר לָנוּ מֵתִּי יִהְיוּ הָאֵלֶּה וּמָה הָאוֹת כִּי־יָכְלּוּ כָּׂל הַדְּבָרִים הָאֵלֶּה",
           "source_files": ["000148.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "Line 4: Text quality poor",
             "Several consonants and nikud marks unclear"
@@ -3679,22 +3739,31 @@
         },
         {
           "number": 5,
-          "text_nikud": "יֵשׁוּעַ עֹנֶה לָהֶם נִלוּל לִבְּכֶם דָּאוּ בְּנֵי יִשְׂרָאֵל אִישׁ",
+          "text_nikud": "וְיֵשׁוּעַ עֻנָּה לָהֶם וַיָּחֶׂל לְדַבֵּר רְאוּ פֶּן יְשִׂיאֲכֶם אִישֶׁ",
           "source_files": ["000148.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": ["Line 5: Some nikud marks unclear"],
           "text_nikud_delitzsch": "וַיַּעַן יֵשׁוּעַ וַיְדַבֵּר אֲלֵיהֶם הִשָּׁמְרוּ לָכֶם פֶּן־יַתְעֶה אֶתְכֶם אִישׁ׃"
         },
         {
           "number": 6,
-          "text_nikud": "כִּי־רַבִּים יִבֹּאוּ בִּשְׁמִי לֵאמֹר אֲנִי הוּא כִּי אָמַר הוּא יְכַבֵּשׁוּ לִבְבִים",
+          "text_nikud": "כִּי־רַבִּים יָבוֹאוּ בִּשְּׁמִי לֵאמׂר כִּי אֲנִי הוּא וַיֻּתְּעוּ לְרַבִּים",
           "source_files": ["000148.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": ["Line 6: Several words partially illegible"],
           "text_nikud_delitzsch": "כִּי רַבִּים יָבֹאוּ בִּשְׁמִי לֵאמׂר אֲנִי הוּא וְהִתְעוּ רַבִּים׃"
         },
         {
           "number": 7,
-          "text_nikud": "וְאַם תִּשְׁמְעוּ מִלְחֲמוֹת וּשְׁמוּעוֹת מִלְחָמוֹת אַל־תִּבָּהֵלוּ כִּי צָרִיך לִהְיוֹת אֵן עַד קֵץ אֵינֶנּוּ הַקֵּץ",
+          "text_nikud": "וְאִם תִּשְׁמְעוּ מִלְחָמוֹת וּשְׁמוֹעוֹת הַמִּלְחָמוֹת אַל תִּבְהֲלוּ כִּי־צָרִיךְ לִהְיוֹת אַךְ עַד־הִנֵּה אֵינֶנּוּ הִקֵּץ",
           "source_files": ["000148.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "Line 7: Some nikud marks and consonants unclear"
           ],
@@ -3702,8 +3771,11 @@
         },
         {
           "number": 8,
-          "text_nikud": "כִּי יָקוּם גּוֹי עַל־גּוֹי וּמַמְלָכָה עַל־מַמְלָכָה יִהְיֶה דָּעַשׁ בְּכָל מְקוֹמוֹת יִהְיוּ רָעָב וּרְגָזִים וְהַבְּלִים וְהַכֹּל הָאֵת רָאשִׁית וְהַמְחֵילִים וְהַכְּאֵבִים",
+          "text_nikud": "כִּי יָקוּם גּוֹי עַל־גּוֹי וּמַמְלְכָה עַל־מַמְלָכָה וַיִּהְיֶה רַעַשׁ בְּכָׂל מְקוֹמוֹת וַיִּהְיֶה רָׂעָב וּמְהוֹּמָה רֵאשִׁית הַחֲׂבֵלִים הָאֵלֶּה",
           "source_files": ["000148.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "Line 8: Extended verse with multiple unclear sections",
             "Several words damaged or illegible"
@@ -3935,8 +4007,11 @@
         },
         {
           "number": 3,
-          "text_nikud": "וּבֶאֱשֶׁר הָיָה בֵית עַנְיָה בְּבֵית שִׁמְעוֹן הַמְצוֹרָע נִשְׁבַּח בִּשְׁלְחָן לָאָה אִשָּׁה אֲשֶׁר לוֹ בַּךְ כֶּתֶם שֶׁמֶן הַטּוֹבֶן וְשָׁבַּר אוֹתָהּ רֹאשׁ יָרֵךְ יָרַךְ רֹאשׁ וַשֵּׁךְ מְאוֹד נֵרֶד רֹאשׁ נֵירָד נֶרֶד",
+          "text_nikud": "וְכַאֲשֶׁר הָיָה בְּבֵיִת עָנִיּהָ בְּבֵּיִת שִׁמְעוֹן הַמְּצוֹּרֵע בַּשַּׁבָּתוּ בְּשֻׁלְחָׂן בָּאָה אִשָּׁה אֲשֶׁר לָהּ פְּךְ בָּהֵט בְּשֵּׁם נֶׂרֶד רָׂאשׁ יָקֵר מְאָׂד וַתְּשַׁבֵּר אֶת־הַבָּהָט וַתִּשְׁפֵּךְ עַל־רִאשׁוֹ",
           "source_files": ["000158.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "The verse appears to have some repetitions or variant readings in the ink, particularly in the latter portion"
           ],
@@ -4091,8 +4166,11 @@
         },
         {
           "number": 24,
-          "text_nikud": "וַיֹּאמֶר לָהֶם וְאַתֶּם יְדַעְתֶּם אֶת דָּם בְּרִית הַחֲדָשָׁה אֲשֶׁר עַל רַבִּים נִשְׁפָּךְ",
+          "text_nikud": "וַיּׂאמֶר לָהֶם זׂאת יֶשׁ־דֳּׂמִי דַּׂם בְּרִית הַחֲדָשָׁה אֲשֶׁר עַל־רַבִּים נִשְׁפָּךְ",
           "source_files": ["000164.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "Verse 24: Word 'יְדַעְתֶּם' vowel points unclear",
             "Verse 24: Word 'נִשְׁפָּךְ' final vowel unclear"
@@ -4101,8 +4179,11 @@
         },
         {
           "number": 25,
-          "text_nikud": "אָמֵן אֹמֵר אֲנִי לָכֶם כִּי עוֹד לֹא אֶשְׁתֶּה מֵאוּטַּ הַגֶּפֶן עַד הַיּוֹם הַהוּא אֲשֶׁר בּוֹ אֶשְׁתֶּהוּ חָדָשׁ בְּמַלְכוּת אָבִי",
+          "text_nikud": "אָמֵן אֲנִי אוֹּמֵר לָכֶם כִּי עוֹד לָא אִשְׁתָּה מֵאֲנָב הַגֶּׂפֶן עַד־הַיּוֹם הַהוּא אֲשֶׁר בּוֹ אֲשְׁתְּנוּ חָׂדֶשׁ בְּמַלְכוּת אָבִי",
           "source_files": ["000164.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "Verse 25: Word 'מֵאוּטַּ' unclear - may be 'מִפְּרִי'",
             "Verse 25: Word sequence 'אֶשְׁתֶּהוּ' appears to have suffix but vowels unclear"
@@ -4118,8 +4199,11 @@
         },
         {
           "number": 27,
-          "text_nikud": "וַיֹּאמֶר לָהֶם יֵשׁוּעַ כִּי כֻלְּכֶם תִּכָּשְׁלוּ בִי בַּלַּיְלָה יְהוָה כִּי־כָתוּב הַךְ אֶת־הָרוֹעֶה וְהַצֹּאן תְּפוּצֶינָה",
+          "text_nikud": "וַיּׂאמֶר לָהֶם יֵשׁוּעַ כִּי כֻלָּכֶם תְּכֻשֻּׁלוּ בִּי בְּלַיְלָה הַזֶּה כִּי־נִכְתָּׂב הָךְ אֶת־הָרוּעָה וַתִּפּוֹּצֶינָה וְהַצֵּׂאָן",
           "source_files": ["000164.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "Verse 27: Word 'תִּכָּשְׁלוּ' dagesh unclear",
             "Verse 27: Word 'תְּפוּצֶינָה' final syllable vowels unclear"
@@ -4128,8 +4212,11 @@
         },
         {
           "number": 28,
-          "text_nikud": "אֲבָל אַחֲרֵי קוּמִי אֶקְדֵּם אֶתְכֶם בַּלִילֶה",
+          "text_nikud": "אֲבָל אַחֲרֵי קוֹמִי אֲקְׂדִים אֶתְכֶם בִּגְלִילָה",
           "source_files": ["000164.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "Verse 28: Word 'בַּלִילֶה' appears unclear - may be 'בַּגָּלִיל'"
           ],
@@ -4137,8 +4224,11 @@
         },
         {
           "number": 29,
-          "text_nikud": "וַיֹּאמֶר אָמַר לוֹ וְאַף־כָּל־כֻלָּם אֶשָּׁלוּ אַךְ אֲנִי לֹא־עָלְמָם לֹא אֵכָשֵׁל",
+          "text_nikud": "וְכִיפָׂה אָׂמֵר לוֹ וְאִם־כֻּלָּם יְכֻשֻּׁלוּ אַךְ אֲנִי לְעוֹלָם לָא אָכֻשָּׁל",
           "source_files": ["000164.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "Verse 29: Word 'אֶשָּׁלוּ' unclear - may be different verb form",
             "Verse 29: Sequence 'לֹא־עָלְמָם' very unclear"
@@ -4477,8 +4567,11 @@
         },
         {
           "number": 4,
-          "text_nikud": "וּפִילָטוֹס שָׁב וַיִּשְׁאַל לוֹ לֵאמֹר הֲלֹא תַּעֲנֶה דָבָר רְאֵה כַּמָּה עֹוֹוֹת יָעִינוּ עָלֶיךָ",
+          "text_nikud": "וּפִילָטוֹס שֵׁב וְּשָׁאֵל לוֹ לֵאמׂר הֲלֵא תְּעֻנֶּה דַּבָּר רָׂאָה כַּמָּה עֵדוּת יַעֲנוּ עָלֶיךָ",
           "source_files": ["000178.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "עֹוֹוֹת - unusual vowel pattern, possibly three consecutive Holam marks"
           ],
@@ -4558,8 +4651,11 @@
         },
         {
           "number": 15,
-          "text_nikud": "וּפִילָטוֹס רָצָה לַעֲשׂוֹת לְרָצוֹן הָעָם כִּי־וַיִּתֵּן נִפְטָר אֶת־בַּר־אַבָּא וַיִּקַּח אֶת־יֵשׁוּעַ לִצְלֹב בִּשׁוֹטִים וּלִצְלוֹקֵב",
+          "text_nikud": "וּפִילָטוֹס רוֹּצָה לַעֲשׂוֹת לְעָם כִּרְצוֹנָם וַיִּפָּטֵׂר אֶת־בָּר־אָבֹא וַיֻּתֵּן אֶת־יֵשׁוּעַ לֵיסֵר בַּשָּׁוֹטִים וּלְהוֹקְעַ",
           "source_files": ["000180.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "verse_15_final_word_unusual_spelling_לִצְלוֹקֵב"
           ],
@@ -4834,8 +4930,11 @@
         },
         {
           "number": 6,
-          "text_nikud": "וְהוּא אָמֵר אֲלֵיהֶן אַל־תִּבָּעַתְנָה מְבַקְשׁוֹת אַתֶּן אֶת־יֵשׁוּעַ הַנָּצְרִי אֲשֶׁר תְּלָהוּהוּ הֵם הוּא אֵינְךְ בָּרָא נוֹהָה וְהַמָּקוֹם אֲשֶׁר שָׂמוּהוּ נִמְצָא",
+          "text_nikud": "וְהוּא אָׂמֵר לָהֵן אַל תִּבְעָתוּ מְבְקְשׁוֹת אַׂתֵּן אֶת־יֵשׁוּעַ הַנְּׂצְרִי אֲשֶׁר הִתְלּוּהוּ קָם הוּא וְאֵינֶנּוּ פָׂה הִנֵּה הַמָּקוֹם אֲשֶׁר שְׁמֻוֻהוּ שָׁמָּהּ",
           "source_files": ["000190.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "The word sequence in verse 6 is complex and some nikud marks are difficult to distinguish with full certainty"
           ],
@@ -4843,8 +4942,11 @@
         },
         {
           "number": 7,
-          "text_nikud": "אֲבָל לְכוּ וְנַאֲמַרְנָה לִתְלַמִידָיו אֲבָל לְכוּ וְנַאֲמַרְנָה לִתְלַמִידָיו כְּלִימְדִים בָּרָא נוֹהָה וְהַלָּךְ שָׁם תִּרְאוּ אֹתוֹ כַּאֲשֶׁר אֲמַר לָכֶם",
+          "text_nikud": "אֲבָל לְכָנָּה וְאָמַרְנָה לְתַלְמִידָיו וּלְכִיפָׂה כִּי־הוּא מְקְדִים אֶתְכֶם בִּגְלִילָה שָׁם תִּרְאֲוּהוּ כַּאֲשֶׁר אָׂמֵר לָכֶם",
           "source_files": ["000190.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "Verse 7 appears to have repetition which may be a printing artifact"
           ],
@@ -4859,8 +4961,11 @@
         },
         {
           "number": 9,
-          "text_nikud": "וַיַּשְׁכֵּם יֵשׁוּעַ בְּאֶחָד בְּשַׁבַּת מֵרֵאשִׁית אֲשֶׁר שְׁבָעָת הַשֵּׁדִים וְהַגְדוֹלִית אֲשֶׁר מִמֶּנָּה יָצָא שִׁבְעָת שֵׁדִים",
+          "text_nikud": "וְכַאֲשֶׁר קָם יֵשׁוּעַ בַּבֹקֶר בְּאֶחָד בַּשַּׁבָּת נִרְאָה בָּרִאשָׁנָה לַמְרִים הַמְגְדְּלֵנִית אֲשֶׁר מִמֶּנָּה הוֹצִיא שִׁבְעָה שֵׁדִים",
           "source_files": ["000190.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "Verse 9 has complex word structure that requires careful verification"
           ],
@@ -4868,8 +4973,11 @@
         },
         {
           "number": 10,
-          "text_nikud": "וְאַחַר אֲשֶׁר שָׁלְחוּ אֲנִי מִדּוּעַ אֲנִי אָבֹא אֶפֶן אֲבִילֵם וּבַכְּתָמִים",
+          "text_nikud": "הִיא הֻׂלָכָה וַתֻּגֵּד לַאֲשֶׁר הָיוּ עִמּוֹ אֲבָלִים וּבוֹכִים",
           "source_files": ["000192.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "Verse 10: Several words are unclear due to image quality and complex Hutter typography"
           ],
@@ -4877,8 +4985,11 @@
         },
         {
           "number": 11,
-          "text_nikud": "וְכַאֲשֶׁר שָׁבַעוּ וַהַמַּת בָּרָה הוּא לֹא רָאָה מִנָּם לֹא הֶאֱמִינוּ",
+          "text_nikud": "וְכַאֲשֶׁר שָׁמְעוּ הֵמָּה כִּי־חַי הוּא וְכִי נִרְאֶה מֵהֵנָה לָא הֶאֱמִינוּ",
           "source_files": ["000192.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "Verse 11: Complex typography makes some vowel points difficult to verify with certainty"
           ],
@@ -4913,8 +5024,11 @@
         },
         {
           "number": 15,
-          "text_nikud": "וַיֹּאמֶר לָהֶם לְכוּ בְּכָל־הַעוֹלָם וְקִרְאוּ אֶת־בְּשׂוֹרָה בְּכָל־הַבְּרִיאָה",
+          "text_nikud": "וַיּׂאמֶר לָהֶם לָכוּ אֶל־כָּל־הָעוֹלָם וְקִרְאוּ אֶת־הַבְּשׂוֹרָה לְכָל הַבְרִיאָה",
           "source_files": ["000192.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "Verse 15: Generally clear but some vowel points difficult to verify"
           ],
@@ -4931,8 +5045,11 @@
         },
         {
           "number": 17,
-          "text_nikud": "וְאֹתוֹת אֲשֶׁר הַמַּאֲמִינִים אֱלֹהִים יְלַכוּ בִּשְׁמִי יִטְּאוּ שֵׁדִים בִּלְשׁוֹנוֹת חֲדָשׁוֹת יְדַבְּרוּ",
+          "text_nikud": "וְאִׂתּוֹת אֲשֶׁר יַעֲשׂוּ הַמַּאֲמִינִים אֵלֶּה הֵן בִּשְּׁמִי יוֹצִיאוּ שֵׁדִים בְּלְשׁוּנוֹת חֲׂדָשׁוֹת יְדַבֵּרוּ",
           "source_files": ["000192.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "lena",
           "visual_uncertainty": [
             "Verse 17: Several hollow letters difficult to distinguish; vowel points on some letters unclear"
           ],

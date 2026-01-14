@@ -41,7 +41,7 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     info_title: 'Info',
     info_hutter_title: 'Who was Elias Hutter?',
     info_hutter_text:
-      'Elias Hutter (c. 1553–1605) was a German Hebraist, linguist, and printer from Görlitz. He dedicated his life to the study and teaching of Hebrew, founding a school in Nuremberg where students could learn to read Hebrew in just four weeks using his innovative method. His passion for languages led him to create one of the most ambitious biblical projects of the Renaissance era.',
+      'Elias Hutter (c. 1553–1605) was a German Hebraist, linguist, and printer from Görlitz. His translation of the New Testament into Hebrew, published between 1599 and 1602 as part of the Nuremberg Polyglot, represents one of the first complete Hebrew New Testaments ever printed. Note: This OCR transcription from the original printed work contains some inaccuracies and is still being refined.',
     info_polyglot_title: 'The Nuremberg Polyglot',
     info_polyglot_text:
       'The Nuremberg Polyglot New Testament, published between 1599 and 1602, is a monumental work presenting the New Testament in twelve languages arranged in parallel columns. Among these languages, Hutter included his own Hebrew translation, making it one of the first complete Hebrew New Testaments ever printed. This work represents a remarkable achievement in biblical scholarship and early modern printing.',
@@ -50,7 +50,7 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
       'Besorah (בְּשׂוֹרָה) means "Good News" or "Gospel" in Hebrew. This digital edition presents Hutter\'s Hebrew translation of the Greek New Testament. Unlike later translations, Hutter\'s work was created during a period of renewed interest in biblical languages, making it a unique historical document that bridges Greek Christian scripture with the Hebrew linguistic tradition.',
     info_delitzsch_title: 'Delitzsch Translation',
     info_delitzsch_text:
-      "This project also includes the Hebrew translation of the New Testament by Franz Delitzsch (1813–1890), a renowned German Lutheran theologian and Hebraist. Delitzsch's work represents a scholarly approach to Hebrew translation, drawing from his deep knowledge of both biblical Hebrew and rabbinic literature. His translation, completed in the 19th century, provides an alternative perspective to Hutter's Renaissance-era work.",
+      "Franz Delitzsch (1813–1890) was a renowned German Lutheran theologian and Hebraist. His Hebrew translation of the New Testament represents a scholarly approach drawing from deep knowledge of both biblical Hebrew and rabbinic literature. Completed in the 19th century, Delitzsch's translation is considered more linguistically accurate and serves as the default text in this application.",
     info_tanaj_title: 'Tanakh',
     info_tanaj_text:
       "This project also includes the Hebrew Bible (Tanakh) from the Masoretic Text, the authoritative Hebrew text of the Bible that has been meticulously preserved through centuries of careful transmission by Israel's scribes.",
@@ -71,7 +71,7 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     info_title: 'Info',
     info_hutter_title: '¿Quién fue Elias Hutter?',
     info_hutter_text:
-      'Elias Hutter (c. 1553–1605) fue un hebraísta, lingüista e impresor alemán de Görlitz. Dedicó su vida al estudio y enseñanza del hebreo, fundando una escuela en Núremberg donde los estudiantes podían aprender a leer hebreo en solo cuatro semanas usando su método innovador. Su pasión por los idiomas lo llevó a crear uno de los proyectos bíblicos más ambiciosos de la era del Renacimiento.',
+      'Elias Hutter (c. 1553–1605) fue un hebraísta, lingüista e impresor alemán de Görlitz. Su traducción del Nuevo Testamento al hebreo, publicada entre 1599 y 1602 como parte de la Políglota de Núremberg, representa uno de los primeros Nuevos Testamentos hebreos completos jamás impresos. Nota: Esta transcripción OCR de la obra impresa original contiene algunas inexactitudes y aún está siendo refinada.',
     info_polyglot_title: 'La Políglota de Núremberg',
     info_polyglot_text:
       'La Políglota del Nuevo Testamento de Núremberg, publicada entre 1599 y 1602, es una obra monumental que presenta el Nuevo Testamento en doce idiomas dispuestos en columnas paralelas. Entre estos idiomas, Hutter incluyó su propia traducción al hebreo, convirtiéndola en uno de los primeros Nuevos Testamentos hebreos completos jamás impresos. Esta obra representa un logro notable en los estudios bíblicos y la impresión moderna temprana.',
@@ -80,7 +80,7 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
       'Besorah (בְּשׂוֹרָה) significa "Buenas Nuevas" o "Evangelio" en hebreo. Esta edición digital presenta la traducción hebrea de Hutter del Nuevo Testamento griego. A diferencia de traducciones posteriores, la obra de Hutter fue creada durante un período de renovado interés en las lenguas bíblicas, convirtiéndola en un documento histórico único que une las escrituras cristianas griegas con la tradición lingüística hebrea.',
     info_delitzsch_title: 'Traducción de Delitzsch',
     info_delitzsch_text:
-      'Este proyecto también incluye la traducción hebrea del Nuevo Testamento de Franz Delitzsch (1813–1890), un reconocido teólogo luterano alemán y hebraísta. La obra de Delitzsch representa un enfoque académico de la traducción al hebreo, basado en su profundo conocimiento tanto del hebreo bíblico como de la literatura rabínica. Su traducción, completada en el siglo XIX, proporciona una perspectiva alternativa al trabajo de la era del Renacimiento de Hutter.',
+      'Franz Delitzsch (1813–1890) fue un reconocido teólogo luterano alemán y hebraísta. Su traducción hebrea del Nuevo Testamento representa un enfoque académico basado en su profundo conocimiento tanto del hebreo bíblico como de la literatura rabínica. Completada en el siglo XIX, la traducción de Delitzsch se considera más precisa lingüísticamente y sirve como el texto predeterminado en esta aplicación.',
     info_tanaj_title: 'Tanaj',
     info_tanaj_text:
       'Este proyecto también incluye la Biblia hebrea (Tanaj) del Texto Masorético, el texto hebreo autorizado de la Biblia que ha sido meticulosamente preservado a través de siglos de transmisión cuidadosa por parte de escribas de Israel.',
@@ -101,7 +101,7 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     info_title: 'מידע',
     info_hutter_title: 'מי היה אליאס הוטר?',
     info_hutter_text:
-      'אליאס הוטר (1553–1605 לערך) היה חוקר עברית, בלשן ומדפיס גרמני מגרליץ. הוא הקדיש את חייו ללימוד והוראת העברית, והקים בית ספר בנירנברג שבו תלמידים יכלו ללמוד לקרוא עברית תוך ארבעה שבועות בלבד באמצעות שיטתו החדשנית. תשוקתו לשפות הובילה אותו ליצור את אחד הפרויקטים המקראיים השאפתניים ביותר של עידן הרנסנס.',
+      'אליאס הוטר (1553–1605 לערך) היה חוקר עברית, בלשן ומדפיס גרמני מגרליץ. תרגומו של הברית החדשה לעברית, שפורסם בין 1599 ל-1602 כחלק מהפוליגלוטה של נירנברג, מייצג אחד מהברית החדשות העבריות המלאות הראשונות שהודפסו אי פעם. הערה: תמלול ה-OCR הזה מהעבודה המודפסת המקורית מכיל חלק מהחוסרים וממשיך להיות משוכלל.',
     info_polyglot_title: 'הפוליגלוטה של נירנברג',
     info_polyglot_text:
       'הברית החדשה הפוליגלוטית של נירנברג, שפורסמה בין 1599 ל-1602, היא יצירה מונומנטלית המציגה את הברית החדשה בשתים עשרה שפות המסודרות בעמודות מקבילות. בין שפות אלו, הוטר כלל את תרגומו העברי שלו, והפך אותה לאחת מהברית החדשות העבריות המלאות הראשונות שהודפסו אי פעם. יצירה זו מייצגת הישג מרשים במדעי המקרא ובדפוס המודרני המוקדם.',
@@ -110,7 +110,7 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
       'בְּשׂוֹרָה פירושה "חדשות טובות" או "גוספל" בעברית. מהדורה דיגיטלית זו מציגה את תרגומו העברי של הוטר מהברית החדשה היוונית. בניגוד לתרגומים מאוחרים יותר, עבודתו של הוטר נוצרה בתקופה של התעניינות מחודשת בשפות המקרא, מה שהופך אותה למסמך היסטורי ייחודי המגשר בין הכתבים הנוצריים היווניים למסורת הלשונית העברית.',
     info_delitzsch_title: 'תרגום דליצש',
     info_delitzsch_text:
-      'פרויקט זה כולל גם את התרגום העברי של הברית החדשה מאת פרנץ דליצש (1813–1890), תיאולוג לותרני גרמני מוכר וחוקר עברית. עבודתו של דליצש מייצגת גישה אקדמית לתרגום עברי, המבוססת על ידיעתו העמוקה הן בעברית המקראית והן בספרות הרבנית. תרגומו, שהושלם במאה התשע עשרה, מספק פרספקטיבה חלופית לעבודתו של הוטר מתקופת הרנסנס.',
+      'פרנץ דליצש (1813–1890) היה תיאולוג לותרני גרמני מוכר וחוקר עברית. תרגומו העברי של הברית החדשה מייצג גישה אקדמית המבוססת על ידיעתו העמוקה הן בעברית המקראית והן בספרות הרבנית. שהושלם במאה התשע עשרה, תרגומו של דליצש נחשב למדויק יותר מבחינה לשונית ומהווה את הטקסט בריר המחדל באפליקציה זו.',
     info_tanaj_title: 'תנ״ך',
     info_tanaj_text:
       'פרויקט זה כולל גם את התנ״ך מהטקסט המסורתי, הטקסט העברי הרשמי של התנ״ך ששומר בקפידה במשך מאות שנים על ידי סופרי ישראל.',

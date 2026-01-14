@@ -20,7 +20,6 @@ Thumbs.db
 
 # Data and models (uncomment if you want to ignore these)
 # data/
-# models/
 # output/
 
 # Local Tanaj source data directory
@@ -34,6 +33,10 @@ data/temp/
 
 # Generated images (converted from PDFs)
 data/images/
+
+# models
+models/
+scripts/nakdimon/models/
 
 # Checkpoints
 output/.checkpoints/
@@ -57,4 +60,5 @@ frontend/next-env.d.ts
 
 # TypeScript build cache
 *.tsbuildinfo
+
 

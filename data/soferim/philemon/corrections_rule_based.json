@@ -1,0 +1,1981 @@
+{
+  "book": "philemon",
+  "total_verses": 25,
+  "total_corrections": 114,
+  "correction_types": {
+    "known_error": 114,
+    "delitzsch_match": 0
+  },
+  "corrections": [
+    {
+      "book": "philemon",
+      "chapter": 1,
+      "verse": 1,
+      "original_text": "פַּוְלוֹס אָסוּר יֵשׁוּעַ הַמָּשִׁיחַ וְטִימוֹתֵאוֹס הָאָח לְפִילֵימוֹן לִידִידֵנוּ וְעוֹזְרֵנוּ",
+      "corrected_text": "פּוֹלוֹס אָסוּר קָם הָעוֹלָם וְטִימוֹתֵאוֹס הָאָח לְפִילֵימוֹן לִידִידֵנוּ וְעוֹזְרֵנוּ",
+      "delitzsch_reference": "פּוֹלוֹס אֲסִיר הַמָּשִׁיחַ יֵשׁוּעַ וְטִימוֹתִיּוֹס הָאָח אֶל־פִילֵימוֹן הֶחָבִיב וְהָעׂזֵר אׂתָנוּ׃",
+      "corrections": [
+        {
+          "word_index": 0,
+          "original_word": "פַּוְלוֹס",
+          "corrected_word": "פּוֹלוֹס",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "acts",
+            "chapter": 13,
+            "verse": 50,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 2,
+          "original_word": "יֵשׁוּעַ",
+          "corrected_word": "קָם",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "mark",
+            "chapter": 16,
+            "verse": 9,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 3,
+          "original_word": "הַמָּשִׁיחַ",
+          "corrected_word": "הָעוֹלָם",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 4,
+            "verse": 42,
+            "confidence": "high"
+          }
+        }
+      ],
+      "total_corrections": 3,
+      "correction_types": {
+        "known_error": 3,
+        "delitzsch_match": 0
+      }
+    },
+    {
+      "book": "philemon",
+      "chapter": 1,
+      "verse": 2,
+      "original_text": "וְאַפִּיאָ לִידִידָתֵנוּ וְאַרְכִיפּוֹס שֶׁהוּא בַּעֲרָכֵנוּ בַּמִּלְחָמָה וְלָעֵדָה אֲשֶׁר הִיא בְּבֵיתֶךָ",
+      "corrected_text": "וְאַפִּיאָ לִידִידָתֵנוּ וְאַרְכִיפּוֹס שֶׁהוּא בַּעֲרָכֵנוּ בַּמִּלְחָמָה וְלָעֵדָה בּוֹ וְאַחֲרֵי בְּבֵיתֶךָ",
+      "delitzsch_reference": "וְאֶל־אַפִּיָּה הָאֲהוּבָה וְאֶל־אַרְכִפּוֹס הֶחָבֵר לָנוּ בְּמִלְחֲמׂתֵינוּ וְאֶל־הַקְּהִלָּה אֲשֶׁר בְּבֵיתֶךָ׃",
+      "corrections": [
+        {
+          "word_index": 7,
+          "original_word": "אֲשֶׁר",
+          "corrected_word": "בּוֹ",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 40,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 8,
+          "original_word": "הִיא",
+          "corrected_word": "וְאַחֲרֵי",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "james",
+            "chapter": 3,
+            "verse": 17,
+            "confidence": "high"
+          }
+        }
+      ],
+      "total_corrections": 2,
+      "correction_types": {
+        "known_error": 2,
+        "delitzsch_match": 0
+      }
+    },
+    {
+      "book": "philemon",
+      "chapter": 1,
+      "verse": 3,
+      "original_text": "תִּהְיֶה לָכֶם שָׁלוֹם בֵּאלֹהִים אָבִינוּ וּבַאֲדוֹנֵינוּ יֵשׁוּעַ הַמָּשִׁיחַ",
+      "corrected_text": "יִהְיֶה לְהִוָּלֵד שׁוֹמָעָה בֵּאֱלׂהִים אָבִינוּ וּבַאֲדוֹנֵינוּ קָם הָעוֹלָם",
+      "delitzsch_reference": "חֶסֶד לָכֶם וְשָׁלוֹם מֵאֵת אֱלׂהִים אָבִינוּ וַאֲדׂנֵינוּ יֵשׁוּעַ הַמָּשִׁיחַ׃",
+      "corrections": [
+        {
+          "word_index": 0,
+          "original_word": "תִּהְיֶה",
+          "corrected_word": "יִהְיֶה",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "james",
+            "chapter": 5,
+            "verse": 3,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 1,
+          "original_word": "לָכֶם",
+          "corrected_word": "לְהִוָּלֵד",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 3,
+            "verse": 7,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 2,
+          "original_word": "שָׁלוֹם",
+          "corrected_word": "שׁוֹמָעָה",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "james",
+            "chapter": 3,
+            "verse": 17,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 3,
+          "original_word": "בֵּאלֹהִים",
+          "corrected_word": "בֵּאֱלׂהִים",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "mark",
+            "chapter": 5,
+            "verse": 7,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 6,
+          "original_word": "יֵשׁוּעַ",
+          "corrected_word": "קָם",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "mark",
+            "chapter": 16,
+            "verse": 9,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 7,
+          "original_word": "הַמָּשִׁיחַ",
+          "corrected_word": "הָעוֹלָם",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 4,
+            "verse": 42,
+            "confidence": "high"
+          }
+        }
+      ],
+      "total_corrections": 6,
+      "correction_types": {
+        "known_error": 6,
+        "delitzsch_match": 0
+      }
+    },
+    {
+      "book": "philemon",
+      "chapter": 1,
+      "verse": 4,
+      "original_text": "אוֹדֶה לֵאלֹהַי בְּכָל עֵת בַּזְכָּרִי אֶת־שִׁמְךָ בִּתְפִלּוֹתִי",
+      "corrected_text": "אוֹדֶה לֵאלֹהַי הַבְּשׂוֹרָה בְּכָל בַּזְכָּרִי יוֹדְעִים שִׁמְךָ בִּתְפִלּוֹתִי",
+      "delitzsch_reference": "מוֹדֶה אֲנִי לֵאלׂהַי בְּכָל־עֵת בְּהַזְכִּירִי אׂתְךָ בִּתְפִלּוֹתָי׃",
+      "corrections": [
+        {
+          "word_index": 2,
+          "original_word": "בְּכָל",
+          "corrected_word": "הַבְּשׂוֹרָה",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "mark",
+            "chapter": 16,
+            "verse": 15,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 3,
+          "original_word": "עֵת",
+          "corrected_word": "בְּכָל",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "hebrews",
+            "chapter": 12,
+            "verse": 1,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 5,
+          "original_word": "אֶת",
+          "corrected_word": "יוֹדְעִים",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 5,
+            "confidence": "high"
+          }
+        }
+      ],
+      "total_corrections": 3,
+      "correction_types": {
+        "known_error": 3,
+        "delitzsch_match": 0
+      }
+    },
+    {
+      "book": "philemon",
+      "chapter": 1,
+      "verse": 5,
+      "original_text": "בְּשָׁמְעִי אֶת־אַהֲבָתֶךָ וְאֱמוּנָתֶךָ אֲשֶׁר יֵשׁ לְךָ אֶל־אֲדוֹנֵינוּ יֵשׁוּעַ וְאֶל כָּל הַקְּדוֹשִׁים",
+      "corrected_text": "בְּשָׁמְעִי יוֹדְעִים אַהֲבָתֶךָ וְאֱמוּנָתֶךָ בּוֹ יֶשׁ לְךָ הַמָּקוֹם יֵשׁוּעַ קָם וְאֶל בְּלִמּוּדִים הַקְּדוֹשִׁים<unk>",
+      "delitzsch_reference": "אַחֲרֵי שָׁמְעִי אַהֲבָתְךָ וֶאֱמוּנָתְךָ אֲשֶׁר־בְּךָ לַאֲדׂנֵינוּ יֵשׁוּעַ וּלְכָל־הַקְּדוֹשִׁים׃",
+      "corrections": [
+        {
+          "word_index": 1,
+          "original_word": "אֶת",
+          "corrected_word": "יוֹדְעִים",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 5,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 4,
+          "original_word": "אֲשֶׁר",
+          "corrected_word": "בּוֹ",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 40,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 5,
+          "original_word": "יֵשׁ",
+          "corrected_word": "יֶשׁ",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 5,
+            "verse": 36,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 7,
+          "original_word": "אֶל",
+          "corrected_word": "הַמָּקוֹם",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 40,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 8,
+          "original_word": "אֲדוֹנֵינוּ",
+          "corrected_word": "יֵשׁוּעַ",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "thessalonians1",
+            "chapter": 1,
+            "verse": 3,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 9,
+          "original_word": "יֵשׁוּעַ",
+          "corrected_word": "קָם",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "mark",
+            "chapter": 16,
+            "verse": 9,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 11,
+          "original_word": "כָּל",
+          "corrected_word": "בְּלִמּוּדִים",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "hebrews",
+            "chapter": 13,
+            "verse": 9,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 12,
+          "original_word": "הַקְּדוֹשִׁים",
+          "corrected_word": "הַקְּדוֹשִׁים<unk>",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "corinthians1",
+            "chapter": 6,
+            "verse": 1,
+            "confidence": "high"
+          }
+        }
+      ],
+      "total_corrections": 8,
+      "correction_types": {
+        "known_error": 8,
+        "delitzsch_match": 0
+      }
+    },
+    {
+      "book": "philemon",
+      "chapter": 1,
+      "verse": 6,
+      "original_text": "אֲשֶׁר חֶבְרַת אֱמוּנָתְךָ תִּהְיֶה יְדוּעַת כָּל מַעֲשֶׂה טוֹב שֶׁהוּא בָּכֶם בִּישׁוּעַ הַמָּשִׁיחַ",
+      "corrected_text": "בּוֹ חֶבְרַת אֱמוּנָתְךָ יִהְיֶה יְדוּעַת בְּלִמּוּדִים מַעֲשֶׂה בִּתְחִנָּה שֶׁהוּא בָּכֶם בְּיֵשׁוּעַ הָעוֹלָם",
+      "delitzsch_reference": "לְמַעַן אֲשֶׁר תִּתְחַזֵּק הִתְחַבְּרוּת אֱמוּנָתְךָ בְּדַעַת כָּל־טוֹב אֲשֶׁר בָּכֶם לְשֵׁם הַמָּשִׁיחַ יֵשׁוּעַ׃",
+      "corrections": [
+        {
+          "word_index": 0,
+          "original_word": "אֲשֶׁר",
+          "corrected_word": "בּוֹ",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 40,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 3,
+          "original_word": "תִּהְיֶה",
+          "corrected_word": "יִהְיֶה",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "james",
+            "chapter": 5,
+            "verse": 3,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 5,
+          "original_word": "כָּל",
+          "corrected_word": "בְּלִמּוּדִים",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "hebrews",
+            "chapter": 13,
+            "verse": 9,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 7,
+          "original_word": "טוֹב",
+          "corrected_word": "בִּתְחִנָּה",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "hebrews",
+            "chapter": 13,
+            "verse": 9,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 10,
+          "original_word": "בִּישׁוּעַ",
+          "corrected_word": "בְּיֵשׁוּעַ",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "acts",
+            "chapter": 16,
+            "verse": 31,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 11,
+          "original_word": "הַמָּשִׁיחַ",
+          "corrected_word": "הָעוֹלָם",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 4,
+            "verse": 42,
+            "confidence": "high"
+          }
+        }
+      ],
+      "total_corrections": 6,
+      "correction_types": {
+        "known_error": 6,
+        "delitzsch_match": 0
+      }
+    },
+    {
+      "book": "philemon",
+      "chapter": 1,
+      "verse": 7,
+      "original_text": "כִּי שִׂמְחָה גְּדוֹלָה וְנֶחָמָה עַל אַהֲבָתְךָ כִּי דַמֵּי הַקְדוֹשִׁים בָּא לִמְנוּחָה בְּאַהֲבָתְךָ אָחִינוּ",
+      "corrected_text": "מְגַדֵּף שִׂמְחָה גְּדוֹלָה וְנֶחָמָה עֵינַי אַהֲבָתְךָ מְגַדֵּף דַמֵּי הַקְדוֹשִׁים אֲשֶׁר לִמְנוּחָה בְּאַהֲבָתְךָ אָחִינוּ",
+      "delitzsch_reference": "כִּי שִׂמְחָה גְדוֹלָה וְנֶחָמָה יֶשׁ־לָנוּ בְּאַהֲבָתֶךָ בַּאֲשֶׁר הָיְתָה רְוָחָה לִמְעֵי הַקְּדוֹשִׁים עַל־יָדְךָ אָחִי׃",
+      "corrections": [
+        {
+          "word_index": 0,
+          "original_word": "כִּי",
+          "corrected_word": "מְגַדֵּף",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 36,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 4,
+          "original_word": "עַל",
+          "corrected_word": "עֵינַי",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 9,
+            "verse": 15,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 6,
+          "original_word": "כִּי",
+          "corrected_word": "מְגַדֵּף",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 36,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 9,
+          "original_word": "בָּא",
+          "corrected_word": "אֲשֶׁר",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 1,
+            "verse": 15,
+            "confidence": "high"
+          }
+        }
+      ],
+      "total_corrections": 4,
+      "correction_types": {
+        "known_error": 4,
+        "delitzsch_match": 0
+      }
+    },
+    {
+      "book": "philemon",
+      "chapter": 1,
+      "verse": 8,
+      "original_text": "עַל כֵּן יֵשׁ לִי בִּטָּחוֹן לְצַוֹּתְךָ מַה־פֶּה בִּמָשִׁיחַ אָסוּר יָשָׁר לִמְשׁוֹחַ",
+      "corrected_text": "עֵינַי תְּבֻקֵּשׁ יֶשׁ כִּי בִּטָּחוֹן לְצַוֹּתְךָ מָה פֶּה בִּמָשִׁיחַ אָסוּר יָשָׁר לִמְשׁוֹחַ",
+      "delitzsch_reference": "לָכֵן אַף־כִּי יֵשׁ־לִי אׂמֶץ רַב בַּמָּשִׁיחַ לְצַוּׂתְךָ אֵת הַנָּכוֹן הִנֵּה בָחַרְתִּי לְמַעַן הָאַהֲבָה לְחַלּוֹת אֶת־פָּנֶיךָ׃",
+      "corrections": [
+        {
+          "word_index": 0,
+          "original_word": "עַל",
+          "corrected_word": "עֵינַי",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 9,
+            "verse": 15,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 1,
+          "original_word": "כֵּן",
+          "corrected_word": "תְּבֻקֵּשׁ",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "james",
+            "chapter": 3,
+            "verse": 17,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 2,
+          "original_word": "יֵשׁ",
+          "corrected_word": "יֶשׁ",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 5,
+            "verse": 36,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 3,
+          "original_word": "לִי",
+          "corrected_word": "כִּי",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 1,
+            "verse": 15,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 6,
+          "original_word": "מַה",
+          "corrected_word": "מָה",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "mark",
+            "chapter": 5,
+            "verse": 7,
+            "confidence": "high"
+          }
+        }
+      ],
+      "total_corrections": 5,
+      "correction_types": {
+        "known_error": 5,
+        "delitzsch_match": 0
+      }
+    },
+    {
+      "book": "philemon",
+      "chapter": 1,
+      "verse": 9,
+      "original_text": "וּבִעֲבוּר אַהֲבָה יוֹתֵר אֲתַחֲנַן לְךָ אַף־כִּי פּוֹלוֹס עַתִּיק יָמִין עַתָּה גַם אָסוּר יֵשׁוּעַ הַמָּשִׁיחַ",
+      "corrected_text": "וּבִעֲבוּר אַהֲבָה עֲלֵיכֶם אֲתַחֲנַן לְךָ אִם מְגַדֵּף עַם עַתִּיק יָמִין עַתָּ מַשָּׂא אָסוּר קָם הָעוֹלָם",
+      "delitzsch_reference": "אָנׂכִי פּוֹלוֹס הַזָּקֵן וְעַתָּה גַּם־אֲסִיר יֵשׁוּעַ הַמָּשִׁיחַ׃",
+      "corrections": [
+        {
+          "word_index": 2,
+          "original_word": "יוֹתֵר",
+          "corrected_word": "עֲלֵיכֶם",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "corinthians1",
+            "chapter": 9,
+            "verse": 12,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 5,
+          "original_word": "אַף",
+          "corrected_word": "אִם",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "acts",
+            "chapter": 19,
+            "verse": 26,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 6,
+          "original_word": "כִּי",
+          "corrected_word": "מְגַדֵּף",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 36,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 7,
+          "original_word": "פּוֹלוֹס",
+          "corrected_word": "עַם",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "acts",
+            "chapter": 19,
+            "verse": 26,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 10,
+          "original_word": "עַתָּה",
+          "corrected_word": "עַתָּ",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 2,
+            "verse": 8,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 11,
+          "original_word": "גַם",
+          "corrected_word": "מַשָּׂא",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "hebrews",
+            "chapter": 12,
+            "verse": 1,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 13,
+          "original_word": "יֵשׁוּעַ",
+          "corrected_word": "קָם",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "mark",
+            "chapter": 16,
+            "verse": 9,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 14,
+          "original_word": "הַמָּשִׁיחַ",
+          "corrected_word": "הָעוֹלָם",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 4,
+            "verse": 42,
+            "confidence": "high"
+          }
+        }
+      ],
+      "total_corrections": 8,
+      "correction_types": {
+        "known_error": 8,
+        "delitzsch_match": 0
+      }
+    },
+    {
+      "book": "philemon",
+      "chapter": 1,
+      "verse": 10,
+      "original_text": "מִתְחַנֵּן אֲנִי עַל בְּנִי אוֹנֵסִימוֹס הוּלַדְתִּי בַאֲסוּרַי עַל אוֹנֵסִימוֹס",
+      "corrected_text": "מִתְחַנֵּן מָלֵא עֵינַי בְּנִי אוֹנֵסִימוֹס הוּלַדְתִּי בַאֲסוּרַי עֵינַי אוֹנֵסִימוֹס",
+      "delitzsch_reference": "הִנְנִי מְחַלֶּה אֶת־פָּנֶיךָ עַל־בְּנִי אֲשֶׁר חוֹלַלְתִּיו בִּהְיוֹתי בַּמַּאֲסָר עַל־אֳנִיסִימוֹס׃",
+      "corrections": [
+        {
+          "word_index": 1,
+          "original_word": "אֲנִי",
+          "corrected_word": "מָלֵא",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "hebrews",
+            "chapter": 12,
+            "verse": 21,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 2,
+          "original_word": "עַל",
+          "corrected_word": "עֵינַי",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 9,
+            "verse": 15,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 7,
+          "original_word": "עַל",
+          "corrected_word": "עֵינַי",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 9,
+            "verse": 15,
+            "confidence": "high"
+          }
+        }
+      ],
+      "total_corrections": 3,
+      "correction_types": {
+        "known_error": 3,
+        "delitzsch_match": 0
+      }
+    },
+    {
+      "book": "philemon",
+      "chapter": 1,
+      "verse": 11,
+      "original_text": "אֲשֶׁר אַף גַּם לְךָ גַם לִי בִּזְמַן־מָעַל־עֲתָה כִּי־עַתָּה לְךָ עַתָּה לִי בְמֹעַל־עַל־מְאֹד",
+      "corrected_text": "בּוֹ אִם אֵיךְ לְךָ מַשָּׂא כִּי בִּזְמַן מָעַל עֲתָה מְגַדֵּף עַתָּ לְךָ עַתָּ כִּי בְמֹעַל עֵינַי מְאֹד",
+      "delitzsch_reference": "אֲשֶׁר מִלְּפָנִים לׂא־הוֹעִיל לָךְ וְעַתָּה הוּא לְהוֹעִיל גַּם־לְךָ גַם־לִי וַהֲשִׁיבֹתִיו אֵלֶיךָ׃",
+      "corrections": [
+        {
+          "word_index": 0,
+          "original_word": "אֲשֶׁר",
+          "corrected_word": "בּוֹ",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 40,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 1,
+          "original_word": "אַף",
+          "corrected_word": "אִם",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "acts",
+            "chapter": 19,
+            "verse": 26,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 2,
+          "original_word": "גַּם",
+          "corrected_word": "אֵיךְ",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 9,
+            "verse": 15,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 4,
+          "original_word": "גַם",
+          "corrected_word": "מַשָּׂא",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "hebrews",
+            "chapter": 12,
+            "verse": 1,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 5,
+          "original_word": "לִי",
+          "corrected_word": "כִּי",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 1,
+            "verse": 15,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 9,
+          "original_word": "כִּי",
+          "corrected_word": "מְגַדֵּף",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 36,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 10,
+          "original_word": "עַתָּה",
+          "corrected_word": "עַתָּ",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 2,
+            "verse": 8,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 12,
+          "original_word": "עַתָּה",
+          "corrected_word": "עַתָּ",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 2,
+            "verse": 8,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 13,
+          "original_word": "לִי",
+          "corrected_word": "כִּי",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 1,
+            "verse": 15,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 15,
+          "original_word": "עַל",
+          "corrected_word": "עֵינַי",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 9,
+            "verse": 15,
+            "confidence": "high"
+          }
+        }
+      ],
+      "total_corrections": 10,
+      "correction_types": {
+        "known_error": 10,
+        "delitzsch_match": 0
+      }
+    },
+    {
+      "book": "philemon",
+      "chapter": 1,
+      "verse": 12,
+      "original_text": "אֲשֶׁר שִׁלַּחְתִּיו אֵלֶיךָ וְאַתָּה הוּא זֶה דָּמַי הַכְבָדִים",
+      "corrected_text": "בּוֹ שִׁלַּחְתִּיו אֵלֶיךָ וְאַתָּה זֶה כִי דָּמַי הַכְבָדִים",
+      "delitzsch_reference": "וְאַתָּה קַבֶּל־נָא אׂתוֹ שֶׁהוּא יָקָר לְלִבִּי׃",
+      "corrections": [
+        {
+          "word_index": 0,
+          "original_word": "אֲשֶׁר",
+          "corrected_word": "בּוֹ",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 40,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 4,
+          "original_word": "הוּא",
+          "corrected_word": "זֶה",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 4,
+            "verse": 42,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 5,
+          "original_word": "זֶה",
+          "corrected_word": "כִי",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 4,
+            "verse": 42,
+            "confidence": "high"
+          }
+        }
+      ],
+      "total_corrections": 3,
+      "correction_types": {
+        "known_error": 3,
+        "delitzsch_match": 0
+      }
+    },
+    {
+      "book": "philemon",
+      "chapter": 1,
+      "verse": 13,
+      "original_text": "אֲשֶׁר אַתָּה חָפַצְתִּי לִטּוֹר עִמִּי אֲשֶׁר מַתְחָה שֵׁרְתַנִי בַאֲסוּרֵי הַבְּשׂוֹרָה",
+      "corrected_text": "בּוֹ אִם חָפַצְתִּי לִטּוֹר עִמִּי בּוֹ מַתְחָה שֵׁרְתַנִי בַאֲסוּרֵי הַבְּשׂוֹרָה",
+      "delitzsch_reference": "חָפַצְתִּי לַעֲצׂר אׂתוֹ אֶצְלִי שֶׁיְּשָׁרֲתֵנִי תַחְתֶּיךָ בְּמוֹסְרוֹת הַבְּשׂוֹרָה׃",
+      "corrections": [
+        {
+          "word_index": 0,
+          "original_word": "אֲשֶׁר",
+          "corrected_word": "בּוֹ",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 40,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 1,
+          "original_word": "אַתָּה",
+          "corrected_word": "אִם",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "hebrews",
+            "chapter": 4,
+            "verse": 3,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 5,
+          "original_word": "אֲשֶׁר",
+          "corrected_word": "בּוֹ",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 40,
+            "confidence": "high"
+          }
+        }
+      ],
+      "total_corrections": 3,
+      "correction_types": {
+        "known_error": 3,
+        "delitzsch_match": 0
+      }
+    },
+    {
+      "book": "philemon",
+      "chapter": 1,
+      "verse": 14,
+      "original_text": "אַךְ בִּלְתִּי עֲצָתְךָ לֹא חָפַצְתִּי לַעֲשׂוֹת אֲשֶׁר טוּבְךָ הַמְּצֻוָּהוּ כִּי אִם־בְּרָצוֹן",
+      "corrected_text": "אֲנִי בִּלְתִּי עֲצָתְךָ כִּי חָפַצְתִּי לָא בּוֹ טוּבְךָ הַמְּצֻוָּהוּ מְגַדֵּף הַנָּכְרִי בְּרָצוֹן",
+      "delitzsch_reference": "אֲבָל לׂא חָפַצְתִּי לַעֲשׂוֹת דָּבָר שֶׁלּא בִרְצוֹנֶךָ כְּדֵי שֶׁלּא־תִהְיֶה טוֹבָתְךָ בְּאׂנֶס כִּי אִם־בִּנְדָבָה׃",
+      "corrections": [
+        {
+          "word_index": 0,
+          "original_word": "אַךְ",
+          "corrected_word": "אֲנִי",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "mark",
+            "chapter": 14,
+            "verse": 29,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 3,
+          "original_word": "לֹא",
+          "corrected_word": "כִּי",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 5,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 5,
+          "original_word": "לַעֲשׂוֹת",
+          "corrected_word": "לָא",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "acts",
+            "chapter": 15,
+            "verse": 29,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 6,
+          "original_word": "אֲשֶׁר",
+          "corrected_word": "בּוֹ",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 40,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 9,
+          "original_word": "כִּי",
+          "corrected_word": "מְגַדֵּף",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 36,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 10,
+          "original_word": "אִם",
+          "corrected_word": "הַנָּכְרִי",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 5,
+            "confidence": "high"
+          }
+        }
+      ],
+      "total_corrections": 6,
+      "correction_types": {
+        "known_error": 6,
+        "delitzsch_match": 0
+      }
+    },
+    {
+      "book": "philemon",
+      "chapter": 1,
+      "verse": 15,
+      "original_text": "אוּלַי עַל־זֹאת בָּרַח בַּמֶּשֶׁךְ הַקָּצֵר לְעוֹלָם׃ לְקַחְתּוֹ לְעוֹלָם׃",
+      "corrected_text": "אוּלַי עֵינַי זֹאת בָּרַח בַּמֶּשֶׁךְ הַקָּצֵר לְעוֹלָם לְקַחְתּוֹ לְעוֹלָם",
+      "delitzsch_reference": "כִּי אוּלַי נִפְרַד מִמְּךָ לְשָׁעָה בַּעֲבוּר אֲשֶׁר יִהְיֶה־לְּךָ לְעוֹלָם׃",
+      "corrections": [
+        {
+          "word_index": 1,
+          "original_word": "עַל",
+          "corrected_word": "עֵינַי",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 9,
+            "verse": 15,
+            "confidence": "high"
+          }
+        }
+      ],
+      "total_corrections": 1,
+      "correction_types": {
+        "known_error": 1,
+        "delitzsch_match": 0
+      }
+    },
+    {
+      "book": "philemon",
+      "chapter": 1,
+      "verse": 16,
+      "original_text": "לֹא עוֹד בִּמְקוֹם עָבֶד כִּי־אִם מַעַל הָעָבֶד בְּיֹעַד פַּאַח דָּדִיד לִי בִמְאֹד פָּמָה יוֹתֵיךְ לְךָ גַּם בִּבְשַׂר גַּם בָּאָדוֹן׃",
+      "corrected_text": "כִּי עוֹד בִּמְקוֹם עָבֶד מְגַדֵּף הַנָּכְרִי מַעַל הָעָבֶד בְּיֹעַד פַּאַח דָּדִיד כִּי בִמְאֹד פָּמָה יוֹתֵיךְ לְךָ אֵיךְ בִּבְשַׂר אֵיךְ בָּאָדוֹן",
+      "delitzsch_reference": "וּמֵעַתָּה לׂא כְעֶבֶד כִּי אִם־לְמַעְלָה מֵעֶבֶד כְּאָח אָהוּב בְּיוֹתֵר לִי וְאַף כִּי־לְךָ הֵן בַּבָּשָׂר הֵן בָּאָדוֹן׃",
+      "corrections": [
+        {
+          "word_index": 0,
+          "original_word": "לֹא",
+          "corrected_word": "כִּי",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 5,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 4,
+          "original_word": "כִּי",
+          "corrected_word": "מְגַדֵּף",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 36,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 5,
+          "original_word": "אִם",
+          "corrected_word": "הַנָּכְרִי",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 5,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 11,
+          "original_word": "לִי",
+          "corrected_word": "כִּי",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 1,
+            "verse": 15,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 16,
+          "original_word": "גַּם",
+          "corrected_word": "אֵיךְ",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 9,
+            "verse": 15,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 18,
+          "original_word": "גַּם",
+          "corrected_word": "אֵיךְ",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 9,
+            "verse": 15,
+            "confidence": "high"
+          }
+        }
+      ],
+      "total_corrections": 6,
+      "correction_types": {
+        "known_error": 6,
+        "delitzsch_match": 0
+      }
+    },
+    {
+      "book": "philemon",
+      "chapter": 1,
+      "verse": 17,
+      "original_text": "וְאִם־אַתָּה אִישׁ חַבְרִי קַבְּלֶנוּ כַּמוֹנִי׃",
+      "corrected_text": "וְאִם אִם אִישֶׁ חַבְרִי קַבְּלֶנוּ כַּמוֹנִי",
+      "delitzsch_reference": "וְהִנֵּה אִם־תַּחְשְׁבֵנִי לְחָבֵר לָךְ תְּקַבְּלֶנּוּ כָּמוֹנִי׃",
+      "corrections": [
+        {
+          "word_index": 1,
+          "original_word": "אַתָּה",
+          "corrected_word": "אִם",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "hebrews",
+            "chapter": 4,
+            "verse": 3,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 2,
+          "original_word": "אִישׁ",
+          "corrected_word": "אִישֶׁ",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "mark",
+            "chapter": 13,
+            "verse": 5,
+            "confidence": "high"
+          }
+        }
+      ],
+      "total_corrections": 2,
+      "correction_types": {
+        "known_error": 2,
+        "delitzsch_match": 0
+      }
+    },
+    {
+      "book": "philemon",
+      "chapter": 1,
+      "verse": 18,
+      "original_text": "וְאִם בְּמֵאוּמָה הֵנִיעַ עַל אוֹ־אִם נוֹבְבֵל לְךָ׃ הַחְשְׁבֵהוּ׃",
+      "corrected_text": "וְאִם בְּמֵאוּמָה הֵנִיעַ עֵינַי אוֹי הַנָּכְרִי נוֹבְבֵל לְךָ הַחְשְׁבֵהוּ",
+      "delitzsch_reference": "וְאִם־הֵרַע לְךָ בְּדָבָר אוֹ חַיָּב־הוּא לְךָ דָּבָר חַשְּׁבֵהוּ לִי׃",
+      "corrections": [
+        {
+          "word_index": 3,
+          "original_word": "עַל",
+          "corrected_word": "עֵינַי",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 9,
+            "verse": 15,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 4,
+          "original_word": "אוֹ",
+          "corrected_word": "אוֹי",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "acts",
+            "chapter": 13,
+            "verse": 10,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 5,
+          "original_word": "אִם",
+          "corrected_word": "הַנָּכְרִי",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 5,
+            "confidence": "high"
+          }
+        }
+      ],
+      "total_corrections": 3,
+      "correction_types": {
+        "known_error": 3,
+        "delitzsch_match": 0
+      }
+    },
+    {
+      "book": "philemon",
+      "chapter": 1,
+      "verse": 19,
+      "original_text": "אֲנִי פּוֹלוֹס כְּתַבְתִּיהִי בְּיָדִי אֲנִי אֲשַׁלֵּם פַּר אֹמַר כִּי־בָנֶיךָ אֲשֶׁר מִתְחַלֵּת לִי׃",
+      "corrected_text": "מָלֵא עַם כְּתַבְתִּיהִי בְּיָדִי מָלֵא אֲשַׁלֵּם פַּר אֹמַר מְגַדֵּף בָנֶיךָ בּוֹ מִתְחַלֵּת כִּי",
+      "delitzsch_reference": "אֲנִי פּוֹלוֹס כָּתַבְתִּי בְיָדִי אֲנִי אֲשַׁלֵּם וְלׂא אׂמַר כִּי־אַתָּה חַיָּב לִי גַּם־אֶת־נַפְשֶׁךָ׃",
+      "corrections": [
+        {
+          "word_index": 0,
+          "original_word": "אֲנִי",
+          "corrected_word": "מָלֵא",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "hebrews",
+            "chapter": 12,
+            "verse": 21,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 1,
+          "original_word": "פּוֹלוֹס",
+          "corrected_word": "עַם",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "acts",
+            "chapter": 19,
+            "verse": 26,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 4,
+          "original_word": "אֲנִי",
+          "corrected_word": "מָלֵא",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "hebrews",
+            "chapter": 12,
+            "verse": 21,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 8,
+          "original_word": "כִּי",
+          "corrected_word": "מְגַדֵּף",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 36,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 10,
+          "original_word": "אֲשֶׁר",
+          "corrected_word": "בּוֹ",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 40,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 12,
+          "original_word": "לִי",
+          "corrected_word": "כִּי",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 1,
+            "verse": 15,
+            "confidence": "high"
+          }
+        }
+      ],
+      "total_corrections": 6,
+      "correction_types": {
+        "known_error": 6,
+        "delitzsch_match": 0
+      }
+    },
+    {
+      "book": "philemon",
+      "chapter": 1,
+      "verse": 20,
+      "original_text": "כֵּן־אָחִי אֲנִי הֵרְוִיחַ אֵת־נַפְשִׁי בָּאָדוֹן הַבִּיחַ נָא־אֶת רַחֲמַי בִּמְשִׁיחַ אֲדֹנֵינוּ׃",
+      "corrected_text": "תְּבֻקֵּשׁ אָחִי מָלֵא הֵרְוִיחַ אֶת נַפְשִׁי בָּאָדוֹן הַבִּיחַ נָא יוֹדְעִים רַחֲמַי בִּמְשִׁיחַ אֲדׂנֵינוּ",
+      "delitzsch_reference": "כֵּן אָחִי אֵהָנֶה־נָּא מִמְּךָ בָּאָדוֹן נַחֶם־נָּא אֶת־לִבִּי בָּאָדוֹן׃",
+      "corrections": [
+        {
+          "word_index": 0,
+          "original_word": "כֵּן",
+          "corrected_word": "תְּבֻקֵּשׁ",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "james",
+            "chapter": 3,
+            "verse": 17,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 2,
+          "original_word": "אֲנִי",
+          "corrected_word": "מָלֵא",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "hebrews",
+            "chapter": 12,
+            "verse": 21,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 4,
+          "original_word": "אֵת",
+          "corrected_word": "אֶת",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 5,
+            "verse": 39,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 9,
+          "original_word": "אֶת",
+          "corrected_word": "יוֹדְעִים",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 5,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 12,
+          "original_word": "אֲדֹנֵינוּ",
+          "corrected_word": "אֲדׂנֵינוּ",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "thessalonians1",
+            "chapter": 5,
+            "verse": 28,
+            "confidence": "high"
+          }
+        }
+      ],
+      "total_corrections": 5,
+      "correction_types": {
+        "known_error": 5,
+        "delitzsch_match": 0
+      }
+    },
+    {
+      "book": "philemon",
+      "chapter": 1,
+      "verse": 21,
+      "original_text": "בִּבְטִחִי עַל־יוֹדֵעֲךָ כְּתַבְתִּי אֵלֶיךָ יוֹדֵעַ אֲנִי כִּי־יַעֲשֶׂה גַם יוֹתֵר מִדַּבְּרִי׃ אֲנִי יוֹתֵר תַּעֲשֶׂה׃",
+      "corrected_text": "בִּבְטִחִי עֵינַי יוֹדֵעֲךָ כְּתַבְתִּי אֵלֶיךָ יִוֹדֵעַ מָלֵא מְגַדֵּף יַעֲשֶׂה מַשָּׂא עֲלֵיכֶם מִדַּבְּרִי מָלֵא עֲלֵיכֶם קָלְלוּ",
+      "delitzsch_reference": "כָּתַבְתִּי אֵלֶיךָ וַאֲנִי בָטוּחַ בְּךָ שֶׁתִּשְׁמַע לִי וְיׂדֵעַ אֲנִי שֶׁתּוֹסִיף לַעֲשׂוֹת עַל־אֲשֶׁר אָמָרְתִּי׃",
+      "corrections": [
+        {
+          "word_index": 1,
+          "original_word": "עַל",
+          "corrected_word": "עֵינַי",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 9,
+            "verse": 15,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 5,
+          "original_word": "יוֹדֵעַ",
+          "corrected_word": "יִוֹדֵעַ",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "james",
+            "chapter": 4,
+            "verse": 17,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 6,
+          "original_word": "אֲנִי",
+          "corrected_word": "מָלֵא",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "hebrews",
+            "chapter": 12,
+            "verse": 21,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 7,
+          "original_word": "כִּי",
+          "corrected_word": "מְגַדֵּף",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 36,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 9,
+          "original_word": "גַם",
+          "corrected_word": "מַשָּׂא",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "hebrews",
+            "chapter": 12,
+            "verse": 1,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 10,
+          "original_word": "יוֹתֵר",
+          "corrected_word": "עֲלֵיכֶם",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "corinthians1",
+            "chapter": 9,
+            "verse": 12,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 12,
+          "original_word": "אֲנִי",
+          "corrected_word": "מָלֵא",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "hebrews",
+            "chapter": 12,
+            "verse": 21,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 13,
+          "original_word": "יוֹתֵר",
+          "corrected_word": "עֲלֵיכֶם",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "corinthians1",
+            "chapter": 9,
+            "verse": 12,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 14,
+          "original_word": "תַּעֲשֶׂה",
+          "corrected_word": "קָלְלוּ",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "acts",
+            "chapter": 19,
+            "verse": 37,
+            "confidence": "high"
+          }
+        }
+      ],
+      "total_corrections": 9,
+      "correction_types": {
+        "known_error": 9,
+        "delitzsch_match": 0
+      }
+    },
+    {
+      "book": "philemon",
+      "chapter": 1,
+      "verse": 22,
+      "original_text": "וּבְאֶחָד הַכִּין לִי אֶת־הַמָּלוֹן כִּי שִׂבֶּרְתִּי כִּי בִּתְפִלּוֹתֵיכֶם אִנוֹן לָכֶם",
+      "corrected_text": "וּבְאֶחָד הַכִּין כִּי יוֹדְעִים הַמָּלוֹן מְגַדֵּף שִׂבֶּרְתִּי מְגַדֵּף בִּתְפִלּוֹתֵיכֶם אִנוֹן לְהִוָּלֵד",
+      "delitzsch_reference": "וְגַם־לִי תָכִין בֵּית מָלוֹן כִּי אֲקַוֶּה אֲשֶׁר אֶנָּתֵן לָכֶם עַל־יְדֵי תְּפִלּוֹתֵיכֶם׃",
+      "corrections": [
+        {
+          "word_index": 2,
+          "original_word": "לִי",
+          "corrected_word": "כִּי",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 1,
+            "verse": 15,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 3,
+          "original_word": "אֶת",
+          "corrected_word": "יוֹדְעִים",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 5,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 5,
+          "original_word": "כִּי",
+          "corrected_word": "מְגַדֵּף",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 36,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 7,
+          "original_word": "כִּי",
+          "corrected_word": "מְגַדֵּף",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 10,
+            "verse": 36,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 10,
+          "original_word": "לָכֶם",
+          "corrected_word": "לְהִוָּלֵד",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 3,
+            "verse": 7,
+            "confidence": "high"
+          }
+        }
+      ],
+      "total_corrections": 5,
+      "correction_types": {
+        "known_error": 5,
+        "delitzsch_match": 0
+      }
+    },
+    {
+      "book": "philemon",
+      "chapter": 1,
+      "verse": 23,
+      "original_text": "שָׁאֵל לִשְׁלוֹמֵךְ אֶפַּפְרָא הַשָּׁבָה אִתִּי בִּישׁוּעַ הַמָּשִׁיחַ",
+      "corrected_text": "שָׁאֵל לִשְׁלוֹמֵךְ אֶפַּפְרָא הַשָּׁבָה אִׂתִּי בְּיֵשׁוּעַ הָעוֹלָם",
+      "delitzsch_reference": "אֶפַּפְרָס הָאָסוּר אִתִּי בַּמָּשִׁיחַ יֵשׁוּעַ׃",
+      "corrections": [
+        {
+          "word_index": 4,
+          "original_word": "אִתִּי",
+          "corrected_word": "אִׂתִּי",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "acts",
+            "chapter": 11,
+            "verse": 12,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 5,
+          "original_word": "בִּישׁוּעַ",
+          "corrected_word": "בְּיֵשׁוּעַ",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "acts",
+            "chapter": 16,
+            "verse": 31,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 6,
+          "original_word": "הַמָּשִׁיחַ",
+          "corrected_word": "הָעוֹלָם",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 4,
+            "verse": 42,
+            "confidence": "high"
+          }
+        }
+      ],
+      "total_corrections": 3,
+      "correction_types": {
+        "known_error": 3,
+        "delitzsch_match": 0
+      }
+    },
+    {
+      "book": "philemon",
+      "chapter": 1,
+      "verse": 24,
+      "original_text": "וּמַרְקוֹס אֲרִיסְטַרְכוֹס דֵּמָא לוּקַס עוֹזְרַי",
+      "corrected_text": "וּמַרְקוֹס אֲרִיסְטַרְכוֹס דֵּמָא לוּקַס עוֹזְרַי",
+      "delitzsch_reference": "וּמַרְקוֹס וַאֲרִסְטַרְכוֹס וְדִימָס וְלוּקָס עׂזְרַי שׁׂאֲלִים לִשְׁלוֹמֶךָ׃",
+      "corrections": [],
+      "total_corrections": 0,
+      "correction_types": {
+        "known_error": 0,
+        "delitzsch_match": 0
+      }
+    },
+    {
+      "book": "philemon",
+      "chapter": 1,
+      "verse": 25,
+      "original_text": "חַנּוֹת אֲדֹנֵינוּ יֵשׁוּעַ הַמָּשִׁיחַ עִם רוּחֲכֶם אָמֵן",
+      "corrected_text": "חַנּוֹת אֲדׂנֵינוּ קָם הָעוֹלָם נִהְיָה רוּחֲכֶם אָמֵן",
+      "delitzsch_reference": "חֶסֶד יֵשׁוּעַ הַמָּשִׁיחַ אֲדׂנֵינוּ עִם־רוּחֲכֶם אָמֵן׃",
+      "corrections": [
+        {
+          "word_index": 1,
+          "original_word": "אֲדֹנֵינוּ",
+          "corrected_word": "אֲדׂנֵינוּ",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "thessalonians1",
+            "chapter": 5,
+            "verse": 28,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 2,
+          "original_word": "יֵשׁוּעַ",
+          "corrected_word": "קָם",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "mark",
+            "chapter": 16,
+            "verse": 9,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 3,
+          "original_word": "הַמָּשִׁיחַ",
+          "corrected_word": "הָעוֹלָם",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "moriah",
+            "book": "john",
+            "chapter": 4,
+            "verse": 42,
+            "confidence": "high"
+          }
+        },
+        {
+          "word_index": 4,
+          "original_word": "עִם",
+          "corrected_word": "נִהְיָה",
+          "correction_type": "known_error",
+          "confidence": "high",
+          "metadata": {
+            "source": "lena",
+            "book": "thessalonians1",
+            "chapter": 4,
+            "verse": 17,
+            "confidence": "high"
+          }
+        }
+      ],
+      "total_corrections": 4,
+      "correction_types": {
+        "known_error": 4,
+        "delitzsch_match": 0
+      }
+    }
+  ]
+}

@@ -19,8 +19,8 @@ export default function TextSourceToggle({
     <RetroToggle
       enabled={enabled}
       onToggle={onToggle}
-      labelLeft="Hutter"
-      labelRight="Delitzsch"
+      labelLeft="Delitzsch"
+      labelRight="Hutter"
       position={position || 'top-[88px] right-5'}
       ariaLabel="Toggle text source between Hutter and Delitzsch"
       title="Toggle text source"

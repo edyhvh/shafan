@@ -135,10 +135,15 @@
         },
         {
           "number": 15,
-          "text_nikud": "יוֹחָנָן הָעֵד עָלָיו וַיִּצְעַק לֵאמֹר זֶה הוּא אֲשֶׁר אָמַרְתִּי בָּא וְלִפְנַי הָיָה כִּי רֹאשׁ לִי הָיָה בִּמְשָׁפְטֵי הָיָה",
+          "text_nikud": "יוֹחָנָן הֵעִיד עָלָיו וַיִּצְעַק לֵאמֹר זֶה הוּא אֲשֶׁר אָמַרְתִּי אֲשֶׁר אַחֲרַי בָא וּלְפָנַי הָיָה כִּי־רִאשׁוֹן מִמֶּנִּי הָיָה:",
           "source_files": [
             "000004.png"
           ],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "Verse 15: Final phrase 'בִּמְשָׁפְטֵי הָיָה' - the word before הָיָה is difficult to read; appears to be בִּמְשָׁפְטֵי but vowel marks are unclear",
+          "correction_uncertainty": "1",
           "visual_uncertainty": [
             "Verse 15: Final phrase 'בִּמְשָׁפְטֵי הָיָה' - the word before הָיָה is difficult to read; appears to be בִּמְשָׁפְטֵי but vowel marks are unclear"
           ],
@@ -543,10 +548,15 @@
         },
         {
           "number": 8,
-          "text_nikud": "וַיֹּאבֵד אֲלֵיהֶם שַׁאֲבוּ עַתָּה וְהוֹבִילוּ לְכַל־הַמִּשְׁתֶּה נִכְלָאוֹ",
+          "text_nikud": "וַיֹּאמֶר אֲלֵיהֶם שַׁאֲבוּ עַתָּ וְהָבִיאוּ לְבַעַל הַמִּשְׁתֶּה וַיָּבִיאוּ:",
           "source_files": [
             "000016.png"
           ],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "נִכְלָאוֹ - Unusual form, possibly scribal variant",
+          "correction_uncertainty": "1",
           "visual_uncertainty": [
             "נִכְלָאוֹ - Unusual form, possibly scribal variant"
           ],
@@ -563,10 +573,15 @@
         },
         {
           "number": 10,
-          "text_nikud": "וַיֹּאמֶר אֵלָיו כָּל־אִישׁ בָּרֹאשׁוֹנָה יִתֵּן טוֹב עַם וּכְאֲשֶׁר שָׁכְרוּ אַז הַמְּצֻיָּר נִצְּרַת נָצְרָתָה אַת־בֵּן הַטּוֹב עַד עָתָּה",
+          "text_nikud": "וַיֹּאמֶר אֵלָיו כָּל־־־אִישׁ בָּרִאשׁוֹנָה יַיִן טוֹב שָׂם וְכַאֲשֶׁר שָׁכְרוּ אָז אֶת־הַצָּעִיר וְאַתָּ נָצַרְתָּה אֶת־יַיִן הַטּוֹב עַד־עַתָּה:",
           "source_files": [
             "000018.png"
           ],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "Verse 10 line 2: 'הַמְּצֻיָּר' - unusual vocalization, verified as visible | Verse 10 line 2: 'נִצְּרַת' vs 'נִצְּרָת' - dagesh placement uncertain",
+          "correction_uncertainty": "2",
           "visual_uncertainty": [
             "Verse 10 line 2: 'הַמְּצֻיָּר' - unusual vocalization, verified as visible",
             "Verse 10 line 2: 'נִצְּרַת' vs 'נִצְּרָת' - dagesh placement uncertain"
@@ -584,10 +599,15 @@
         },
         {
           "number": 12,
-          "text_nikud": "וְאַחֲרֵי לִירֵדֶד לִכְפַר נַחוּם הוּא וְאִמּוֹ וְאֶחָיו וְתַלְמִידָיו וְשָׁם הָיוּ יָמִים לֹא רַבִּים",
+          "text_nikud": "וְאַחֲרֵי כֵן־יָרַד לְכֹפֶר נַחוּם הוּא וְאִמּוֹ וְאֶחָיו וְתַמִלְידָיו וְשָׁם הָיוּ יָמִים לֹא רַבִּים:",
           "source_files": [
             "000018.png"
           ],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "Note: ׳וְתַמִלְידָיו׳ is a typographical error in the source; the intended form is ׳וְתַלְמִידָיו׳. Verse 12: 'לִירֵדֶד' - double dalet unusual, verified as visible",
+          "correction_uncertainty": "1",
           "visual_uncertainty": [
             "Verse 12: 'לִירֵדֶד' - double dalet unusual, verified as visible"
           ],
@@ -615,10 +635,15 @@
         },
         {
           "number": 15,
-          "text_nikud": "וַיַּעַשׂ לוֹ שׁוֹט מֵחֲבָלִים וַיְשַׁלַּח כֻּלָּם מִכָּל־הַם גַּם אֶת־הַצֹּאן וְהַשְׁוָרִים וְשָׁבַר וִישַׁבֵּר אֶת־אַגְרוֹת הַמַּסְתְּרִים וְהָפַךְ שֻׁלְחֹנוֹתָם בַּעַד",
+          "text_nikud": "וַיַּעַשׂ לוֹ שׁוֹט מֵחֲבָלִים וַיַּשְׁלֵךְ כֻּלָּם מֵהֵיכָל וְגַם אֶת־־־צֹנֶה וּשְׁוָרִים וַיִשְׁפֹךְ אֶת־־אֲגוֹרוֹת הַמִּתְעָרְבִים וְשֻׁלְחֲנוֹתָם הָפַךְ:",
           "source_files": [
             "000018.png"
           ],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "Verse 15: 'מִכָּל־הַם' - unusual form, possibly 'מן־הַהֵיכָל' abbreviated | Verse 15: 'וִישַׁבֵּר' - second occurrence of breaking/shattering, verified",
+          "correction_uncertainty": "2",
           "visual_uncertainty": [
             "Verse 15: 'מִכָּל־הַם' - unusual form, possibly 'מן־הַהֵיכָל' abbreviated",
             "Verse 15: 'וִישַׁבֵּר' - second occurrence of breaking/shattering, verified"
@@ -777,10 +802,15 @@
         },
         {
           "number": 7,
-          "text_nikud": "אַל תִּתְמַהּ כִּי אֲבַדְתִּי נַעֲרִי לָכֶם אַתֶּם מְלַכְלֵכִים",
+          "text_nikud": "אַל־תִּתְמַהּ כִּי אָמַרְתִּי צָרִיךְ לְהִוָּלֵד אֶתְכֶם מִלְמַעְלָה:",
           "source_files": [
             "000024.png"
           ],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "verse 7 appears to have non-standard wording",
+          "correction_uncertainty": "1",
           "visual_uncertainty": [
             "verse 7 appears to have non-standard wording"
           ],
@@ -833,10 +863,15 @@
         },
         {
           "number": 13,
-          "text_nikud": "וְאִישׁ לֹא עָלָה אֶל־הַשָּׁמַיִם כִּי אִם אֲשֶׁר יָרַד מִן־הַשָּׁמַיִם אֲשֶׁר בַּשָּׁמָיִם אֲשֶׁר בַּשָּׁמַיִם הוּא בֶּן־הָאָדָם אֲשֶׁר בַּשָּׁמַיִם הוּא",
+          "text_nikud": "וְאִישׁ לֹא עָלָה אֶל־הַשָּׁמַיִם כִּי אִם אֲשֶׁר מִשָּׁמַיִם יָרַד זֶה הוּא בֶּן־הָאָדָם אֲשֶׁר בַּשָּׁמַיִם הֹוֶה:",
           "source_files": [
             "000026.png"
           ],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "Verse 13: First phrase uncertain due to print quality - 'וְאִישׁ לֹא עָלָה' may have additional marks | Verse 13: Multiple occurrences of 'אֲשֶׁר בַּשָּׁמַיִם' - transcribed exactly as visible but unusual structure",
+          "correction_uncertainty": "2",
           "visual_uncertainty": [
             "Verse 13: First phrase uncertain due to print quality - 'וְאִישׁ לֹא עָלָה' may have additional marks",
             "Verse 13: Multiple occurrences of 'אֲשֶׁר בַּשָּׁמַיִם' - transcribed exactly as visible but unusual structure"
@@ -1439,10 +1474,15 @@
         },
         {
           "number": 42,
-          "text_nikud": "וְלָאִשָּׁה אָמְרוּ לֹא אֱמוּנָם אֲנַחְנוּ בְּעֲבוֹד מִלְּתֵךְ כִּי אִם שְׁמַעְנוּ וַנֵּדַע כִּי זֶה הוּא אָמְנָם הַמּוֹשִׁיעַ נְעוּלָם הַמָּשִׁיחַ",
+          "text_nikud": "וּלְאִשָּׁה אָמְרוּ לֹא מַאֲמִינִים אֲנַחְנוּ בַעֲבוּר מִלָּתֵךְ כִּי אִם אֲנַחְנוּ שָׁמַעְנוּ וְיָדַעְנוּ כִי זֶה הוּא בֶאֱמֶת מוֹשִׁיעַ הָעוֹלָם הַמָּשִׁיחַ:",
           "source_files": [
             "000044.png"
           ],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "נְעוּלָם - appears to read as shown, though expected form might differ",
+          "correction_uncertainty": "1",
           "visual_uncertainty": [
             "נְעוּלָם - appears to read as shown, though expected form might differ"
           ],
@@ -1638,10 +1678,15 @@
         },
         {
           "number": 9,
-          "text_nikud": "דִּיזְלֵע יְהוּדַעַע מָרְהָא שְׁלֹשׁ וּהָאִינֵן נְהוּוּא וּאִישֵׁא אֶת־מָשָׁה הֲלָךְ פֹּתֵר שַׁבָּת בַּרוּם נְהוּוּא",
+          "text_nikud": "וּבְרֶגַע נִהְיָה שָׁלֵו הָאָדָם הַהוּא וְיִשָּׂא אֶת־־מִטָּתוֹ וַיְהַלֵּךְ וַתְּהִי שַׁבָּת בַּיּוֹם הַהוּא:",
           "source_files": [
             "000050.png"
           ],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "verse 9 has mixed text quality",
+          "correction_uncertainty": "1",
           "visual_uncertainty": [
             "verse 9 has mixed text quality"
           ],
@@ -1874,10 +1919,15 @@
         },
         {
           "number": 35,
-          "text_nikud": "הוּא הַיָּה הַלֶּחֶם בּוֹעֵד וּמַיִד וְאִכֵּם אֲבִילִים הֵם לֶעַת לְלֵיל בְּאַלְדּוּן",
+          "text_nikud": "הוּא הָיָה הַנֵּר בּוֹעֵר וּמֵאִיר וְאַתֶּם אֲבִיתֶם לָעֵת לָגִיל בְּאוֹרוֹ:",
           "source_files": [
             "000058.png"
           ],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "verse 35: word 2 'הַיָּה' - final letter may be ה or ח | verse 35: word 3 'הַלֶּחֶם' - third letter dagesh uncertain | verse 35: word 4 'בּוֹעֵד' - vowel pattern uncertain | verse 35: word 5 'וּמַיִד' - second letter yod vs vav uncertain | verse 35: word 9 'לֶעַת' - first vowel may be segol or tsere | verse 35: word 11 'בְּאַלְדּוּן' - final nun vs mem sofit uncertain",
+          "correction_uncertainty": "6",
           "visual_uncertainty": [
             "verse 35: word 2 'הַיָּה' - final letter may be ה or ח",
             "verse 35: word 3 'הַלֶּחֶם' - third letter dagesh uncertain",
@@ -1890,10 +1940,15 @@
         },
         {
           "number": 36,
-          "text_nikud": "וְאָנִי יֵשׁ לִי עֵדוֹת גְּדוֹלָה מֵיּוֹחָן כִּי הַמַּעֲשִׂים אֲשֶׁר עוֹשֶׂה אָבִי שְׁלָחַנִי הֵעִידוּ עָלַי כִּי הָאָב שְׁלָחַנִי",
+          "text_nikud": "וַאֲנִי יֶשׁ לִי עֵדוּת גְּדוֹלָה מִיּוֹחָנָן כִּי הַמַּעֲשִׂים אֲשֶׁר נָתַן לִי הָאָב לְכַלּוֹת אוֹתָם הֵמָּה הַמַּעֲשִׂים אֲשֶׁר עוֹשֶׂה אֲנֹכִי הֵעִידוּ עָלַי כִּי הָאָב שְׁלָחַנִי:",
           "source_files": [
             "000058.png"
           ],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "verse 36: word 7 'גְּדוֹלָה' - dagesh in gimel uncertain | verse 36: word 8 'מֵיּוֹחָן' - compound word structure unclear | verse 36: word 13 'אוֹתָם' may be 'אוֹתָהּ' | verse 36: word 18 'שְׁלָחַנִי' - final vowel pattern",
+          "correction_uncertainty": "4",
           "visual_uncertainty": [
             "verse 36: word 7 'גְּדוֹלָה' - dagesh in gimel uncertain",
             "verse 36: word 8 'מֵיּוֹחָן' - compound word structure unclear",
@@ -1904,10 +1959,15 @@
         },
         {
           "number": 37,
-          "text_nikud": "וְהָאָב אֲשֶׁר שְׁלָחַנִי הוּא הֵעִיד עָלַי כֹּל פַּעַם לֹא שְׁמַעְתֶּם וּתְבוּנָתוֹ לֹא רְאִיתֶם",
+          "text_nikud": "וְהָאָב אֲשֶׁר שְׁלָחַנִי הוּא הֵעִיד עָלַי וְקוֹלוֹ בְּכָל עִתּוֹת לֹא שְׁמַעְתֶּם וּתְמוּנָתוֹ לֹא רְאִיתֶם:",
           "source_files": [
             "000058.png"
           ],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "verse 37: word 7 'הֵעִיד' - vowel on ayin may be tsere or segol | verse 37: word 9 'כֹּל' - dagesh unclear | verse 37: word 10 'פַּעַם' - dagesh in pe uncertain | verse 37: word 13 'וּתְבוּנָתוֹ' - compound structure unclear",
+          "correction_uncertainty": "4",
           "visual_uncertainty": [
             "verse 37: word 7 'הֵעִיד' - vowel on ayin may be tsere or segol",
             "verse 37: word 9 'כֹּל' - dagesh unclear",
@@ -1931,10 +1991,15 @@
         },
         {
           "number": 39,
-          "text_nikud": "חָקְרוּ אֵת הַכְּתוֹבִים כִּי הוֹשְׁבִים אַתֶּם לִהְיוֹת לָכֶם בָּהֶם אֵת חַיֵּי עוֹלָם וְהֵמָּה הַמְּעִידִים עָלַי",
+          "text_nikud": "חִקְרוּ אֶת־־־הַכְּתָבִים כִּי חוֹשְׁבִים אַתֶּם לִהְיוֹת לָכֶם בָהֶם אֶת־־־חַיֵּי עוֹלָם וְהֵמָּה הָיוּ הַמְּעִידִים עָלַי:",
           "source_files": [
             "000058.png"
           ],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "verse 39: word 5 'הוֹשְׁבִים' - root uncertain, may be different verb form | verse 39: word 13 'חַיֵּי' - dagesh in yod unclear | verse 39: word 15 'וְהֵמָּה' - dagesh in mem uncertain",
+          "correction_uncertainty": "3",
           "visual_uncertainty": [
             "verse 39: word 5 'הוֹשְׁבִים' - root uncertain, may be different verb form",
             "verse 39: word 13 'חַיֵּי' - dagesh in yod unclear",
@@ -1944,10 +2009,15 @@
         },
         {
           "number": 40,
-          "text_nikud": "וְלֹא חֲפַצְתֶּם לָבוֹא אֵלַי לִהְיוֹת לָכֶם חַיִּים",
+          "text_nikud": "וְלֹא תֹּאבוּ לָבוֹא אֵלַי לִהְיוֹת לָכֶם חַיִּים:",
           "source_files": [
             "000058.png"
           ],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "verse 40: word 2 'חֲפַצְתֶּם' - hataf patach vs simple sheva on chet | verse 40: word 8 'חַיִּים' - final mem vs mem sofit",
+          "correction_uncertainty": "2",
           "visual_uncertainty": [
             "verse 40: word 2 'חֲפַצְתֶּם' - hataf patach vs simple sheva on chet",
             "verse 40: word 8 'חַיִּים' - final mem vs mem sofit"
@@ -2606,10 +2676,15 @@
         },
         {
           "number": 65,
-          "text_nikud": "וַיֹּאמֶר לָכֵן אָמַרְתִּי לָכֶם כִּי אִישׁ לֹא יָבוֹא אֶל־כֹּל לוֹא יִהְיֶה מִאֵת",
+          "text_nikud": "וַיֹּאמֶר לָכֵן אָמַרְתִּי לָכֶם כִּי אִישׁ לֹא יוּכַל לָבוֹא אֵלַי אִם לֹא נִתָּן לוֹ יִהְיֶה מֵאָבִי:",
           "source_files": [
             "000078.png"
           ],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "The text appears to be cut off or incomplete at the bottom of the page - the verse seems truncated",
+          "correction_uncertainty": "1",
           "visual_uncertainty": [
             "The text appears to be cut off or incomplete at the bottom of the page - the verse seems truncated"
           ],
@@ -3822,10 +3897,15 @@
         },
         {
           "number": 14,
-          "text_nikud": "אָנֹכִי הָרֹעֶה הַטּוֹב כַּאֲשֶׁר עָשָׂה יְשׁוּעַ אֶת־נַפְשׁוֹ וְנִבְטַח אֶת־עֵינָיו",
+          "text_nikud": "וַתְּהִי־שַׁבָּת כַּאֲשֶׁר עָשָׂה יֵשׁוּעַ אֶת־הַטִּיט וּפָקַח אֶת־עֵינָיו:",
           "source_files": [
             "000116.png"
           ],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "verse 14 appears to have non-standard wording or may be damaged/unclear in parts",
+          "correction_uncertainty": "1",
           "visual_uncertainty": [
             "verse 14 appears to have non-standard wording or may be damaged/unclear in parts"
           ],
@@ -3833,10 +3913,15 @@
         },
         {
           "number": 15,
-          "text_nikud": "וַיִּשּׁוּבוּ וַיִּשְׁאֲלוּ לוֹ הַפְּרֻשִׁים גַּם־הֵם אֵיךְ נִשְׂבַּר לָרְאוֹת וַיֹּאמֶר לָהֶם אֶת־נְשָׁמָה פִּי עַל־עֵינָיו נִתְּנוּ וַיִּרְאֵנִי וַיִּרְאֵה אֲבוֹת",
+          "text_nikud": "וַיָּשׁוּבוּ וַיִּשְׁאֲלוּ לוֹ הַפְּרוּשִׁים אֵיךְ שָׁב לִרְאוֹת וַיֹּאמֶר לָהֶם אֶת הַטִּיט שִׂים לִי עַל־עֵינַי וָאֶרְחַץ וְרוֹאֶה אָנֹכִי:",
           "source_files": [
             "000116.png"
           ],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "verse 15 text appears to have non-standard wording",
+          "correction_uncertainty": "1",
           "visual_uncertainty": [
             "verse 15 text appears to have non-standard wording"
           ],
@@ -4120,10 +4205,15 @@
         },
         {
           "number": 5,
-          "text_nikud": "כִּי אִם יוּטֵם בָּאֵיֹם אֵינָם יִנְסוּ בַּמֵּמִּי כִּי לֹא יֹדְעוּם אֶת־קוֹל תְּבִידִים",
+          "text_nikud": "וְאַחֲרֵי הַנָּכְרִי אֵינָם בָּאִים כִּי אִם יָנוּסוּ מִמֶּנּוּ כִּי לֹא יוֹדְעִים אֶת־קוֹל הַנָּכְרִים:",
           "source_files": [
             "000126.png"
           ],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "בָּאֵיֹם - unusual vocalization | בַּמֵּמִּי - unclear reading | תְּבִידִים - possible non-standard form",
+          "correction_uncertainty": "3",
           "visual_uncertainty": [
             "בָּאֵיֹם - unusual vocalization",
             "בַּמֵּמִּי - unclear reading",
@@ -4408,10 +4498,15 @@
         },
         {
           "number": 36,
-          "text_nikud": "וַיֹּאת אֲשֶׁר קֹדֶשׁ תֹּאבֵל וְשָׁלֹחַ אֵל־חֹצִילֹם אֹמֵרֹים כִּי מִבֹּדְלֹאו כִּי אָבְדַנִי בְּנֵי אֱלֹהִים אֲנִילִי",
+          "text_nikud": "וְאֶת אֲשֶׁר קִדֵּשׁ הָאָב וְשָׁלַח אֶל־הַעוֹלם אוֹמְרִים אַתֶּם כִּי מְגַדֵּף אַתָּ כִּי אָמַרְתִּי בֶן־אֱלֹהִים אֲנֹכִי:",
           "source_files": [
             "000136.png"
           ],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "verse 36: character after 'וַיֹּאת' - appears to be אֲשֶׁר but vowels are faint | verse 36: 'תֹּאבֵל' - dagesh in ת unclear, may be printing artifact | verse 36: 'מִבֹּדְלֹאו' - unusual form, transcribed as visible",
+          "correction_uncertainty": "3",
           "visual_uncertainty": [
             "verse 36: character after 'וַיֹּאת' - appears to be אֲשֶׁר but vowels are faint",
             "verse 36: 'תֹּאבֵל' - dagesh in ת unclear, may be printing artifact",
@@ -4421,10 +4516,15 @@
         },
         {
           "number": 37,
-          "text_nikud": "וְאֹם אֵינִיגִי עֹשֶׂה אֵחָד־מַעֲשֵׂי אָבִי לֹא תַאֲמִינוּ לִי",
+          "text_nikud": "וְאִם אֵינֶנִּי עוֹשֶׂה אֶת־מַעֲשֵׂי אָבִי לֹא תַּאֲמִינוּ לִי:",
           "source_files": [
             "000136.png"
           ],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "verse 37: 'אֵינִיגִי' - uncertain reading, possibly 'אֵינִי' with unclear suffix",
+          "correction_uncertainty": "1",
           "visual_uncertainty": [
             "verse 37: 'אֵינִיגִי' - uncertain reading, possibly 'אֵינִי' with unclear suffix"
           ],
@@ -4455,10 +4555,15 @@
         },
         {
           "number": 40,
-          "text_nikud": "וַיֵּשֶׁב נָשׁוֹב נֵלַךְ לְעֹבֶד הַיַּרְדֵּן אֶל־הַמָּקוֹם אֲשֶׁר בּוֹ הָיָה יוֹחָנָן בָּרֵאשֹׁנָה טֹבֵל וַיַּחַן־שָׁם",
+          "text_nikud": "וַיָּשָׁב וַיֵּלֶךְ לְעֵבֶר הַיַּרְדֵּן אֶל־הַמָּקוֹם אֲשֶׁר בּוֹ הָיָה יוֹחָנָן בָּרִאשׁוֹנָה טוֹבֵל וַיְאַחֵר שָׁם:",
           "source_files": [
             "000136.png"
           ],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "verse 40: 'נָשׁוֹב' - dagesh in שׁ unclear",
+          "correction_uncertainty": "1",
           "visual_uncertainty": [
             "verse 40: 'נָשׁוֹב' - dagesh in שׁ unclear"
           ],

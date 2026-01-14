@@ -234,8 +234,13 @@
         },
         {
           "number": 18,
-          "text_nikud": "כִּי בַּאֲשֶׁר נִצַּג הַלְבָה בְעָנְיוֹ עָתָה יוּכַל צָעוּדִי לַחֲסוֹט",
+          "text_nikud": "כִּי־בַאֲשֶׁר נָגוּעַ מֻכֶּה מְעֻנֶּה וּמְנֻסֶּה הוּא יוּכַל לַעֲזֹר לַמְנֻסִּים;",
           "source_files": ["000012.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "verse 18 word 3: 'הַלְבָה' - unusual form, transcribed as visible | verse 18 word 4: 'בְעָנְיוֹ' - transcribed as visible | verse 18 word 6: 'יוּכַל' - transcribed as visible | verse 18 word 7: 'צָעוּדִי' - unusual form, transcribed as visible | verse 18 word 8: 'לַחֲסוֹט' - transcribed as visible",
+          "correction_uncertainty": "5",
           "visual_uncertainty": [
             "verse 18 word 3: 'הַלְבָה' - unusual form, transcribed as visible",
             "verse 18 word 4: 'בְעָנְיוֹ' - transcribed as visible",
@@ -406,8 +411,13 @@
         },
         {
           "number": 3,
-          "text_nikud": "כִּי־נָבוֹא בַּמְּנוּחָה אַתָּה אֲשֶׁר נֶאֱמָנוּ כַּאֲשֶׁר אָמַר אֲשֶׁר נִשְׁבַּעְתִּי בְּאַפִּי אִם־יָבֹאוּן אֶל־מְנוּחָתִי בַּעֲשׂוֹת נַפְשִׁית נִכְרָתָה גְנֵשׁוֹתָם",
+          "text_nikud": "כִּי־נָבוֹא בִמְנוּחָה אִם־נַאֲמִין אֵיךְ אָמַר אֲשֶׁר נִשְׁבַּעְתִּי בְאַפִּי אִם יְבוֹאוּן אֶל־מְנוּחָתִי וְאַף־כִּי מַעֲשָׂיו מֵרֵאשִׁית הַבְּרִיאָה נַעֲשִׂים:",
           "source_files": ["000018.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "גְנֵשׁוֹתָם - unusual form, transcribed as visible",
+          "correction_uncertainty": "1",
           "visual_uncertainty": [
             "גְנֵשׁוֹתָם - unusual form, transcribed as visible"
           ],
@@ -464,8 +474,13 @@
         },
         {
           "number": 11,
-          "text_nikud": "לָכֵן נִמַּהֵר לְבוֹא אֶל הַמְּנוּחָה וְאַל פָּרַשׁ אִישׁ יִשְׁנֶה לֶאֱשֶׁר יִבּוֹל בַּחֲטָאָה הַזֹאת בִּנְסוֹתָם",
+          "text_nikud": "לָכֵן נְמַהֵר לָבוֹא אֵל־מְנוּחָה הַזֹּאת פֶּן־אִישׁ יִשְׁוֶה לַאֲשֶׁר יִפּוֹל בְחֵטְא הַסֵּטִים:",
           "source_files": ["000020.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "Letters printed in reduced size or irregular position due to layout are not transcribed; only linguistically functional letters are reproduced. Verse 11: 'יִבּוֹל' is unusual spelling; expected may differ but transcribing visible ink exactly",
+          "correction_uncertainty": "1",
           "visual_uncertainty": [
             "Verse 11: 'יִבּוֹל' is unusual spelling; expected may differ but transcribing visible ink exactly"
           ],
@@ -890,8 +905,13 @@
         },
         {
           "number": 19,
-          "text_nikud": "כִּי־דָבַר לֹא אַהַד בִּכְלָלָה תְּחוֹדָה וּבוֹא בְּמִקְוָמָה הָאֱמוּנָה הַטּוֹבָה בַּמַּקֹּמָה אֲשֶׁר בֵּית יַעֲקֹב אֵל־אֱלֹהִים",
+          "text_nikud": "כִּי־דָבָר לֹא אֶחָד כִּלְּתָה הַתּוֹרָה וּבָאָה בִמְקוֹמָהּ הָאֱמוּנָה הַטּוֹבָה מִמֶּנָּה אֲשֶׁר בָּהּ נִקְרַב אֶל־אֱלֹהִים:",
           "source_files": ["000040.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "verse_19_complex_vocalization",
+          "correction_uncertainty": "1",
           "visual_uncertainty": ["verse_19_complex_vocalization"],
           "text_nikud_delitzsch": "כִּי הַתּוֹרָה הִיא לׂא־הִשְׁלִימָה דָּבָר וְהִנֵּה נִכְנְסָה תַחְתֶּיהָ תִּקְוָה טוֹבָה מִמֶּנָּה אֲשֶׁר־נִקְרַב עַל־יָדָהּ לֵאלׂהִים׃"
         },
@@ -1217,8 +1237,13 @@
         },
         {
           "number": 23,
-          "text_nikud": "וְאַף כִּי הֻצְרַךְ אֲשֶׁר הַדְּמוּת אֲשֶׁר הַטִּיטִים בָּרַבְבָה הָעָלְתָה בְּרוּבָם אֵלֶּה אֲשֶׁר הֵן בַּשָּׁמַיִם יִזְכּוּ בִגְאוּתָם טוֹבִים בַּהֲמוֹנָה",
+          "text_nikud": "לָכֵן צָרִיךְ אֲשֶׁר גַּם הָעִנְיָנִים אֲשֶׁר בַּשָּׁמַיִם בִּדְבָרִים כָּאֵלֶּה יִטְהָרוּן כִּי־אֲשֶׁר הָיוּ בַשָּׁמַיִם בִּזְבָחִים טוֹבִים מֵהֵמָּה:",
           "source_files": ["000054.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "verse 23 has complex text with some difficult to read characters",
+          "correction_uncertainty": "1",
           "visual_uncertainty": [
             "verse 23 has complex text with some difficult to read characters"
           ],
@@ -1421,8 +1446,13 @@
         },
         {
           "number": 23,
-          "text_nikud": "כִּי נַחֲזִיק אֶת־תּוֹרַת הַקִּוּוּי וְלֹא נָמוּט כִּי נֶאֱמָן הוּא הַנֶּאֱמָרִיד",
+          "text_nikud": "וְנַחֲזִיק אֶת־תּוֹרַת תִּקְוָתֵנוּ וְלֹא נָמוֹט כִּי־נֶאֱמָן הוּא הַמַּאֲמִיר:",
           "source_files": ["000064.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "verse 23: final word appears to be 'הַנֶּאֱמָרִיד' with unusual ending - possible printing artifact or non-standard form",
+          "correction_uncertainty": "1",
           "visual_uncertainty": [
             "verse 23: final word appears to be 'הַנֶּאֱמָרִיד' with unusual ending - possible printing artifact or non-standard form"
           ],
@@ -1688,8 +1718,13 @@
         },
         {
           "number": 21,
-          "text_nikud": "בֶּאֱמוּנָה יַעֲקֹב בְּמוֹתוֹ בֵּרֵךְ כָּל־אִישׁ מִבְּנֵי יוֹסֵף וַיִּשְׁתָּחוּ יִשְׂרָאֵל עַל־רֹאשׁ (הַמַּטֶּה)",
+          "text_nikud": "בֶּאֱמוּנָה יַעֲקֹב בְּמוֹתוֹ בָרָךְ לְכָל אִישׁ מִבְּנֵי יוֹסֵף וַיִּשְׁתַּחוּ יִשְׂרָאֵל עַל־רֹאשׁ (הַמִּיטָּה:)",
           "source_files": ["000074.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "Parentheses around הַמַּטֶּה are visible in main text",
+          "correction_uncertainty": "1",
           "visual_uncertainty": [
             "Parentheses around הַמַּטֶּה are visible in main text"
           ],
@@ -1790,8 +1825,13 @@
         },
         {
           "number": 35,
-          "text_nikud": "נָשִׁים לָקְחוּ מֵתֵיהֶם אֶתְרוּם וַאֲחֵרִים הוּקְעוּ וְלֹא־יִקְשׁוּ אֶת־הַפְּלֵטָה לְמַצָא אֶת־תְּקוּמָה טוֹבָה מִכֵּן",
+          "text_nikud": "הַנָּשִׁים לָקְחוּ מִתְּקוּמָה אֶת־מֵתֵיהֶן וַאֲחֵרִים הוּקְעוּ וְלֹא יְבַקְשׁוּ אֶת־הַפְּלֵטָה לִמְצֹא אֶת־תְּקוּמָה טוֹבָה מֵהֵן:",
           "source_files": ["000078.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "אֶתְרוּם (unusual form) | הוּקְעוּ (unclear vocalization)",
+          "correction_uncertainty": "2",
           "visual_uncertainty": [
             "אֶתְרוּם (unusual form)",
             "הוּקְעוּ (unclear vocalization)"
@@ -1807,8 +1847,13 @@
         },
         {
           "number": 37,
-          "text_nikud": "נִסְקָלוּ בָאֲבָנִים נִגְזְרוּ לִגְזָרִים נִסְּכוּ מֵהַב מִרְהַב מֵאֹנֵּה חֶרֶב שׁוֹטְטוּ צֵאן וְאֵינָב בְּעוֹדוֹת שֶׁעִיר צָאן וְאֵינָב בְּמַחֲסוֹר כָּל דָּבָר בֶּעָלֶה וְגַצְוּקָה מְעֻנִּים",
+          "text_nikud": "נִסְקְלוּ בַאֲבָנִים נִגְזְרוּ לִגְזָרִים נִסּוּ בְפִי־־חֶרֶב מֵתוּ הִתְהַלְּכוּ אָנָה וְאָנָה בְעוֹרוֹת שְׂעִירֵי צֹאן וְעִזִּים בְּמַּחְסוֹר כָּל־דָּבָר בַּצָּרָה וּמְצוּקָה מְעֻנִּים:",
           "source_files": ["000080.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "שׁוֹטְטוּ צֵאן - word boundaries unclear",
+          "correction_uncertainty": "1",
           "visual_uncertainty": ["שׁוֹטְטוּ צֵאן - word boundaries unclear"],
           "text_nikud_delitzsch": "נִסְקְלוּ בָאֲבָנִים נֻסְּרוּ בַמְּגֵרָה נִבְחֲנוּ בְיִסּוּרִים מֵתוּ לְפִי־חָרֶב וַיָּנֻעוּ עֲטוּפֵי עוֹרׂת כְּבָשִׂים וְעִזִּים בְּחׂסֶר וּבְעׂצֶר רָעָה וְיָגוֹן׃"
         },
@@ -1830,8 +1875,13 @@
         },
         {
           "number": 40,
-          "text_nikud": "עַל־כִּי־אֱלֹהִים רָאָה עָלֵינוּ דְּבַרָה־טוֹב לְטוֹבָה מִמָּקוֹם לְבַד־עָדֵינוּ בָּלָחֲתִם לֹא־יִכְלֶה בְּיַד־הַשְׁלֵמוּת",
+          "text_nikud": "עַל־כִּי־אֱלֹהִים רָאָה עָלֵינוּ מִקֶּדֶם לַטּוֹבָה פֶן יְכֻלּוּ בִלְעָדֵינוּ:",
           "source_files": ["000080.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "דְּבַרָה־טוֹב - unclear word structure | בָּלָחֲתִם - possible vocalization issue",
+          "correction_uncertainty": "2",
           "visual_uncertainty": [
             "דְּבַרָה־טוֹב - unclear word structure",
             "בָּלָחֲתִם - possible vocalization issue"
@@ -1846,8 +1896,13 @@
       "verses": [
         {
           "number": 1,
-          "text_nikud": "עַל כֵּן כִּי נַלְוֵי סְבִיכוּתֵינוּ עַנַן עֵדִים נָשִׂים בַּעֲלֵינוּ אֶת כָּל־נֹשֶׂא גַם אֶת הַחִטָּה אֲשֶׁר כָּל־עֵת דִּבְּקָה בָנוּ וּנְרֻצָה בְּמִשְׁרָד מֵרָץ אֶל־הַמִּלְחָמָה אֲשֶׁר עֲרוּכָה לָנוּ",
+          "text_nikud": "עַל־כֵּן כִּי־יֶשׁ־לָנוּ סְבִיבוֹתֵינוּ עֲנַן הַעֵדִים נָשִּׂים מֵעָלֵינוּ אֶת־כָּל־מַשָּׂא וְגַם אֶת־־הַחֲטָאָה אֲשֶׁר בְּכָל עֵת דָּבְקָה בָנוּ וּבְדֻמִיָּה נָרוּץ אֶל־־־הַמִּלְחָמָה אֲשֶׁר עֲרוּכָה לָנוּ:",
           "source_files": ["000080.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "סְבִיכוּתֵינוּ - possible vocalization variation",
+          "correction_uncertainty": "1",
           "visual_uncertainty": [
             "סְבִיכוּתֵינוּ - possible vocalization variation"
           ],
@@ -1932,8 +1987,13 @@
         },
         {
           "number": 13,
-          "text_nikud": "פְּנוּ דֶּרֶךְ יְהוָֹה יִשַׁר בְּעֵרְבָה מְסִלָּה לֵאלֹהֵינוּ בַּם בּוֹ עִסָּחַת וְנִתְּנָה וְהַפַסַח כִּי אִם־רְפָא יִתֵּר",
+          "text_nikud": "פַּנּוּ דֶרֶךְ יְהֹוָה יַשְּׁרוּ בַעֲרָבָה מְסִלָּה לְרַגְלֵיכֶם פֶּן יַעֲטֶה וְיִתְעֶה הַפִּסֵּחַ כִּי־אִם יֵרָפֶא יוֹתֵר:",
           "source_files": ["000084.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "verse_13_complex_layout",
+          "correction_uncertainty": "1",
           "visual_uncertainty": ["verse_13_complex_layout"],
           "text_nikud_delitzsch": "וּמַעְגַּל רַגְלֵיכֶם פַּלֵּסוּ לְמַעַן לׂא־תִטֶּה הַצּׂלֵעָה מִן־הַדֶּרֶךְ כִּי אִם־תֵּרָפֵא׃"
         },
@@ -1967,8 +2027,13 @@
         },
         {
           "number": 18,
-          "text_nikud": "לֹא קְרַבְתֶּם לְהֹלוֹת בָּרָה וּבֹקְרִיָּה נִיל עָשָׁן וַעֲרָפֶל וּבַקְסִוּם וַפַּר כָּבֵד",
+          "text_nikud": "כִּי־לֹא קְרַבְתֶּם לַעֲלוֹת בָּהָר וּנְגוֹעַ בְּקָצֵהוּ וַיַּעַל־עֲשָׁנוֹ כְעֶשֶׁן הַכִּבְשָׁן וּבְרָקִים וְעָנָן כָּבֵד:",
           "source_files": ["000086.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "לְהֹלוֹת | בָּרָה | וּבֹקְרִיָּה | וּבַקְסִוּם",
+          "correction_uncertainty": "4",
           "visual_uncertainty": [
             "לְהֹלוֹת",
             "בָּרָה",
@@ -1979,15 +2044,25 @@
         },
         {
           "number": 19,
-          "text_nikud": "וְלֹא אֱהֹוקֹל הַשּׁוֹפָר הֲלוֹז וְקוֹל מְדַבְּרִים אֲשֶׁר יַעֲמִיד בְּחוֹק הַשֹּׁמְעִים וַיְאָמְרוּ אַל־דְּבַר לְפָנֵינוּ אֱלֹהִים בָּמוֹת",
+          "text_nikud": "וְלֹא אֶל־קוֹל הַשּׁוֹפָר הוֹלֵךְ וְחָזֵק מְאוֹר וְקוֹל הַדְּבָרִים אֲשֶׁר יָנֻעוּ וְיַעַמְדּוּ מֵרָחוֹק הַשֹּׁמְעִים וְיֹאמְרוּ אַל־יְדַבֵּר עִמָּנוּ אֱלֹהִים פֶּן נָמוּת:",
           "source_files": ["000086.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "אֱהֹוקֹל | הֲלוֹז | יַעֲמִיד",
+          "correction_uncertainty": "3",
           "visual_uncertainty": ["אֱהֹוקֹל", "הֲלוֹז", "יַעֲמִיד"],
           "text_nikud_delitzsch": "וְלׂא לְקוֹל שׁוֹפָר וּלְקוֹל הַדְּבָרִים אֲשֶׁר שׁׂמְעָיו בִּקְשׁוּ שֶׁלּא יוֹסִיף לְדַבֵּר עִמָּהֶם עוֹד׃"
         },
         {
           "number": 20,
-          "text_nikud": "כִּי לֹא יָכְלוּ לְהַכִּיל מַה שֶּׁנֶּאֱמַר אִם־בְּהֵמָה אִם־אִישׁ יִגַּע בְּהַר יַד סָקֵל יִסָּקֵל (אוֹ יִדֶּה יֶרֶה",
+          "text_nikud": "כִּי־־לֹא יָכְלוּ לְהָכִיל מַה מְּצֻוָּּה אִם־־בְּהֵמָה אִם־אִישׁ תִּגַּע בָּהָר יָד סָקוֹל יִסָּקֵל (אוֹ־יָרֹה יִיָּרֶה:)",
           "source_files": ["000088.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "verse 20: parenthesis after יִסָּקֵל - unusual placement | verse 20: possible incomplete verse - ends mid-phrase",
+          "correction_uncertainty": "2",
           "visual_uncertainty": [
             "verse 20: parenthesis after יִסָּקֵל - unusual placement",
             "verse 20: possible incomplete verse - ends mid-phrase"
@@ -1996,8 +2071,13 @@
         },
         {
           "number": 21,
-          "text_nikud": "וְגַם כָּל נָתְנָה הָיָא הַנִּרְאָה לְמֹשֶׁה מִלֹּא אֲנִי תּוֹדֵד וְרָעֵד",
+          "text_nikud": "וְכִי־־־חֲרָדָה הִיא הַמַּרְאֶה וַיֹּאמֶר גַּם מֹשֶׁה מָלֵא אֲנִי חֲרָדָה וָרָעַד:",
           "source_files": ["000088.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "verse 21: נָתְנָה - unusual form, verified as transcribed | verse 21: תּוֹדֵד - double dalet verified",
+          "correction_uncertainty": "2",
           "visual_uncertainty": [
             "verse 21: נָתְנָה - unusual form, verified as transcribed",
             "verse 21: תּוֹדֵד - double dalet verified"
@@ -2020,8 +2100,13 @@
         },
         {
           "number": 24,
-          "text_nikud": "וְאֶל־אִישׁ בַּיִן וּכְעֵל בְּרִית חֲדָשָׁה יֵשׁוּעַ הַמַּשִּׁית וְאֶל־דַּם הַנָּזָה הַטּוֹבְקִים טוֹב מִדַּם הֶבֶל",
+          "text_nikud": "וְאֶל־אִישׁ בֵּינַיִם וּבַעַל בְּרִית הָחֲדָשָׁה יֵשׁוּעַ הַמָּשִׁיחַ וְאֶל־דְּמֵי נִדָּה הַצּוֹעֲקִים טוֹב מִקּוֹל דְּמֵי הָבֶל:",
           "source_files": ["000088.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "verse 24: הַטּוֹבְקִים - unusual form, verified as transcribed",
+          "correction_uncertainty": "1",
           "visual_uncertainty": [
             "verse 24: הַטּוֹבְקִים - unusual form, verified as transcribed"
           ],
@@ -2029,8 +2114,13 @@
         },
         {
           "number": 25,
-          "text_nikud": "רָאוּ וְיִשְׁמְרוּ בֶּן הַמְדַבֵּר עֲלֵיכֶם אֲשֶׁר מִדַּבֵּר עֲלֵיכֶם אֲשֶׁר מִדַּבֵּר עֲלֵיכֶם כִּי אִם בָּאָרֶץ לֹא יִכְלוּ לָנוּס בְּמָאֵן יְחַדּוּ אוֹתוֹ אִם נִמְרֹד עַל־אֲשֶׁר מִדַּבֵּר אֵלֵינוּ מִן־הַשָּׁמַיִם מִדַּבֵּר אֵלֵינוּ",
+          "text_nikud": "וּרְאוּ וְהִשָּׁמְרוּ פֶן תִּמְרְדוּ עַל־־אֲשֶׁר מְדַבֵּר עִמָּכֶם וְאִם הָאֵלֶּה אֲשֶׁר מָרְדוּ עַל־הַמְדַבֵּר אִתָּם בָּאָרֶץ לֹא יָכְלוּ לָנוּס כַּמָּה יוֹתֵר אֲנַחְנוּ אִם נִמְרֹד עַל־אֲשֶׁר מִשָּׁמַיִם מְדַבֵּר אֵלֵינוּ:",
           "source_files": ["000088.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "verse 25: repetitive phrase structure - verified as written",
+          "correction_uncertainty": "1",
           "visual_uncertainty": [
             "verse 25: repetitive phrase structure - verified as written"
           ],
@@ -2128,8 +2218,13 @@
         },
         {
           "number": 9,
-          "text_nikud": "כָּל־מִידֵי מִתְהַפֶּלְטִים וְהַזָּרִים לֹא תִּתְעָתְעוּ כִּי טוֹב בַּחֲנוֹנוֹת לְסַד לִבְּכֶם וְלֹא בְּמַאָכָלִים אֲשֶׁר לֹא הוֹעִילוּ לְהוֹלְכִים בָּהֶן",
+          "text_nikud": "בְּלִמּוּדִים מִתְחַלְּפִים וַחֲדָשִׁים לֹא תְּתַעְתֵּעוּ כִּי־טוֹב בִּתְחִנָּה לְסַעֵד לִבְּכֶם וְלֹא בַמַּאֲכָלִים אֲשֶׁר לֹא הוֹעִילוּ לַהוֹלְכִים בָּם:",
           "source_files": ["000092.png"],
+          "manually_corrected": true,
+          "correction_timestamp": "2026-01-14T09:37:53.332906",
+          "correction_source": "moriah",
+          "correction_comments": "verse 9: several words difficult to verify due to print quality",
+          "correction_uncertainty": "1",
           "visual_uncertainty": [
             "verse 9: several words difficult to verify due to print quality"
           ],

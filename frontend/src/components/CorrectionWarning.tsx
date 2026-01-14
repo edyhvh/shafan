@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 import { getLocaleFromPath } from '@/lib/locale'
 import { t } from '@/lib/translations'
 import { useScrollState } from '@/hooks/useScrollState'
+import { useTextSource } from '@/hooks/useTextSource'
 import { WarningIcon } from './icons'
 
 const GITHUB_ISSUES_URL = 'https://github.com/edyhvh/shafan/issues'
@@ -14,6 +15,7 @@ export default function CorrectionWarning() {
   const pathname = usePathname()
   const locale = getLocaleFromPath(pathname)
   const { shouldHideForContent } = useScrollState()
+  const { textSource, isLoaded } = useTextSource()
   const [isErrorPage, setIsErrorPage] = useState(false)
 
   // Detect if we're on an error page by checking for error-specific content
@@ -43,12 +45,14 @@ export default function CorrectionWarning() {
     return () => clearTimeout(timeout)
   }, [pathname])
 
-  // Only show warning in books section, not on error pages
+  // Only show warning in books section, not on error pages, AND only for Hutter text
   if (
     !pathname.includes('/book/') ||
     isErrorPage ||
     pathname.includes('/error') ||
-    pathname.includes('/not-found')
+    pathname.includes('/not-found') ||
+    !isLoaded ||
+    textSource === 'delitzsch'
   ) {
     return null
   }
