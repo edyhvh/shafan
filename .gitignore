@@ -20,7 +20,8 @@ Thumbs.db
 
 # Data and models (uncomment if you want to ignore these)
 # data/
-# models/
+models/
+scripts/nakdimon/models/
 # output/
 
 # Local Tanaj source data directory
