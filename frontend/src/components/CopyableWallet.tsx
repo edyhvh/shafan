@@ -45,25 +45,64 @@ export default function CopyableWallet({
   const [copied, setCopied] = useState(false)
 
   const handleCopy = async () => {
-    await navigator.clipboard.writeText(address)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
+    try {
+      // Try modern clipboard API first
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(address)
+      } else {
+        // Fallback for older browsers or non-secure contexts
+        const textArea = document.createElement('textarea')
+        textArea.value = address
+        textArea.style.position = 'fixed'
+        textArea.style.left = '-999999px'
+        textArea.style.top = '-999999px'
+        document.body.appendChild(textArea)
+        textArea.focus()
+        textArea.select()
+
+        try {
+          const successful = document.execCommand('copy')
+          if (!successful) throw new Error('Copy failed')
+        } finally {
+          document.body.removeChild(textArea)
+        }
+      }
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch (err) {
+      console.error('Failed to copy address:', err)
+      // Fallback: select the text for manual copying
+      const range = document.createRange()
+      const selection = window.getSelection()
+      const textNode = document.createTextNode(address)
+      document.body.appendChild(textNode)
+      range.selectNodeContents(textNode)
+      selection?.removeAllRanges()
+      selection?.addRange(range)
+      document.body.removeChild(textNode)
+    }
   }
 
   return (
-    <div className="flex items-center justify-center gap-3 text-lg group">
-      {icon}
-      <span className="font-medium text-primary">{name}</span>
+    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center gap-2 sm:gap-3 text-lg group max-w-full">
+      <div className="flex items-center justify-center gap-2 sm:gap-3">
+        {icon}
+        <span className="font-medium text-primary text-center sm:text-left">
+          {name}
+        </span>
+      </div>
       <button
         onClick={handleCopy}
-        className="flex items-center gap-2 text-secondary hover:text-primary transition-colors cursor-pointer"
+        className="flex items-center gap-2 text-secondary hover:text-primary transition-colors cursor-pointer touch-manipulation min-h-[44px] px-2 py-1 rounded"
         title={`Copy ${name} address`}
       >
-        <span className="font-mono text-sm text-secondary">{address}</span>
+        <span className="font-mono text-sm text-secondary break-all sm:break-normal truncate max-w-[200px] sm:max-w-none">
+          {address}
+        </span>
         {copied ? (
-          <CheckmarkIcon className="w-4 h-4 text-green-600" />
+          <CheckmarkIcon className="w-4 h-4 text-green-600 flex-shrink-0" />
         ) : (
-          <CopyIcon className="w-4 h-4 text-secondary opacity-0 group-hover:opacity-100 transition-opacity" />
+          <CopyIcon className="w-4 h-4 text-secondary opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity flex-shrink-0" />
         )}
       </button>
     </div>

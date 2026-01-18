@@ -1,9 +1,8 @@
 'use client'
 
 import { Chapter } from '@/lib/types'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import VersesDropdown from './VersesDropdown'
-import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { getLocaleFromPath } from '@/lib/locale'
 
@@ -13,6 +12,7 @@ interface ChaptersDropdownProps {
   isOpen: boolean
   onClose: () => void
   onCloseAll?: () => void
+  isMobile?: boolean
 }
 
 export default function ChaptersDropdown({
@@ -21,10 +21,18 @@ export default function ChaptersDropdown({
   isOpen,
   onClose,
   onCloseAll,
+  isMobile = false,
 }: ChaptersDropdownProps) {
   const [selectedChapter, setSelectedChapter] = useState<number | null>(null)
   const pathname = usePathname()
   const locale = getLocaleFromPath(pathname)
+
+  // Reset selected chapter when dropdown closes
+  useEffect(() => {
+    if (!isOpen) {
+      setSelectedChapter(null)
+    }
+  }, [isOpen])
 
   if (!isOpen) return null
 
@@ -57,19 +65,62 @@ export default function ChaptersDropdown({
   const isSingleChapter = chapters.length === 1
 
   const handleChapterClick = (e: React.MouseEvent, chapterNumber: number) => {
+    e.preventDefault()
+    e.stopPropagation()
+
     if (isSingleChapter) {
       // Single chapter: navigate directly and close all dropdowns
       onCloseAll?.()
       return
     }
 
-    // Multi-chapter: toggle selection to show verses
-    e.preventDefault()
-    if (selectedChapter === chapterNumber) {
-      setSelectedChapter(null)
-    } else {
-      setSelectedChapter(chapterNumber)
-    }
+    // Multi-chapter: always show verses (both mobile and desktop)
+    setSelectedChapter(chapterNumber)
+  }
+
+  // On mobile or desktop, if chapter is selected, show only verses; otherwise show chapters
+  if (selectedChapter && chapter) {
+    return (
+      <div className="relative dropdown-panel z-[60] p-3">
+        {/* Back button */}
+        <button
+          onClick={() => setSelectedChapter(null)}
+          className="mb-3 text-sm text-muted hover:text-primary transition-all flex items-center gap-2"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <path d="M19 12H5M12 19l-7-7 7-7" />
+          </svg>
+          {locale === 'he' ? 'חזור לפרקים' : 'Back to chapters'}
+        </button>
+
+        {/* Verses only */}
+        {chapter.verses && chapter.verses.length > 0 ? (
+          <VersesDropdown
+            verses={chapter.verses}
+            bookName={bookName}
+            chapterNumber={chapter.number}
+            isOpen={true}
+            onClose={() => setSelectedChapter(null)}
+            onCloseAll={() => {
+              onClose()
+              onCloseAll?.()
+            }}
+            isMobile={isMobile}
+          />
+        ) : (
+          <div className="p-4 text-sm text-muted">
+            {locale === 'he' ? 'אין פסוקים זמינים' : 'No verses available'}
+          </div>
+        )}
+      </div>
+    )
   }
 
   return (
@@ -83,9 +134,8 @@ export default function ChaptersDropdown({
           const isSelected = selectedChapter === ch.number
 
           return (
-            <Link
+            <button
               key={ch.number}
-              href={`/${locale}/book/${bookName}/chapter/${ch.number}`}
               className={`flex items-center justify-center w-10 h-10 text-sm font-semibold transition-all duration-150 rounded-lg cursor-pointer ${
                 isSelected
                   ? 'bg-gray text-white scale-105 shadow-md'
@@ -94,27 +144,10 @@ export default function ChaptersDropdown({
               onClick={(e) => handleChapterClick(e, ch.number)}
             >
               {locale === 'he' ? ch.hebrew_letter : ch.number}
-            </Link>
+            </button>
           )
         })}
       </div>
-
-      {/* Verses dropdown - positioned outside, appears on chapter selection */}
-      {chapter && chapter.verses.length > 0 && (
-        <div className="absolute left-full top-0 pl-2 z-[70] animate-slide-in">
-          <VersesDropdown
-            verses={chapter.verses}
-            bookName={bookName}
-            chapterNumber={chapter.number}
-            isOpen={true}
-            onClose={() => setSelectedChapter(null)}
-            onCloseAll={() => {
-              onClose()
-              onCloseAll?.()
-            }}
-          />
-        </div>
-      )}
     </div>
   )
 }

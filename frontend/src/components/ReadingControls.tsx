@@ -235,5 +235,13 @@ export default function ReadingControls() {
   // Use portal to render controls directly in body, outside any scrollable containers
   if (!mounted) return null
 
+  // Hide floating controls on mobile - they're now in the settings panel
+  // Use a more reliable mobile detection
+  if (typeof window !== 'undefined') {
+    const isMobile =
+      window.innerWidth < 768 || window.matchMedia('(max-width: 767px)').matches
+    if (isMobile) return null
+  }
+
   return createPortal(controlsContent, document.body)
 }

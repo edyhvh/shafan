@@ -9,18 +9,31 @@ import BooksDropdown from './navigation/BooksDropdown'
 import LanguageSelector from './LanguageSelector'
 import Logo from './Logo'
 import { MenuIcon } from './icons'
+import Settings from './Settings'
 import { getLastBookLocation } from '@/hooks/useLastBook'
 import { useScrollState } from '@/hooks/useScrollState'
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [booksDropdownOpen, setBooksDropdownOpen] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+  const [settingsCloseTrigger, setSettingsCloseTrigger] = useState(0)
   const booksTimeoutRef = useRef<NodeJS.Timeout | null>(null)
   const isBooksHoveredRef = useRef(false)
   const pathname = usePathname()
   const locale = getLocaleFromPath(pathname)
   const router = useRouter()
   const { shouldHideForContent } = useScrollState()
+
+  // Detect mobile on mount and resize
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   // Clear timeouts on unmount
   useEffect(() => {
@@ -41,29 +54,50 @@ export default function Navbar() {
     }
   }
 
-  const handleBooksMouseLeave = () => {
+  const handleBooksMouseLeave = (e: React.MouseEvent) => {
+    // Check if we're moving to a child element (dropdown)
+    const relatedTarget = e.relatedTarget as Node | null
+    const currentTarget = e.currentTarget as HTMLElement
+    
+    // If moving to a child element, don't close
+    if (relatedTarget && currentTarget.contains(relatedTarget)) {
+      return
+    }
+    
     isBooksHoveredRef.current = false
     // Clear any existing timeout
     if (booksTimeoutRef.current) {
       clearTimeout(booksTimeoutRef.current)
     }
-    // Set timeout to close dropdown
+    // Set timeout to close dropdown - increased delay to prevent flickering
     booksTimeoutRef.current = setTimeout(() => {
       // Check if still not hovered before closing
       if (!isBooksHoveredRef.current) {
         setBooksDropdownOpen(false)
       }
-    }, 300)
+    }, 500)
   }
 
-  const handleBooksClick = useCallback(() => {
-    const lastBook = getLastBookLocation()
-    if (lastBook) {
-      router.push(
-        `/${locale}/book/${lastBook.bookId}/chapter/${lastBook.chapterId}`
-      )
-    }
-  }, [locale, router])
+  const handleBooksClick = useCallback(
+    (e: React.MouseEvent) => {
+      // Only handle clicks on mobile - desktop uses hover
+      if (isMobile) {
+        e.preventDefault()
+        e.stopPropagation()
+        // Close mobile menu and settings if open, then toggle books dropdown
+        if (mobileMenuOpen) {
+          setMobileMenuOpen(false)
+        }
+        if (!booksDropdownOpen) {
+          // Opening books dropdown - close settings
+          setSettingsCloseTrigger((prev) => prev + 1)
+        }
+        setBooksDropdownOpen(!booksDropdownOpen)
+      }
+      // Desktop: do nothing on click, hover handles the dropdown
+    },
+    [booksDropdownOpen, isMobile, mobileMenuOpen]
+  )
 
   const handleLogoClick = useCallback(
     (e: React.MouseEvent) => {
@@ -114,17 +148,21 @@ export default function Navbar() {
         {/* Books Link */}
         <div
           className="relative"
-          onMouseEnter={handleBooksMouseEnter}
-          onMouseLeave={handleBooksMouseLeave}
+          onMouseEnter={!isMobile ? handleBooksMouseEnter : undefined}
+          onMouseLeave={!isMobile ? handleBooksMouseLeave : undefined}
         >
           <button
-            onClick={handleBooksClick}
-            className="px-3 py-1.5 text-xs font-medium text-black/80 hover:text-black transition-all duration-200 rounded-lg hover:bg-black/5"
+            onClick={isMobile ? handleBooksClick : undefined}
+            className={`px-3 py-1.5 text-xs font-medium text-black/80 transition-all duration-200 rounded-lg ${
+              isMobile
+                ? 'hover:text-black hover:bg-black/5 cursor-pointer'
+                : 'hover:text-black hover:bg-black/5'
+            }`}
           >
             {t('books', locale)}
           </button>
           <div
-            className={`absolute top-full ${locale === 'he' ? 'right-0' : 'left-0'} pt-1`}
+            className={`absolute top-full ${locale === 'he' ? 'right-0' : 'left-0'} pt-1 -mt-1`}
             onMouseEnter={handleBooksMouseEnter}
             onMouseLeave={handleBooksMouseLeave}
           >
@@ -137,6 +175,7 @@ export default function Navbar() {
                   isBooksHoveredRef.current = false
                   setBooksDropdownOpen(false)
                 }}
+                isMobile={isMobile}
               />
             </div>
           </div>
@@ -166,9 +205,35 @@ export default function Navbar() {
           <LanguageSelector />
         </div>
 
+        {/* Settings Button - Mobile */}
+        <div className="md:hidden">
+          <Settings
+            onOpen={() => {
+              // Close Books dropdown and mobile menu when Settings opens
+              if (booksDropdownOpen) {
+                setBooksDropdownOpen(false)
+              }
+              if (mobileMenuOpen) {
+                setMobileMenuOpen(false)
+              }
+            }}
+            closeTrigger={settingsCloseTrigger}
+          />
+        </div>
+
         {/* Hamburger Menu Button */}
         <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          onClick={() => {
+            // Close Books dropdown and settings if open, then toggle mobile menu
+            if (booksDropdownOpen) {
+              setBooksDropdownOpen(false)
+            }
+            if (!mobileMenuOpen) {
+              // Opening mobile menu - close settings
+              setSettingsCloseTrigger((prev) => prev + 1)
+            }
+            setMobileMenuOpen(!mobileMenuOpen)
+          }}
           className="md:hidden p-2.5 text-black/70 hover:text-black transition-all duration-200 rounded-full hover:bg-black/5"
           aria-label="Toggle menu"
         >
@@ -180,30 +245,6 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-56 rounded-2xl bg-gradient-to-b from-white/40 to-white/25 backdrop-blur-3xl backdrop-saturate-200 border border-white/40 shadow-[0_8px_32px_rgba(0,0,0,0.08),inset_0_1px_1px_rgba(255,255,255,0.6)] ring-1 ring-white/30 overflow-hidden">
           <div className="py-2">
-            <button
-              onClick={() => {
-                const lastBook = getLastBookLocation()
-                if (lastBook) {
-                  router.push(
-                    `/${locale}/book/${lastBook.bookId}/chapter/${lastBook.chapterId}`
-                  )
-                  setMobileMenuOpen(false)
-                } else {
-                  setBooksDropdownOpen(!booksDropdownOpen)
-                }
-              }}
-              className="w-full text-left px-5 py-3 text-sm font-medium text-black/80 hover:text-black transition-all duration-200 hover:bg-black/5"
-            >
-              {t('books', locale)}
-            </button>
-            {booksDropdownOpen && (
-              <div className="px-5 pb-2">
-                <BooksDropdown
-                  isOpen={booksDropdownOpen}
-                  onClose={() => setBooksDropdownOpen(false)}
-                />
-              </div>
-            )}
             <Link
               href={`/${locale}/info`}
               onClick={() => setMobileMenuOpen(false)}

@@ -63,21 +63,19 @@ export default function CorrectionWarning() {
   }
 
   return (
-    <div className="fixed top-4 left-4 z-40 transition-all duration-300 ease-out animate-in fade-in slide-in-from-top-2">
-      <div className="bg-yellow-200/80 backdrop-blur-sm border-2 border-yellow-300/60 rounded-lg px-1.5 py-2 shadow-lg flex items-start gap-1.5 max-w-[180px]">
-        <WarningIcon className="w-3.5 h-3.5 warning-text flex-shrink-0 mt-0.5" />
-        <p className="text-[9px] sm:text-[10px] warning-text font-medium leading-tight">
-          {t('correction_warning_text', locale)}{' '}
-          <Link
-            href={GITHUB_ISSUES_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline font-semibold warning-text hover:opacity-80 transition-opacity"
-          >
-            {t('correction_warning_link', locale)}
-          </Link>
-        </p>
-      </div>
+    <div className="bg-yellow-200/80 backdrop-blur-sm border-2 border-yellow-300/60 rounded-lg px-1.5 py-2 shadow-lg flex items-start gap-1.5 max-w-[180px] transition-all duration-300 ease-out animate-in fade-in slide-in-from-top-2">
+      <WarningIcon className="w-3.5 h-3.5 warning-text flex-shrink-0 mt-0.5" />
+      <p className="text-[9px] sm:text-[10px] warning-text font-medium leading-tight">
+        {t('correction_warning_text', locale)}{' '}
+        <Link
+          href={GITHUB_ISSUES_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline font-semibold warning-text hover:opacity-80 transition-opacity"
+        >
+          {t('correction_warning_link', locale)}
+        </Link>
+      </p>
     </div>
   )
 }

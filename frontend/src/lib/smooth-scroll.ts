@@ -53,6 +53,11 @@ export function scrollToVerse(verseNumber: number, offset = 128): void {
 
   if (verseElement) {
     smoothScrollToElement(verseElement, validOffset)
+    // Dispatch custom event to trigger highlight animation
+    const highlightEvent = new CustomEvent('verse-highlight', {
+      detail: { verseNumber: sanitizedVerseNumber },
+    })
+    window.dispatchEvent(highlightEvent)
   } else {
     console.warn(
       `scrollToVerse: verse element not found: ${sanitizedVerseNumber}`

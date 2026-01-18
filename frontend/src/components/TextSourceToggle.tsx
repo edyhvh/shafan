@@ -15,13 +15,17 @@ export default function TextSourceToggle({
   position,
   className,
 }: TextSourceToggleProps) {
+  // If position is empty string, pass undefined to disable fixed positioning
+  const togglePosition =
+    position === '' ? undefined : (position ?? 'top-[88px] right-5')
+
   return (
     <RetroToggle
       enabled={enabled}
       onToggle={onToggle}
       labelLeft="Delitzsch"
       labelRight="Hutter"
-      position={position || 'top-[88px] right-5'}
+      position={togglePosition}
       ariaLabel="Toggle text source between Hutter and Delitzsch"
       title="Toggle text source"
       labelFontClass="font-ui-latin"

@@ -1,9 +1,9 @@
 'use client'
 
 import { Verse } from '@/lib/types'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { getLocaleFromPath } from '@/lib/locale'
+import { scrollToVerse } from '@/lib/smooth-scroll'
 
 interface VersesDropdownProps {
   verses: Verse[]
@@ -12,6 +12,7 @@ interface VersesDropdownProps {
   isOpen: boolean
   onClose: () => void
   onCloseAll?: () => void
+  isMobile?: boolean
 }
 
 export default function VersesDropdown({
@@ -23,7 +24,12 @@ export default function VersesDropdown({
   onCloseAll,
 }: VersesDropdownProps) {
   const pathname = usePathname()
+  const router = useRouter()
   const locale = getLocaleFromPath(pathname)
+
+  // Check if we're already on the target chapter page
+  const currentChapterPath = `/${locale}/book/${bookName}/chapter/${chapterNumber}`
+  const isOnCurrentChapter = pathname === currentChapterPath
 
   if (!isOpen) return null
 
@@ -43,6 +49,23 @@ export default function VersesDropdown({
   const maxHeight =
     verses.length > 16 ? '400px' : verses.length > 9 ? '350px' : '300px'
 
+  const handleVerseClick = (verseNumber: number) => {
+    onClose()
+    onCloseAll?.()
+
+    if (isOnCurrentChapter) {
+      // Already on the page, scroll immediately
+      // Use a small delay to ensure dropdown closes first
+      setTimeout(() => {
+        scrollToVerse(verseNumber, 128)
+      }, 150)
+    } else {
+      // Navigate to the chapter page with hash
+      // The ChapterContent component will handle scrolling via useEffect
+      router.push(`${currentChapterPath}#verse-${verseNumber}`)
+    }
+  }
+
   return (
     <div className="dropdown-panel z-[70] p-3">
       <div
@@ -53,17 +76,13 @@ export default function VersesDropdown({
         }}
       >
         {verses.map((verse) => (
-          <Link
+          <button
             key={verse.number}
-            href={`/${locale}/book/${bookName}/chapter/${chapterNumber}#verse-${verse.number}`}
-            className="flex items-center justify-center w-9 h-9 text-xs font-ui-latin font-medium text-black bg-black/5 hover:bg-black/10 hover:scale-105 active:scale-95 transition-all duration-150 rounded-lg"
-            onClick={() => {
-              onClose()
-              onCloseAll?.()
-            }}
+            onClick={() => handleVerseClick(verse.number)}
+            className="flex items-center justify-center w-9 h-9 text-xs font-ui-latin font-medium text-black bg-black/5 hover:bg-black/10 hover:scale-105 active:scale-95 transition-all duration-150 rounded-lg cursor-pointer"
           >
             {verse.number}
-          </Link>
+          </button>
         ))}
       </div>
     </div>

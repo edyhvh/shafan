@@ -5,7 +5,7 @@ interface RetroToggleProps {
   onToggle: () => void
   labelLeft: string
   labelRight: string
-  position: string
+  position?: string
   ariaLabel: string
   title?: string
   labelFontClass?: string

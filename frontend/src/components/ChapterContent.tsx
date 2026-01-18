@@ -14,6 +14,7 @@ import { type BookName } from '@/lib/books'
 import type { Verse } from '@/lib/types'
 import { getChristianVerse } from '@/lib/versification'
 import { useEffect, useState } from 'react'
+import { scrollToVerse } from '@/lib/smooth-scroll'
 
 // Dynamically import ReadingControls with SSR disabled to prevent hydration issues
 const ReadingControls = dynamic(() => import('./ReadingControls'), {
@@ -81,6 +82,56 @@ export default function ChapterContent({
   const allPreferencesLoaded =
     nikudLoaded && cantillationLoaded && textSourceLoaded && seferLoaded
 
+  // Track highlighted verse for temporary highlight animation
+  const [highlightedVerse, setHighlightedVerse] = useState<number | null>(null)
+
+  // Listen for verse highlight events from scrollToVerse
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    const handleVerseHighlight = (event: Event) => {
+      const customEvent = event as CustomEvent<{ verseNumber: number }>
+      const verseNumber = customEvent.detail?.verseNumber
+      if (verseNumber) {
+        setHighlightedVerse(verseNumber)
+        // Remove highlight after animation completes
+        setTimeout(() => {
+          setHighlightedVerse(null)
+        }, 1600) // 1.6 seconds to match animation duration
+      }
+    }
+
+    window.addEventListener('verse-highlight', handleVerseHighlight)
+    return () => window.removeEventListener('verse-highlight', handleVerseHighlight)
+  }, [])
+
+  // Handle hash scrolling when page loads with a verse hash (e.g., #verse-5)
+  useEffect(() => {
+    if (typeof window === 'undefined' || !allPreferencesLoaded) return
+
+    const handleHashScroll = () => {
+      const hash = window.location.hash
+      if (hash && hash.startsWith('#verse-')) {
+        const verseNumber = parseInt(hash.replace('#verse-', ''), 10)
+        if (!isNaN(verseNumber) && verseNumber > 0) {
+          // Delay to ensure content is rendered
+          setTimeout(() => {
+            scrollToVerse(verseNumber, 128)
+            // Clear hash after scrolling to prevent persistent highlight
+            window.history.replaceState(null, '', window.location.pathname)
+          }, 300)
+        }
+      }
+    }
+
+    // Handle initial hash
+    handleHashScroll()
+
+    // Also handle hash changes (e.g., when navigating with browser back/forward)
+    window.addEventListener('hashchange', handleHashScroll)
+    return () => window.removeEventListener('hashchange', handleHashScroll)
+  }, [chapterNumber, allPreferencesLoaded])
+
   // Component to display verse numbers with Christian equivalents
   const VerseNumber = ({
     verseNumber,
@@ -139,48 +190,62 @@ export default function ChapterContent({
           {hebrewLetter}
         </h2>
 
-        <div className={seferEnabled ? '' : 'space-y-8'} dir="rtl">
+        <div className={`${seferEnabled ? '' : 'space-y-8'}`} dir="rtl">
           {seferEnabled ? (
             // Sefer mode: continuous paragraph display
-            <p className="font-bible-hebrew text-[32px] md:text-[36px] leading-[1.9] text-primary">
-              {verses.map((verse, index) => (
-                <span
+            <p className="font-bible-hebrew text-[32px] md:text-[36px] leading-[1.9] text-primary text-right">
+              {verses.map((verse, index) => {
+                const isHighlighted = highlightedVerse === verse.number
+                return (
+                  <span
+                    key={verse.number}
+                    id={`verse-${verse.number}`}
+                    className={`scroll-mt-32 transition-all duration-500 ${
+                      isHighlighted
+                        ? 'verse-highlight-animate rounded px-1'
+                        : ''
+                    }`}
+                  >
+                    {verse.number > 0 && (
+                      <VerseNumber
+                        verseNumber={verse.number}
+                        className="text-muted ml-2"
+                      />
+                    )}
+                    <span className="font-bible-hebrew">
+                      {allPreferencesLoaded ? getDisplayText(verse) : '...'}
+                    </span>
+                    {index < verses.length - 1 && ' '}
+                  </span>
+                )
+              })}
+            </p>
+          ) : (
+            // Standard mode: separate verse blocks
+            verses.map((verse) => {
+              const isHighlighted = highlightedVerse === verse.number
+              return (
+                <div
                   key={verse.number}
                   id={`verse-${verse.number}`}
-                  className="scroll-mt-32 target:bg-amber-100/50 target:rounded target:px-1 transition-colors duration-500"
+                  className={`font-bible-hebrew text-[32px] md:text-[36px] leading-[1.9] text-primary text-right scroll-mt-32 transition-all duration-500 ${
+                    isHighlighted
+                      ? 'verse-highlight-animate rounded-lg px-4 -mx-4'
+                      : ''
+                  }`}
                 >
                   {verse.number > 0 && (
                     <VerseNumber
                       verseNumber={verse.number}
-                      className="text-muted ml-2"
+                      className="text-muted ml-3"
                     />
                   )}
                   <span className="font-bible-hebrew">
                     {allPreferencesLoaded ? getDisplayText(verse) : '...'}
                   </span>
-                  {index < verses.length - 1 && ' '}
-                </span>
-              ))}
-            </p>
-          ) : (
-            // Standard mode: separate verse blocks
-            verses.map((verse) => (
-              <div
-                key={verse.number}
-                id={`verse-${verse.number}`}
-                className="font-bible-hebrew text-[32px] md:text-[36px] leading-[1.9] text-primary scroll-mt-32 target:bg-amber-100/50 target:rounded-lg target:px-4 target:-mx-4 transition-colors duration-500"
-              >
-                {verse.number > 0 && (
-                  <VerseNumber
-                    verseNumber={verse.number}
-                    className="text-muted ml-3"
-                  />
-                )}
-                <span className="font-bible-hebrew">
-                  {allPreferencesLoaded ? getDisplayText(verse) : '...'}
-                </span>
-              </div>
-            ))
+                </div>
+              )
+            })
           )}
         </div>
       </div>

@@ -95,7 +95,7 @@ export default async function LocaleLayout({
       dir={dir}
       data-nikud="true"
       data-cantillation="false"
-      data-text-source="hutter"
+      data-text-source="delitzsch"
       data-sefer="true"
       data-theme="light"
       suppressHydrationWarning
@@ -141,8 +141,13 @@ export default async function LocaleLayout({
           {/* Floating Navbar */}
           <Navbar />
 
-          {/* Correction Warning - Fixed at top */}
-          <CorrectionWarning />
+          {/* Correction Warning - Desktop: floating left, Mobile: below navbar */}
+          <div className="fixed top-4 left-4 z-30 hidden md:block">
+            <CorrectionWarning />
+          </div>
+          <div className="fixed top-24 left-4 right-4 z-30 md:hidden">
+            <CorrectionWarning />
+          </div>
 
           {/* Main content with top padding for floating navbar */}
           <main className="w-full pt-32 pb-16">{children}</main>

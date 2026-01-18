@@ -3,34 +3,36 @@
 interface NikudToggleProps {
   enabled: boolean
   onToggle: () => void
+  position?: string
+  className?: string
 }
 
 // Hebrew word "nikud" - displayed in the toggle
 const NIKUD_LABEL = 'נקוד'
 
-export default function NikudToggle({ enabled, onToggle }: NikudToggleProps) {
+export default function NikudToggle({
+  enabled,
+  onToggle,
+  position,
+  className = '',
+}: NikudToggleProps) {
   return (
     <button
       onClick={onToggle}
-      className="fixed top-6 right-5 z-40 cursor-pointer group"
+      className={`${position ? `fixed ${position} z-40` : ''} cursor-pointer group ${className}`}
       aria-label="Toggle nikud"
       aria-pressed={enabled}
       title="Toggle nikud"
     >
-      {/* Retro toggle track */}
+      {/* Neumorphic toggle track */}
       <div
         className={`
           relative flex items-center
-          w-[88px] h-[32px]
           rounded-full
-          border-2
-          transition-all duration-300 ease-out
-          ${
-            enabled
-              ? 'bg-gray border-gray'
-              : 'bg-white border-gray/30 group-hover:border-gray/50'
-          }
+          bg-background
+          ${enabled ? 'toggle-outer-pressed' : 'toggle-outer-raised'}
         `}
+        style={{ width: '100px', height: '32px' }}
       >
         {/* Label text */}
         <span
@@ -38,27 +40,25 @@ export default function NikudToggle({ enabled, onToggle }: NikudToggleProps) {
           className={`
             absolute top-0 bottom-0 flex items-center
             font-ui-hebrew font-semibold text-sm
-            transition-all duration-300 ease-out
-            select-none
-            ${enabled ? 'left-0 pl-[30px] text-white/90' : 'right-0 pr-[30px] text-muted'}
+            select-none pointer-events-none
+            ${
+              enabled
+                ? 'left-0 right-0 justify-start pl-2.5 text-secondary'
+                : 'left-[30px] right-[8px] justify-end text-muted'
+            }
           `}
         >
           {NIKUD_LABEL}
         </span>
 
-        {/* Sliding knob */}
+        {/* Sliding knob - smooth animation */}
         <div
           className={`
             absolute top-[5px]
             w-[22px] h-[22px]
             rounded-full
-            transition-all duration-300 ease-out
-            shadow-[0_1px_3px_rgba(0,0,0,0.2)]
-            ${
-              enabled
-                ? 'right-[3px] bg-primary'
-                : 'left-[3px] bg-gray/40 group-hover:bg-gray/60'
-            }
+            transition-[left,right] duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]
+            ${enabled ? 'right-[3px] left-auto bg-primary toggle-inner-dark' : 'left-[3px] right-auto bg-background toggle-inner-light'}
           `}
         />
       </div>

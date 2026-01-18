@@ -123,7 +123,7 @@ export default async function BookChapterPage({ params }: PageProps) {
     displayName[locale as 'he' | 'es' | 'en'] || displayName.en
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Save current location to localStorage for "Back to reading" feature */}
       <SaveLastBook bookId={bookId} chapterId={chapterId} />
 

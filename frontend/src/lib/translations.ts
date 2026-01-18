@@ -28,6 +28,12 @@ type TranslationKey =
   // Correction warning
   | 'correction_warning_text'
   | 'correction_warning_link'
+  // Settings
+  | 'settings_title'
+  | 'on'
+  | 'off'
+  | 'light'
+  | 'dark'
 
 const translations: Record<Locale, Record<TranslationKey, string>> = {
   en: {
@@ -59,6 +65,12 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     correction_warning_text:
       'You may see errors in words, letters, or grammar. Help us improve',
     correction_warning_link: 'here',
+    // Settings
+    settings_title: 'Settings',
+    on: 'On',
+    off: 'Off',
+    light: 'Light',
+    dark: 'Dark',
   },
   es: {
     books: 'Libros',
@@ -89,6 +101,12 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     correction_warning_text:
       'Es posible que encuentres errores de palabras, letras o gramática. Ayúdanos a mejorar',
     correction_warning_link: 'aquí',
+    // Settings
+    settings_title: 'Configuración',
+    on: 'Activado',
+    off: 'Desactivado',
+    light: 'Claro',
+    dark: 'Oscuro',
   },
   he: {
     books: 'ספרים',
@@ -119,6 +137,12 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     correction_warning_text:
       'ייתכן שתראו שגיאות במילים, אותיות או דקדוק. עזרו לנו לשפר',
     correction_warning_link: 'כאן',
+    // Settings
+    settings_title: 'הגדרות',
+    on: 'פועל',
+    off: 'כבוי',
+    light: 'בהיר',
+    dark: 'כהה',
   },
 }
 
