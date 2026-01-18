@@ -67,10 +67,10 @@ export default function SearchableDropdown({
                 key={item.id}
                 href={item.href || '#'}
                 onClick={item.onClick}
-                className={`flex items-center justify-center p-2 text-sm font-semibold rounded-lg transition-all duration-200 ${
+                className={`flex items-center justify-center p-2 text-sm font-semibold rounded-lg transition-all duration-200 cursor-pointer ${
                   item.isCurrent
                     ? 'bg-primary text-white'
-                    : 'text-primary hover:bg-primary/5'
+                    : 'text-primary bg-black/[0.04] hover:bg-black/[0.08] hover:shadow-sm'
                 }`}
               >
                 {item.label}
@@ -93,10 +93,10 @@ export default function SearchableDropdown({
               key={item.id}
               href={item.href || '#'}
               onClick={item.onClick}
-              className={`block px-4 py-2 text-sm font-semibold transition-all duration-200 ${
+              className={`block px-4 py-2 text-sm font-semibold transition-all duration-200 cursor-pointer ${
                 item.isCurrent
                   ? 'bg-primary text-white'
-                  : 'text-primary hover:bg-primary/5'
+                  : 'text-primary hover:bg-black/[0.08] hover:shadow-sm'
               }`}
             >
               {item.label}

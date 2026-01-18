@@ -79,7 +79,7 @@ export default function VersesDropdown({
           <button
             key={verse.number}
             onClick={() => handleVerseClick(verse.number)}
-            className="flex items-center justify-center w-9 h-9 text-xs font-ui-latin font-medium text-black bg-black/5 hover:bg-black/10 hover:scale-105 active:scale-95 transition-all duration-150 rounded-lg cursor-pointer"
+            className="flex items-center justify-center w-9 h-9 text-xs font-ui-latin font-medium text-black bg-black/[0.04] hover:bg-black/[0.08] hover:scale-105 active:scale-95 transition-all duration-200 rounded-lg cursor-pointer hover:shadow-sm"
           >
             {verse.number}
           </button>

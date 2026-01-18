@@ -12,28 +12,19 @@ import { MenuIcon } from './icons'
 import Settings from './Settings'
 import { getLastBookLocation } from '@/hooks/useLastBook'
 import { useScrollState } from '@/hooks/useScrollState'
+import { useIsMobile } from '@/hooks/useIsMobile'
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [booksDropdownOpen, setBooksDropdownOpen] = useState(false)
-  const [isMobile, setIsMobile] = useState(false)
-  const [settingsCloseTrigger, setSettingsCloseTrigger] = useState(0)
+  const [settingsOpen, setSettingsOpen] = useState(false)
+  const isMobile = useIsMobile()
   const booksTimeoutRef = useRef<NodeJS.Timeout | null>(null)
   const isBooksHoveredRef = useRef(false)
   const pathname = usePathname()
   const locale = getLocaleFromPath(pathname)
   const router = useRouter()
   const { shouldHideForContent } = useScrollState()
-
-  // Detect mobile on mount and resize
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
-    checkMobile()
-    window.addEventListener('resize', checkMobile)
-    return () => window.removeEventListener('resize', checkMobile)
-  }, [])
 
   // Clear timeouts on unmount
   useEffect(() => {
@@ -52,18 +43,26 @@ export default function Navbar() {
       clearTimeout(booksTimeoutRef.current)
       booksTimeoutRef.current = null
     }
+    // Dispatch event to close any page dropdowns
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('close-page-dropdowns'))
+    }
   }
 
   const handleBooksMouseLeave = (e: React.MouseEvent) => {
     // Check if we're moving to a child element (dropdown)
-    const relatedTarget = e.relatedTarget as Node | null
+    const relatedTarget = e.relatedTarget
     const currentTarget = e.currentTarget as HTMLElement
-    
+
     // If moving to a child element, don't close
-    if (relatedTarget && currentTarget.contains(relatedTarget)) {
+    if (
+      relatedTarget &&
+      relatedTarget instanceof Node &&
+      currentTarget.contains(relatedTarget)
+    ) {
       return
     }
-    
+
     isBooksHoveredRef.current = false
     // Clear any existing timeout
     if (booksTimeoutRef.current) {
@@ -90,7 +89,11 @@ export default function Navbar() {
         }
         if (!booksDropdownOpen) {
           // Opening books dropdown - close settings
-          setSettingsCloseTrigger((prev) => prev + 1)
+          setSettingsOpen(false)
+          // Dispatch event to close any page dropdowns
+          if (typeof window !== 'undefined') {
+            window.dispatchEvent(new CustomEvent('close-page-dropdowns'))
+          }
         }
         setBooksDropdownOpen(!booksDropdownOpen)
       }
@@ -208,8 +211,10 @@ export default function Navbar() {
         {/* Settings Button - Mobile */}
         <div className="md:hidden">
           <Settings
+            isOpen={settingsOpen}
             onOpen={() => {
               // Close Books dropdown and mobile menu when Settings opens
+              setSettingsOpen(true)
               if (booksDropdownOpen) {
                 setBooksDropdownOpen(false)
               }
@@ -217,7 +222,7 @@ export default function Navbar() {
                 setMobileMenuOpen(false)
               }
             }}
-            closeTrigger={settingsCloseTrigger}
+            onClose={() => setSettingsOpen(false)}
           />
         </div>
 
@@ -230,7 +235,7 @@ export default function Navbar() {
             }
             if (!mobileMenuOpen) {
               // Opening mobile menu - close settings
-              setSettingsCloseTrigger((prev) => prev + 1)
+              setSettingsOpen(false)
             }
             setMobileMenuOpen(!mobileMenuOpen)
           }}

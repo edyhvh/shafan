@@ -1,9 +1,11 @@
 'use client'
 
 import { usePathname, useRouter } from 'next/navigation'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useRef } from 'react'
 import { getLocaleFromPath, removeLocaleFromPath } from '@/lib/locale'
 import { ChevronDown } from '@/components/icons'
+import { useIsMobile } from '@/hooks/useIsMobile'
+import { useClickOutside } from '@/hooks/useClickOutside'
 
 const languages = [
   { code: 'he', label: 'עברית', nativeLabel: 'עברית' },
@@ -15,7 +17,7 @@ export default function LanguageSelector() {
   const pathname = usePathname()
   const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
-  const [isMobile, setIsMobile] = useState(false)
+  const isMobile = useIsMobile()
   const containerRef = useRef<HTMLDivElement>(null)
   const buttonRef = useRef<HTMLButtonElement>(null)
 
@@ -23,32 +25,8 @@ export default function LanguageSelector() {
   const currentLanguage =
     languages.find((lang) => lang.code === currentLocale) || languages[0]
 
-  // Detect mobile on mount and resize
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
-    checkMobile()
-    window.addEventListener('resize', checkMobile)
-    return () => window.removeEventListener('resize', checkMobile)
-  }, [])
-
   // Close dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        containerRef.current &&
-        !containerRef.current.contains(event.target as Node)
-      ) {
-        setIsOpen(false)
-      }
-    }
-
-    if (isOpen) {
-      document.addEventListener('mousedown', handleClickOutside)
-      return () => document.removeEventListener('mousedown', handleClickOutside)
-    }
-  }, [isOpen])
+  useClickOutside(containerRef, () => setIsOpen(false), isOpen)
 
   const handleLanguageChange = (locale: string) => {
     setIsOpen(false)

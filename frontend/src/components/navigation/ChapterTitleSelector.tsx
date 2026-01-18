@@ -64,6 +64,22 @@ export default function ChapterTitleSelector({
   )
   useClickOutside(bookDropdownRef, () => setIsBookOpen(false), isBookOpen)
 
+  // Close dropdowns when navbar dropdowns open
+  useEffect(() => {
+    const handleClosePageDropdowns = () => {
+      setIsChapterOpen(false)
+      setIsBookOpen(false)
+    }
+
+    window.addEventListener('close-page-dropdowns', handleClosePageDropdowns)
+    return () => {
+      window.removeEventListener(
+        'close-page-dropdowns',
+        handleClosePageDropdowns
+      )
+    }
+  }, [])
+
   // Get Hebrew info for the current book (for en/es locales)
   const hebrewInfo = BOOK_HEBREW_INFO[bookName]
   const transliteration =

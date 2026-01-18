@@ -136,10 +136,10 @@ export default function ChaptersDropdown({
           return (
             <button
               key={ch.number}
-              className={`flex items-center justify-center w-10 h-10 text-sm font-semibold transition-all duration-150 rounded-lg cursor-pointer ${
+              className={`flex items-center justify-center w-10 h-10 text-sm font-semibold transition-all duration-200 rounded-lg cursor-pointer ${
                 isSelected
                   ? 'bg-gray text-white scale-105 shadow-md'
-                  : 'bg-black/5 text-black hover:bg-black/30 hover:text-black hover:scale-110 hover:shadow-sm hover:animate-pulse-subtle active:scale-95'
+                  : 'bg-black/[0.04] text-black hover:bg-black/[0.08] hover:scale-105 hover:shadow-sm active:scale-95'
               } ${locale === 'he' ? 'font-ui-hebrew' : 'font-ui-latin'}`}
               onClick={(e) => handleChapterClick(e, ch.number)}
             >
