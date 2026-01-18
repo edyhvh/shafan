@@ -7,6 +7,7 @@ import { getLocaleFromPath } from '@/lib/locale'
 import { t } from '@/lib/translations'
 import { useScrollState } from '@/hooks/useScrollState'
 import { useTextSource } from '@/hooks/useTextSource'
+import { isNewTestament, AVAILABLE_BOOKS, type BookName } from '@/lib/books'
 import { WarningIcon } from './icons'
 
 const GITHUB_ISSUES_URL = 'https://github.com/edyhvh/shafan/issues'
@@ -45,14 +46,21 @@ export default function CorrectionWarning() {
     return () => clearTimeout(timeout)
   }, [pathname])
 
-  // Only show warning in books section, not on error pages, AND only for Hutter text
+  // Extract bookId from pathname (format: /[locale]/book/[bookId]/chapter/[chapterId])
+  const bookMatch = pathname.match(/\/book\/([^/]+)/)
+  const bookId = bookMatch ? (bookMatch[1] as BookName) : null
+  const isNTBook =
+    bookId && AVAILABLE_BOOKS.includes(bookId) && isNewTestament(bookId)
+
+  // Only show warning in books section, not on error pages, AND only for Hutter text in New Testament books
   if (
     !pathname.includes('/book/') ||
     isErrorPage ||
     pathname.includes('/error') ||
     pathname.includes('/not-found') ||
     !isLoaded ||
-    textSource === 'delitzsch'
+    textSource === 'delitzsch' ||
+    !isNTBook
   ) {
     return null
   }
