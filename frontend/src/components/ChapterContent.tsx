@@ -102,7 +102,8 @@ export default function ChapterContent({
     }
 
     window.addEventListener('verse-highlight', handleVerseHighlight)
-    return () => window.removeEventListener('verse-highlight', handleVerseHighlight)
+    return () =>
+      window.removeEventListener('verse-highlight', handleVerseHighlight)
   }, [])
 
   // Handle hash scrolling when page loads with a verse hash (e.g., #verse-5)
