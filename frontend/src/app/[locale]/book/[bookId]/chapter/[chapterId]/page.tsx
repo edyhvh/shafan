@@ -58,7 +58,7 @@ export async function generateMetadata({ params }: PageProps) {
       ],
       robots: { index: true, follow: true },
       openGraph: {
-        title: 'Shafan – Pure Hebrew for Scripture Study',
+        title: 'Shafan – Bible in Hebrew for Scripture Study',
         description:
           'Read Tanakh and Besorah in Hebrew. Fast, clean, distraction-free for deep study.',
         type: 'website',
@@ -66,13 +66,13 @@ export async function generateMetadata({ params }: PageProps) {
         images: [
           {
             url: '/og-image.png',
-            alt: 'Shafan – Pure Hebrew for Scripture Study',
+            alt: 'Shafan – Bible in Hebrew for Scripture Study',
           },
         ],
       },
       twitter: {
         card: 'summary_large_image',
-        title: 'Shafan – Pure Hebrew for Scripture Study',
+        title: 'Shafan – Bible in Hebrew for Scripture Study',
         description:
           'Read Tanakh and Besorah in Hebrew. Fast, clean, distraction-free for deep study.',
         images: ['/og-image.png'],

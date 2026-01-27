@@ -196,7 +196,7 @@ export default function ChapterContent({
       <article className={`${seferEnabled ? '' : 'space-y-8'}`} dir="rtl">
         {seferEnabled ? (
           // Sefer mode: continuous paragraph display
-          <p className="font-bible-hebrew text-[32px] md:text-[36px] leading-[1.9] text-primary text-right">
+          <p className="font-bible-hebrew text-[50px] md:text-[54px] leading-[1.9] text-primary text-right">
             {verses.map((verse, index) => {
               const isHighlighted = highlightedVerse === verse.number
               return (
@@ -229,7 +229,7 @@ export default function ChapterContent({
               <div
                 key={verse.number}
                 id={`verse-${verse.number}`}
-                className={`font-bible-hebrew text-[32px] md:text-[36px] leading-[1.9] text-primary text-right scroll-mt-32 transition-all duration-500 ${
+                className={`font-bible-hebrew text-[50px] md:text-[54px] leading-[1.9] text-primary text-right scroll-mt-32 transition-all duration-500 ${
                   isHighlighted
                     ? 'verse-highlight-animate rounded-lg px-4 -mx-4'
                     : ''

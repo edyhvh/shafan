@@ -51,10 +51,10 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     home: 'Home',
     nikud: 'Nikud',
     page_title: 'Hebrew Besorah',
-    site_meta_title: 'Shafan – Pure Hebrew for Scripture Study',
+    site_meta_title: 'Shafan – Bible in Hebrew for Scripture Study',
     site_meta_description:
       'Read Tanakh and Besorah in Hebrew. Fast, clean, distraction-free for deep study.',
-    hebrew_bible_title: 'Hebrew Bible',
+    hebrew_bible_title: 'Bible in Hebrew',
     // Info page
     info_title: 'Info',
     info_hutter_title: 'Who was Elias Hutter?',
@@ -98,10 +98,10 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     home: 'Inicio',
     nikud: 'Nikud',
     page_title: 'Besorah Hebrea',
-    site_meta_title: 'Shafan – Hebreo puro para estudio bíblico',
+    site_meta_title: 'Shafan – Biblia en hebreo para estudio bíblico',
     site_meta_description:
       'Lee Tanaj y Besorah en hebreo. Rápido, limpio y sin distracciones para un estudio profundo.',
-    hebrew_bible_title: 'Biblia hebrea',
+    hebrew_bible_title: 'Biblia en hebreo',
     // Info page
     info_title: 'Info',
     info_hutter_title: '¿Quién fue Elias Hutter?',
