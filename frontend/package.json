@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "npm run sync-data && next dev -p 3001",
-    "build": "npm run sync-data && next build",
+    "build": "next build",
+    "build:local": "npm run sync-data && next build",
     "start": "next start -p 3001",
     "lint": "eslint .",
     "type-check": "tsc --noEmit",
