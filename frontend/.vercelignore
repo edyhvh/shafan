@@ -1,0 +1,22 @@
+# Large datasets and artifacts
+../data/
+../models/
+../output/
+
+# Local caches/build artifacts
+.next/
+node_modules/
+
+# Large source files
+*.pdf
+
+# Tooling artifacts
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+
+# OS/IDE
+.DS_Store
+.idea/
+.vscode/
