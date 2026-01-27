@@ -25,6 +25,9 @@ type TranslationKey =
   | 'info_tanaj_text'
   | 'info_follow'
   | 'info_youtube_title'
+  // Donate page
+  | 'donate_contact_prefix'
+  | 'donate_telegram_label'
   // Correction warning
   | 'correction_warning_text'
   | 'correction_warning_link'
@@ -62,6 +65,10 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
       "This project also includes the Hebrew Bible (Tanakh) from the Masoretic Text, the authoritative Hebrew text of the Bible that has been meticulously preserved through centuries of careful transmission by Israel's scribes.",
     info_follow: 'Follow the project',
     info_youtube_title: "Yeshua the Messiah's Besorah",
+    // Donate page
+    donate_contact_prefix:
+      'if you wanna know other methods to donate please contact me on',
+    donate_telegram_label: 'telegram',
     correction_warning_text:
       'You may see errors in words, letters, or grammar. Help us improve',
     correction_warning_link: 'here',
@@ -98,6 +105,10 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
       'Este proyecto también incluye la Biblia hebrea (Tanaj) del Texto Masorético, el texto hebreo autorizado de la Biblia que ha sido meticulosamente preservado a través de siglos de transmisión cuidadosa por parte de escribas de Israel.',
     info_follow: 'Sigue el proyecto',
     info_youtube_title: 'La Besorah de Yeshúa el Mesías',
+    // Donate page
+    donate_contact_prefix:
+      'si quieres conocer otros métodos para donar por favor contáctame en',
+    donate_telegram_label: 'telegram',
     correction_warning_text:
       'Es posible que encuentres errores de palabras, letras o gramática. Ayúdanos a mejorar',
     correction_warning_link: 'aquí',
@@ -134,6 +145,9 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
       'פרויקט זה כולל גם את התנ״ך מהטקסט המסורתי, הטקסט העברי הרשמי של התנ״ך ששומר בקפידה במשך מאות שנים על ידי סופרי ישראל.',
     info_follow: 'עקבו אחרי הפרויקט',
     info_youtube_title: 'בְּשׂוֹרַת יֵשׁוּעַ הַמָּשִׁיחַ',
+    // Donate page
+    donate_contact_prefix: 'אם תרצה לדעת על דרכי תרומה נוספות, אפשר ליצור איתי קשר ב',
+    donate_telegram_label: 'טלגרם',
     correction_warning_text:
       'ייתכן שתראו שגיאות במילים, אותיות או דקדוק. עזרו לנו לשפר',
     correction_warning_link: 'כאן',

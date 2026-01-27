@@ -1,4 +1,6 @@
 import { DONATION_CONFIG } from '@/lib/config'
+import { Locale } from '@/lib/locale'
+import { t } from '@/lib/translations'
 import type { Metadata } from 'next'
 
 // Pre-render this page for all locales at build time
@@ -39,11 +41,23 @@ const TelegramIcon = ({ className }: { className?: string }) => (
   </svg>
 )
 
-export default function DonatePage() {
+interface PageProps {
+  params: Promise<{
+    locale: string
+  }>
+}
+
+export default async function DonatePage({ params }: PageProps) {
+  const { locale } = await params
+  const loc = locale as Locale
+  const isRTL = loc === 'he'
+
   return (
     <div className="min-h-[60vh] flex items-center justify-center">
       <div className="text-center">
-        <div className="space-y-6 font-ui-latin text-gray">
+        <div
+          className={`space-y-6 text-gray ${isRTL ? 'font-hebrew' : 'font-ui-latin'}`}
+        >
           {/* GitHub Sponsor */}
           <div className="flex items-center justify-center gap-3 text-lg">
             <div className="flex items-center gap-1">
@@ -61,11 +75,11 @@ export default function DonatePage() {
             </a>
           </div>
           <p className="text-sm text-gray/70">
-            if you wanna know other methods to donate please contact me on{' '}
+            {t('donate_contact_prefix', loc)}{' '}
             <span className="inline-flex items-center gap-2">
               <span className="inline-flex items-center gap-1 font-medium text-gray">
                 <TelegramIcon className="w-4 h-4" />
-                telegram
+                {t('donate_telegram_label', loc)}
               </span>
               <a
                 href="https://t.me/edyhvh"
