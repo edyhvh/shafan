@@ -1,16 +1,7 @@
-import { fileURLToPath } from 'node:url'
-import { dirname, join } from 'node:path'
-
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Ultra-minimalist configuration for shafan
   reactStrictMode: true,
-
-  // Fix for multiple lockfile detection
-  outputFileTracingRoot: join(__dirname, '../'),
 
   // Optimize for mobile and slow connections
   // Note: optimizeCss is now stable in Next.js 15, no longer experimental
