@@ -1,20 +1,35 @@
-# Default owners for the entire repository
+# CODEOWNERS - Code Review Assignments
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owner for everything in the repository
 * @edyhvh
 
 # Source of truth - JSON files in output directory
+# These contain the actual transcribed Hebrew texts
 /output/ @edyhvh
 
-# Frontend code
+# Frontend web application
 /frontend/ @edyhvh
 
-# Scripts and processing code
+# Processing scripts (PDF download, image extraction, AI transcription)
 /scripts/ @edyhvh
+
+# Python source code
+/src/ @edyhvh
+
+# Data files (source materials, references)
+/data/ @edyhvh
+
+# Documentation
+/docs/ @edyhvh
 
 # Project configuration files
 /setup.py @edyhvh
 /requirements.txt @edyhvh
 /Makefile @edyhvh
+/run.sh @edyhvh
 
-# GitHub configuration
+# GitHub configuration and workflows
 /.github/ @edyhvh
+
 

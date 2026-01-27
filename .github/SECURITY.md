@@ -1,57 +1,104 @@
-# Security Configuration
+# Security Policy
 
-## Current Protection
+## Current Security Configuration
 
 ### Branch Protection (`main`)
-- ✅ Require PR before merging (1 approval)
-- ✅ Require Code Owner review
-- ✅ Require status checks: `Validate JSON Files`, `Frontend Checks`, `Security Scan`
-- ✅ Require conversation resolution
-- ✅ No bypass allowed (includes administrators)
 
-### Code Owners
-Defined in `.github/CODEOWNERS`. `@edyhvh` must approve changes to:
-- `/output/` - JSON source files
-- `/frontend/` - Frontend code
-- `/scripts/` - Processing scripts
-- Configuration files
+Our main branch is protected with the following rules:
+
+- ✅ **Pull Request Required** — All changes must go through PR with at least 1 approval
+- ✅ **Code Owner Review** — Changes to critical paths require `@edyhvh` approval (see [CODEOWNERS](.github/CODEOWNERS))
+- ✅ **Status Checks** — Must pass before merging:
+  - `Validate JSON Files` — Ensures data integrity
+  - `Frontend Checks` — Linting and type checking
+  - `Security Scan` — Dependency vulnerability checks
+- ✅ **Conversation Resolution** — All PR comments must be resolved
+- ✅ **No Bypass** — Administrators cannot bypass these rules
+
+### Code Ownership
+
+Defined in [`.github/CODEOWNERS`](.github/CODEOWNERS). The following paths require review by `@edyhvh`:
+
+- `/output/` — JSON source files (single source of truth for all texts)
+- `/frontend/` — Web application code
+- `/scripts/` — Text processing and AI transcription pipelines
+- Configuration files (`setup.py`, `requirements.txt`, `Makefile`)
 
 ### Automated Security
-- ✅ **Dependabot**: Weekly dependency updates (`.github/dependabot.yml`)
-- ✅ **Security Scan**: npm audit + pip-audit in PR checks workflow
-- ✅ **Workflow Permissions**: Restricted to read-only + PR comments/checks
+
+- ✅ **Dependabot** — Weekly automated dependency updates (configured in [`.github/dependabot.yml`](.github/dependabot.yml))
+- ✅ **Security Scanning** — Both `npm audit` (frontend) and `pip-audit` (Python) run on every PR
+- ✅ **Workflow Permissions** — GitHub Actions restricted to read-only access + PR comments/checks only
 
 ### Workflow Approval
-- ✅ **First-time contributors**: Require approval for workflows
-- ⚠️ **Workflow permissions**: Set to "Read and write" in GitHub Settings → Actions
 
-## Manual Setup Required
+- ✅ **First-time Contributors** — Workflow runs require manual approval for new contributors
+- ⚠️ **Workflow Permissions** — Currently set to "Read and write" (required for automated PR updates)
+
+## Manual Setup (For Repository Admins)
 
 ### 1. Workflow Permissions
-Go to: `https://github.com/edyhvh/shafan/settings/actions`
 
-- **Workflow permissions**: Select "Read and write permissions"
-- **Save**
+Navigate to: `https://github.com/edyhvh/shafan/settings/actions`
 
-### 2. Signed Commits (Optional)
-1. Generate GPG key: `gpg --full-generate-key`
-2. Export: `gpg --armor --export YOUR_KEY_ID`
-3. Add to GitHub: Settings → SSH and GPG keys
-4. Configure Git: `git config --global commit.gpgsign true`
-5. Enable in branch protection: Settings → Branches → Require signed commits
+- Set **Workflow permissions** to "Read and write permissions"
+- Enable "Allow GitHub Actions to create and approve pull requests"
+- Click **Save**
+
+### 2. Signed Commits (Recommended but Optional)
+
+```bash
+# Generate GPG key
+gpg --full-generate-key
+
+# Export public key
+gpg --armor --export YOUR_KEY_ID
+
+# Add to GitHub: Settings → SSH and GPG keys
+
+# Configure Git to sign commits
+git config --global commit.gpgsign true
+```
+
+Then enable in GitHub: Settings → Branches → Edit rule → Require signed commits
 
 ## Security Checklist
 
-- [x] Branch protection enabled
-- [x] CODEOWNERS configured
-- [x] Automated security scanning
-- [x] Dependabot enabled
-- [x] Restrictive workflow permissions
-- [x] Workflow approval for first-time contributors
-- [ ] Workflow permissions: "Read and write" (needs update)
-- [ ] Signed commits required (optional)
-- [x] Secrets properly managed
+- [x] Branch protection enabled on `main`
+- [x] CODEOWNERS configured for critical paths
+- [x] Automated security scanning (npm audit + pip-audit)
+- [x] Dependabot enabled with weekly checks
+- [x] Restrictive workflow permissions (read-only by default)
+- [x] Workflow approval required for first-time contributors
+- [x] Secrets properly managed (no credentials in code)
+- [ ] Signed commits required (optional, not yet enforced)
 
-## Reporting Security Issues
+## Reporting Security Vulnerabilities
 
-**Do NOT** create public issues. Email security concerns directly.
+**Please do NOT create public issues for security vulnerabilities.**
+
+If you discover a security issue, please report it privately:
+
+1. **Email:** Contact `@edyhvh` directly through GitHub
+2. **Security Advisory:** Use GitHub's [private vulnerability reporting](https://github.com/edyhvh/shafan/security/advisories/new)
+
+You will receive a response within 48 hours. We appreciate responsible disclosure.
+
+## Data Integrity
+
+This project contains historical religious texts. Data integrity is critical:
+
+- All text corrections must be verified against [original manuscript images](https://huggingface.co/datasets/edyhvh/hutter)
+- JSON files in `/output/` are the single source of truth
+- See [CONTRIBUTING.md](.github/CONTRIBUTING.md) for the proper correction workflow
+
+## Supported Versions
+
+| Version | Supported          |
+| ------- | ------------------ |
+| main    | ✅ Active development |
+| other branches | ⚠️ Not monitored for security |
+
+---
+
+**Last Updated:** January 2026

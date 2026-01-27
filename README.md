@@ -1,17 +1,34 @@
-# shafan - Digital Edition of Elias Hutter's Hebrew Besorah
+# Shafan - שפן
 
-**shafan** is the first public, free, and completely open digital edition of the Hebrew translation of Besorah (New Testament) made by Elias Hutter in Nuremberg between 1599 and 1602—a historical text that for 426 years only existed in physical libraries or illegible scanned PDFs.
+**Shafan** is a comprehensive, free, and open-source platform for studying Hebrew Scriptures, featuring both the **Tanakh** (Hebrew Bible) and the **Besorah** (New Testament) with multiple Hebrew translations.
 
-## Data Sources
+The project brings together two significant Hebrew Besorah translations: **Elias Hutter's** groundbreaking 1599-1602 edition (digitized for the first time from historical manuscripts) and **Franz Delitzsch's** scholarly 19th-century translation. Combined with morphologically analyzed Tanakh texts, Shafan provides a modern digital interface for deep study of Hebrew Scriptures.
 
-### Tanaj (Hebrew Bible)
-The Tanaj data used in this project comes from the Open Scriptures Hebrew Bible project. We use the morphological analysis from [morphhb](https://github.com/openscriptures/morphhb), which provides lemma and morphology information for Hebrew Bible texts.
+This project combines digital humanities, computer vision, and AI to transform rare manuscript images and historical texts into a searchable, multilingual web application.
 
-### Besorah (Delitzsch)
-The Besorah data used in this project comes from Franz Delitzsch's Hebrew New Testament. We obtained the data from [hebrew-bible.github.io](https://github.com/hebrew-bible/hebrew-bible.github.io), which provides a complete Hebrew Bible including the New Testament.
+## What Makes This Special
 
-### Versification Mapping
-Versification mapping data is obtained from the [Copenhagen Alliance](https://github.com/Copenhagen-Alliance/copenhagen-alliance.github.io) project, which provides standardized mappings between Hebrew (Masoretic) and English (KJV-style) versification systems. This data is used to handle differences in verse numbering between Hebrew and English traditions, particularly for Tanakh books where verse numbers differ (e.g., Psalms where Hebrew counts psalm titles as verse 1, while English starts content as verse 1). The mapping data is processed and simplified for use in the frontend to enable accurate cross-referencing between Hebrew and English verse numbers.
+- **Comprehensive Hebrew Bible**: Complete Tanakh and Besorah in one unified platform
+- **Multiple Besorah Translations**: Features both Hutter (1599-1602) and Delitzsch Hebrew New Testament versions
+- **Historic Digitization**: First-ever digital edition of Hutter's 426-year-old manuscript, previously only in physical libraries
+- **AI-Powered Transcription**: Uses Claude AI to accurately transcribe complex Hebrew text with nikud from manuscript images
+- **Modern Web Interface**: Clean, responsive UI with Hebrew (RTL), Spanish, and English support
+- **Fully Open Source**: MIT licensed, complete processing pipeline and data included
+
+## Project Structure
+
+```
+shafan/
+├── scripts/           # Complete processing pipeline
+│   ├── pdf/          # Download historical PDFs
+│   ├── images/       # Convert to optimized images
+│   ├── hebrew_images/# Extract Hebrew text columns
+│   └── text/         # AI transcription to JSON
+├── frontend/         # Next.js web application
+├── output/           # Final structured JSON (source of truth)
+├── data/             # Source materials & references
+└── models/           # ML models (if training custom OCR)
+```
 
 ## Quick Start
 
@@ -20,9 +37,9 @@ Versification mapping data is obtained from the [Copenhagen Alliance](https://gi
 - **Python 3.12** (managed via mise)
 - **Node.js 20** (managed via mise)
 - **aria2** (for downloading PDFs): `brew install aria2`
-- **poppler** (for converting PDFs to images): `brew install poppler`
+- **poppler** (for PDF conversion): `brew install poppler`
 
-### Setup
+### Installation
 
 ```bash
 # Clone the repository
@@ -31,57 +48,118 @@ cd shafan
 
 # One-command setup (installs dependencies, creates virtual environment)
 python setup.py
+
+# Run the web interface
+cd frontend
+npm install
+npm run dev
 ```
 
-This will set up mise, install Python 3.12 + Node.js 20, create a virtual environment, install all dependencies, and configure direnv for automatic environment activation.
+Visit [http://localhost:3001](http://localhost:3001) to browse the Hebrew texts!
 
-## Workflow Overview
+## Data Sources
 
-The project follows a pipeline to convert historical PDF manuscripts into a digital edition:
+### Tanakh (Hebrew Bible)
 
-1. **Download PDFs** → Download source PDFs from the Hutter Polyglot Bible archive
-2. **Convert to Images** → Convert PDF pages to images optimized for OCR
-3. **Extract Hebrew Columns** → Extract the Hebrew text columns from manuscript pages
-4. **Transcribe Text** → Use AI to transcribe Hebrew text into structured JSON
-5. **Web Interface** → Browse and read the digital edition in the frontend
+- Morphological data from [Open Scriptures morphhb](https://github.com/openscriptures/morphhb)
+- Complete Hebrew Bible with lemma and morphology analysis
+- Masoretic text with vowel points (nikud) and cantillation marks
 
-## Detailed Documentation
+### Besorah - Hutter Edition (1599-1602)
 
-For detailed instructions and options for each step, see the README files in each directory:
+- Elias Hutter's Hebrew New Testament from his Polyglot Bible
+- Original manuscript PDFs from historical archives
+- AI-transcribed using Claude with manual verification
+- First digital edition of this historic translation
+- Manuscript images hosted on [Hugging Face](https://huggingface.co/datasets/edyhvh/hutter)
 
-- **[scripts/pdf/README.md](scripts/pdf/README.md)** - Downloading source PDFs
-- **[scripts/images/README.md](scripts/images/README.md)** - Converting PDFs to images
-- **[scripts/hebrew_images/README.md](scripts/hebrew_images/README.md)** - Extracting Hebrew text columns
-- **[scripts/text/README.md](scripts/text/README.md)** - Transcribing Hebrew text with AI
-- **[frontend/README.md](frontend/README.md)** - Running the web application
+### Besorah - Delitzsch Edition (19th century)
 
-## Quick Commands
+- Franz Delitzsch's scholarly Hebrew New Testament translation
+- Widely regarded as the standard modern Hebrew New Testament
+- Data from [hebrew-bible.github.io](https://github.com/hebrew-bible/hebrew-bible.github.io)
+
+### Versification Mapping
+
+- [Copenhagen Alliance](https://github.com/Copenhagen-Alliance/copenhagen-alliance.github.io) standardized mappings
+- Handles Hebrew (Masoretic) ↔ English (KJV) verse number differences
+- Critical for books like Psalms where numbering systems diverge
+
+## Processing Pipeline
+
+The project follows a complete pipeline to convert historical PDF manuscripts into a modern digital edition:
+
+1. **Download PDFs** → Fetch source PDFs from Hutter Polyglot Bible archive
+2. **Convert to Images** → Transform PDF pages to OCR-optimized images
+3. **Extract Hebrew Columns** → Isolate Hebrew text columns from manuscript pages
+4. **AI Transcription** → Use Claude AI to transcribe Hebrew with nikud into structured JSON
+5. **Web Interface** → Browse and study the texts in a modern, responsive web app
+
+### Pipeline Commands
 
 ```bash
-# Download PDFs
+# Step 1: Download source PDFs
 python -m scripts.pdf all
 
-# Convert PDFs to images
+# Step 2: Convert PDFs to images
 python -m scripts.images all
 
-# Extract Hebrew columns
+# Step 3: Extract Hebrew text columns
 python scripts/hebrew_images/main.py all
 
-# Transcribe text (requires API key)
+# Step 4: AI transcription (requires API key)
 export ANTHROPIC_API_KEY="your-api-key"
 python -m scripts.text --all
 
-# Run frontend
-cd frontend && npm run dev
+# Step 5: Run frontend
+cd frontend
+npm run dev
 ```
+
+## Detailed Documentation
+
+Each component has its own comprehensive README:
+
+- **[scripts/pdf/README.md](scripts/pdf/README.md)** — Downloading historical manuscript PDFs
+- **[scripts/images/README.md](scripts/images/README.md)** — Converting PDFs to optimized images
+- **[scripts/hebrew_images/README.md](scripts/hebrew_images/README.md)** — Extracting Hebrew text columns with computer vision
+- **[scripts/text/README.md](scripts/text/README.md)** — AI transcription with Claude
+- **[frontend/README.md](frontend/README.md)** — Web application setup and features
+
+## Contributing
+
+We welcome contributions! Whether you:
+
+- **Found a transcription error?** Report it or fix it
+- **Want to improve the code?** Submit a PR
+- **Have UI suggestions?** Open an issue
+- **Can help with translations?** We'd love your help
+
+See [CONTRIBUTING.md](.github/CONTRIBUTING.md) for detailed guidelines on how to help improve the text, verify corrections against original manuscripts, and contribute code.
 
 ## Training Dataset
 
-The extracted Hebrew text images used for model training are hosted on Hugging Face at [https://huggingface.co/datasets/edyhvh/hutter](https://huggingface.co/datasets/edyhvh/hutter) instead of GitHub to avoid repository bloat.
+The extracted Hebrew text images used for AI training and verification are hosted on Hugging Face at [edyhvh/hutter](https://huggingface.co/datasets/edyhvh/hutter) to keep the repository lightweight.
 
+## License
 
+MIT License - see [LICENSE](LICENSE) for details.
 
+## Acknowledgments
 
+- **Elias Hutter** (1553–1605) — Original translator and printer
+- **Open Scriptures** — Hebrew Bible morphological data
+- **Copenhagen Alliance** — Versification mapping standards
+- **Anthropic Claude** — AI transcription technology
+- **Moriah Betzalel and Lena Kamilkov** - Helped me catch and find error patterns when the AI transcribed Hutter's text, this text is not fully corrected yet but it's a good starting point.
+- All contributors who help verify and improve the texts
 
+---
 
+<div align="center">
 
+**Built for digital humanities and Biblical scholarship**
+
+[Report an Issue](https://github.com/edyhvh/shafan/issues) · [Request Feature](https://github.com/edyhvh/shafan/issues) · [View Demo](https://shafan.xyz)
+
+</div>
