@@ -151,7 +151,7 @@ MIT License - see [LICENSE](LICENSE) for details.
 - **Open Scriptures** — Hebrew Bible morphological data
 - **Copenhagen Alliance** — Versification mapping standards
 - **Anthropic Claude** — AI transcription technology
-- **Moriah Betzalel and Lena Kamilkov** - Help me catching and finding error patterns when the AI transcribed Hutter's text, this text is not fully corrected yet but it's a good starting point.
+- **Moriah Betzalel and Lena Kamilkov** - Helped me catch and find error patterns when the AI transcribed Hutter's text, this text is not fully corrected yet but it's a good starting point.
 - All contributors who help verify and improve the texts
 
 ---
