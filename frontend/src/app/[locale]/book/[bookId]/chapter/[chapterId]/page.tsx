@@ -1,17 +1,13 @@
 import { notFound } from 'next/navigation'
-import {
-  AVAILABLE_BOOKS,
-  BOOK_DISPLAY_NAMES,
-  isNewTestament,
-  type BookName,
-} from '@/lib/books'
+import { AVAILABLE_BOOKS, BOOK_DISPLAY_NAMES, type BookName } from '@/lib/books'
 import { loadBookServer } from '@/lib/books-server'
 import ChapterTitleSelector from '@/components/navigation/ChapterTitleSelector'
 import ChapterNavigation from '@/components/navigation/ChapterNavigation'
 import ChapterContent from '@/components/ChapterContent'
 import SaveLastBook from '@/components/navigation/SaveLastBook'
 import AuthorInfo from '@/components/AuthorInfo'
-import { locales } from '@/lib/locale'
+import { Locale, locales } from '@/lib/locale'
+import { t } from '@/lib/translations'
 
 export const revalidate = 604800
 
@@ -52,11 +48,10 @@ export async function generateMetadata({ params }: PageProps) {
     return {
       title: 'Shafan – Pure Hebrew for Scripture Study',
       description:
-        'Read Tanakh and Besorah in original Hebrew with nikud. Fast, clean, distraction-free for deep study.',
+        'Read Tanakh and Besorah in Hebrew. Fast, clean, distraction-free for deep study.',
       keywords: [
         'hebrew tanakh online',
         'besorah hebrew hutter',
-        'nikud toggle',
         'hebrew bible study',
         'tanakh hebrew text',
         'besorah hebrew',
@@ -65,7 +60,7 @@ export async function generateMetadata({ params }: PageProps) {
       openGraph: {
         title: 'Shafan – Pure Hebrew for Scripture Study',
         description:
-          'Read Tanakh and Besorah in original Hebrew with nikud. Fast, clean, distraction-free for deep study.',
+          'Read Tanakh and Besorah in Hebrew. Fast, clean, distraction-free for deep study.',
         type: 'website',
         url: 'https://shafan.xyz',
         images: [
@@ -79,7 +74,7 @@ export async function generateMetadata({ params }: PageProps) {
         card: 'summary_large_image',
         title: 'Shafan – Pure Hebrew for Scripture Study',
         description:
-          'Read Tanakh and Besorah in original Hebrew with nikud. Fast, clean, distraction-free for deep study.',
+          'Read Tanakh and Besorah in Hebrew. Fast, clean, distraction-free for deep study.',
         images: ['/og-image.png'],
       },
     }
@@ -92,11 +87,10 @@ export async function generateMetadata({ params }: PageProps) {
     return {
       title: 'Shafan – Pure Hebrew for Scripture Study',
       description:
-        'Read Tanakh and Besorah in original Hebrew with nikud. Fast, clean, distraction-free for deep study.',
+        'Read Tanakh and Besorah in Hebrew. Fast, clean, distraction-free for deep study.',
       keywords: [
         'hebrew tanakh online',
         'besorah hebrew hutter',
-        'nikud toggle',
         'hebrew bible study',
         'tanakh hebrew text',
         'besorah hebrew',
@@ -105,7 +99,7 @@ export async function generateMetadata({ params }: PageProps) {
       openGraph: {
         title: 'Shafan – Pure Hebrew for Scripture Study',
         description:
-          'Read Tanakh and Besorah in original Hebrew with nikud. Fast, clean, distraction-free for deep study.',
+          'Read Tanakh and Besorah in Hebrew. Fast, clean, distraction-free for deep study.',
         type: 'website',
         url: 'https://shafan.xyz',
         images: [
@@ -119,7 +113,7 @@ export async function generateMetadata({ params }: PageProps) {
         card: 'summary_large_image',
         title: 'Shafan – Pure Hebrew for Scripture Study',
         description:
-          'Read Tanakh and Besorah in original Hebrew with nikud. Fast, clean, distraction-free for deep study.',
+          'Read Tanakh and Besorah in Hebrew. Fast, clean, distraction-free for deep study.',
         images: ['/og-image.png'],
       },
     }
@@ -134,9 +128,10 @@ export async function generateMetadata({ params }: PageProps) {
   const bookDisplayName =
     displayName[locale as 'he' | 'es' | 'en'] || displayName.en
 
-  const testamentLabel = isNewTestament(bookName) ? 'Besorah' : 'Tanakh'
-  const pageTitle = `${bookDisplayName} ${chapterNumber} – Original Hebrew with Nikud | Shafan`
-  const description = `Read ${bookDisplayName} ${chapterNumber} in original Hebrew with nikud. Fast, clean ${testamentLabel} study with distraction-free text.`
+  const hebrewBibleLabel = t('hebrew_bible_title', locale as Locale)
+  const pageTitle = `${bookDisplayName} ${chapterNumber} – ${hebrewBibleLabel}`
+  const description =
+    'Read Tanakh and Besorah in Hebrew. Fast, clean, distraction-free for deep study.'
   const canonicalUrl = `https://shafan.xyz/${locale}/book/${bookId}/chapter/${chapterNumber}`
 
   return {
@@ -145,8 +140,6 @@ export async function generateMetadata({ params }: PageProps) {
     keywords: [
       `${bookDisplayName} ${chapterNumber}`,
       `${bookDisplayName} Hebrew`,
-      'original hebrew with nikud',
-      'nikud toggle',
       'hebrew tanakh online',
       'besorah hebrew hutter',
     ],

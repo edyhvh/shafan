@@ -7,7 +7,7 @@ const BRAND_TITLE = `${BRAND_NAME} – Pure Hebrew for Scripture Study`
 export const metadata: Metadata = {
   title: BRAND_NAME,
   description:
-    'Read Tanakh and Besorah in original Hebrew with nikud. Fast, clean, distraction-free for deep study.',
+    'Read Tanakh and Besorah in Hebrew. Fast, clean, distraction-free for deep study.',
   metadataBase: new URL('https://shafan.xyz'),
   keywords: [
     'hebrew tanakh online',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: BRAND_TITLE,
     description:
-      'Read Tanakh and Besorah in original Hebrew with or without nikud. Fast, clean, distraction-free for deep study.',
+      'Read Tanakh and Besorah in Hebrew. Fast, clean, distraction-free for deep study.',
     type: 'website',
     url: 'https://shafan.xyz',
     images: [
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: BRAND_TITLE,
     description:
-      'Read Tanakh and Besorah in original Hebrew with nikud. Fast, clean, distraction-free for deep study.',
+      'Read Tanakh and Besorah in Hebrew. Fast, clean, distraction-free for deep study.',
     images: ['/og-image.png'],
   },
   icons: {
