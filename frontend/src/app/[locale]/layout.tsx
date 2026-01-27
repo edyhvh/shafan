@@ -9,6 +9,8 @@ import {
 import '../globals.css'
 import Navbar from '@/components/Navbar'
 import CorrectionWarning from '@/components/CorrectionWarning'
+import { Locale } from '@/lib/locale'
+import { t } from '@/lib/translations'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -41,14 +43,24 @@ const assistant = Assistant({
 })
 
 export async function generateMetadata({
-  params: _params,
+  params,
 }: {
   params: Promise<{ locale: string }>
 }): Promise<Metadata> {
+  const brandName = 'shafan'
+  const { locale } = await params
+  const loc = (locale || 'he') as Locale
+  const description = t('site_meta_description', loc)
+  const canonicalUrl = `https://shafan.xyz/${loc}`
+  const openGraphLocaleMap: Record<Locale, string> = {
+    en: 'en_US',
+    es: 'es_ES',
+    he: 'he_IL',
+  }
+
   return {
-    title: 'Safan – Pure Hebrew for Scripture Study',
-    description:
-      'Read Tanakh and Besorah in original Hebrew with nikud. Fast, clean, distraction-free for deep study.',
+    title: brandName,
+    description,
     metadataBase: new URL('https://shafan.xyz'),
     keywords: [
       'hebrew tanakh online',
@@ -62,24 +74,31 @@ export async function generateMetadata({
       index: true,
       follow: true,
     },
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        en: 'https://shafan.xyz/en',
+        es: 'https://shafan.xyz/es',
+        he: 'https://shafan.xyz/he',
+      },
+    },
     openGraph: {
-      title: 'Safan – Pure Hebrew for Scripture Study',
-      description:
-        'Read Tanakh and Besorah in original Hebrew with nikud. Fast, clean, distraction-free for deep study.',
+      title: brandName,
+      description,
       type: 'website',
-      url: 'https://shafan.xyz',
+      url: canonicalUrl,
+      locale: openGraphLocaleMap[loc],
       images: [
         {
           url: '/og-image.png',
-          alt: 'Safan – Pure Hebrew for Scripture Study',
+          alt: brandName,
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Safan – Pure Hebrew for Scripture Study',
-      description:
-        'Read Tanakh and Besorah in original Hebrew with nikud. Fast, clean, distraction-free for deep study.',
+      title: brandName,
+      description,
       images: ['/og-image.png'],
     },
   }

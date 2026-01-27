@@ -1,8 +1,11 @@
 import type { Metadata } from 'next'
 
+const BRAND_NAME = 'shafan'
+const BRAND_TITLE = `${BRAND_NAME} – Pure Hebrew for Scripture Study`
+
 // Root layout - locale detection and redirects are handled by middleware.ts
 export const metadata: Metadata = {
-  title: 'shafan.xyz',
+  title: BRAND_NAME,
   description:
     'Read Tanakh and Besorah in original Hebrew with nikud. Fast, clean, distraction-free for deep study.',
   metadataBase: new URL('https://shafan.xyz'),
@@ -32,7 +35,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: 'Safan – Pure Hebrew for Scripture Study',
+    title: BRAND_TITLE,
     description:
       'Read Tanakh and Besorah in original Hebrew with or without nikud. Fast, clean, distraction-free for deep study.',
     type: 'website',
@@ -40,13 +43,13 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/og-image.png',
-        alt: 'Safan – Pure Hebrew for Scripture Study',
+        alt: BRAND_TITLE,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Safan – Pure Hebrew for Scripture Study',
+    title: BRAND_TITLE,
     description:
       'Read Tanakh and Besorah in original Hebrew with nikud. Fast, clean, distraction-free for deep study.',
     images: ['/og-image.png'],

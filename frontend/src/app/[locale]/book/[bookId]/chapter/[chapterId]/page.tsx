@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: PageProps) {
   // Runtime validation to prevent path traversal attacks
   if (!AVAILABLE_BOOKS.includes(bookId as BookName)) {
     return {
-      title: 'Safan – Pure Hebrew for Scripture Study',
+      title: 'Shafan – Pure Hebrew for Scripture Study',
       description:
         'Read Tanakh and Besorah in original Hebrew with nikud. Fast, clean, distraction-free for deep study.',
       keywords: [
@@ -63,7 +63,7 @@ export async function generateMetadata({ params }: PageProps) {
       ],
       robots: { index: true, follow: true },
       openGraph: {
-        title: 'Safan – Pure Hebrew for Scripture Study',
+        title: 'Shafan – Pure Hebrew for Scripture Study',
         description:
           'Read Tanakh and Besorah in original Hebrew with nikud. Fast, clean, distraction-free for deep study.',
         type: 'website',
@@ -71,13 +71,13 @@ export async function generateMetadata({ params }: PageProps) {
         images: [
           {
             url: '/og-image.png',
-            alt: 'Safan – Pure Hebrew for Scripture Study',
+            alt: 'Shafan – Pure Hebrew for Scripture Study',
           },
         ],
       },
       twitter: {
         card: 'summary_large_image',
-        title: 'Safan – Pure Hebrew for Scripture Study',
+        title: 'Shafan – Pure Hebrew for Scripture Study',
         description:
           'Read Tanakh and Besorah in original Hebrew with nikud. Fast, clean, distraction-free for deep study.',
         images: ['/og-image.png'],
@@ -90,7 +90,7 @@ export async function generateMetadata({ params }: PageProps) {
 
   if (isNaN(chapterNumber) || chapterNumber < 1) {
     return {
-      title: 'Safan – Pure Hebrew for Scripture Study',
+      title: 'Shafan – Pure Hebrew for Scripture Study',
       description:
         'Read Tanakh and Besorah in original Hebrew with nikud. Fast, clean, distraction-free for deep study.',
       keywords: [
@@ -103,7 +103,7 @@ export async function generateMetadata({ params }: PageProps) {
       ],
       robots: { index: true, follow: true },
       openGraph: {
-        title: 'Safan – Pure Hebrew for Scripture Study',
+        title: 'Shafan – Pure Hebrew for Scripture Study',
         description:
           'Read Tanakh and Besorah in original Hebrew with nikud. Fast, clean, distraction-free for deep study.',
         type: 'website',
@@ -111,13 +111,13 @@ export async function generateMetadata({ params }: PageProps) {
         images: [
           {
             url: '/og-image.png',
-            alt: 'Safan – Pure Hebrew for Scripture Study',
+            alt: 'Shafan – Pure Hebrew for Scripture Study',
           },
         ],
       },
       twitter: {
         card: 'summary_large_image',
-        title: 'Safan – Pure Hebrew for Scripture Study',
+        title: 'Shafan – Pure Hebrew for Scripture Study',
         description:
           'Read Tanakh and Besorah in original Hebrew with nikud. Fast, clean, distraction-free for deep study.',
         images: ['/og-image.png'],
@@ -135,7 +135,7 @@ export async function generateMetadata({ params }: PageProps) {
     displayName[locale as 'he' | 'es' | 'en'] || displayName.en
 
   const testamentLabel = isNewTestament(bookName) ? 'Besorah' : 'Tanakh'
-  const pageTitle = `${bookDisplayName} ${chapterNumber} – Original Hebrew with Nikud | Safan`
+  const pageTitle = `${bookDisplayName} ${chapterNumber} – Original Hebrew with Nikud | Shafan`
   const description = `Read ${bookDisplayName} ${chapterNumber} in original Hebrew with nikud. Fast, clean ${testamentLabel} study with distraction-free text.`
   const canonicalUrl = `https://shafan.xyz/${locale}/book/${bookId}/chapter/${chapterNumber}`
 
@@ -162,7 +162,7 @@ export async function generateMetadata({ params }: PageProps) {
       images: [
         {
           url: '/og-image.png',
-          alt: 'Safan – Pure Hebrew for Scripture Study',
+          alt: 'Shafan – Pure Hebrew for Scripture Study',
         },
       ],
     },

@@ -8,8 +8,42 @@ export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'es' }, { locale: 'he' }]
 }
 
-export const metadata: Metadata = {
-  title: 'Shafan',
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const loc = locale as Locale
+  const title = t('donate_meta_title', loc)
+  const description = t('donate_meta_description', loc)
+  const canonicalUrl = `https://shafan.xyz/${loc}/donate`
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      url: canonicalUrl,
+      images: [
+        {
+          url: '/og-image.png',
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: ['/og-image.png'],
+    },
+  }
 }
 
 // Inline SVG icons - rendered on server, no client JS needed

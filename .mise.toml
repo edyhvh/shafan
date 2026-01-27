@@ -1,4 +1,4 @@
-# SAFAN Environment Configuration
+# SHAFAN Environment Configuration
 # Full-stack project: Python (OCR backend) + Node.js (Next.js frontend)
 [tools]
 python = "3.12"

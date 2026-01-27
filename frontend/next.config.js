@@ -1,7 +1,16 @@
+import { fileURLToPath } from 'node:url'
+
+const __dirname = fileURLToPath(new URL('.', import.meta.url))
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Ultra-minimalist configuration for shafan
   reactStrictMode: true,
+
+  // Explicit workspace root to avoid multi-lockfile warning
+  turbopack: {
+    root: __dirname,
+  },
 
   // Optimize for mobile and slow connections
   // Note: optimizeCss is now stable in Next.js 15, no longer experimental
