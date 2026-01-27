@@ -13,6 +13,20 @@ const nextConfig = {
   // Static optimization - remove standalone for Vercel compatibility
   // output: 'standalone',
 
+  // Optimize bundle size and serverless functions
+  experimental: {
+    // Optimize server components bundle size
+    optimizePackageImports: ['react', 'react-dom'],
+  },
+
+  // Reduce serverless function size by optimizing imports
+  modularizeImports: {
+    '@/lib/books': {
+      transform: '@/lib/books',
+      skipDefaultConversion: true,
+    },
+  },
+
   // Security headers for production
   async headers() {
     return [

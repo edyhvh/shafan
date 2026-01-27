@@ -11,25 +11,22 @@ import { t } from '@/lib/translations'
 
 export const revalidate = 604800
 
+// Generate only the first chapter of each book for initial build
+// Other pages will be generated on-demand (ISR) to reduce deployment size
 export async function generateStaticParams() {
-  const bookData = await Promise.all(
-    AVAILABLE_BOOKS.map(async (bookId) => {
-      const book = await loadBookServer(bookId)
-      const chapterCount = book?.chapters.length ?? 0
-      return { bookId, chapterCount }
-    })
-  )
-
-  return bookData.flatMap(({ bookId, chapterCount }) =>
-    locales.flatMap((locale) =>
-      Array.from({ length: chapterCount }, (_, index) => ({
-        locale,
-        bookId,
-        chapterId: String(index + 1),
-      }))
-    )
+  // Only pre-generate first chapter of each book
+  // This dramatically reduces build size while still enabling SSG
+  return AVAILABLE_BOOKS.flatMap((bookId) =>
+    locales.map((locale) => ({
+      locale,
+      bookId,
+      chapterId: '1',
+    }))
   )
 }
+
+// Enable dynamic params for on-demand generation
+export const dynamicParams = true
 
 interface PageProps {
   params: Promise<{

@@ -21,33 +21,23 @@ export async function loadBookServer(bookName: BookName): Promise<Book | null> {
     const fs = await import('fs')
     const path = await import('path')
 
-    // Try public/data first, then fallback to output directory
+    // Only read from public/data directory
+    // This prevents Next.js file tracing from including the parent output directory
     const publicDataPath = path.join(
       process.cwd(),
       'public',
       'data',
       `${bookName}.json`
     )
-    const outputPath = path.join(
-      process.cwd(),
-      '..',
-      'output',
-      `${bookName}.json`
-    )
 
-    let filePath = publicDataPath
     if (!fs.existsSync(publicDataPath)) {
-      if (fs.existsSync(outputPath)) {
-        filePath = outputPath
-      } else {
-        logger.error(`Book file not found: ${bookName}.json`, undefined, {
-          bookName,
-        })
-        return null
-      }
+      logger.error(`Book file not found: ${bookName}.json`, undefined, {
+        bookName,
+      })
+      return null
     }
 
-    const fileContents = fs.readFileSync(filePath, 'utf-8')
+    const fileContents = fs.readFileSync(publicDataPath, 'utf-8')
     const data: Book = JSON.parse(fileContents)
     return data
   } catch (error) {
