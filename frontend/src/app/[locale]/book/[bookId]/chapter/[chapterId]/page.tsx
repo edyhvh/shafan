@@ -60,10 +60,14 @@ export async function generateMetadata({ params }: PageProps) {
           'Read Tanakh and Besorah in Hebrew. Fast, clean, distraction-free for deep study.',
         type: 'website',
         url: 'https://shafan.xyz',
+        siteName: 'Shafan',
         images: [
           {
-            url: '/og-image.png',
+            url: 'https://shafan.xyz/og-image.png',
+            width: 1200,
+            height: 630,
             alt: 'Shafan – Bible in Hebrew for Scripture Study',
+            type: 'image/png',
           },
         ],
       },
@@ -72,7 +76,9 @@ export async function generateMetadata({ params }: PageProps) {
         title: 'Shafan – Bible in Hebrew for Scripture Study',
         description:
           'Read Tanakh and Besorah in Hebrew. Fast, clean, distraction-free for deep study.',
-        images: ['/og-image.png'],
+        images: ['https://shafan.xyz/og-image.png'],
+        site: '@shafanxyz',
+        creator: '@shafanxyz',
       },
     }
   }
@@ -99,10 +105,14 @@ export async function generateMetadata({ params }: PageProps) {
           'Read Tanakh and Besorah in Hebrew. Fast, clean, distraction-free for deep study.',
         type: 'website',
         url: 'https://shafan.xyz',
+        siteName: 'Shafan',
         images: [
           {
-            url: '/og-image.png',
+            url: 'https://shafan.xyz/og-image.png',
+            width: 1200,
+            height: 630,
             alt: 'Shafan – Pure Hebrew for Scripture Study',
+            type: 'image/png',
           },
         ],
       },
@@ -111,7 +121,9 @@ export async function generateMetadata({ params }: PageProps) {
         title: 'Shafan – Pure Hebrew for Scripture Study',
         description:
           'Read Tanakh and Besorah in Hebrew. Fast, clean, distraction-free for deep study.',
-        images: ['/og-image.png'],
+        images: ['https://shafan.xyz/og-image.png'],
+        site: '@shafanxyz',
+        creator: '@shafanxyz',
       },
     }
   }
@@ -147,12 +159,16 @@ export async function generateMetadata({ params }: PageProps) {
     openGraph: {
       title: pageTitle,
       description,
-      type: 'website',
+      type: 'article',
       url: canonicalUrl,
+      siteName: 'Shafan',
       images: [
         {
-          url: '/og-image.png',
+          url: 'https://shafan.xyz/og-image.png',
+          width: 1200,
+          height: 630,
           alt: 'Shafan – Pure Hebrew for Scripture Study',
+          type: 'image/png',
         },
       ],
     },
@@ -160,7 +176,9 @@ export async function generateMetadata({ params }: PageProps) {
       card: 'summary_large_image',
       title: pageTitle,
       description,
-      images: ['/og-image.png'],
+      images: ['https://shafan.xyz/og-image.png'],
+      site: '@shafanxyz',
+      creator: '@shafanxyz',
     },
   }
 }
@@ -203,8 +221,72 @@ export default async function BookChapterPage({ params }: PageProps) {
   const bookDisplayName =
     displayName[locale as 'he' | 'es' | 'en'] || displayName.en
 
+  // Generate JSON-LD structured data
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: `${bookDisplayName} ${chapterNumber}`,
+    description:
+      'Read Tanakh and Besorah in Hebrew. Fast, clean, distraction-free for deep study.',
+    url: `https://shafan.xyz/${locale}/book/${bookId}/chapter/${chapterNumber}`,
+    image: 'https://shafan.xyz/og-image.png',
+    author: {
+      '@type': 'Organization',
+      name: 'Shafan',
+      url: 'https://shafan.xyz',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Shafan',
+      url: 'https://shafan.xyz',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://shafan.xyz/icon.svg',
+      },
+    },
+    inLanguage: locale,
+    isPartOf: {
+      '@type': 'Book',
+      name: bookDisplayName,
+    },
+  }
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: `https://shafan.xyz/${locale}`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: bookDisplayName,
+        item: `https://shafan.xyz/${locale}/book/${bookId}/chapter/1`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: `${bookDisplayName} ${chapterNumber}`,
+        item: `https://shafan.xyz/${locale}/book/${bookId}/chapter/${chapterNumber}`,
+      },
+    ],
+  }
+
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* Save current location to localStorage for "Back to reading" feature */}
       <SaveLastBook bookId={bookId} chapterId={chapterId} />
 

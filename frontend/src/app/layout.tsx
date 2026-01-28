@@ -40,10 +40,14 @@ export const metadata: Metadata = {
       'Read Tanakh and Besorah in Hebrew. Fast, clean, distraction-free for deep study.',
     type: 'website',
     url: 'https://shafan.xyz',
+    siteName: 'Shafan',
     images: [
       {
-        url: '/og-image.png',
+        url: 'https://shafan.xyz/og-image.png',
+        width: 1200,
+        height: 630,
         alt: BRAND_TITLE,
+        type: 'image/png',
       },
     ],
   },
@@ -52,7 +56,9 @@ export const metadata: Metadata = {
     title: BRAND_TITLE,
     description:
       'Read Tanakh and Besorah in Hebrew. Fast, clean, distraction-free for deep study.',
-    images: ['/og-image.png'],
+    images: ['https://shafan.xyz/og-image.png'],
+    site: '@shafanxyz',
+    creator: '@shafanxyz',
   },
   icons: {
     icon: '/icon.svg',

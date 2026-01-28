@@ -87,11 +87,15 @@ export async function generateMetadata({
       description,
       type: 'website',
       url: canonicalUrl,
+      siteName: 'Shafan',
       locale: openGraphLocaleMap[loc],
       images: [
         {
-          url: '/og-image.png',
+          url: 'https://shafan.xyz/og-image.png',
+          width: 1200,
+          height: 630,
           alt: brandName,
+          type: 'image/png',
         },
       ],
     },
@@ -99,7 +103,9 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: brandName,
       description,
-      images: ['/og-image.png'],
+      images: ['https://shafan.xyz/og-image.png'],
+      site: '@shafanxyz',
+      creator: '@shafanxyz',
     },
   }
 }
