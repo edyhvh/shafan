@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
+import { BRAND_CONFIG } from '@/lib/config'
 
-const BRAND_NAME = 'shafan'
+const BRAND_NAME = BRAND_CONFIG.name
 const BRAND_TITLE = `${BRAND_NAME} – Pure Hebrew for Scripture Study`
-const SOCIAL_IMAGE_URL = 'https://shafan.xyz/banner.png'
+const SOCIAL_IMAGE_URL = BRAND_CONFIG.socialImageUrl
 
 // Root layout - locale detection and redirects are handled by middleware.ts
 export const metadata: Metadata = {

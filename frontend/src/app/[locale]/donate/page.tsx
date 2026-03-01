@@ -1,9 +1,9 @@
-import { DONATION_CONFIG } from '@/lib/config'
+import { DONATION_CONFIG, BRAND_CONFIG } from '@/lib/config'
 import { Locale } from '@/lib/locale'
 import { t } from '@/lib/translations'
 import type { Metadata } from 'next'
 
-const SOCIAL_IMAGE_URL = 'https://shafan.xyz/banner.png'
+const SOCIAL_IMAGE_URL = BRAND_CONFIG.socialImageUrl
 
 // Pre-render this page for all locales at build time
 export function generateStaticParams() {

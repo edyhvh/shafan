@@ -7,9 +7,10 @@ import ChapterContent from '@/components/ChapterContent'
 import SaveLastBook from '@/components/navigation/SaveLastBook'
 import AuthorInfo from '@/components/AuthorInfo'
 import { locales } from '@/lib/locale'
+import { BRAND_CONFIG } from '@/lib/config'
 
 export const revalidate = 604800
-const SOCIAL_IMAGE_URL = 'https://shafan.xyz/banner.png'
+const SOCIAL_IMAGE_URL = BRAND_CONFIG.socialImageUrl
 
 // Generate only the first chapter of each book for initial build
 // Other pages will be generated on-demand (ISR) to reduce deployment size

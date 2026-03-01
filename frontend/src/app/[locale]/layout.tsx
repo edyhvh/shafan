@@ -11,6 +11,7 @@ import Navbar from '@/components/Navbar'
 import CorrectionWarning from '@/components/CorrectionWarning'
 import { Locale } from '@/lib/locale'
 import { t } from '@/lib/translations'
+import { BRAND_CONFIG } from '@/lib/config'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -42,7 +43,7 @@ const assistant = Assistant({
   weight: ['400', '600'],
 })
 
-const SOCIAL_IMAGE_URL = 'https://shafan.xyz/banner.png'
+const SOCIAL_IMAGE_URL = BRAND_CONFIG.socialImageUrl
 
 export async function generateMetadata({
   params,
