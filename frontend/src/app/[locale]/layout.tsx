@@ -42,6 +42,8 @@ const assistant = Assistant({
   weight: ['400', '600'],
 })
 
+const SOCIAL_IMAGE_URL = 'https://shafan.xyz/banner.png'
+
 export async function generateMetadata({
   params,
 }: {
@@ -91,7 +93,7 @@ export async function generateMetadata({
       locale: openGraphLocaleMap[loc],
       images: [
         {
-          url: 'https://shafan.xyz/og-image.png',
+          url: SOCIAL_IMAGE_URL,
           width: 1200,
           height: 630,
           alt: brandName,
@@ -103,7 +105,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: brandName,
       description,
-      images: ['https://shafan.xyz/og-image.png'],
+      images: [SOCIAL_IMAGE_URL],
       site: '@shafanxyz',
       creator: '@shafanxyz',
     },
@@ -133,8 +135,8 @@ export default async function LocaleLayout({
       suppressHydrationWarning
     >
       <head>
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="shortcut icon" href="/icon.svg" />
+        <link rel="icon" href="/icon.png?v=2" type="image/png" />
+        <link rel="shortcut icon" href="/icon.png?v=2" />
         <script
           dangerouslySetInnerHTML={{
             __html: `

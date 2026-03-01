@@ -10,6 +10,7 @@ import { Locale, locales } from '@/lib/locale'
 import { t } from '@/lib/translations'
 
 export const revalidate = 604800
+const SOCIAL_IMAGE_URL = 'https://shafan.xyz/banner.png'
 
 // Generate only the first chapter of each book for initial build
 // Other pages will be generated on-demand (ISR) to reduce deployment size
@@ -63,7 +64,7 @@ export async function generateMetadata({ params }: PageProps) {
         siteName: 'Shafan',
         images: [
           {
-            url: 'https://shafan.xyz/og-image.png',
+            url: SOCIAL_IMAGE_URL,
             width: 1200,
             height: 630,
             alt: 'Shafan – Bible in Hebrew for Scripture Study',
@@ -76,7 +77,7 @@ export async function generateMetadata({ params }: PageProps) {
         title: 'Shafan – Bible in Hebrew for Scripture Study',
         description:
           'Read Tanakh and Besorah in Hebrew. Fast, clean, distraction-free for deep study.',
-        images: ['https://shafan.xyz/og-image.png'],
+        images: [SOCIAL_IMAGE_URL],
         site: '@shafanxyz',
         creator: '@shafanxyz',
       },
@@ -108,7 +109,7 @@ export async function generateMetadata({ params }: PageProps) {
         siteName: 'Shafan',
         images: [
           {
-            url: 'https://shafan.xyz/og-image.png',
+            url: SOCIAL_IMAGE_URL,
             width: 1200,
             height: 630,
             alt: 'Shafan – Pure Hebrew for Scripture Study',
@@ -121,7 +122,7 @@ export async function generateMetadata({ params }: PageProps) {
         title: 'Shafan – Pure Hebrew for Scripture Study',
         description:
           'Read Tanakh and Besorah in Hebrew. Fast, clean, distraction-free for deep study.',
-        images: ['https://shafan.xyz/og-image.png'],
+        images: [SOCIAL_IMAGE_URL],
         site: '@shafanxyz',
         creator: '@shafanxyz',
       },
@@ -164,7 +165,7 @@ export async function generateMetadata({ params }: PageProps) {
       siteName: 'Shafan',
       images: [
         {
-          url: 'https://shafan.xyz/og-image.png',
+          url: SOCIAL_IMAGE_URL,
           width: 1200,
           height: 630,
           alt: 'Shafan – Pure Hebrew for Scripture Study',
@@ -176,7 +177,7 @@ export async function generateMetadata({ params }: PageProps) {
       card: 'summary_large_image',
       title: pageTitle,
       description,
-      images: ['https://shafan.xyz/og-image.png'],
+      images: [SOCIAL_IMAGE_URL],
       site: '@shafanxyz',
       creator: '@shafanxyz',
     },
@@ -229,7 +230,7 @@ export default async function BookChapterPage({ params }: PageProps) {
     description:
       'Read Tanakh and Besorah in Hebrew. Fast, clean, distraction-free for deep study.',
     url: `https://shafan.xyz/${locale}/book/${bookId}/chapter/${chapterNumber}`,
-    image: 'https://shafan.xyz/og-image.png',
+    image: SOCIAL_IMAGE_URL,
     author: {
       '@type': 'Organization',
       name: 'Shafan',
@@ -241,7 +242,7 @@ export default async function BookChapterPage({ params }: PageProps) {
       url: 'https://shafan.xyz',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://shafan.xyz/icon.svg',
+        url: 'https://shafan.xyz/icon.png',
       },
     },
     inLanguage: locale,

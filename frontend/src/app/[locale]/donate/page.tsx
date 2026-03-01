@@ -3,6 +3,8 @@ import { Locale } from '@/lib/locale'
 import { t } from '@/lib/translations'
 import type { Metadata } from 'next'
 
+const SOCIAL_IMAGE_URL = 'https://shafan.xyz/banner.png'
+
 // Pre-render this page for all locales at build time
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'es' }, { locale: 'he' }]
@@ -32,7 +34,7 @@ export async function generateMetadata({
       url: canonicalUrl,
       images: [
         {
-          url: '/og-image.png',
+          url: SOCIAL_IMAGE_URL,
           alt: title,
         },
       ],
@@ -41,7 +43,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title,
       description,
-      images: ['/og-image.png'],
+      images: [SOCIAL_IMAGE_URL],
     },
   }
 }
