@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 interface LogoProps {
   className?: string
   size?: 'default' | 'compact'
@@ -6,26 +8,20 @@ interface LogoProps {
 export default function Logo({ className = '', size = 'default' }: LogoProps) {
   const isCompact = size === 'compact'
 
-  const hebrewSize = isCompact
-    ? 'text-[20px] md:text-[22px]'
-    : 'text-[52px] md:text-[52px]'
-
-  const latinSize = isCompact
-    ? 'text-[18px] md:text-[20px]'
-    : 'text-[48px] md:text-[48px]'
-
-  const gap = isCompact ? 'gap-1' : 'gap-3'
+  const width = isCompact ? 28 : 120
+  const height = isCompact ? 28 : 120
+  const sizeClass = isCompact ? 'w-7 h-7' : 'w-[120px] h-[120px]'
 
   return (
-    <div className={`flex items-baseline ${gap} ${className}`}>
-      <span
-        className={`font-logo-hebrew ${hebrewSize} leading-[1.1] text-black`}
-      >
-        שפן
-      </span>
-      <span className={`font-logo-latin ${latinSize} leading-[1.1] text-black`}>
-        shafan
-      </span>
+    <div className={`flex items-center ${className}`}>
+      <Image
+        src="/logo.png"
+        alt="shafan"
+        width={width}
+        height={height}
+        priority={isCompact}
+        className={`${sizeClass} object-contain`}
+      />
     </div>
   )
 }

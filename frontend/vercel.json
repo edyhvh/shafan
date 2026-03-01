@@ -12,7 +12,7 @@
       ]
     },
     {
-      "source": "/(og-image\\.png|icon\\.svg|shafan_banner\\.png|favicon\\.ico)",
+      "source": "/(icon\\.png|logo\\.png|banner\\.png|favicon\\.ico)",
       "headers": [
         {
           "key": "Cache-Control",

@@ -1,5 +1,8 @@
 # SHAFAN Environment Configuration
 # Full-stack project: Python (OCR backend) + Node.js (Next.js frontend)
+[settings]
+env_shell_expand = false
+
 [tools]
 python = "3.12"
 node = "20"

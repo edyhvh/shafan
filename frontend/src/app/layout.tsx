@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
+import { BRAND_CONFIG } from '@/lib/config'
 
-const BRAND_NAME = 'shafan'
+const BRAND_NAME = BRAND_CONFIG.name
 const BRAND_TITLE = `${BRAND_NAME} – Pure Hebrew for Scripture Study`
+const SOCIAL_IMAGE_URL = BRAND_CONFIG.socialImageUrl
 
 // Root layout - locale detection and redirects are handled by middleware.ts
 export const metadata: Metadata = {
@@ -43,7 +45,7 @@ export const metadata: Metadata = {
     siteName: 'Shafan',
     images: [
       {
-        url: 'https://shafan.xyz/og-image.png',
+        url: SOCIAL_IMAGE_URL,
         width: 1200,
         height: 630,
         alt: BRAND_TITLE,
@@ -56,12 +58,13 @@ export const metadata: Metadata = {
     title: BRAND_TITLE,
     description:
       'Read Tanakh and Besorah in Hebrew. Fast, clean, distraction-free for deep study.',
-    images: ['https://shafan.xyz/og-image.png'],
+    images: [SOCIAL_IMAGE_URL],
     site: '@shafanxyz',
     creator: '@shafanxyz',
   },
   icons: {
-    icon: '/icon.svg',
+    icon: '/icon.png?v=2',
+    shortcut: '/icon.png?v=2',
   },
 }
 
@@ -72,8 +75,8 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <link rel="icon" type="image/svg+xml" href="/icon.svg" />
-      <link rel="shortcut icon" href="/icon.svg" />
+      <link rel="icon" type="image/png" href="/icon.png?v=2" />
+      <link rel="shortcut icon" href="/icon.png?v=2" />
       {children}
     </>
   )

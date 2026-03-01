@@ -36,14 +36,18 @@ function detectLocaleFromHeader(acceptLanguage: string): Locale {
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
+  const isStaticAsset = /\.(?:png|jpg|jpeg|gif|webp|svg|ico|txt|xml)$/i.test(
+    pathname
+  )
 
   // Skip proxy for static files and API routes
   if (
+    isStaticAsset ||
     pathname.startsWith('/_next') ||
     pathname.startsWith('/api') ||
     pathname.startsWith('/data') ||
     pathname.startsWith('/favicon.ico') ||
-    pathname === '/icon.svg'
+    pathname === '/icon.png'
   ) {
     return NextResponse.next()
   }
@@ -77,12 +81,12 @@ export const config = {
      * - _next/static (static files)
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
-     * - icon.svg (icon file)
+     * - icon.png (icon file)
      * - data (static JSON files)
      *
      * The pattern uses .*? to make the trailing part optional,
      * allowing it to match the root path '/' as well.
      */
-    '/((?!api|_next/static|_next/image|favicon.ico|icon.svg|data).*)?',
+    '/((?!api|_next/static|_next/image|favicon.ico|icon.png|data|.*\\.(?:png|jpg|jpeg|gif|webp|svg|ico|txt|xml)$).*)?',
   ],
 }
