@@ -13,7 +13,6 @@ type TranslationKey =
   | 'page_title'
   | 'site_meta_title'
   | 'site_meta_description'
-  | 'hebrew_bible_title'
   // Info page
   | 'info_title'
   | 'info_hutter_title'
@@ -51,10 +50,9 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     home: 'Home',
     nikud: 'Nikud',
     page_title: 'Hebrew Besorah',
-    site_meta_title: 'Shafan – Bible in Hebrew for Scripture Study',
+    site_meta_title: 'Shafan',
     site_meta_description:
       'Read Tanakh and Besorah in Hebrew. Fast, clean, distraction-free for deep study.',
-    hebrew_bible_title: 'Bible in Hebrew',
     // Info page
     info_title: 'Info',
     info_hutter_title: 'Who was Elias Hutter?',
@@ -98,10 +96,9 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     home: 'Inicio',
     nikud: 'Nikud',
     page_title: 'Besorah Hebrea',
-    site_meta_title: 'Shafan – Biblia en hebreo para estudio bíblico',
+    site_meta_title: 'Shafan',
     site_meta_description:
       'Lee Tanaj y Besorah en hebreo. Rápido, limpio y sin distracciones para un estudio profundo.',
-    hebrew_bible_title: 'Biblia en hebreo',
     // Info page
     info_title: 'Info',
     info_hutter_title: '¿Quién fue Elias Hutter?',
@@ -145,10 +142,9 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     home: 'בית',
     nikud: 'ניקוד',
     page_title: 'בְּשׂוֹרָה עברית',
-    site_meta_title: 'Shafan – עברית טהורה ללימוד המקרא',
+    site_meta_title: 'Shafan',
     site_meta_description:
       'קראו תנ״ך ובשורה בעברית. מהיר, נקי וללא הסחות ללימוד מעמיק.',
-    hebrew_bible_title: 'תנ״ך',
     // Info page
     info_title: 'מידע',
     info_hutter_title: 'מי היה אליאס הוטר?',
