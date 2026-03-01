@@ -81,7 +81,7 @@ export const config = {
      * - _next/static (static files)
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
-    * - icon.png (icon file)
+     * - icon.png (icon file)
      * - data (static JSON files)
      *
      * The pattern uses .*? to make the trailing part optional,
