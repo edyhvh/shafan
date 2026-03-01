@@ -20,7 +20,11 @@ import sys
 
 # Configuration
 VERSIFICATION_URL = "https://raw.githubusercontent.com/Copenhagen-Alliance/copenhagen-alliance.github.io/master/specifications/versification/versification-mappings/standard-mappings/eng.json"
-OUTPUT_PATH = pathlib.Path.home() / "shafan" / "frontend" / "public" / "data" / "versification" / "versification.json"
+ROOT_DIR = pathlib.Path(__file__).resolve().parents[2]
+OUTPUT_PATHS = [
+    ROOT_DIR / "frontend" / "public" / "data" / "versification" / "versification.json",
+    ROOT_DIR / "data" / "versification" / "versification.json",
+]
 
 # Tanakh books with versification differences between Hebrew (Masoretic) and English (KJV) traditions
 # The Copenhagen Alliance data shows equivalences, not errors - these are legitimate differences
@@ -53,6 +57,7 @@ TANAKH_BOOKS_WITH_DIFFERENCES = {
     "EZK": "ezekiel",     # Ezekiel - verse renumberings
     "DAN": "daniel",      # Daniel - verse renumberings
     "HOS": "hosea",       # Hosea - verse renumberings
+    "JOL": "joel",        # Joel - chapter shifts
     "AMO": "amos",        # Amos - verse differences
     "OBA": "obadiah",     # Obadiah - verse differences
     "JON": "jonah",       # Jonah - verse renumberings
@@ -63,7 +68,6 @@ TANAKH_BOOKS_WITH_DIFFERENCES = {
     "HAG": "haggai",      # Haggai - verse differences
     "ZEC": "zechariah",   # Zechariah - verse renumberings
     "MAL": "malachi",     # Malachi - chapter shifts
-    # Note: Joel excluded due to incompatible chapter structure (Hebrew has 4 chapters, mapping assumes different divisions)
 }
 
 
@@ -397,16 +401,13 @@ def create_simplified_versification(raw_data):
 
 
 def save_versification_data(data):
-    """Save the simplified versification data to JSON file."""
-    # Create directory if it doesn't exist
-    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-
-    # Save with nice formatting for readability
-    with open(OUTPUT_PATH, 'w', encoding='utf-8') as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
-
-    print(f"Saved versification data to: {OUTPUT_PATH}")
-    print(f"File size: {OUTPUT_PATH.stat().st_size} bytes")
+    """Save the simplified versification data to all output JSON files."""
+    for output_path in OUTPUT_PATHS:
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(output_path, 'w', encoding='utf-8') as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+        print(f"Saved versification data to: {output_path}")
+        print(f"File size: {output_path.stat().st_size} bytes")
 
 
 def main():
