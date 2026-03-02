@@ -1,3 +1,9 @@
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Ultra-minimalist configuration for shafan
@@ -17,6 +23,10 @@ const nextConfig = {
   experimental: {
     // Optimize server components bundle size
     optimizePackageImports: ['react', 'react-dom'],
+  },
+
+  turbopack: {
+    root: __dirname,
   },
 
   // Reduce serverless function size by optimizing imports
