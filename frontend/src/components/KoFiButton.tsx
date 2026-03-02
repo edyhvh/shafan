@@ -1,6 +1,7 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
+import { DONATION_CONFIG } from '@/lib/config'
 
 declare global {
   interface Window {
@@ -15,18 +16,21 @@ declare global {
 }
 
 export default function KoFiButton() {
+  const drawnRef = useRef(false)
+
   useEffect(() => {
     if (typeof window === 'undefined') {
       return
     }
 
     const drawFloatingChat = () => {
-      if (!window.kofiWidgetOverlay) {
+      if (!window.kofiWidgetOverlay || drawnRef.current) {
         return
       }
+      drawnRef.current = true
 
       window.kofiWidgetOverlay.draw(
-        'edyhvh',
+        DONATION_CONFIG.kofiUsername,
         {
           type: 'floating-chat',
           'floating-chat.donateButton.text': 'Support me',
@@ -40,19 +44,22 @@ export default function KoFiButton() {
     if (window.kofiWidgetOverlay) {
       drawFloatingChat()
     } else {
-      const overlayScript = document.getElementById(
+      let script = document.getElementById(
         'kofi-overlay-widget-script'
       ) as HTMLScriptElement | null
 
-      if (!overlayScript) {
-        const script = document.createElement('script')
+      if (!script) {
+        script = document.createElement('script')
         script.id = 'kofi-overlay-widget-script'
         script.src = 'https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'
         script.type = 'text/javascript'
-        script.onload = drawFloatingChat
         document.head.appendChild(script)
-      } else {
-        overlayScript.addEventListener('load', drawFloatingChat, { once: true })
+      }
+
+      script.addEventListener('load', drawFloatingChat)
+      const loadedScript = script
+      return () => {
+        loadedScript.removeEventListener('load', drawFloatingChat)
       }
     }
   }, [])

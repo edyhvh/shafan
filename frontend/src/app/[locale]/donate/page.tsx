@@ -97,7 +97,7 @@ export default async function DonatePage({ params }: PageProps) {
             className="inline-flex items-center gap-2 rounded-md border border-zinc-900 bg-zinc-900 px-4 py-2 text-lg font-medium text-white hover:bg-zinc-800 hover:border-zinc-800 transition-colors"
           >
             <GithubSponsorsIcon className="w-5 h-5 text-pink-400" />
-            <span>Github Sponsor</span>
+            <span>GitHub Sponsors</span>
           </a>
           <p className="text-sm text-gray/70">
             {t('donate_contact_prefix', loc)}{' '}
