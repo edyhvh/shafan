@@ -26,6 +26,7 @@ export default function Logo({ className = '', size = 'default' }: LogoProps) {
         width={width}
         height={height}
         priority={isCompact}
+        unoptimized
         className={`${sizeClass} object-contain`}
       />
     </div>
