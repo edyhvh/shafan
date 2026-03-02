@@ -2283,6 +2283,42 @@
       }
     }
   },
+  "JOL": {
+    "type": "verse_differences",
+    "description": "Joel has versification differences between Hebrew and English traditions",
+    "simple_map": {
+      "3": {
+        "1": "2:28",
+        "2": "2:29",
+        "3": "2:30",
+        "4": "2:31",
+        "5": "2:32"
+      },
+      "4": {
+        "1": "3:1",
+        "2": "3:2",
+        "3": "3:3",
+        "4": "3:4",
+        "5": "3:5",
+        "6": "3:6",
+        "7": "3:7",
+        "8": "3:8",
+        "9": "3:9",
+        "10": "3:10",
+        "11": "3:11",
+        "12": "3:12",
+        "13": "3:13",
+        "14": "3:14",
+        "15": "3:15",
+        "16": "3:16",
+        "17": "3:17",
+        "18": "3:18",
+        "19": "3:19",
+        "20": "3:20",
+        "21": "3:21"
+      }
+    }
+  },
   "JON": {
     "type": "verse_differences",
     "description": "Jonah has versification differences between Hebrew and English traditions",
