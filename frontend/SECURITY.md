@@ -51,21 +51,7 @@ All security headers are configured in `next.config.js`:
 
 Comprehensive CSP to prevent XSS and injection attacks:
 
-**General routes (`/(.*)`)**:
-
-```
-default-src 'self'
-script-src 'self' 'unsafe-eval' 'unsafe-inline'
-style-src 'self' 'unsafe-inline' https://fonts.googleapis.com
-font-src 'self' https://fonts.gstatic.com
-img-src 'self' data: https:
-connect-src 'self'
-frame-ancestors 'none'
-base-uri 'self'
-form-action 'self'
-```
-
-**Donate route (`/(en|es|he)/donate`) — relaxed for Ko-fi widget**:
+**All routes (`/(.*)`)**:
 
 ```
 default-src 'self'
@@ -85,7 +71,7 @@ form-action 'self'
 - `unsafe-eval` required by Next.js for hot reload
 - `unsafe-inline` required for styled-jsx and Tailwind
 - Google Fonts whitelisted for typography
-- Ko-fi domains permitted on donate page only to minimize attack surface
+- Ko-fi domains are permitted globally so client-side navigation can render the donate widget on first visit without reload
 
 ---
 

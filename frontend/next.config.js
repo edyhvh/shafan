@@ -67,27 +67,6 @@ const nextConfig = {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
-              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-              "font-src 'self' https://fonts.gstatic.com",
-              "img-src 'self' data: https:",
-              "connect-src 'self'",
-              "frame-ancestors 'none'",
-              "base-uri 'self'",
-              "form-action 'self'",
-            ].join('; '),
-          },
-        ],
-      },
-      // Donate page: relaxed CSP to permit Ko-fi widget resources
-      {
-        source: '/(en|es|he)/donate',
-        headers: [
-          ...baseHeaders,
-          {
-            key: 'Content-Security-Policy',
-            value: [
-              "default-src 'self'",
               "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://storage.ko-fi.com",
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://storage.ko-fi.com",
               "font-src 'self' https://fonts.gstatic.com",
