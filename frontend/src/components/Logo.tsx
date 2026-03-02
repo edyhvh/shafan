@@ -1,4 +1,7 @@
+"use client"
+
 import Image from 'next/image'
+import { useTheme } from '@/hooks/useTheme'
 
 interface LogoProps {
   className?: string
@@ -6,16 +9,18 @@ interface LogoProps {
 }
 
 export default function Logo({ className = '', size = 'default' }: LogoProps) {
+  const { theme, isLoaded } = useTheme()
   const isCompact = size === 'compact'
 
   const width = isCompact ? 28 : 120
   const height = isCompact ? 28 : 120
   const sizeClass = isCompact ? 'w-7 h-7' : 'w-[120px] h-[120px]'
+  const src = !isLoaded || theme === 'light' ? '/logo_light.svg' : '/logo_dark.svg'
 
   return (
     <div className={`flex items-center ${className}`}>
       <Image
-        src="/logo.png"
+        src={src}
         alt="shafan"
         width={width}
         height={height}
