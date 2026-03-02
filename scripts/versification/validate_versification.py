@@ -8,6 +8,8 @@ Checks:
 3) Joel mapping exists and matches expected chapter shifts
 """
 
+from __future__ import annotations
+
 import json
 import pathlib
 import sys
