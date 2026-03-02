@@ -27,7 +27,7 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.0.0",
     "@typescript-eslint/eslint-plugin": "^8.53.0",
-    "@typescript-eslint/parser": "^8.53.1s",
+    "@typescript-eslint/parser": "^8.56.1",
     "autoprefixer": "^10.4.24",
     "eslint": "^9.0.0",
     "eslint-config-next": "^16.1.4",
