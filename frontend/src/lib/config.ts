@@ -4,6 +4,7 @@
 
 export const DONATION_CONFIG = {
   githubSponsor: 'https://github.com/sponsors/edyhvh',
+  kofiUsername: 'edyhvh',
 } as const
 
 export const BRAND_CONFIG = {

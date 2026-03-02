@@ -2,6 +2,7 @@ import { DONATION_CONFIG, BRAND_CONFIG } from '@/lib/config'
 import { Locale } from '@/lib/locale'
 import { t } from '@/lib/translations'
 import type { Metadata } from 'next'
+import KoFiButton from '@/components/KoFiButton'
 
 const SOCIAL_IMAGE_URL = BRAND_CONFIG.socialImageUrl
 
@@ -59,13 +60,6 @@ const GithubSponsorsIcon = ({ className }: { className?: string }) => (
   </svg>
 )
 
-const CreditCardIcon = ({ className }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 16 16" fill="currentColor">
-    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z" />
-    <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z" />
-  </svg>
-)
-
 const TelegramIcon = ({ className }: { className?: string }) => (
   <svg
     className={className}
@@ -94,22 +88,17 @@ export default async function DonatePage({ params }: PageProps) {
         <div
           className={`space-y-6 text-gray ${isRTL ? 'font-hebrew' : 'font-ui-latin'}`}
         >
+          <KoFiButton />
           {/* GitHub Sponsor */}
-          <div className="flex items-center justify-center gap-3 text-lg">
-            <div className="flex items-center gap-1">
-              <GithubSponsorsIcon className="w-6 h-6" />
-              <CreditCardIcon className="w-5 h-5" />
-            </div>
-            <span className="font-medium">Github Sponsor</span>
-            <a
-              href={DONATION_CONFIG.githubSponsor}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray/70 hover:text-black underline underline-offset-2 transition-colors"
-            >
-              @edyhvh
-            </a>
-          </div>
+          <a
+            href={DONATION_CONFIG.githubSponsor}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-md border border-zinc-900 bg-zinc-900 px-4 py-2 text-lg font-medium text-white hover:bg-zinc-800 hover:border-zinc-800 transition-colors"
+          >
+            <GithubSponsorsIcon className="w-5 h-5 text-pink-400" />
+            <span>GitHub Sponsors</span>
+          </a>
           <p className="text-sm text-gray/70">
             {t('donate_contact_prefix', loc)}{' '}
             <span className="inline-flex items-center gap-2">
