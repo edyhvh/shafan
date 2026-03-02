@@ -5,7 +5,7 @@ env_shell_expand = false
 
 [tools]
 python = "3.12"
-node = "20"
+node = "24"
 uv = "latest"
 
 [env]
