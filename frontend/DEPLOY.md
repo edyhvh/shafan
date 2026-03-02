@@ -6,7 +6,7 @@ This guide explains how to deploy the Shafan frontend to Vercel.
 
 - A Vercel account ([sign up](https://vercel.com/signup) if needed)
 - The project repository pushed to GitHub, GitLab, or Bitbucket
-- Node.js >= 20.0.0 (Vercel will use this automatically)
+- Node.js >= 24.0.0 (Vercel will use this automatically)
 
 ## Important: Root Directory Configuration
 
@@ -66,7 +66,7 @@ Before deploying, ensure:
 - ✅ All JSON files are in `frontend/public/data/` (they should be committed to git)
 - ✅ `vercel.json` exists in `frontend/` directory
 - ✅ `package.json` has correct build scripts
-- ✅ Node.js version is specified in `package.json` (`engines.node >= 20.0.0`)
+- ✅ Node.js version is specified in `package.json` (`engines.node >= 24.0.0`)
 
 ## Build Process
 
