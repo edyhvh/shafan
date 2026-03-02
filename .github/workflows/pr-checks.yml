@@ -65,6 +65,29 @@ jobs:
         working-directory: ./frontend
         run: npm run format:check
 
+  wallet-trace-scan:
+    name: Wallet Trace Scan
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Detect wallet keywords and address patterns
+        run: |
+          set -euo pipefail
+          PATTERN='wallet|ethereum|bitcoin|solana|usdt|usdc|tether|copyablewallet|0x[0-9a-fA-F]{40}|bc1[ac-hj-np-z02-9]{11,71}|[13][a-km-zA-HJ-NP-Z1-9]{25,34}'
+
+          if git grep -nEI "$PATTERN" -- \
+            . \
+            ':!frontend/package-lock.json' \
+            ':!**/node_modules/**' \
+            ':!.venv/**'; then
+            echo 'Wallet trace scan failed: found potential crypto wallet traces.'
+            exit 1
+          fi
+
+          echo 'Wallet trace scan passed.'
+
   security-scan:
     name: Security Scan
     runs-on: ubuntu-latest
