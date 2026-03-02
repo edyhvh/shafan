@@ -76,7 +76,7 @@ form-action 'self'
 ### Code Security
 
 - ✅ No `eval()` or dynamic code execution
-- ✅ No `dangerouslySetInnerHTML`
+- ⚠️ `dangerouslySetInnerHTML` used in layout/chapter pages for JSON-LD/script injection (acceptable for static content)
 - ✅ No `innerHTML` or `document.write()`
 - ✅ All user inputs validated and sanitized
 - ✅ Type-safe with TypeScript
