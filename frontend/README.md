@@ -4,7 +4,7 @@ Frontend web application for Shafan - Hebrew New Testament digital edition.
 
 ## Prerequisites
 
-- Node.js >= 20.0.0
+- Node.js >= 20.9.0
 - npm or yarn
 
 ## Setup

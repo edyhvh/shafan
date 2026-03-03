@@ -1,3 +1,9 @@
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Ultra-minimalist configuration for shafan
@@ -17,6 +23,10 @@ const nextConfig = {
   experimental: {
     // Optimize server components bundle size
     optimizePackageImports: ['react', 'react-dom'],
+  },
+
+  turbopack: {
+    root: __dirname,
   },
 
   // Reduce serverless function size by optimizing imports
@@ -63,27 +73,6 @@ const nextConfig = {
         headers: [
           ...baseHeaders,
           // Content Security Policy
-          {
-            key: 'Content-Security-Policy',
-            value: [
-              "default-src 'self'",
-              "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
-              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-              "font-src 'self' https://fonts.gstatic.com",
-              "img-src 'self' data: https:",
-              "connect-src 'self'",
-              "frame-ancestors 'none'",
-              "base-uri 'self'",
-              "form-action 'self'",
-            ].join('; '),
-          },
-        ],
-      },
-      // Donate page: relaxed CSP to permit Ko-fi widget resources
-      {
-        source: '/(en|es|he)/donate',
-        headers: [
-          ...baseHeaders,
           {
             key: 'Content-Security-Policy',
             value: [
