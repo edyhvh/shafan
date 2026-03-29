@@ -65,7 +65,12 @@ export default function VersesDropdown({
     } else {
       // Navigate to the chapter page with hash
       // The ChapterContent component will handle scrolling via useEffect
-      router.push(withTTHParam(`${currentChapterPath}#verse-${verseNumber}`, effectiveTTHEnabled))
+      router.push(
+        withTTHParam(
+          `${currentChapterPath}#verse-${verseNumber}`,
+          effectiveTTHEnabled
+        )
+      )
     }
   }
 

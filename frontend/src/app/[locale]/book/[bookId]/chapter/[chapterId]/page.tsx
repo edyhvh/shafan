@@ -212,9 +212,8 @@ export default async function BookChapterPage({ params }: PageProps) {
 
   // Load TTH data if available for this book
   const tthBook = hasTTH(bookName) ? await loadTTHServer(bookName) : null
-  const tthChapter = tthBook?.chapters.find(
-    (ch) => ch.chapter === chapterNumber
-  ) ?? null
+  const tthChapter =
+    tthBook?.chapters.find((ch) => ch.chapter === chapterNumber) ?? null
   const tthAvailable = hasTTH(bookName)
 
   // Check if chapter exists

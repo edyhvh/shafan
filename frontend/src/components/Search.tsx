@@ -34,7 +34,9 @@ export default function Search() {
   const handleBookSelect = (bookName: BookName) => {
     setQuery('')
     setIsOpen(false)
-    router.push(withTTHParam(`/${locale}/book/${bookName}/chapter/1`, effectiveTTHEnabled))
+    router.push(
+      withTTHParam(`/${locale}/book/${bookName}/chapter/1`, effectiveTTHEnabled)
+    )
   }
 
   return (

@@ -162,7 +162,10 @@ export default function ChapterTitleSelector({
               label: chapter.number.toString(),
               href: `/${locale}/book/${bookName}/chapter/${chapter.number}`,
               isCurrent: chapter.number === currentChapter,
-              disabled: effectiveTTHEnabled && tthChapterCount !== null && chapter.number > tthChapterCount,
+              disabled:
+                effectiveTTHEnabled &&
+                tthChapterCount !== null &&
+                chapter.number > tthChapterCount,
               onClick: () => setIsChapterOpen(false),
             }))}
             emptyMessage="No chapters found"

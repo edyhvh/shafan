@@ -156,9 +156,13 @@ export default function ReadingControls() {
     bookId && AVAILABLE_BOOKS.includes(bookId as BookName)
       ? (bookId as BookName)
       : null
-  const showTextSourceToggle = Boolean(!tthEnabled && bookName && isNewTestament(bookName))
+  const showTextSourceToggle = Boolean(
+    !tthEnabled && bookName && isNewTestament(bookName)
+  )
   const showNikudToggle = !tthEnabled
-  const showCantillationToggle = Boolean(!tthEnabled && bookName && !isNewTestament(bookName))
+  const showCantillationToggle = Boolean(
+    !tthEnabled && bookName && !isNewTestament(bookName)
+  )
 
   const firstToggleTop = showTextSourceToggle ? 72 : 24
   const toggleSpacing = 64

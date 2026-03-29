@@ -21,7 +21,10 @@ const SUPERSCRIPT_DIGIT_MAP: Record<string, string> = {
 }
 
 function normalizeMarker(marker: string): string {
-  return marker.replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹]/g, digit => SUPERSCRIPT_DIGIT_MAP[digit] ?? digit)
+  return marker.replace(
+    /[⁰¹²³⁴⁵⁶⁷⁸⁹]/g,
+    (digit) => SUPERSCRIPT_DIGIT_MAP[digit] ?? digit
+  )
 }
 
 export default function FootnoteTooltip({ footnote }: FootnoteTooltipProps) {
@@ -83,9 +86,7 @@ export default function FootnoteTooltip({ footnote }: FootnoteTooltipProps) {
           <div className="font-semibold text-xs text-secondary mb-1">
             {footnote.word}
           </div>
-          <div className="text-xs leading-relaxed">
-            {footnote.explanation}
-          </div>
+          <div className="text-xs leading-relaxed">{footnote.explanation}</div>
           {/* Tooltip arrow */}
           <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-black/10" />
         </div>

@@ -258,12 +258,21 @@ export default function BooksDropdown({
                               }`
                         } ${locale === 'he' ? 'flex-row-reverse' : ''} w-full text-left`}
                         onMouseEnter={() =>
-                          !isMobile && !isTTHUnavailable && setHoveredBook(bookName)
+                          !isMobile &&
+                          !isTTHUnavailable &&
+                          setHoveredBook(bookName)
                         }
                         onMouseLeave={() => !isMobile && setHoveredBook(null)}
                         onClick={handleBookClick}
                         disabled={isTTHUnavailable}
-                        title={isTTHUnavailable ? t('tth_not_available_book', locale as 'he' | 'es' | 'en') : undefined}
+                        title={
+                          isTTHUnavailable
+                            ? t(
+                                'tth_not_available_book',
+                                locale as 'he' | 'es' | 'en'
+                              )
+                            : undefined
+                        }
                       >
                         <span>
                           {displayName[locale as 'he' | 'es' | 'en'] ||
@@ -271,7 +280,10 @@ export default function BooksDropdown({
                         </span>
                         {isTTHUnavailable ? (
                           <span className="text-xs text-muted/60 font-normal max-w-[120px] text-right leading-tight">
-                            {t('tth_not_available_book', locale as 'he' | 'es' | 'en')}
+                            {t(
+                              'tth_not_available_book',
+                              locale as 'he' | 'es' | 'en'
+                            )}
                           </span>
                         ) : (
                           <ChevronRight

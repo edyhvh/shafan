@@ -84,16 +84,24 @@ export default function Settings({
       <div className="space-y-4">
         {/* TTH Toggle */}
         <div className="flex items-center justify-between py-2">
-          <label className="text-sm font-medium text-black/80">
-            TTH
-          </label>
+          <label className="text-sm font-medium text-black/80">TTH</label>
           <button
             onClick={toggleTTH}
             className={`tth-button px-3 py-1.5 text-xs cursor-pointer ${tthEnabled ? 'active' : ''}`}
             aria-label="Toggle TTH Spanish translation"
             aria-pressed={tthEnabled}
           >
-            {tthEnabled ? (locale === 'he' ? 'פועל' : locale === 'es' ? 'Activado' : 'On') : (locale === 'he' ? 'כבוי' : locale === 'es' ? 'Desactivado' : 'Off')}
+            {tthEnabled
+              ? locale === 'he'
+                ? 'פועל'
+                : locale === 'es'
+                  ? 'Activado'
+                  : 'On'
+              : locale === 'he'
+                ? 'כבוי'
+                : locale === 'es'
+                  ? 'Desactivado'
+                  : 'Off'}
           </button>
         </div>
 

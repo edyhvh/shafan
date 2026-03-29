@@ -153,9 +153,15 @@ export default function ChaptersDropdown({
                     ? 'bg-gray text-white scale-105 shadow-md cursor-pointer'
                     : 'bg-black/[0.04] text-black hover:bg-black/[0.08] hover:scale-105 hover:shadow-sm active:scale-95 cursor-pointer'
               } ${locale === 'he' ? 'font-ui-hebrew' : 'font-ui-latin'}`}
-              onClick={(e) => !isTTHUnavailable && handleChapterClick(e, ch.number)}
+              onClick={(e) =>
+                !isTTHUnavailable && handleChapterClick(e, ch.number)
+              }
               disabled={isTTHUnavailable}
-              title={isTTHUnavailable ? t('tth_not_available_chapter', locale as 'he' | 'es' | 'en') : undefined}
+              title={
+                isTTHUnavailable
+                  ? t('tth_not_available_chapter', locale as 'he' | 'es' | 'en')
+                  : undefined
+              }
             >
               {locale === 'he' ? ch.hebrew_letter : ch.number}
             </button>

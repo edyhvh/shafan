@@ -59,7 +59,7 @@ export function usePreference<T extends string>(
       setValue(stored)
     }
     setIsLoaded(true)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   // Save to localStorage and update data attribute when value changes.
