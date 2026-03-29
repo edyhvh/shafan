@@ -40,6 +40,11 @@ const nextConfig = {
   // Security headers for production
   async headers() {
     const baseHeaders = [
+      // Enforce HTTPS in browsers once first secure request is seen
+      {
+        key: 'Strict-Transport-Security',
+        value: 'max-age=31536000; includeSubDomains',
+      },
       // Prevent clickjacking
       {
         key: 'X-Frame-Options',
@@ -64,6 +69,16 @@ const nextConfig = {
       {
         key: 'Permissions-Policy',
         value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
+      },
+      // Opt out of cross-origin opener sharing where possible
+      {
+        key: 'Cross-Origin-Opener-Policy',
+        value: 'same-origin-allow-popups',
+      },
+      // Restrict who can load resources from this origin
+      {
+        key: 'Cross-Origin-Resource-Policy',
+        value: 'same-origin',
       },
     ]
 

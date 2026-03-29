@@ -2,6 +2,21 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 import { locales, defaultLocale, type Locale } from './lib/locale'
 
+function applyRedirectSecurityHeaders(response: NextResponse): NextResponse {
+  response.headers.set(
+    'Strict-Transport-Security',
+    'max-age=31536000; includeSubDomains'
+  )
+  response.headers.set('X-Frame-Options', 'DENY')
+  response.headers.set('X-Content-Type-Options', 'nosniff')
+  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin')
+  response.headers.set(
+    'Permissions-Policy',
+    'camera=(), microphone=(), geolocation=(), interest-cohort=()'
+  )
+  return response
+}
+
 /**
  * Parse Accept-Language header and return preferred locale
  * Handles quality values (q-values) to determine preference order
@@ -36,9 +51,17 @@ function detectLocaleFromHeader(acceptLanguage: string): Locale {
 
 export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
+  const forwardedProto = request.headers.get('x-forwarded-proto')
   const isStaticAsset = /\.(?:png|jpg|jpeg|gif|webp|svg|ico|txt|xml)$/i.test(
     pathname
   )
+
+  // Force HTTPS at the edge layer if an upstream forwards plain HTTP.
+  if (forwardedProto === 'http') {
+    const secureUrl = request.nextUrl.clone()
+    secureUrl.protocol = 'https:'
+    return applyRedirectSecurityHeaders(NextResponse.redirect(secureUrl, 308))
+  }
 
   // Skip proxy for static files and API routes
   if (
@@ -69,7 +92,7 @@ export default function proxy(request: NextRequest) {
   const redirectPath = pathname === '/' ? `/${locale}` : `/${locale}${pathname}`
   const newUrl = new URL(redirectPath, request.url)
   // Redirect without logging in production (proxy runs on every request)
-  return NextResponse.redirect(newUrl)
+  return applyRedirectSecurityHeaders(NextResponse.redirect(newUrl))
 }
 
 // Proxy config for Next.js
