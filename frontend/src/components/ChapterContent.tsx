@@ -10,11 +10,16 @@ import { useNikud } from '@/hooks/useNikud'
 import { useCantillation } from '@/hooks/useCantillation'
 import { useTextSource } from '@/hooks/useTextSource'
 import { useSefer } from '@/hooks/useSefer'
+import { useTTH } from '@/hooks/useTTH'
 import { type BookName } from '@/lib/books'
-import type { Verse } from '@/lib/types'
+import type { Verse, TTHChapter } from '@/lib/types'
 import { getChristianVerse } from '@/lib/versification'
 import { useEffect, useState } from 'react'
 import { scrollToVerse } from '@/lib/smooth-scroll'
+import FootnoteTooltip from './FootnoteTooltip'
+import { usePathname } from 'next/navigation'
+import { getLocaleFromPath } from '@/lib/locale'
+import { t } from '@/lib/translations'
 
 // Dynamically import ReadingControls with SSR disabled to prevent hydration issues
 const ReadingControls = dynamic(() => import('./ReadingControls'), {
@@ -27,6 +32,8 @@ interface ChapterContentProps {
   verses: Verse[]
   bookName: BookName
   chapterNumber: number
+  tthChapter?: TTHChapter | null
+  tthAvailable?: boolean
 }
 
 export default function ChapterContent({
@@ -34,12 +41,17 @@ export default function ChapterContent({
   verses,
   bookName: _bookName,
   chapterNumber,
+  tthChapter,
+  tthAvailable,
 }: ChapterContentProps) {
   const { nikudEnabled, isLoaded: nikudLoaded } = useNikud()
   const { cantillationEnabled, isLoaded: cantillationLoaded } =
     useCantillation()
   const { textSource, isLoaded: textSourceLoaded } = useTextSource()
   const { seferEnabled, isLoaded: seferLoaded } = useSefer()
+  const { tthEnabled, isLoaded: tthLoaded } = useTTH()
+  const pathname = usePathname()
+  const locale = getLocaleFromPath(pathname) as 'he' | 'es' | 'en'
 
   // State for Christian Bible verse mappings with optimized loading
   const [christianVerses, setChristianVerses] = useState<
@@ -80,7 +92,11 @@ export default function ChapterContent({
 
   // Wait for all preference hooks to be loaded before rendering to prevent hydration mismatches
   const allPreferencesLoaded =
-    nikudLoaded && cantillationLoaded && textSourceLoaded && seferLoaded
+    nikudLoaded && cantillationLoaded && textSourceLoaded && seferLoaded && tthLoaded
+
+  // Determine if we're in TTH mode with data available
+  // Gate on allPreferencesLoaded to prevent hydration mismatch (server always renders Hebrew)
+  const showTTH = allPreferencesLoaded && tthEnabled && tthChapter && tthChapter.verses.length > 0
 
   // Track highlighted verse for temporary highlight animation
   const [highlightedVerse, setHighlightedVerse] = useState<number | null>(null)
@@ -133,6 +149,17 @@ export default function ChapterContent({
     return () => window.removeEventListener('hashchange', handleHashScroll)
   }, [chapterNumber, allPreferencesLoaded])
 
+  // Block rendering entirely when TTH is enabled but book is not available
+  if (allPreferencesLoaded && tthEnabled && !tthAvailable) {
+    return (
+      <section className="mb-12 pt-12">
+        <div className="text-center text-muted text-base font-ui-latin px-4" dir="ltr">
+          {t('tth_book_unavailable_message', locale)}
+        </div>
+      </section>
+    )
+  }
+
   // Component to display verse numbers with Christian equivalents
   const VerseNumber = ({
     verseNumber,
@@ -182,6 +209,52 @@ export default function ChapterContent({
     return displayText
   }
 
+  /**
+   * Render TTH verse text with inline footnote tooltips
+   */
+  const renderTTHText = (tthText: string, footnotes: import('@/lib/types').TTHFootnote[]) => {
+    if (!footnotes || footnotes.length === 0) {
+      return <span dangerouslySetInnerHTML={{ __html: tthText }} />
+    }
+
+    // Split the text by footnote markers to insert tooltip components
+    const parts: (string | { type: 'footnote'; footnote: import('@/lib/types').TTHFootnote })[] = []
+    let remaining = tthText
+
+    // Sort footnotes by their position in the text (find each marker)
+    const sortedFootnotes = [...footnotes].sort((a, b) => {
+      const posA = tthText.indexOf(a.marker)
+      const posB = tthText.indexOf(b.marker)
+      return posA - posB
+    })
+
+    for (const fn of sortedFootnotes) {
+      const idx = remaining.indexOf(fn.marker)
+      if (idx !== -1) {
+        if (idx > 0) {
+          parts.push(remaining.slice(0, idx))
+        }
+        parts.push({ type: 'footnote', footnote: fn })
+        remaining = remaining.slice(idx + fn.marker.length)
+      }
+    }
+    if (remaining) {
+      parts.push(remaining)
+    }
+
+    return (
+      <>
+        {parts.map((part, i) =>
+          typeof part === 'string' ? (
+            <span key={i} dangerouslySetInnerHTML={{ __html: part }} />
+          ) : (
+            <FootnoteTooltip key={`fn-${i}`} footnote={part.footnote} />
+          )
+        )}
+      </>
+    )
+  }
+
   return (
     <section className="mb-12" aria-labelledby="chapter-hebrew-letter">
       <ReadingControls />
@@ -193,16 +266,106 @@ export default function ChapterContent({
         {hebrewLetter}
       </h2>
 
-      <article className={`${seferEnabled ? '' : 'space-y-8'}`} dir="rtl">
+      {/* TTH "not available" message for chapter */}
+      {allPreferencesLoaded && tthEnabled && !showTTH && tthAvailable && (
+        <div className="text-center text-muted text-sm mb-6 font-ui-latin" dir="ltr">
+          {t('tth_not_available_chapter', locale)}
+        </div>
+      )}
+
+      {/* TTH Spanish content */}
+      {showTTH ? (
+        <article className={`${seferEnabled ? '' : 'space-y-8'}`} dir="ltr">
+          {seferEnabled ? (
+            // Sefer mode: continuous paragraph display for TTH
+            <p className="font-bible-hebrew text-[28px] md:text-[32px] leading-[2] text-primary text-left">
+              {tthChapter.verses.map((tthVerse, index) => {
+                const isHighlighted = highlightedVerse === tthVerse.verse
+                const firstOccurrenceIndex = tthChapter.verses.findIndex(
+                  (verse) => verse.verse === tthVerse.verse
+                )
+                const verseId =
+                  firstOccurrenceIndex === index
+                    ? `verse-${tthVerse.verse}`
+                    : `verse-${tthVerse.verse}-${index}`
+                return (
+                  <span
+                    key={`${tthVerse.verse}-${index}`}
+                    id={verseId}
+                    className={`scroll-mt-32 transition-all duration-500 ${
+                      isHighlighted ? 'verse-highlight-animate rounded px-1' : ''
+                    }`}
+                  >
+                    {tthVerse.verse > 0 && (
+                      <span className="font-ui-latin text-base whitespace-nowrap text-muted mr-2">
+                        [{tthVerse.verse}]
+                      </span>
+                    )}
+                    <span className="font-ui-latin">
+                      {allPreferencesLoaded
+                        ? renderTTHText(tthVerse.tth, tthVerse.footnotes)
+                        : '...'}
+                    </span>
+                    {index < tthChapter.verses.length - 1 && ' '}
+                  </span>
+                )
+              })}
+            </p>
+          ) : (
+            // Standard mode: separate verse blocks for TTH
+            tthChapter.verses.map((tthVerse, index) => {
+              const isHighlighted = highlightedVerse === tthVerse.verse
+              const firstOccurrenceIndex = tthChapter.verses.findIndex(
+                (verse) => verse.verse === tthVerse.verse
+              )
+              const verseId =
+                firstOccurrenceIndex === index
+                  ? `verse-${tthVerse.verse}`
+                  : `verse-${tthVerse.verse}-${index}`
+              return (
+                <div
+                  key={`${tthVerse.verse}-${index}`}
+                  id={verseId}
+                  className={`font-ui-latin text-[28px] md:text-[32px] leading-[2] text-primary text-left scroll-mt-32 transition-all duration-500 ${
+                    isHighlighted
+                      ? 'verse-highlight-animate rounded-lg px-4 -mx-4'
+                      : ''
+                  }`}
+                >
+                  {tthVerse.verse > 0 && (
+                    <span className="font-ui-latin text-base whitespace-nowrap text-muted mr-3">
+                      [{tthVerse.verse}]
+                    </span>
+                  )}
+                  <span>
+                    {allPreferencesLoaded
+                      ? renderTTHText(tthVerse.tth, tthVerse.footnotes)
+                      : '...'}
+                  </span>
+                </div>
+              )
+            })
+          )}
+        </article>
+      ) : (
+        /* Hebrew content (original) */
+        <article className={`${seferEnabled ? '' : 'space-y-8'}`} dir="rtl">
         {seferEnabled ? (
           // Sefer mode: continuous paragraph display
           <p className="font-bible-hebrew text-[50px] md:text-[54px] leading-[1.9] text-primary text-right">
             {verses.map((verse, index) => {
               const isHighlighted = highlightedVerse === verse.number
+              const firstOccurrenceIndex = verses.findIndex(
+                (entry) => entry.number === verse.number
+              )
+              const verseId =
+                firstOccurrenceIndex === index
+                  ? `verse-${verse.number}`
+                  : `verse-${verse.number}-${index}`
               return (
                 <span
-                  key={verse.number}
-                  id={`verse-${verse.number}`}
+                  key={`${verse.number}-${index}`}
+                  id={verseId}
                   className={`scroll-mt-32 transition-all duration-500 ${
                     isHighlighted ? 'verse-highlight-animate rounded px-1' : ''
                   }`}
@@ -223,12 +386,19 @@ export default function ChapterContent({
           </p>
         ) : (
           // Standard mode: separate verse blocks
-          verses.map((verse) => {
+          verses.map((verse, index) => {
             const isHighlighted = highlightedVerse === verse.number
+            const firstOccurrenceIndex = verses.findIndex(
+              (entry) => entry.number === verse.number
+            )
+            const verseId =
+              firstOccurrenceIndex === index
+                ? `verse-${verse.number}`
+                : `verse-${verse.number}-${index}`
             return (
               <div
-                key={verse.number}
-                id={`verse-${verse.number}`}
+                key={`${verse.number}-${index}`}
+                id={verseId}
                 className={`font-bible-hebrew text-[50px] md:text-[54px] leading-[1.9] text-primary text-right scroll-mt-32 transition-all duration-500 ${
                   isHighlighted
                     ? 'verse-highlight-animate rounded-lg px-4 -mx-4'
@@ -249,6 +419,7 @@ export default function ChapterContent({
           })
         )}
       </article>
+      )}
     </section>
   )
 }

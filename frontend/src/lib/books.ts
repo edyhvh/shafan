@@ -166,7 +166,7 @@ export const BOOK_DISPLAY_NAMES: Record<
   john2: { he: 'יוחנן ב', en: '2 John', es: '2 Juan' },
   john3: { he: 'יוחנן ג', en: '3 John', es: '3 Juan' },
   jude: { he: 'יהודה', en: 'Jude', es: 'Judas' },
-  revelation: { he: 'ההתגלות (סודות)', en: 'Revelation', es: 'Apocalipsis' },
+  revelation: { he: 'סודות', en: 'Revelation', es: 'Apocalipsis' },
 }
 
 /**
@@ -380,8 +380,8 @@ export const BOOK_HEBREW_INFO: Record<
   },
   jude: { hebrew: 'יהודה', transliteration: { en: 'yehuda', es: 'yehudah' } },
   revelation: {
-    hebrew: 'ההתגלות (סודות)',
-    transliteration: { en: 'hahitgalut (sodot)', es: 'hahitgalut (sodot)' },
+    hebrew: 'סודות',
+    transliteration: { en: 'sodot', es: 'sodot' },
   },
 }
 

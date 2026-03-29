@@ -34,7 +34,7 @@ function detectLocaleFromHeader(acceptLanguage: string): Locale {
   return defaultLocale
 }
 
-export function proxy(request: NextRequest) {
+export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
   const isStaticAsset = /\.(?:png|jpg|jpeg|gif|webp|svg|ico|txt|xml)$/i.test(
     pathname

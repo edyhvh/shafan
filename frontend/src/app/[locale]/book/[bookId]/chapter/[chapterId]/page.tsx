@@ -1,6 +1,8 @@
 import { notFound } from 'next/navigation'
 import { AVAILABLE_BOOKS, BOOK_DISPLAY_NAMES, type BookName } from '@/lib/books'
 import { loadBookServer } from '@/lib/books-server'
+import { loadTTHServer } from '@/lib/tth-server'
+import { hasTTH } from '@/lib/tth'
 import ChapterTitleSelector from '@/components/navigation/ChapterTitleSelector'
 import ChapterNavigation from '@/components/navigation/ChapterNavigation'
 import ChapterContent from '@/components/ChapterContent'
@@ -8,6 +10,7 @@ import SaveLastBook from '@/components/navigation/SaveLastBook'
 import AuthorInfo from '@/components/AuthorInfo'
 import { locales } from '@/lib/locale'
 import { BRAND_CONFIG } from '@/lib/config'
+import Script from 'next/script'
 
 export const revalidate = 604800
 const SOCIAL_IMAGE_URL = BRAND_CONFIG.socialImageUrl
@@ -207,6 +210,13 @@ export default async function BookChapterPage({ params }: PageProps) {
     notFound()
   }
 
+  // Load TTH data if available for this book
+  const tthBook = hasTTH(bookName) ? await loadTTHServer(bookName) : null
+  const tthChapter = tthBook?.chapters.find(
+    (ch) => ch.chapter === chapterNumber
+  ) ?? null
+  const tthAvailable = hasTTH(bookName)
+
   // Check if chapter exists
   const chapter = book.chapters.find((ch) => ch.number === chapterNumber)
   if (!chapter) {
@@ -278,12 +288,13 @@ export default async function BookChapterPage({ params }: PageProps) {
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      {/* JSON-LD Structured Data */}
-      <script
+      <Script
+        id={`jsonld-article-${locale}-${bookId}-${chapterNumber}`}
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <script
+      <Script
+        id={`jsonld-breadcrumb-${locale}-${bookId}-${chapterNumber}`}
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
@@ -317,6 +328,8 @@ export default async function BookChapterPage({ params }: PageProps) {
         verses={chapter.verses}
         bookName={bookName}
         chapterNumber={chapterNumber}
+        tthChapter={tthChapter}
+        tthAvailable={tthAvailable}
       />
 
       {/* Chapter Navigation Footer */}

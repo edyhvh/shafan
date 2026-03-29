@@ -4,6 +4,8 @@ import { Verse } from '@/lib/types'
 import { usePathname, useRouter } from 'next/navigation'
 import { getLocaleFromPath } from '@/lib/locale'
 import { scrollToVerse } from '@/lib/smooth-scroll'
+import { useTTH } from '@/hooks/useTTH'
+import { withTTHParam } from '@/lib/navigation-params'
 
 interface VersesDropdownProps {
   verses: Verse[]
@@ -26,6 +28,7 @@ export default function VersesDropdown({
   const pathname = usePathname()
   const router = useRouter()
   const locale = getLocaleFromPath(pathname)
+  const { effectiveTTHEnabled } = useTTH()
 
   // Check if we're already on the target chapter page
   const currentChapterPath = `/${locale}/book/${bookName}/chapter/${chapterNumber}`
@@ -62,7 +65,7 @@ export default function VersesDropdown({
     } else {
       // Navigate to the chapter page with hash
       // The ChapterContent component will handle scrolling via useEffect
-      router.push(`${currentChapterPath}#verse-${verseNumber}`)
+      router.push(withTTHParam(`${currentChapterPath}#verse-${verseNumber}`, effectiveTTHEnabled))
     }
   }
 

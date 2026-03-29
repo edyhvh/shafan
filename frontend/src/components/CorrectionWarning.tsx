@@ -9,6 +9,7 @@ import { useScrollState } from '@/hooks/useScrollState'
 import { useTextSource } from '@/hooks/useTextSource'
 import { isNewTestament, AVAILABLE_BOOKS, type BookName } from '@/lib/books'
 import { WarningIcon } from './icons'
+import { useTTH } from '@/hooks/useTTH'
 
 const GITHUB_ISSUES_URL = 'https://github.com/edyhvh/shafan/issues'
 
@@ -17,6 +18,7 @@ export default function CorrectionWarning() {
   const locale = getLocaleFromPath(pathname)
   const { shouldHideForContent } = useScrollState()
   const { textSource, isLoaded } = useTextSource()
+  const { tthEnabled } = useTTH()
   const [isErrorPage, setIsErrorPage] = useState(false)
 
   // Detect if we're on an error page by checking for error-specific content
@@ -52,7 +54,7 @@ export default function CorrectionWarning() {
   const isNTBook =
     bookId && AVAILABLE_BOOKS.includes(bookId) && isNewTestament(bookId)
 
-  // Only show warning in books section, not on error pages, AND only for Hutter text in New Testament books
+  // Only show warning in books section, not on error pages, AND only for Hutter text in New Testament books when TTH is not enabled
   if (
     !pathname.includes('/book/') ||
     isErrorPage ||
@@ -60,7 +62,8 @@ export default function CorrectionWarning() {
     pathname.includes('/not-found') ||
     !isLoaded ||
     textSource === 'delitzsch' ||
-    !isNTBook
+    !isNTBook ||
+    tthEnabled
   ) {
     return null
   }

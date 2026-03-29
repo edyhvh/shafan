@@ -13,6 +13,8 @@ import Settings from './Settings'
 import { getLastBookLocation } from '@/hooks/useLastBook'
 import { useScrollState } from '@/hooks/useScrollState'
 import { useIsMobile } from '@/hooks/useIsMobile'
+import { useTTH } from '@/hooks/useTTH'
+import { withTTHParam } from '@/lib/navigation-params'
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -25,6 +27,7 @@ export default function Navbar() {
   const locale = getLocaleFromPath(pathname)
   const router = useRouter()
   const { shouldHideForContent } = useScrollState()
+  const { tthEnabled, effectiveTTHEnabled, toggleTTH } = useTTH()
 
   // Clear timeouts on unmount
   useEffect(() => {
@@ -118,13 +121,18 @@ export default function Navbar() {
       const lastBook = getLastBookLocation()
       if (lastBook) {
         router.push(
-          `/${locale}/book/${lastBook.bookId}/chapter/${lastBook.chapterId}`
+          withTTHParam(
+            `/${locale}/book/${lastBook.bookId}/chapter/${lastBook.chapterId}`,
+            effectiveTTHEnabled
+          )
         )
       } else {
-        router.push(`/${locale}/book/john/chapter/1`)
+        router.push(
+          withTTHParam(`/${locale}/book/john/chapter/1`, effectiveTTHEnabled)
+        )
       }
     },
-    [locale, pathname, router]
+    [locale, pathname, router, effectiveTTHEnabled]
   )
 
   // Determine if navbar should be hidden
@@ -201,6 +209,17 @@ export default function Navbar() {
           >
             {t('donate', locale)}
           </Link>
+
+          {/* TTH Button - Desktop */}
+          <button
+            onClick={toggleTTH}
+            className={`tth-button px-3 py-1.5 text-xs cursor-pointer ${tthEnabled ? 'active' : ''}`}
+            aria-label="Toggle TTH Spanish translation"
+            aria-pressed={tthEnabled}
+            title="TTH – Traducción del Texto Hebreo"
+          >
+            TTH
+          </button>
         </div>
 
         {/* Language Selector - Desktop */}
@@ -209,6 +228,16 @@ export default function Navbar() {
         </div>
 
         {/* Settings Button - Mobile */}
+        <button
+          onClick={toggleTTH}
+          className={`md:hidden tth-button px-3 py-1.5 text-xs cursor-pointer ${tthEnabled ? 'active' : ''}`}
+          aria-label="Toggle TTH Spanish translation"
+          aria-pressed={tthEnabled}
+          title="TTH – Traducción del Texto Hebreo"
+        >
+          TTH
+        </button>
+
         <div className="md:hidden">
           <Settings
             isOpen={settingsOpen}

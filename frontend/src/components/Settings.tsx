@@ -14,6 +14,7 @@ import { useNikud } from '@/hooks/useNikud'
 import { useSefer } from '@/hooks/useSefer'
 import { useCantillation } from '@/hooks/useCantillation'
 import { useTheme } from '@/hooks/useTheme'
+import { useTTH } from '@/hooks/useTTH'
 import { isNewTestament } from '@/lib/books'
 import { parseBookFromPath } from '@/lib/paths'
 
@@ -58,6 +59,7 @@ export default function Settings({
   const { seferEnabled, toggleSefer } = useSefer()
   const { cantillationEnabled, toggleCantillation } = useCantillation()
   const { theme, toggleTheme } = useTheme()
+  const { tthEnabled, toggleTTH } = useTTH()
 
   // Extract book from pathname to determine if we should show certain toggles
   const bookName = parseBookFromPath(pathname)
@@ -80,8 +82,23 @@ export default function Settings({
       </div>
 
       <div className="space-y-4">
-        {/* Text Source Toggle - Only for New Testament */}
-        {showTextSourceToggle && (
+        {/* TTH Toggle */}
+        <div className="flex items-center justify-between py-2">
+          <label className="text-sm font-medium text-black/80">
+            TTH
+          </label>
+          <button
+            onClick={toggleTTH}
+            className={`tth-button px-3 py-1.5 text-xs cursor-pointer ${tthEnabled ? 'active' : ''}`}
+            aria-label="Toggle TTH Spanish translation"
+            aria-pressed={tthEnabled}
+          >
+            {tthEnabled ? (locale === 'he' ? 'פועל' : locale === 'es' ? 'Activado' : 'On') : (locale === 'he' ? 'כבוי' : locale === 'es' ? 'Desactivado' : 'Off')}
+          </button>
+        </div>
+
+        {/* Text Source Toggle - Only for New Testament, hidden when TTH is enabled */}
+        {showTextSourceToggle && !tthEnabled && (
           <div className="flex items-center justify-between py-2">
             <label className="text-sm font-medium text-black/80">
               {locale === 'he' ? 'מקור הטקסט' : 'Text Source'}
@@ -94,18 +111,20 @@ export default function Settings({
           </div>
         )}
 
-        {/* Nikud Toggle */}
-        <div className="flex items-center justify-between py-2">
-          <label className="text-sm font-medium text-black/80">
-            {t('nikud', locale)}
-          </label>
-          <NeumorphicToggle
-            enabled={nikudEnabled}
-            onClick={toggleNikud}
-            label="נקוד"
-            ariaLabel="Toggle nikud (vowel points)"
-          />
-        </div>
+        {/* Nikud Toggle - Hidden in TTH mode */}
+        {!tthEnabled && (
+          <div className="flex items-center justify-between py-2">
+            <label className="text-sm font-medium text-black/80">
+              {t('nikud', locale)}
+            </label>
+            <NeumorphicToggle
+              enabled={nikudEnabled}
+              onClick={toggleNikud}
+              label="נקוד"
+              ariaLabel="Toggle nikud (vowel points)"
+            />
+          </div>
+        )}
 
         {/* Sefer Toggle */}
         <div className="flex items-center justify-between py-2">
@@ -120,8 +139,8 @@ export default function Settings({
           />
         </div>
 
-        {/* Cantillation Toggle - Only for Tanaj */}
-        {showCantillationToggle && (
+        {/* Cantillation Toggle - Hidden in TTH mode and only for Tanaj */}
+        {showCantillationToggle && !tthEnabled && (
           <div className="flex items-center justify-between py-2">
             <label className="text-sm font-medium text-black/80">
               {locale === 'he' ? 'טעמים' : 'Cantillation'}

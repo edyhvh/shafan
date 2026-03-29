@@ -41,6 +41,9 @@ type TranslationKey =
   | 'off'
   | 'light'
   | 'dark'
+  | 'tth_not_available_book'
+  | 'tth_not_available_chapter'
+  | 'tth_book_unavailable_message'
 
 const translations: Record<Locale, Record<TranslationKey, string>> = {
   en: {
@@ -88,6 +91,9 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     off: 'Off',
     light: 'Light',
     dark: 'Dark',
+    tth_not_available_book: 'Not available yet',
+    tth_not_available_chapter: 'Not available yet',
+    tth_book_unavailable_message: 'This book is not available yet. Disable the TTH option to continue reading.',
   },
   es: {
     books: 'Libros',
@@ -134,6 +140,9 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     off: 'Desactivado',
     light: 'Claro',
     dark: 'Oscuro',
+    tth_not_available_book: 'Aún no disponible',
+    tth_not_available_chapter: 'Aún no disponible',
+    tth_book_unavailable_message: 'Este libro aún no está disponible. Desactiva la opción TTH para continuar leyendo.',
   },
   he: {
     books: 'ספרים',
@@ -180,6 +189,9 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     off: 'כבוי',
     light: 'בהיר',
     dark: 'כהה',
+    tth_not_available_book: 'עדיין לא זמין',
+    tth_not_available_chapter: 'עדיין לא זמין',
+    tth_book_unavailable_message: 'ספר זה עדיין לא זמין. השבת את אפשרות TTH כדי להמשיך לקרוא.',
   },
 }
 

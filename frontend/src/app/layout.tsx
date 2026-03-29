@@ -73,11 +73,5 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  return (
-    <>
-      <link rel="icon" type="image/png" href="/icon.png?v=2" />
-      <link rel="shortcut icon" href="/icon.png?v=2" />
-      {children}
-    </>
-  )
+  return children
 }

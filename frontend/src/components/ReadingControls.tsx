@@ -7,6 +7,7 @@ import { useCantillation } from '@/hooks/useCantillation'
 import { useTextSource } from '@/hooks/useTextSource'
 import { useSefer } from '@/hooks/useSefer'
 import { useTheme } from '@/hooks/useTheme'
+import { useTTH } from '@/hooks/useTTH'
 import { usePathname } from 'next/navigation'
 import { isNewTestament, AVAILABLE_BOOKS, type BookName } from '@/lib/books'
 import { useScrollState } from '@/hooks/useScrollState'
@@ -137,6 +138,7 @@ export default function ReadingControls() {
   const { textSource, toggleTextSource } = useTextSource()
   const { seferEnabled, toggleSefer } = useSefer()
   const { theme, toggleTheme } = useTheme()
+  const { tthEnabled } = useTTH()
   const pathname = usePathname()
   const [mounted, setMounted] = useState(false)
 
@@ -154,8 +156,28 @@ export default function ReadingControls() {
     bookId && AVAILABLE_BOOKS.includes(bookId as BookName)
       ? (bookId as BookName)
       : null
-  const showTextSourceToggle = bookName && isNewTestament(bookName)
-  const showCantillationToggle = bookName && !isNewTestament(bookName)
+  const showTextSourceToggle = Boolean(!tthEnabled && bookName && isNewTestament(bookName))
+  const showNikudToggle = !tthEnabled
+  const showCantillationToggle = Boolean(!tthEnabled && bookName && !isNewTestament(bookName))
+
+  const firstToggleTop = showTextSourceToggle ? 72 : 24
+  const toggleSpacing = 64
+  let nextToggleTop = firstToggleTop
+
+  const nikudTop = nextToggleTop
+  if (showNikudToggle) {
+    nextToggleTop += toggleSpacing
+  }
+
+  const seferTop = nextToggleTop
+  nextToggleTop += toggleSpacing
+
+  const cantillationTop = nextToggleTop
+  if (showCantillationToggle) {
+    nextToggleTop += toggleSpacing
+  }
+
+  const themeTop = nextToggleTop
 
   useEffect(() => {
     setMounted(true)
@@ -168,7 +190,7 @@ export default function ReadingControls() {
 
   const controlsContent = (
     <>
-      {/* Text Source Toggle (Hutter/Delitzsch) - Only for New Testament */}
+      {/* Text Source Toggle (Hutter/Delitzsch) - Only for New Testament, hidden in TTH mode */}
       {showTextSourceToggle && (
         <TextSourceToggle
           enabled={textSource === 'delitzsch'}
@@ -178,16 +200,17 @@ export default function ReadingControls() {
         />
       )}
 
-      {/* Nikud Button - Always shown, positioned below text source toggle if both are visible */}
-      {/* Text source ends at 56px, so Nikud starts at 72px with 16px gap */}
-      <ToggleButton
-        enabled={nikudEnabled}
-        onClick={toggleNikud}
-        label="נקוד"
-        ariaLabel="Toggle nikud (vowel points)"
-        topPosition={showTextSourceToggle ? '72px' : '24px'}
-        animationDelay="50ms"
-      />
+      {/* Nikud Button - Hidden in TTH mode */}
+      {showNikudToggle && (
+        <ToggleButton
+          enabled={nikudEnabled}
+          onClick={toggleNikud}
+          label="נקוד"
+          ariaLabel="Toggle nikud (vowel points)"
+          topPosition={`${nikudTop}px`}
+          animationDelay="50ms"
+        />
+      )}
 
       {/* Sefer Button - Always shown, positioned below nikud button */}
       {/* Each button component is ~56px tall (40px button + 4px gap + 12px label) */}
@@ -197,18 +220,18 @@ export default function ReadingControls() {
         onClick={toggleSefer}
         label="ספר"
         ariaLabel="Toggle sefer (continuous paragraph) display"
-        topPosition={showTextSourceToggle ? '136px' : '88px'}
+        topPosition={`${seferTop}px`}
         animationDelay="100ms"
       />
 
-      {/* Cantillation Button - Only shown for Tanaj books, positioned below sefer button */}
+      {/* Cantillation Button - Hidden in TTH mode and only shown for Tanaj books */}
       {showCantillationToggle && (
         <ToggleButton
           enabled={cantillationEnabled}
           onClick={toggleCantillation}
           label="טעמים"
           ariaLabel="Toggle cantillation marks"
-          topPosition={showTextSourceToggle ? '200px' : '152px'}
+          topPosition={`${cantillationTop}px`}
           animationDelay="150ms"
         />
       )}
@@ -218,15 +241,7 @@ export default function ReadingControls() {
         enabled={theme === 'light'}
         onClick={toggleTheme}
         ariaLabel="Toggle theme (light/dark)"
-        topPosition={
-          showCantillationToggle
-            ? showTextSourceToggle
-              ? '264px'
-              : '216px'
-            : showTextSourceToggle
-              ? '200px'
-              : '152px'
-        }
+        topPosition={`${themeTop}px`}
         animationDelay="200ms"
       />
     </>
