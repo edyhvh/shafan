@@ -5,6 +5,10 @@ import { useState, useEffect } from 'react'
 import VersesDropdown from './VersesDropdown'
 import { usePathname } from 'next/navigation'
 import { getLocaleFromPath } from '@/lib/locale'
+import { useTTH } from '@/hooks/useTTH'
+import { getTTHChapterCount } from '@/lib/tth'
+import type { BookName } from '@/lib/books'
+import { t } from '@/lib/translations'
 
 interface ChaptersDropdownProps {
   chapters: Chapter[]
@@ -26,6 +30,8 @@ export default function ChaptersDropdown({
   const [selectedChapter, setSelectedChapter] = useState<number | null>(null)
   const pathname = usePathname()
   const locale = getLocaleFromPath(pathname)
+  const { effectiveTTHEnabled } = useTTH()
+  const tthChapterCount = getTTHChapterCount(bookName as BookName)
 
   // Reset selected chapter when dropdown closes
   useEffect(() => {
@@ -132,16 +138,30 @@ export default function ChaptersDropdown({
       >
         {chapters.map((ch) => {
           const isSelected = selectedChapter === ch.number
+          const isTTHUnavailable =
+            effectiveTTHEnabled &&
+            tthChapterCount !== null &&
+            ch.number > tthChapterCount
 
           return (
             <button
               key={ch.number}
-              className={`flex items-center justify-center w-10 h-10 text-sm font-semibold transition-all duration-200 rounded-lg cursor-pointer ${
-                isSelected
-                  ? 'bg-gray text-white scale-105 shadow-md'
-                  : 'bg-black/[0.04] text-black hover:bg-black/[0.08] hover:scale-105 hover:shadow-sm active:scale-95'
+              className={`flex items-center justify-center w-10 h-10 text-sm font-semibold transition-all duration-200 rounded-lg ${
+                isTTHUnavailable
+                  ? 'opacity-30 cursor-not-allowed bg-black/[0.02] text-muted'
+                  : isSelected
+                    ? 'bg-gray text-white scale-105 shadow-md cursor-pointer'
+                    : 'bg-black/[0.04] text-black hover:bg-black/[0.08] hover:scale-105 hover:shadow-sm active:scale-95 cursor-pointer'
               } ${locale === 'he' ? 'font-ui-hebrew' : 'font-ui-latin'}`}
-              onClick={(e) => handleChapterClick(e, ch.number)}
+              onClick={(e) =>
+                !isTTHUnavailable && handleChapterClick(e, ch.number)
+              }
+              disabled={isTTHUnavailable}
+              title={
+                isTTHUnavailable
+                  ? t('tth_not_available_chapter', locale as 'he' | 'es' | 'en')
+                  : undefined
+              }
             >
               {locale === 'he' ? ch.hebrew_letter : ch.number}
             </button>

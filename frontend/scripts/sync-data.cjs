@@ -1,5 +1,5 @@
 /**
- * Sync JSON book data from output directory to public/data for static serving
+ * Sync JSON book data from output and data/tth/json directories to public/data for static serving
  * Normalizes JSON formatting to avoid unnecessary copies
  */
 
@@ -7,6 +7,7 @@ const fs = require('fs')
 const path = require('path')
 
 const outputDir = path.join(__dirname, '../../output')
+const tthDir = path.join(__dirname, '../../data/tth/json')
 const publicDataDir = path.join(__dirname, '../public/data')
 
 /**
@@ -88,7 +89,7 @@ if (fs.existsSync(outputDir)) {
     // Only show output if there were changes or if it's the first run
     if (copiedCount > 0) {
       console.log(
-        `Data sync: ${copiedCount} updated, ${skippedCount} unchanged`
+        `Hebrew data sync: ${copiedCount} updated, ${skippedCount} unchanged`
       )
     }
   } else {
@@ -99,4 +100,62 @@ if (fs.existsSync(outputDir)) {
   // Output directory doesn't exist (e.g., in Vercel build) - this is expected
   // The JSON files should already be in public/data from the repository
   // Silently skip
+}
+
+// Copy all JSON files from data/tth/json to public/data (only if changed)
+if (fs.existsSync(tthDir)) {
+  const files = fs.readdirSync(tthDir)
+  const jsonFiles = files.filter((file) => file.endsWith('.json'))
+
+  if (jsonFiles.length > 0) {
+    let copiedCount = 0
+    let skippedCount = 0
+
+    jsonFiles.forEach((file) => {
+      const sourcePath = path.join(tthDir, file)
+      const destPath = path.join(publicDataDir, file)
+
+      try {
+        let needsCopy = false
+
+        if (!fs.existsSync(destPath)) {
+          // Destination doesn't exist, need to copy
+          needsCopy = true
+        } else {
+          // Read and normalize both files for comparison
+          const sourceContent = fs.readFileSync(sourcePath, 'utf8')
+          const destContent = fs.readFileSync(destPath, 'utf8')
+
+          // Compare normalized JSON content
+          if (!jsonContentEqual(sourceContent, destContent)) {
+            needsCopy = true
+          }
+        }
+
+        if (needsCopy) {
+          // Read source, normalize, and write formatted JSON
+          const sourceContent = fs.readFileSync(sourcePath, 'utf8')
+          const normalizedContent = normalizeJson(sourceContent)
+          fs.writeFileSync(destPath, normalizedContent, 'utf8')
+          copiedCount++
+        } else {
+          skippedCount++
+        }
+      } catch (error) {
+        console.error(`✗ Error processing TTH ${file}:`, error.message)
+      }
+    })
+
+    // Only show output if there were changes or if it's the first run
+    if (copiedCount > 0) {
+      console.log(
+        `TTH data sync: ${copiedCount} updated, ${skippedCount} unchanged`
+      )
+    }
+  } else {
+    // TTH directory exists but no JSON files - this is fine
+    // Silently skip
+  }
+} else {
+  // TTH directory doesn't exist - this is fine for builds without TTH data
 }

@@ -3,6 +3,7 @@
 import { useTextSource } from '@/hooks/useTextSource'
 import { isNewTestament, type BookName } from '@/lib/books'
 import { useState, useEffect } from 'react'
+import { useTTH } from '@/hooks/useTTH'
 
 interface AuthorInfoProps {
   bookName: BookName
@@ -21,6 +22,7 @@ export default function AuthorInfo({
   hutterYear,
 }: AuthorInfoProps) {
   const { textSource, isLoaded } = useTextSource()
+  const { tthEnabled } = useTTH()
   const isNT = isNewTestament(bookName)
   const [mounted, setMounted] = useState(false)
 
@@ -28,6 +30,20 @@ export default function AuthorInfo({
   useEffect(() => {
     setMounted(true)
   }, [])
+
+  // If TTH is enabled, show TTH author
+  if (tthEnabled) {
+    return (
+      <div className="mt-12 flex justify-center">
+        <p
+          className="font-ui-latin text-sm text-gray text-center"
+          suppressHydrationWarning
+        >
+          Traducción Textual del Hebreo
+        </p>
+      </div>
+    )
+  }
 
   // For New Testament: show Hutter or Delitzsch based on textSource
   // For Tanaj: show Masoretic Text info

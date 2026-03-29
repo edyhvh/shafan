@@ -3,22 +3,16 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 
 /**
- * Get initial preference state from data attribute (set by inline script) or localStorage
+ * Read preference from data attribute (set by inline script) or localStorage.
+ * Only called inside useEffect (client-side) to avoid hydration mismatches.
  */
-function getInitialPreferenceState<T extends string>(
+function readPreferenceFromDOM<T extends string>(
   storageKey: string,
-  defaultValue: T,
   dataAttribute: string
-): T {
-  if (typeof window === 'undefined') return defaultValue
-
-  // First check the data attribute set by the inline script in layout
-  const dataAttr = document.documentElement.getAttribute(dataAttribute)
-  if (dataAttr !== null) {
-    return dataAttr as T
-  }
-
-  // Fallback to localStorage
+): T | null {
+  // Read localStorage first — it is the source of truth.
+  // Data attributes on <html> are set by the inline script but React hydration
+  // reconciles them back to the JSX-hardcoded defaults, making them unreliable.
   try {
     const stored = localStorage.getItem(storageKey)
     if (stored !== null) {
@@ -28,7 +22,13 @@ function getInitialPreferenceState<T extends string>(
     // Storage error
   }
 
-  return defaultValue
+  // Fallback to data attribute (useful on very first visit with no localStorage)
+  const dataAttr = document.documentElement.getAttribute(dataAttribute)
+  if (dataAttr !== null) {
+    return dataAttr as T
+  }
+
+  return null
 }
 
 /**
@@ -43,9 +43,7 @@ export function usePreference<T extends string>(
   defaultValue: T,
   dataAttribute: string
 ) {
-  const [value, setValue] = useState<T>(() =>
-    getInitialPreferenceState(storageKey, defaultValue, dataAttribute)
-  )
+  const [value, setValue] = useState<T>(defaultValue)
   const [isLoaded, setIsLoaded] = useState(false)
   const valueRef = useRef(value)
 
@@ -54,14 +52,22 @@ export function usePreference<T extends string>(
     valueRef.current = value
   }, [value])
 
-  // Mark as loaded on mount
+  // On mount: read real value from DOM/localStorage, then mark loaded
   useEffect(() => {
+    const stored = readPreferenceFromDOM<T>(storageKey, dataAttribute)
+    if (stored !== null) {
+      setValue(stored)
+    }
     setIsLoaded(true)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  // Save to localStorage and update data attribute when value changes
+  // Save to localStorage and update data attribute when value changes.
+  // Guard with isLoaded so the default value doesn't overwrite the real stored
+  // value before the on-mount read effect has had a chance to run.
   useEffect(() => {
     if (typeof window === 'undefined') return
+    if (!isLoaded) return
 
     try {
       localStorage.setItem(storageKey, value)
@@ -69,7 +75,7 @@ export function usePreference<T extends string>(
     } catch {
       // Storage error (e.g., quota exceeded)
     }
-  }, [value, storageKey, dataAttribute])
+  }, [value, storageKey, dataAttribute, isLoaded])
 
   // Listen for storage changes from other tabs/windows and custom events for same-tab sync
   useEffect(() => {

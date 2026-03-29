@@ -6,6 +6,8 @@ import { getLocaleFromPath, removeLocaleFromPath } from '@/lib/locale'
 import { ChevronDown } from '@/components/icons'
 import { useIsMobile } from '@/hooks/useIsMobile'
 import { useClickOutside } from '@/hooks/useClickOutside'
+import { useTTH } from '@/hooks/useTTH'
+import { withTTHParam } from '@/lib/navigation-params'
 
 const languages = [
   { code: 'he', label: 'עברית', nativeLabel: 'עברית' },
@@ -20,6 +22,7 @@ export default function LanguageSelector() {
   const isMobile = useIsMobile()
   const containerRef = useRef<HTMLDivElement>(null)
   const buttonRef = useRef<HTMLButtonElement>(null)
+  const { effectiveTTHEnabled } = useTTH()
 
   const currentLocale = getLocaleFromPath(pathname)
   const currentLanguage =
@@ -32,7 +35,7 @@ export default function LanguageSelector() {
     setIsOpen(false)
     const pathWithoutLocale = removeLocaleFromPath(pathname)
     const newPath = `/${locale}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`
-    router.push(newPath)
+    router.push(withTTHParam(newPath, effectiveTTHEnabled))
   }
 
   const handleToggle = () => {

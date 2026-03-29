@@ -9,6 +9,7 @@ interface DropdownItem {
   label: string
   href?: string
   isCurrent?: boolean
+  disabled?: boolean
   onClick?: () => void
 }
 
@@ -62,20 +63,29 @@ export default function SearchableDropdown({
       return (
         <div className={`grid grid-cols-${gridCols} gap-1 p-2`}>
           {items.length > 0 ? (
-            items.map((item) => (
-              <Link
-                key={item.id}
-                href={item.href || '#'}
-                onClick={item.onClick}
-                className={`flex items-center justify-center p-2 text-sm font-semibold rounded-lg transition-all duration-200 cursor-pointer ${
-                  item.isCurrent
-                    ? 'bg-primary text-white'
-                    : 'text-primary bg-black/[0.04] hover:bg-black/[0.08] hover:shadow-sm'
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))
+            items.map((item) =>
+              item.disabled ? (
+                <span
+                  key={item.id}
+                  className="flex items-center justify-center p-2 text-sm font-semibold rounded-lg opacity-30 cursor-not-allowed bg-black/[0.02] text-muted"
+                >
+                  {item.label}
+                </span>
+              ) : (
+                <Link
+                  key={item.id}
+                  href={item.href || '#'}
+                  onClick={item.onClick}
+                  className={`flex items-center justify-center p-2 text-sm font-semibold rounded-lg transition-all duration-200 cursor-pointer ${
+                    item.isCurrent
+                      ? 'bg-primary text-white'
+                      : 'text-primary bg-black/[0.04] hover:bg-black/[0.08] hover:shadow-sm'
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              )
+            )
           ) : (
             <div className="col-span-full px-4 py-3 text-sm text-muted text-center">
               {emptyMessage}
@@ -88,20 +98,29 @@ export default function SearchableDropdown({
     return (
       <div className="py-1 max-h-[300px] overflow-y-auto">
         {items.length > 0 ? (
-          items.map((item) => (
-            <Link
-              key={item.id}
-              href={item.href || '#'}
-              onClick={item.onClick}
-              className={`block px-4 py-2 text-sm font-semibold transition-all duration-200 cursor-pointer ${
-                item.isCurrent
-                  ? 'bg-primary text-white'
-                  : 'text-primary hover:bg-black/[0.08] hover:shadow-sm'
-              }`}
-            >
-              {item.label}
-            </Link>
-          ))
+          items.map((item) =>
+            item.disabled ? (
+              <span
+                key={item.id}
+                className="block px-4 py-2 text-sm font-semibold opacity-30 cursor-not-allowed text-muted"
+              >
+                {item.label}
+              </span>
+            ) : (
+              <Link
+                key={item.id}
+                href={item.href || '#'}
+                onClick={item.onClick}
+                className={`block px-4 py-2 text-sm font-semibold transition-all duration-200 cursor-pointer ${
+                  item.isCurrent
+                    ? 'bg-primary text-white'
+                    : 'text-primary hover:bg-black/[0.08] hover:shadow-sm'
+                }`}
+              >
+                {item.label}
+              </Link>
+            )
+          )
         ) : (
           <div className="px-4 py-3 text-sm text-muted text-center">
             {emptyMessage}

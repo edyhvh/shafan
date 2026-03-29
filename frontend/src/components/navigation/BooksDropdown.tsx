@@ -14,6 +14,9 @@ import { usePathname } from 'next/navigation'
 import { getLocaleFromPath } from '@/lib/locale'
 import { ChevronRight, LoadingSpinner, BackArrowIcon } from '@/components/icons'
 import MobileModal from '@/components/ui/MobileModal'
+import { useTTH } from '@/hooks/useTTH'
+import { hasTTH } from '@/lib/tth'
+import { t } from '@/lib/translations'
 
 interface BooksDropdownProps {
   isOpen: boolean
@@ -41,6 +44,7 @@ export default function BooksDropdown({
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null)
   const pathname = usePathname()
   const locale = getLocaleFromPath(pathname)
+  const { effectiveTTHEnabled } = useTTH()
 
   // Reset selected book and hovered book when dropdown closes
   useEffect(() => {
@@ -232,8 +236,11 @@ export default function BooksDropdown({
                   const displayName = BOOK_DISPLAY_NAMES[bookName]
                   const isHovered = hoveredBook === bookName
                   const isSelected = selectedBook === bookName
+                  const isTTHUnavailable =
+                    effectiveTTHEnabled && !hasTTH(bookName)
 
                   const handleBookClick = () => {
+                    if (isTTHUnavailable) return // Block click for unavailable books
                     setSelectedBook(bookName)
                     setHoveredBook(null) // Clear hover state when selecting
                   }
@@ -241,24 +248,48 @@ export default function BooksDropdown({
                   return (
                     <div key={bookName}>
                       <button
-                        className={`flex items-center justify-between px-6 py-3 text-base font-ui-latin font-semibold text-primary transition-all duration-200 border-b border-primary/8 last:border-b-0 cursor-pointer ${
-                          isHovered || isSelected
-                            ? 'bg-black/[0.06] shadow-sm'
-                            : 'hover:bg-black/[0.03]'
+                        className={`flex items-center justify-between px-6 py-3 text-base font-ui-latin font-semibold transition-all duration-200 border-b border-primary/8 last:border-b-0 ${
+                          isTTHUnavailable
+                            ? 'opacity-40 cursor-not-allowed text-muted'
+                            : `text-primary cursor-pointer ${
+                                isHovered || isSelected
+                                  ? 'bg-black/[0.06] shadow-sm'
+                                  : 'hover:bg-black/[0.03]'
+                              }`
                         } ${locale === 'he' ? 'flex-row-reverse' : ''} w-full text-left`}
                         onMouseEnter={() =>
-                          !isMobile && setHoveredBook(bookName)
+                          !isMobile &&
+                          !isTTHUnavailable &&
+                          setHoveredBook(bookName)
                         }
                         onMouseLeave={() => !isMobile && setHoveredBook(null)}
                         onClick={handleBookClick}
+                        disabled={isTTHUnavailable}
+                        title={
+                          isTTHUnavailable
+                            ? t(
+                                'tth_not_available_book',
+                                locale as 'he' | 'es' | 'en'
+                              )
+                            : undefined
+                        }
                       >
                         <span>
                           {displayName[locale as 'he' | 'es' | 'en'] ||
                             displayName.en}
                         </span>
-                        <ChevronRight
-                          className={`text-muted ${locale === 'he' ? 'scale-x-[-1]' : ''}`}
-                        />
+                        {isTTHUnavailable ? (
+                          <span className="text-xs text-muted/60 font-normal max-w-[120px] text-right leading-tight">
+                            {t(
+                              'tth_not_available_book',
+                              locale as 'he' | 'es' | 'en'
+                            )}
+                          </span>
+                        ) : (
+                          <ChevronRight
+                            className={`text-muted ${locale === 'he' ? 'scale-x-[-1]' : ''}`}
+                          />
+                        )}
                       </button>
                     </div>
                   )

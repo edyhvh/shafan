@@ -6,6 +6,7 @@ import {
   Cardo,
   Assistant,
 } from 'next/font/google'
+import Script from 'next/script'
 import '../globals.css'
 import Navbar from '@/components/Navbar'
 import CorrectionWarning from '@/components/CorrectionWarning'
@@ -132,42 +133,43 @@ export default async function LocaleLayout({
       data-cantillation="false"
       data-text-source="delitzsch"
       data-sefer="true"
+      data-tth="false"
       data-theme="light"
       suppressHydrationWarning
     >
       <head>
-        <link rel="icon" href="/icon.png?v=2" type="image/png" />
-        <link rel="shortcut icon" href="/icon.png?v=2" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var nikud = localStorage.getItem('shafan-nikud-enabled');
-                  if (nikud !== null) {
-                    document.documentElement.setAttribute('data-nikud', nikud);
-                  }
-                  var cantillation = localStorage.getItem('shafan-cantillation-enabled');
-                  if (cantillation !== null) {
-                    document.documentElement.setAttribute('data-cantillation', cantillation);
-                  }
-                  var textSource = localStorage.getItem('shafan-text-source');
-                  if (textSource !== null) {
-                    document.documentElement.setAttribute('data-text-source', textSource);
-                  }
-                  var sefer = localStorage.getItem('shafan-sefer-enabled');
-                  if (sefer !== null) {
-                    document.documentElement.setAttribute('data-sefer', sefer);
-                  }
-                  var theme = localStorage.getItem('shafan-theme');
-                  if (theme !== null) {
-                    document.documentElement.setAttribute('data-theme', theme);
-                  }
-                } catch(e) {}
-              })();
-            `,
-          }}
-        />
+        <Script id="shafan-initial-preferences" strategy="beforeInteractive">
+          {`
+            (function() {
+              try {
+                var nikud = localStorage.getItem('shafan-nikud-enabled');
+                if (nikud !== null) {
+                  document.documentElement.setAttribute('data-nikud', nikud);
+                }
+                var cantillation = localStorage.getItem('shafan-cantillation-enabled');
+                if (cantillation !== null) {
+                  document.documentElement.setAttribute('data-cantillation', cantillation);
+                }
+                var textSource = localStorage.getItem('shafan-text-source');
+                if (textSource !== null) {
+                  document.documentElement.setAttribute('data-text-source', textSource);
+                }
+                var sefer = localStorage.getItem('shafan-sefer-enabled');
+                if (sefer !== null) {
+                  document.documentElement.setAttribute('data-sefer', sefer);
+                }
+                var tth = localStorage.getItem('shafan-tth-enabled');
+                if (tth !== null) {
+                  document.documentElement.setAttribute('data-tth', tth);
+                }
+                var theme = localStorage.getItem('shafan-theme');
+                if (theme !== null) {
+                  document.documentElement.setAttribute('data-theme', theme);
+                }
+              } catch (e) {}
+            })();
+          `}
+        </Script>
       </head>
       <body
         className={`${inter.variable} ${libreBodoni.variable} ${suezOne.variable} ${cardo.variable} ${assistant.variable} font-ui-latin antialiased`}

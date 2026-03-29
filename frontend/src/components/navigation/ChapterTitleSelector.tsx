@@ -10,6 +10,8 @@ import {
   BOOK_HEBREW_INFO,
   type BookName,
 } from '@/lib/books'
+import { useTTH } from '@/hooks/useTTH'
+import { hasTTH, getTTHChapterCount } from '@/lib/tth'
 
 interface ChapterTitleSelectorProps {
   bookDisplayName: string
@@ -32,6 +34,8 @@ export default function ChapterTitleSelector({
   const [isBookOpen, setIsBookOpen] = useState(false)
   const chapterDropdownRef = useRef<HTMLDivElement>(null)
   const bookDropdownRef = useRef<HTMLDivElement>(null)
+  const { effectiveTTHEnabled } = useTTH()
+  const tthChapterCount = getTTHChapterCount(bookName)
 
   // Use custom hooks for search functionality
   const {
@@ -125,6 +129,7 @@ export default function ChapterTitleSelector({
                   displayName[locale as 'he' | 'es' | 'en'] || displayName.en,
                 href: `/${locale}/book/${book}/chapter/1`,
                 isCurrent: book === bookName,
+                disabled: effectiveTTHEnabled && !hasTTH(book),
                 onClick: () => setIsBookOpen(false),
               }
             })}
@@ -157,6 +162,10 @@ export default function ChapterTitleSelector({
               label: chapter.number.toString(),
               href: `/${locale}/book/${bookName}/chapter/${chapter.number}`,
               isCurrent: chapter.number === currentChapter,
+              disabled:
+                effectiveTTHEnabled &&
+                tthChapterCount !== null &&
+                chapter.number > tthChapterCount,
               onClick: () => setIsChapterOpen(false),
             }))}
             emptyMessage="No chapters found"

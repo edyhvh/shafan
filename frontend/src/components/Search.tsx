@@ -5,6 +5,8 @@ import { useRouter, usePathname } from 'next/navigation'
 import { searchBooks, BOOK_DISPLAY_NAMES, type BookName } from '@/lib/books'
 import { getLocaleFromPath } from '@/lib/locale'
 import { useClickOutside } from '@/hooks/useClickOutside'
+import { useTTH } from '@/hooks/useTTH'
+import { withTTHParam } from '@/lib/navigation-params'
 
 export default function Search() {
   const [query, setQuery] = useState('')
@@ -14,6 +16,7 @@ export default function Search() {
   const router = useRouter()
   const pathname = usePathname()
   const locale = getLocaleFromPath(pathname)
+  const { effectiveTTHEnabled } = useTTH()
 
   useEffect(() => {
     if (query.trim()) {
@@ -31,7 +34,9 @@ export default function Search() {
   const handleBookSelect = (bookName: BookName) => {
     setQuery('')
     setIsOpen(false)
-    router.push(`/${locale}/book/${bookName}/chapter/1`)
+    router.push(
+      withTTHParam(`/${locale}/book/${bookName}/chapter/1`, effectiveTTHEnabled)
+    )
   }
 
   return (
