@@ -25,8 +25,8 @@ export async function loadTTHServer(
   }
 
   try {
-    const fs = await import('fs')
-    const path = await import('path')
+    const fs = require('fs')
+    const path = require('path')
 
     const tthPath = path.join(
       process.cwd(),

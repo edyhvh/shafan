@@ -1,5 +1,6 @@
 import tseslint from '@typescript-eslint/eslint-plugin'
 import tsparser from '@typescript-eslint/parser'
+import reactHooks from 'eslint-plugin-react-hooks'
 
 export default [
   {
@@ -30,12 +31,17 @@ export default [
     },
     plugins: {
       '@typescript-eslint': tseslint,
+      'react-hooks': reactHooks,
     },
     rules: {
       // Next.js recommended rules
       'react/no-unescaped-entities': 'off',
       '@next/next/no-page-custom-font': 'off',
       '@next/next/no-html-link-for-pages': 'off',
+
+      // React hooks rules
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
 
       // TypeScript rules
       '@typescript-eslint/no-unused-vars': [

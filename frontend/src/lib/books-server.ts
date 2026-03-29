@@ -18,8 +18,8 @@ export async function loadBookServer(bookName: BookName): Promise<Book | null> {
 
   try {
     // Dynamic import to avoid bundling fs in client
-    const fs = await import('fs')
-    const path = await import('path')
+    const fs = require('fs')
+    const path = require('path')
 
     // Only read from public/data directory
     // This prevents Next.js file tracing from including the parent output directory
