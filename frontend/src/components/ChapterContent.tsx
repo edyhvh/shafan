@@ -92,11 +92,19 @@ export default function ChapterContent({
 
   // Wait for all preference hooks to be loaded before rendering to prevent hydration mismatches
   const allPreferencesLoaded =
-    nikudLoaded && cantillationLoaded && textSourceLoaded && seferLoaded && tthLoaded
+    nikudLoaded &&
+    cantillationLoaded &&
+    textSourceLoaded &&
+    seferLoaded &&
+    tthLoaded
 
   // Determine if we're in TTH mode with data available
   // Gate on allPreferencesLoaded to prevent hydration mismatch (server always renders Hebrew)
-  const showTTH = allPreferencesLoaded && tthEnabled && tthChapter && tthChapter.verses.length > 0
+  const showTTH =
+    allPreferencesLoaded &&
+    tthEnabled &&
+    tthChapter &&
+    tthChapter.verses.length > 0
 
   // Track highlighted verse for temporary highlight animation
   const [highlightedVerse, setHighlightedVerse] = useState<number | null>(null)
@@ -150,10 +158,13 @@ export default function ChapterContent({
   }, [chapterNumber, allPreferencesLoaded])
 
   // Block rendering entirely when TTH is enabled but book is not available
-  if (allPreferencesLoaded && tthEnabled && !tthAvailable) {
+  if (tthEnabled && !tthAvailable) {
     return (
       <section className="mb-12 pt-12">
-        <div className="text-center text-muted text-base font-ui-latin px-4" dir="ltr">
+        <div
+          className="text-center text-muted text-base font-ui-latin px-4"
+          dir="ltr"
+        >
           {t('tth_book_unavailable_message', locale)}
         </div>
       </section>
@@ -212,13 +223,19 @@ export default function ChapterContent({
   /**
    * Render TTH verse text with inline footnote tooltips
    */
-  const renderTTHText = (tthText: string, footnotes: import('@/lib/types').TTHFootnote[]) => {
+  const renderTTHText = (
+    tthText: string,
+    footnotes: import('@/lib/types').TTHFootnote[]
+  ) => {
     if (!footnotes || footnotes.length === 0) {
       return <span dangerouslySetInnerHTML={{ __html: tthText }} />
     }
 
     // Split the text by footnote markers to insert tooltip components
-    const parts: (string | { type: 'footnote'; footnote: import('@/lib/types').TTHFootnote })[] = []
+    const parts: (
+      | string
+      | { type: 'footnote'; footnote: import('@/lib/types').TTHFootnote }
+    )[] = []
     let remaining = tthText
 
     // Sort footnotes by their position in the text (find each marker)
@@ -267,8 +284,11 @@ export default function ChapterContent({
       </h2>
 
       {/* TTH "not available" message for chapter */}
-      {allPreferencesLoaded && tthEnabled && !showTTH && tthAvailable && (
-        <div className="text-center text-muted text-sm mb-6 font-ui-latin" dir="ltr">
+      {tthEnabled && !showTTH && tthAvailable && (
+        <div
+          className="text-center text-muted text-sm mb-6 font-ui-latin"
+          dir="ltr"
+        >
           {t('tth_not_available_chapter', locale)}
         </div>
       )}
@@ -293,7 +313,9 @@ export default function ChapterContent({
                     key={`${tthVerse.verse}-${index}`}
                     id={verseId}
                     className={`scroll-mt-32 transition-all duration-500 ${
-                      isHighlighted ? 'verse-highlight-animate rounded px-1' : ''
+                      isHighlighted
+                        ? 'verse-highlight-animate rounded px-1'
+                        : ''
                     }`}
                   >
                     {tthVerse.verse > 0 && (
@@ -350,10 +372,45 @@ export default function ChapterContent({
       ) : (
         /* Hebrew content (original) */
         <article className={`${seferEnabled ? '' : 'space-y-8'}`} dir="rtl">
-        {seferEnabled ? (
-          // Sefer mode: continuous paragraph display
-          <p className="font-bible-hebrew text-[50px] md:text-[54px] leading-[1.9] text-primary text-right">
-            {verses.map((verse, index) => {
+          {seferEnabled ? (
+            // Sefer mode: continuous paragraph display
+            <p className="font-bible-hebrew text-[50px] md:text-[54px] leading-[1.9] text-primary text-right">
+              {verses.map((verse, index) => {
+                const isHighlighted = highlightedVerse === verse.number
+                const firstOccurrenceIndex = verses.findIndex(
+                  (entry) => entry.number === verse.number
+                )
+                const verseId =
+                  firstOccurrenceIndex === index
+                    ? `verse-${verse.number}`
+                    : `verse-${verse.number}-${index}`
+                return (
+                  <span
+                    key={`${verse.number}-${index}`}
+                    id={verseId}
+                    className={`scroll-mt-32 transition-all duration-500 ${
+                      isHighlighted
+                        ? 'verse-highlight-animate rounded px-1'
+                        : ''
+                    }`}
+                  >
+                    {verse.number > 0 && (
+                      <VerseNumber
+                        verseNumber={verse.number}
+                        className="text-muted ml-2"
+                      />
+                    )}
+                    <span className="font-bible-hebrew">
+                      {allPreferencesLoaded ? getDisplayText(verse) : '...'}
+                    </span>
+                    {index < verses.length - 1 && ' '}
+                  </span>
+                )
+              })}
+            </p>
+          ) : (
+            // Standard mode: separate verse blocks
+            verses.map((verse, index) => {
               const isHighlighted = highlightedVerse === verse.number
               const firstOccurrenceIndex = verses.findIndex(
                 (entry) => entry.number === verse.number
@@ -363,62 +420,29 @@ export default function ChapterContent({
                   ? `verse-${verse.number}`
                   : `verse-${verse.number}-${index}`
               return (
-                <span
+                <div
                   key={`${verse.number}-${index}`}
                   id={verseId}
-                  className={`scroll-mt-32 transition-all duration-500 ${
-                    isHighlighted ? 'verse-highlight-animate rounded px-1' : ''
+                  className={`font-bible-hebrew text-[50px] md:text-[54px] leading-[1.9] text-primary text-right scroll-mt-32 transition-all duration-500 ${
+                    isHighlighted
+                      ? 'verse-highlight-animate rounded-lg px-4 -mx-4'
+                      : ''
                   }`}
                 >
                   {verse.number > 0 && (
                     <VerseNumber
                       verseNumber={verse.number}
-                      className="text-muted ml-2"
+                      className="text-muted ml-3"
                     />
                   )}
                   <span className="font-bible-hebrew">
                     {allPreferencesLoaded ? getDisplayText(verse) : '...'}
                   </span>
-                  {index < verses.length - 1 && ' '}
-                </span>
+                </div>
               )
-            })}
-          </p>
-        ) : (
-          // Standard mode: separate verse blocks
-          verses.map((verse, index) => {
-            const isHighlighted = highlightedVerse === verse.number
-            const firstOccurrenceIndex = verses.findIndex(
-              (entry) => entry.number === verse.number
-            )
-            const verseId =
-              firstOccurrenceIndex === index
-                ? `verse-${verse.number}`
-                : `verse-${verse.number}-${index}`
-            return (
-              <div
-                key={`${verse.number}-${index}`}
-                id={verseId}
-                className={`font-bible-hebrew text-[50px] md:text-[54px] leading-[1.9] text-primary text-right scroll-mt-32 transition-all duration-500 ${
-                  isHighlighted
-                    ? 'verse-highlight-animate rounded-lg px-4 -mx-4'
-                    : ''
-                }`}
-              >
-                {verse.number > 0 && (
-                  <VerseNumber
-                    verseNumber={verse.number}
-                    className="text-muted ml-3"
-                  />
-                )}
-                <span className="font-bible-hebrew">
-                  {allPreferencesLoaded ? getDisplayText(verse) : '...'}
-                </span>
-              </div>
-            )
-          })
-        )}
-      </article>
+            })
+          )}
+        </article>
       )}
     </section>
   )
