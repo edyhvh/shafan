@@ -1,467 +1,677 @@
 {
-  "book_name": "micah",
-  "author": "",
-  "publication_year": "",
+  "book_info": {
+    "book_id": "micah",
+    "tth_name": "Micah",
+    "hebrew_name": "מיכה",
+    "english_name": "Micah",
+    "spanish_name": "Miqueas",
+    "section": "neviim",
+    "total_chapters": 7,
+    "total_verses": 105
+  },
   "chapters": [
     {
-      "hebrew_letter": "א",
-      "number": 1,
+      "chapter": 1,
       "verses": [
         {
-          "number": 1,
-          "text_nikud": "דְּבַר יְהוָ֣ה אֲשֶׁ֣ר הָיָ֗ה אֶל מִיכָה֙ הַ/מֹּ֣רַשְׁתִּ֔י בִּ/ימֵ֥י יוֹתָ֛ם אָחָ֥ז יְחִזְקִיָּ֖ה מַלְכֵ֣י יְהוּדָ֑ה אֲשֶׁר חָזָ֥ה עַל שֹׁמְר֖וֹן וִ/ירֽוּשָׁלִָֽם"
+          "verse": 1,
+          "tth": "Palabra de יהוה que fue a Micáh el morashtí en días de Iotam, Ajaz y Jizkiyah, reyes de Iehudáh, lo que vio sobre Shomrón y Ierushalem.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 2,
-          "text_nikud": "שִׁמְעוּ֙ עַמִּ֣ים כֻּלָּ֔/ם הַקְשִׁ֖יבִי אֶ֣רֶץ וּ/מְלֹאָ֑/הּ וִ/יהִי֩ אֲדֹנָ֨/י יְהוִ֤ה בָּ/כֶם֙ לְ/עֵ֔ד אֲדֹנָ֖/י מֵ/הֵיכַ֥ל קָדְשֽׁ/וֹ"
+          "verse": 2,
+          "tth": "¡Escuchen pueblos, todos ellos!,presta atención, tierra y su llenura; será Adonai יהוה contra ustedes por testigo, Adonai desde el Hejal (Palacio o Santuario) de su santidad.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 3,
-          "text_nikud": "כִּֽי הִנֵּ֥ה יְהוָ֖ה יֹצֵ֣א מִ/מְּקוֹמ֑/וֹ וְ/יָרַ֥ד וְ/דָרַ֖ךְ עַל במותי בָּ֥מֳתֵי אָֽרֶץ"
+          "verse": 3,
+          "tth": "Porque he aquí, יהוה sale de su lugary descenderá y pisará sobre las alturas de la tierra.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 4,
-          "text_nikud": "וְ/נָמַ֤סּוּ הֶֽ/הָרִים֙ תַּחְתָּ֔י/ו וְ/הָ/עֲמָקִ֖ים יִתְבַּקָּ֑עוּ כַּ/דּוֹנַג֙ מִ/פְּנֵ֣י הָ/אֵ֔שׁ כְּ/מַ֖יִם מֻגָּרִ֥ים בְּ/מוֹרָֽד"
+          "verse": 4,
+          "tth": "Y se derretirán los montes debajo de Él, y los valles se hendirán, como la cera a causa del (O, ante el) fuego, como las aguas derramadas en una pendiente.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 5,
-          "text_nikud": "בְּ/פֶ֤שַׁע יַֽעֲקֹב֙ כָּל זֹ֔את וּ/בְ/חַטֹּ֖אות בֵּ֣ית יִשְׂרָאֵ֑ל מִֽי פֶ֣שַׁע יַעֲקֹ֗ב הֲ/לוֹא֙ שֹֽׁמְר֔וֹן וּ/מִי֙ בָּמ֣וֹת יְהוּדָ֔ה הֲ/ל֖וֹא יְרוּשָׁלִָֽם"
+          "verse": 5,
+          "tth": "Por la transgresión de Iaacob todo esto, y por los pecados de la casa de Israel.¿Quién es la transgresión de Iaacob? ¿No es Shomrón? ¿Quién los lugares altos de Iehudáh? ¿No es Ierushalem?",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 6,
-          "text_nikud": "וְ/שַׂמְתִּ֥י שֹׁמְר֛וֹן לְ/עִ֥י הַ/שָּׂדֶ֖ה לְ/מַטָּ֣עֵי כָ֑רֶם וְ/הִגַּרְתִּ֤י לַ/גַּי֙ אֲבָנֶ֔י/הָ וִ/יסֹדֶ֖י/הָ אֲגַלֶּֽה"
+          "verse": 6,
+          "tth": "Y puse a Shomrón por ruina del campo, por plantaciones de viña; y derramé por el valle sus piedras, y sus fundamentos pondré al descubierto.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 7,
-          "text_nikud": "וְ/כָל פְּסִילֶ֣י/הָ יֻכַּ֗תּוּ וְ/כָל אֶתְנַנֶּ֨י/הָ֙ יִשָּׂרְפ֣וּ בָ/אֵ֔שׁ וְ/כָל עֲצַבֶּ֖י/הָ אָשִׂ֣ים שְׁמָמָ֑ה כִּ֠י מֵ/אֶתְנַ֤ן זוֹנָה֙ קִבָּ֔צָה וְ/עַד אֶתְנַ֥ן זוֹנָ֖ה יָשֽׁוּבוּ"
+          "verse": 7,
+          "tth": "Y todas sus estatuillas serán aplastadas, y todos sus pagosserán quemados en el fuego, y todas sus imágenes pondré como desolación, porque de pago de ramera las reunió, y a pago de ramera volverán.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 8,
-          "text_nikud": "עַל זֹאת֙ אֶסְפְּדָ֣ה וְ/אֵילִ֔ילָה אֵילְכָ֥ה שילל שׁוֹלָ֖ל וְ/עָר֑וֹם אֶעֱשֶׂ֤ה מִסְפֵּד֙ כַּ/תַּנִּ֔ים וְ/אֵ֖בֶל כִּ/בְנ֥וֹת יַעֲנָֽה"
+          "verse": 8,
+          "tth": "Por esto me lamentaré y gemiré, andaré descalzo y desnudo, haré lamentación como los reptilesy luto como las avestruces (Lit.: hijas del búho).",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 9,
-          "text_nikud": "כִּ֥י אֲנוּשָׁ֖ה מַכּוֹתֶ֑י/הָ כִּי בָ֨אָה֙ עַד יְהוּדָ֔ה נָגַ֛ע עַד שַׁ֥עַר עַמִּ֖/י עַד יְרוּשָׁלִָֽם"
+          "verse": 9,
+          "tth": "Pues incurable es su herida (Lit.: sus heridas), porque ha venido hasta Iehudáh, ha alcanzado hasta la puerta de mi pueblo, hasta Ierushalem.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 10,
-          "text_nikud": "בְּ/גַת֙ אַל תַּגִּ֔ידוּ בָּכ֖וֹ אַל תִּבְכּ֑וּ בְּ/בֵ֣ית לְעַפְרָ֔ה עָפָ֖ר התפלשתי הִתְפַּלָּֽשִׁי"
+          "verse": 10,
+          "tth": "En Gat no lo darán a conocer, ciertamente (Lit.: llorando) no llorarán.En Bet Leafráh (casa de polvo)revuélcate en polvo.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 11,
-          "text_nikud": "עִבְרִ֥י לָ/כֶ֛ם יוֹשֶׁ֥בֶת שָׁפִ֖יר עֶרְיָה בֹ֑שֶׁת לֹ֤א יָֽצְאָה֙ יוֹשֶׁ֣בֶת צַֽאֲנָ֔ן מִסְפַּד֙ בֵּ֣ית הָאֵ֔צֶל יִקַּ֥ח מִ/כֶּ֖ם עֶמְדָּתֽ/וֹ"
+          "verse": 11,
+          "tth": "¡Pasa para ustedes, habitante de Shafir, en desnudez vergonzosa! No saldrá la habitante de Tzaanán.La lamentación de Bet Etzel es queÉl quitará de ustedes su posición.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 12,
-          "text_nikud": "כִּֽי חָ֥לָֽה לְ/ט֖וֹב יוֹשֶׁ֣בֶת מָר֑וֹת כִּֽי יָ֤רַד רָע֙ מֵ/אֵ֣ת יְהוָ֔ה לְ/שַׁ֖עַר יְרוּשָׁלִָֽם"
+          "verse": 12,
+          "tth": "Porque se debilitó por el bienla habitante de Marot (amargura), porque descendió mal de יהוהa la puerta de Ierushalem.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 13,
-          "text_nikud": "רְתֹ֧ם הַ/מֶּרְכָּבָ֛ה לָ/רֶ֖כֶשׁ יוֹשֶׁ֣בֶת לָכִ֑ישׁ רֵאשִׁ֨ית חַטָּ֥את הִיא֙ לְ/בַת צִיּ֔וֹן כִּי בָ֥/ךְ נִמְצְא֖וּ פִּשְׁעֵ֥י יִשְׂרָאֵֽל"
+          "verse": 13,
+          "tth": "Ata el carro a la yunta de caballos, habitante de Lajish; principio de pecado fue ellapara la hija de Tzión, porque en ti fueron halladaslas transgresiones de Israel.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 14,
-          "text_nikud": "לָ/כֵן֙ תִּתְּנִ֣י שִׁלּוּחִ֔ים עַ֖ל מוֹרֶ֣שֶׁת גַּ֑ת בָּתֵּ֤י אַכְזִיב֙ לְ/אַכְזָ֔ב לְ/מַלְכֵ֖י יִשְׂרָאֵֽל"
+          "verse": 14,
+          "tth": "Por eso darás despedidas sobre Moréshet Gat; las casas de Ajzib (engaño) serán por engañopara los reyes de Israel.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 15,
-          "text_nikud": "עֹ֗ד הַ/יֹּרֵשׁ֙ אָ֣בִי לָ֔/ךְ יוֹשֶׁ֖בֶת מָֽרֵשָׁ֑ה עַד עֲדֻּלָּ֥ם יָב֖וֹא כְּב֥וֹד יִשְׂרָאֵֽל"
+          "verse": 15,
+          "tth": "Todavía al heredero (O, al que posee) haré venir a ti, habitante de Maresháh (posesión).Hasta Adulam llegará la gloria de Israel.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 16,
-          "text_nikud": "קָרְחִ֣י וָ/גֹ֔זִּי עַל בְּנֵ֖י תַּעֲנוּגָ֑יִ/ךְ הַרְחִ֤בִי קָרְחָתֵ/ךְ֙ כַּ/נֶּ֔שֶׁר כִּ֥י גָל֖וּ מִמֵּֽ/ךְ"
+          "verse": 16,
+          "tth": "¡Hazte calva y esquílatepor los hijos de tu delicadeza! ¡Ensancha tu calva como el buitre!,porque irán al exilio lejos de ti. Juicio contra los opresores",
+          "footnotes": [],
+          "hebrew_terms": []
         }
       ]
     },
     {
-      "hebrew_letter": "ב",
-      "number": 2,
+      "chapter": 2,
       "verses": [
         {
-          "number": 1,
-          "text_nikud": "ה֧וֹי חֹֽשְׁבֵי אָ֛וֶן וּ/פֹ֥עֲלֵי רָ֖ע עַל מִשְׁכְּבוֹתָ֑/ם בְּ/א֤וֹר הַ/בֹּ֨קֶר֙ יַעֲשׂ֔וּ/הָ כִּ֥י יֶשׁ לְ/אֵ֖ל יָדָֽ/ם"
+          "verse": 1,
+          "tth": "¡Ay de los que piensan injusticia y obran el mal sobre sus camas! En la luz de la mañana lo hacen, porque está en el poder de sus manos (Así en el T.M., en la versión gr., porque no alzaron a Elohim sus manos).",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 2,
-          "text_nikud": "וְ/חָמְד֤וּ שָׂדוֹת֙ וְ/גָזָ֔לוּ וּ/בָתִּ֖ים וְ/נָשָׂ֑אוּ וְ/עָֽשְׁקוּ֙ גֶּ֣בֶר וּ/בֵית֔/וֹ וְ/אִ֖ישׁ וְ/נַחֲלָתֽ/וֹ"
+          "verse": 2,
+          "tth": "Y desean campos y los toman con violencia, y casas, y las toman.Oprimen al varón y su casa, al hombre y su herencia.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 3,
-          "text_nikud": "לָ/כֵ֗ן כֹּ֚ה אָמַ֣ר יְהוָ֔ה הִנְ/נִ֥י חֹשֵׁ֛ב עַל הַ/מִּשְׁפָּחָ֥ה הַ/זֹּ֖את רָעָ֑ה אֲ֠שֶׁר לֹֽא תָמִ֨ישׁוּ מִ/שָּׁ֜ם צַוְּארֹֽתֵי/כֶ֗ם וְ/לֹ֤א תֵֽלְכוּ֙ רוֹמָ֔ה כִּ֛י עֵ֥ת רָעָ֖ה הִֽיא"
+          "verse": 3,
+          "tth": "Por eso, así ha dicho יהוה: Heme aquí, pienso sobre esta familia un malque no quitarán de allí sus cuellosni andarán erguidos; porque tiempo malo es este.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 4,
-          "text_nikud": "בַּ/יּ֨וֹם הַ/ה֜וּא יִשָּׂ֧א עֲלֵי/כֶ֣ם מָשָׁ֗ל וְ/נָהָ֨ה נְהִ֤י נִֽהְיָה֙ אָמַר֙ שָׁד֣וֹד נְשַׁדֻּ֔נוּ חֵ֥לֶק עַמִּ֖/י יָמִ֑יר אֵ֚יךְ יָמִ֣ישׁ לִ֔/י לְ/שׁוֹבֵ֥ב שָׂדֵ֖י/נוּ יְחַלֵּֽק"
+          "verse": 4,
+          "tth": "En aquel día se levantará sobre ustedes un proverbio (O, una parábola), y se lamentará con elegía de lamentación, diciendo: “Ciertamente (Lit.: Devastando) fuimos devastados; la porción de mi pueblo Él ha cambiado.¡Cómo me la ha quitado! Al rebelde nuestros campos ha repartido”.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 5,
-          "text_nikud": "לָ/כֵן֙ לֹֽא יִֽהְיֶ֣ה לְ/ךָ֔ מַשְׁלִ֥יךְ חֶ֖בֶל בְּ/גוֹרָ֑ל בִּ/קְהַ֖ל יְהוָֽה"
+          "verse": 5,
+          "tth": "Por eso no habrá para ti quien eche cordel en parcela (heb.: goral)en la asamblea de יהוה.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 6,
-          "text_nikud": "אַל תַּטִּ֖פוּ יַטִּיפ֑וּ/ן לֹֽא יַטִּ֣פוּ לָ/אֵ֔לֶּה לֹ֥א יִסַּ֖ג כְּלִמּֽוֹת"
+          "verse": 6,
+          "tth": "¡Ustedes no destilen!, ellos destilarán.No destilen acerca de estas cosas (O, a estos), no se retrocederán las vergüenzas.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 7,
-          "text_nikud": "הֶ/אָמ֣וּר בֵּֽית יַעֲקֹ֗ב הֲ/קָצַר֙ ר֣וּחַ יְהוָ֔ה אִם אֵ֖לֶּה מַעֲלָלָ֑י/ו הֲ/ל֤וֹא דְבָרַ֨/י יֵיטִ֔יבוּ עִ֖ם הַ/יָּשָׁ֥ר הוֹלֵֽךְ"
+          "verse": 7,
+          "tth": "¿Se dice, casa de Iaacob: “¿Se ha acortado el Rúaj de יהוה? ”¿Acaso (Lit.: Si) son estas sus acciones? ¿No son mis palabras buenas con el que camina recto?",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 8,
-          "text_nikud": "וְ/אֶתְמ֗וּל עַמִּ/י֙ לְ/אוֹיֵ֣ב יְקוֹמֵ֔ם מִ/מּ֣וּל שַׂלְמָ֔ה אֶ֖דֶר תַּפְשִׁט֑וּ/ן מֵ/עֹבְרִ֣ים בֶּ֔טַח שׁוּבֵ֖י מִלְחָמָֽה"
+          "verse": 8,
+          "tth": "Y ayer mi pueblo como enemigo se levantó, frente a la vestidura despojan el mantode los que pasan con confianzay los que vuelven de la guerra.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 9,
-          "text_nikud": "נְשֵׁ֤י עַמִּ/י֙ תְּגָ֣רְשׁ֔וּ/ן מִ/בֵּ֖ית תַּֽעֲנֻגֶ֑י/הָ מֵ/עַל֙ עֹֽלָלֶ֔י/הָ תִּקְח֥וּ הֲדָרִ֖/י לְ/עוֹלָֽם"
+          "verse": 9,
+          "tth": "A las mujeres de mi pueblo expulsaronde la casa de su placer; de sobre sus niños quitaron mi esplendor para siempre.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 10,
-          "text_nikud": "ק֣וּמוּ וּ/לְכ֔וּ כִּ֥י לֹא זֹ֖את הַ/מְּנוּחָ֑ה בַּ/עֲב֥וּר טָמְאָ֛ה תְּחַבֵּ֖ל וְ/חֶ֥בֶל נִמְרָֽץ"
+          "verse": 10,
+          "tth": "¡Levántense y váyanse!,porque no es este el lugar de descansopor causa de la impureza que destruirá, y destrucción dolorosa.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 11,
-          "text_nikud": "לוּ אִ֞ישׁ הֹלֵ֥ךְ ר֨וּחַ֙ וָ/שֶׁ֣קֶר כִּזֵּ֔ב אַטִּ֣ף לְ/ךָ֔ לַ/יַּ֖יִן וְ/לַ/שֵּׁכָ֑ר וְ/הָיָ֥ה מַטִּ֖יף הָ/עָ֥ם הַ/זֶּֽה"
+          "verse": 11,
+          "tth": "Si un hombre anda",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 12,
-          "text_nikud": "אָסֹ֨ף אֶאֱסֹ֜ף יַעֲקֹ֣ב כֻּלָּ֗/ךְ קַבֵּ֤ץ אֲקַבֵּץ֙ שְׁאֵרִ֣ית יִשְׂרָאֵ֔ל יַ֥חַד אֲשִׂימֶ֖/נּוּ כְּ/צֹ֣אן בָּצְרָ֑ה כְּ/עֵ֨דֶר֙ בְּ/ת֣וֹךְ הַ/דָּֽבְר֔/וֹ תְּהִימֶ֖נָה מֵ/אָדָֽם"
+          "verse": 1,
+          "tth": "en viento y falsedad, miente: “Destilaré para ti de vino y de bebida embriagante”, sería uno que destila de este pueblo.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 13,
-          "text_nikud": "עָלָ֤ה הַ/פֹּרֵץ֙ לִ/פְנֵי/הֶ֔ם פָּֽרְצוּ֙ וַֽ/יַּעֲבֹ֔רוּ שַׁ֖עַר וַ/יֵּ֣צְאוּ ב֑/וֹ וַ/יַּעֲבֹ֤ר מַלְכָּ/ם֙ לִ/פְנֵי/הֶ֔ם וַ/יהוָ֖ה בְּ/רֹאשָֽׁ/ם"
+          "verse": 12,
+          "tth": "Ciertamente (Lit.: Reuniendo) reuniré, Iaacob, todo tú; ciertamente (Lit.: recogiendo) recogeré al remanente de Israel.Juntos los pondré como ovejas del redil; como rebaño en medio de su pasto, harán mucho ruido por la multitud de hombres.",
+          "footnotes": [],
+          "hebrew_terms": []
+        },
+        {
+          "verse": 13,
+          "tth": "Subirá el que abre brecha delante de ellos; abrirán brecha y pasarán la puerta, y saldrán por ella; y pasará su rey delante de ellos, y יהוה a su cabeza. Palabra contra los líderes injustos",
+          "footnotes": [],
+          "hebrew_terms": []
         }
       ]
     },
     {
-      "hebrew_letter": "ג",
-      "number": 3,
+      "chapter": 3,
       "verses": [
         {
-          "number": 1,
-          "text_nikud": "וָ/אֹמַ֗ר שִׁמְעוּ נָא֙ רָאשֵׁ֣י יַעֲקֹ֔ב וּ/קְצִינֵ֖י בֵּ֣ית יִשְׂרָאֵ֑ל הֲ/ל֣וֹא לָ/כֶ֔ם לָ/דַ֖עַת אֶת הַ/מִּשְׁפָּֽט"
+          "verse": 1,
+          "tth": "Y diré: ¡Escuchen, por favor, cabezas de Iaacob, y líderes de la casa de Israel! ¿No es para ustedes el conocer el juicio?",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 2,
-          "text_nikud": "שֹׂ֥נְאֵי ט֖וֹב וְ/אֹ֣הֲבֵי רעה רָ֑ע גֹּזְלֵ֤י עוֹרָ/ם֙ מֵֽ/עֲלֵי/הֶ֔ם וּ/שְׁאֵרָ֖/ם מֵ/עַ֥ל עַצְמוֹתָֽ/ם"
+          "verse": 2,
+          "tth": "¡Aborrecedores del bien y amantes del mal, que arrancan su piel de sobre ellosy su carne de sobre sus huesos!,",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 3,
-          "text_nikud": "וַ/אֲשֶׁ֣ר אָכְלוּ֮ שְׁאֵ֣ר עַמִּ/י֒ וְ/עוֹרָ/ם֙ מֵ/עֲלֵי/הֶ֣ם הִפְשִׁ֔יטוּ וְ/אֶת עַצְמֹֽתֵי/הֶ֖ם פִּצֵּ֑חוּ וּ/פָרְשׂוּ֙ כַּ/אֲשֶׁ֣ר בַּ/סִּ֔יר וּ/כְ/בָשָׂ֖ר בְּ/ת֥וֹךְ קַלָּֽחַת"
+          "verse": 3,
+          "tth": "y que comen la carne de mi puebloy su piel de sobre ellos despojan, y sus huesos rompen en pedazos, y los parten como en la ollay como carne en medio del caldero.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 4,
-          "text_nikud": "אָ֚ז יִזְעֲק֣וּ אֶל יְהוָ֔ה וְ/לֹ֥א יַעֲנֶ֖ה אוֹתָ֑/ם וְ/יַסְתֵּ֨ר פָּנָ֤י/ו מֵ/הֶם֙ בָּ/עֵ֣ת הַ/הִ֔יא כַּ/אֲשֶׁ֥ר הֵרֵ֖עוּ מַעַלְלֵי/הֶֽם"
+          "verse": 4,
+          "tth": "Entonces clamarán a יהוה, y no les responderá; y esconderá su rostro de ellos en ese momento, por lo que han hecho mal sus obras.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 5,
-          "text_nikud": "כֹּ֚ה אָמַ֣ר יְהוָ֔ה עַל הַ/נְּבִיאִ֖ים הַ/מַּתְעִ֣ים אֶת עַמִּ֑/י הַ/נֹּשְׁכִ֤ים בְּ/שִׁנֵּי/הֶם֙ וְ/קָרְא֣וּ שָׁל֔וֹם וַ/אֲשֶׁר֙ לֹא יִתֵּ֣ן עַל פִּי/הֶ֔ם וְ/קִדְּשׁ֥וּ עָלָ֖י/ו מִלְחָמָֽה"
+          "verse": 5,
+          "tth": "Así ha dicho יהוה sobre los profetasque hacen extraviar a mi pueblo, los que muerden con sus dientesy proclaman: ¡Shalom!;y el que no les da en sus bocas, separan contra él una guerra.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 6,
-          "text_nikud": "לָ/כֵ֞ן לַ֤יְלָה לָ/כֶם֙ מֵֽ/חָז֔וֹן וְ/חָשְׁכָ֥ה לָ/כֶ֖ם מִ/קְּסֹ֑ם וּ/בָ֤אָה הַ/שֶּׁ֨מֶשׁ֙ עַל הַ/נְּבִיאִ֔ים וְ/קָדַ֥ר עֲלֵי/הֶ֖ם הַ/יּֽוֹם"
+          "verse": 6,
+          "tth": "Por eso, hay noche para ustedesen vez de visión, y oscuridad para ustedesen vez de adivinación.Y se ha puesto el sol sobre los profetas, y se oscureció sobre ellos el día.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 7,
-          "text_nikud": "וּ/בֹ֣שׁוּ הַ/חֹזִ֗ים וְ/חָֽפְרוּ֙ הַ/קֹּ֣סְמִ֔ים וְ/עָט֥וּ עַל שָׂפָ֖ם כֻּלָּ֑/ם כִּ֛י אֵ֥ין מַעֲנֵ֖ה אֱלֹהִֽים"
+          "verse": 7,
+          "tth": "Y se avergonzaron los videntes, se abochornaron los adivinos.Y se cubrirán sobre el mostacho todos ellos, porque no hay respuesta de Elohim.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 8,
-          "text_nikud": "וְ/אוּלָ֗ם אָנֹכִ֞י מָלֵ֤אתִי כֹ֨חַ֙ אֶת ר֣וּחַ יְהוָ֔ה וּ/מִשְׁפָּ֖ט וּ/גְבוּרָ֑ה לְ/הַגִּ֤יד לְ/יַֽעֲקֹב֙ פִּשְׁע֔/וֹ וּ/לְ/יִשְׂרָאֵ֖ל חַטָּאתֽ/וֹ"
+          "verse": 8,
+          "tth": "Sin embargo, yo estoy lleno de fuerza, del Rúaj de יהוה, y de juicio y poder, para dar a conocer a Iaacob su transgresión, y a Israel su pecado.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 9,
-          "text_nikud": "שִׁמְעוּ נָ֣א זֹ֗את רָאשֵׁי֙ בֵּ֣ית יַעֲקֹ֔ב וּ/קְצִינֵ֖י בֵּ֣ית יִשְׂרָאֵ֑ל הַֽ/מֲתַעֲבִ֣ים מִשְׁפָּ֔ט וְ/אֵ֥ת כָּל הַ/יְשָׁרָ֖ה יְעַקֵּֽשׁוּ"
+          "verse": 9,
+          "tth": "¡Escuchen, por favor, esto, cabezas de la casa de Iaacob, y líderes de la casa de Israel!,los que aborrecen el juicioy a toda rectitud tuercen,",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 10,
-          "text_nikud": "בֹּנֶ֥ה צִיּ֖וֹן בְּ/דָמִ֑ים וִ/ירוּשָׁלִַ֖ם בְּ/עַוְלָֽה"
+          "verse": 10,
+          "tth": "que edifican Tzión con sangres, y a Ierushalem con injusticia.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 11,
-          "text_nikud": "רָאשֶׁ֣י/הָ בְּ/שֹׁ֣חַד יִשְׁפֹּ֗טוּ וְ/כֹהֲנֶ֨י/הָ֙ בִּ/מְחִ֣יר יוֹר֔וּ וּ/נְבִיאֶ֖י/הָ בְּ/כֶ֣סֶף יִקְסֹ֑מוּ וְ/עַל יְהוָה֙ יִשָּׁעֵ֣נוּ לֵ/אמֹ֔ר הֲ/ל֤וֹא יְהוָה֙ בְּ/קִרְבֵּ֔/נוּ לֹֽא תָב֥וֹא עָלֵ֖י/נוּ רָעָֽה"
+          "verse": 11,
+          "tth": "Sus cabezas por soborno juzgan, sus sacerdotes por precio enseñan, y sus profetas por plata adivinan, y sobre יהוה se apoyan, diciendo: ¿No está יהוה en medio de nosotros?,no vendrá sobre nosotros mal.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 12,
-          "text_nikud": "לָ/כֵן֙ בִּ/גְלַלְ/כֶ֔ם צִיּ֖וֹן שָׂדֶ֣ה תֵֽחָרֵ֑שׁ וִ/ירוּשָׁלִַ֨ם֙ עִיִּ֣ין תִּֽהְיֶ֔ה וְ/הַ֥ר הַ/בַּ֖יִת לְ/בָמ֥וֹת יָֽעַר"
+          "verse": 12,
+          "tth": "Por eso, a causa de ustedes, Tzión como campo será arada, y Ierushalem montones de ruinas será, y el monte de la casa será por alturas de bosque. Reinado de יהוה",
+          "footnotes": [],
+          "hebrew_terms": []
         }
       ]
     },
     {
-      "hebrew_letter": "ד",
-      "number": 4,
+      "chapter": 4,
       "verses": [
         {
-          "number": 1,
-          "text_nikud": "וְ/הָיָ֣ה בְּ/אַחֲרִ֣ית הַ/יָּמִ֗ים יִ֠הְיֶה הַ֣ר בֵּית יְהוָ֤ה נָכוֹן֙ בְּ/רֹ֣אשׁ הֶ/הָרִ֔ים וְ/נִשָּׂ֥א ה֖וּא מִ/גְּבָע֑וֹת וְ/נָהֲר֥וּ עָלָ֖י/ו עַמִּֽים"
+          "verse": 1,
+          "tth": "Y sucederá que en el fin de los díasserá el monte de la casa de יהוהestablecido en la cabeza de los montes, y se levantará él más que las colinas, y fluirán sobre él los pueblos.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 2,
-          "text_nikud": "וְֽ/הָלְכ֞וּ גּוֹיִ֣ם רַבִּ֗ים וְ/אָֽמְרוּ֙ לְכ֣וּ וְ/נַעֲלֶ֣ה אֶל הַר יְהוָ֗ה וְ/אֶל בֵּית֙ אֱלֹהֵ֣י יַעֲקֹ֔ב וְ/יוֹרֵ֨/נוּ֙ מִ/דְּרָכָ֔י/ו וְ/נֵלְכָ֖ה בְּ/אֹֽרְחֹתָ֑י/ו כִּ֤י מִ/צִּיּוֹן֙ תֵּצֵ֣א תוֹרָ֔ה וּ/דְבַר יְהוָ֖ה מִ/ירוּשָׁלִָֽם"
+          "verse": 2,
+          "tth": "E irán muchas naciones, y dirán: ¡Vengan y subamos al monte de יהוהy a la casa del Elohim de Iaacob!,y nos instruirá de sus caminosy caminaremos en sus sendas.Porque de Tzión saldrá la Torah, y la palabra de יהוה de Ierushalem.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 3,
-          "text_nikud": "וְ/שָׁפַ֗ט בֵּ֚ין עַמִּ֣ים רַבִּ֔ים וְ/הוֹכִ֛יחַ לְ/גוֹיִ֥ם עֲצֻמִ֖ים עַד רָח֑וֹק וְ/כִתְּת֨וּ חַרְבֹתֵי/הֶ֜ם לְ/אִתִּ֗ים וַ/חֲנִיתֹֽתֵי/הֶם֙ לְ/מַזְמֵר֔וֹת לֹֽא יִשְׂא֞וּ גּ֤וֹי אֶל גּוֹי֙ חֶ֔רֶב וְ/לֹא יִלְמְד֥וּ/ן ע֖וֹד מִלְחָמָֽה"
+          "verse": 3,
+          "tth": "Y juzgará entre muchos pueblos, y enjuiciará (O, corregirá) a naciones poderosas, hasta la lejanía; y golpearán sus espadas para rejas de aradoy sus lanzas para podaderas.No levantarán espada nación hacia nación, y no aprenderán más guerra.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 4,
-          "text_nikud": "וְ/יָשְׁב֗וּ אִ֣ישׁ תַּ֧חַת גַּפְנ֛/וֹ וְ/תַ֥חַת תְּאֵנָת֖/וֹ וְ/אֵ֣ין מַחֲרִ֑יד כִּי פִ֛י יְהוָ֥ה צְבָא֖וֹת דִּבֵּֽר"
+          "verse": 4,
+          "tth": "Y se sentará cada hombre debajo de su vidy debajo de su higuera, y no habrá quien aterrorice, porque la boca de יהוה Tzebaot ha hablado.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 5,
-          "text_nikud": "כִּ֚י כָּל הָ֣/עַמִּ֔ים יֵלְכ֕וּ אִ֖ישׁ בְּ/שֵׁ֣ם אֱלֹהָ֑י/ו וַ/אֲנַ֗חְנוּ נֵלֵ֛ךְ בְּ/שֵׁם יְהוָ֥ה אֱלֹהֵ֖י/נוּ לְ/עוֹלָ֥ם וָ/עֶֽד"
+          "verse": 5,
+          "tth": "Porque todos los pueblos andarán cada uno en el nombre de su dios, pero nosotros andaremos en el Nombre de יהוה nuestro Elohimpara siempre y siempre.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 6,
-          "text_nikud": "בַּ/יּ֨וֹם הַ/ה֜וּא נְאֻם יְהוָ֗ה אֹֽסְפָה֙ הַ/צֹּ֣לֵעָ֔ה וְ/הַ/נִּדָּחָ֖ה אֲקַבֵּ֑צָה וַ/אֲשֶׁ֖ר הֲרֵעֹֽתִי"
+          "verse": 6,
+          "tth": "En aquel día –declaración de יהוה–reuniré a la coja, y la ahuyentada recogeré, y la que maltraté.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 7,
-          "text_nikud": "וְ/שַׂמְתִּ֤י אֶת הַ/צֹּֽלֵעָה֙ לִ/שְׁאֵרִ֔ית וְ/הַ/נַּהֲלָאָ֖ה לְ/ג֣וֹי עָצ֑וּם וּ/מָלַ֨ךְ יְהוָ֤ה עֲלֵי/הֶם֙ בְּ/הַ֣ר צִיּ֔וֹן מֵ/עַתָּ֖ה וְ/עַד עוֹלָֽם"
+          "verse": 7,
+          "tth": "Y pondré a la coja para remanente, y a la ahuyentada para nación poderosa, y reinará יהוה sobre ellos en el monte de Tzióndesde ahora y hasta siempre.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 8,
-          "text_nikud": "וְ/אַתָּ֣ה מִגְדַּל עֵ֗דֶר עֹ֛פֶל בַּת צִיּ֖וֹן עָדֶ֣י/ךָ תֵּאתֶ֑ה וּ/בָאָ֗ה הַ/מֶּמְשָׁלָה֙ הָ/רִ֣אשֹׁנָ֔ה מַמְלֶ֖כֶת לְ/בַ֥ת יְרוּשָׁלִָֽם"
+          "verse": 8,
+          "tth": "Y tú, torre de rebaño (heb.: Migdal Éder), colina (heb.: Ofel) de la hija de Tzión, hasta ti llegaráy vendrá el gobierno primero, el reino de la hija de Ierushalem.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 9,
-          "text_nikud": "עַתָּ֕ה לָ֥/מָּה תָרִ֖יעִי רֵ֑עַ הֲ/מֶ֣לֶךְ אֵֽין בָּ֗/ךְ אִֽם יוֹעֲצֵ/ךְ֙ אָבָ֔ד כִּֽי הֶחֱזִיקֵ֥/ךְ חִ֖יל כַּ/יּוֹלֵדָֽה"
+          "verse": 9,
+          "tth": "Ahora, ¿por qué lanzas grito? ¿Rey no hay en ti?,¿o tu consejero se perdió?,porque se te ha aferrado dolor como mujer de parto.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 10,
-          "text_nikud": "ח֧וּלִי וָ/גֹ֛חִי בַּת צִיּ֖וֹן כַּ/יּֽוֹלֵדָ֑ה כִּֽי עַתָּה֩ תֵצְאִ֨י מִ/קִּרְיָ֜ה וְ/שָׁכַ֣נְתְּ בַּ/שָּׂדֶ֗ה וּ/בָ֤את עַד בָּבֶל֙ שָׁ֣ם תִּנָּצֵ֔לִי שָׁ֚ם יִגְאָלֵ֣/ךְ יְהוָ֔ה מִ/כַּ֖ף אֹיְבָֽיִ/ךְ"
+          "verse": 10,
+          "tth": "Retuércete y haz brotar (O, haz estallar), hija de Tzión, como mujer de parto, porque ahora saldrás de la ciudady morarás en el campo, e irás hasta Babel.Allí serás rescatada, allí te redimirá יהוהde la palma de tus enemigos.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 11,
-          "text_nikud": "וְ/עַתָּ֛ה נֶאֶסְפ֥וּ עָלַ֖יִ/ךְ גּוֹיִ֣ם רַבִּ֑ים הָ/אֹמְרִ֣ים תֶּחֱנָ֔ף וְ/תַ֥חַז בְּ/צִיּ֖וֹן עֵינֵֽי/נוּ"
+          "verse": 11,
+          "tth": "Pero ahora se han reunido contra timuchas naciones, las cuales dicen: “¡Ella se contaminará, y contemplarán en Tzión nuestros ojos! ”",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 12,
-          "text_nikud": "וְ/הֵ֗מָּה לֹ֤א יָֽדְעוּ֙ מַחְשְׁב֣וֹת יְהוָ֔ה וְ/לֹ֥א הֵבִ֖ינוּ עֲצָת֑/וֹ כִּ֥י קִבְּצָ֖/ם כֶּ/עָמִ֥יר גֹּֽרְנָ/ה"
+          "verse": 12,
+          "tth": "Pero ellos no conocen los pensamientos de יהוה, ni entienden su plan (O, consejo), porque los ha recogido como gavilla a la era.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 13,
-          "text_nikud": "ק֧וּמִי וָ/ד֣וֹשִׁי בַת צִיּ֗וֹן כִּֽי קַרְנֵ֞/ךְ אָשִׂ֤ים בַּרְזֶל֙ וּ/פַרְסֹתַ֨יִ/ךְ֙ אָשִׂ֣ים נְחוּשָׁ֔ה וַ/הֲדִקּ֖וֹת עַמִּ֣ים רַבִּ֑ים וְ/הַחֲרַמְתִּ֤י לַֽ/יהוָה֙ בִּצְעָ֔/ם וְ/חֵילָ֖/ם לַ/אֲד֥וֹן כָּל הָ/אָֽרֶץ"
-        },
-        {
-          "number": 14,
-          "text_nikud": "עַתָּה֙ תִּתְגֹּדְדִ֣י בַת גְּד֔וּד מָצ֖וֹר שָׂ֣ם עָלֵ֑י/נוּ בַּ/שֵּׁ֨בֶט֙ יַכּ֣וּ עַֽל הַ/לְּחִ֔י אֵ֖ת שֹׁפֵ֥ט יִשְׂרָאֵֽל"
+          "verse": 13,
+          "tth": "¡Levántate y trilla, hija de Tzión!,porque tu cuerno pondré de hierroy tus pezuñas pondré de cobre, y molerás muchos pueblos, y apartarás para יהוה su ganancia injusta, y su fuerza para el Adón de toda la tierra. Nacimiento del Rey en Bet Léjem",
+          "footnotes": [],
+          "hebrew_terms": []
         }
       ]
     },
     {
-      "hebrew_letter": "ה",
-      "number": 5,
+      "chapter": 5,
       "verses": [
         {
-          "number": 1,
-          "text_nikud": "וְ/אַתָּ֞ה בֵּֽית לֶ֣חֶם אֶפְרָ֗תָה צָעִיר֙ לִֽ/הְיוֹת֙ בְּ/אַלְפֵ֣י יְהוּדָ֔ה מִמְּ/ךָ֙ לִ֣/י יֵצֵ֔א לִֽ/הְי֥וֹת מוֹשֵׁ֖ל בְּ/יִשְׂרָאֵ֑ל וּ/מוֹצָאֹתָ֥י/ו מִ/קֶּ֖דֶם מִ/ימֵ֥י עוֹלָֽם"
+          "verse": 1,
+          "tth": "Ahora, reúnete en tropas (O, penetra), hija de tropa; asedio ha puesto sobre nosotros, con la vara golpearán en la mejilla al juez de Israel.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 2,
-          "text_nikud": "לָ/כֵ֣ן יִתְּנֵ֔/ם עַד עֵ֥ת יוֹלֵדָ֖ה יָלָ֑דָה וְ/יֶ֣תֶר אֶחָ֔י/ו יְשׁוּב֖וּ/ן עַל בְּנֵ֥י יִשְׂרָאֵֽל"
+          "verse": 2,
+          "tth": "Y tú, Bet Léjem Efratah, pequeña eres para estar entre los miles de Iehudáh, de ti para Mí saldrá, para ser gobernante en Israel, y sus salidas son desde la antigüedad, desde los días de antaño.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 3,
-          "text_nikud": "וְ/עָמַ֗ד וְ/רָעָה֙ בְּ/עֹ֣ז יְהוָ֔ה בִּ/גְא֕וֹן שֵׁ֖ם יְהוָ֣ה אֱלֹהָ֑י/ו וְ/יָשָׁ֕בוּ כִּֽי עַתָּ֥ה יִגְדַּ֖ל עַד אַפְסֵי אָֽרֶץ"
+          "verse": 3,
+          "tth": "Por lo tanto, los entregará hasta el tiempoen que la mujer que ha de dar a luz dé a luz.Y el resto de sus hermanos, volverán a los hijos de Israel.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 4,
-          "text_nikud": "וְ/הָיָ֥ה זֶ֖ה שָׁל֑וֹם אַשּׁ֣וּר כִּֽי יָב֣וֹא בְ/אַרְצֵ֗/נוּ וְ/כִ֤י יִדְרֹךְ֙ בְּ/אַרְמְנֹתֵ֔י/נוּ וַ/הֲקֵמֹ֤נוּ עָלָי/ו֙ שִׁבְעָ֣ה רֹעִ֔ים וּ/שְׁמֹנָ֖ה נְסִיכֵ֥י אָדָֽם"
+          "verse": 4,
+          "tth": "Y se parará y pastoreará con fuerza de יהוה, con la exaltación del Nombre de יהוה su Elohim.Y se asentarán, porque ahora será engrandecidohasta los confines de la tierra.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 5,
-          "text_nikud": "וְ/רָע֞וּ אֶת אֶ֤רֶץ אַשּׁוּר֙ בַּ/חֶ֔רֶב וְ/אֶת אֶ֥רֶץ נִמְרֹ֖ד בִּ/פְתָחֶ֑י/הָ וְ/הִצִּיל֙ מֵֽ/אַשּׁ֔וּר כִּֽי יָב֣וֹא בְ/אַרְצֵ֔/נוּ וְ/כִ֥י יִדְרֹ֖ךְ בִּ/גְבוּלֵֽ/נוּ"
+          "verse": 5,
+          "tth": "Y Este será shalom. Cuando Ashur entre en nuestra tierra (Otra lectura posible es: Y será esta shalom: Cuando Ashur…), y pise en nuestros palacios, levantaremos sobre él siete pastores y ocho príncipes de hombres.6 Y pastorearán la tierra de Ashur con espada, y a la tierra de Nimrod en sus entradas.Y nos rescatará de Ashurcuando entre en nuestra tierray cuando pise en nuestra frontera.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 6,
-          "text_nikud": "וְ/הָיָ֣ה שְׁאֵרִ֣ית יַעֲקֹ֗ב בְּ/קֶ֨רֶב֙ עַמִּ֣ים רַבִּ֔ים כְּ/טַל֙ מֵ/אֵ֣ת יְהוָ֔ה כִּ/רְבִיבִ֖ים עֲלֵי עֵ֑שֶׂב אֲשֶׁ֤ר לֹֽא יְקַוֶּה֙ לְ/אִ֔ישׁ וְ/לֹ֥א יְיַחֵ֖ל לִ/בְנֵ֥י אָדָֽם"
+          "verse": 7,
+          "tth": "Y será el remanente de Iaacob, en medio de muchos pueblos, como rocío de יהוה, como lluvias abundantes sobre la hierbaque no espera al hombreni aguarda a los hijos del hombre.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 7,
-          "text_nikud": "וְ/הָיָה֩ שְׁאֵרִ֨ית יַעֲקֹ֜ב בַּ/גּוֹיִ֗ם בְּ/קֶ֨רֶב֙ עַמִּ֣ים רַבִּ֔ים כְּ/אַרְיֵה֙ בְּ/בַהֲמ֣וֹת יַ֔עַר כִּ/כְפִ֖יר בְּ/עֶדְרֵי צֹ֑אן אֲשֶׁ֧ר אִם עָבַ֛ר וְ/רָמַ֥ס וְ/טָרַ֖ף וְ/אֵ֥ין מַצִּֽיל"
+          "verse": 8,
+          "tth": "Y será el remanente de Iaacob, en las naciones, en medio de muchos pueblos, como león entre las bestias del bosque, como leoncillo entre los rebaños de ovejas, que si pasa, pisotea y desgarra, y no hay quien rescate.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 8,
-          "text_nikud": "תָּרֹ֥ם יָדְ/ךָ֖ עַל צָרֶ֑י/ךָ וְ/כָל אֹיְבֶ֖י/ךָ יִכָּרֵֽתוּ"
+          "verse": 9,
+          "tth": "Se alzará tu mano sobre tus opresores, y todos tus enemigos serán cortados.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 9,
-          "text_nikud": "וְ/הָיָ֤ה בַ/יּוֹם הַ/הוּא֙ נְאֻם יְהוָ֔ה וְ/הִכְרַתִּ֥י סוּסֶ֖י/ךָ מִ/קִּרְבֶּ֑/ךָ וְ/הַאֲבַדְתִּ֖י מַרְכְּבֹתֶֽי/ךָ"
+          "verse": 10,
+          "tth": "Y será que en aquel día–declaración de יהוה–cortaré tus caballos de en medio de ti, y haré perder tus carros.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 10,
-          "text_nikud": "וְ/הִכְרַתִּ֖י עָרֵ֣י אַרְצֶ֑/ךָ וְ/הָרַסְתִּ֖י כָּל מִבְצָרֶֽי/ךָ"
+          "verse": 11,
+          "tth": "Y cortaré las ciudades de tu tierray derribaré todas tus fortificaciones.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 11,
-          "text_nikud": "וְ/הִכְרַתִּ֥י כְשָׁפִ֖ים מִ/יָּדֶ֑/ךָ וּֽ/מְעוֹנְנִ֖ים לֹ֥א יִֽהְיוּ לָֽ/ךְ"
+          "verse": 12,
+          "tth": "Y cortaré las hechicerías de tu mano, y adivinos no tendrás.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 12,
-          "text_nikud": "וְ/הִכְרַתִּ֧י פְסִילֶ֛י/ךָ וּ/מַצֵּבוֹתֶ֖י/ךָ מִ/קִּרְבֶּ֑/ךָ וְ/לֹֽא תִשְׁתַּחֲוֶ֥ה ע֖וֹד לְ/מַעֲשֵׂ֥ה יָדֶֽי/ךָ"
+          "verse": 13,
+          "tth": "Y cortaré tus imágenes talladasy tus pilares de en medio de ti, y no te postrarás más a la obra de tus manos.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 13,
-          "text_nikud": "וְ/נָתַשְׁתִּ֥י אֲשֵׁירֶ֖י/ךָ מִ/קִּרְבֶּ֑/ךָ וְ/הִשְׁמַדְתִּ֖י עָרֶֽי/ךָ"
+          "verse": 14,
+          "tth": "Y desarraigaré tus Asheráh de en medio de ti, y destruiré tus ciudades.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 14,
-          "text_nikud": "וְ/עָשִׂ֜יתִי בְּ/אַ֧ף וּ/בְ/חֵמָ֛ה נָקָ֖ם אֶת הַ/גּוֹיִ֑ם אֲשֶׁ֖ר לֹ֥א שָׁמֵֽעוּ"
+          "verse": 15,
+          "tth": "Y haré con ira y con ardorvenganza a las naciones que no escucharon. La disputa de Elohim con su pueblo",
+          "footnotes": [],
+          "hebrew_terms": []
         }
       ]
     },
     {
-      "hebrew_letter": "ו",
-      "number": 6,
+      "chapter": 6,
       "verses": [
         {
-          "number": 1,
-          "text_nikud": "שִׁמְעוּ נָ֕א אֵ֥ת אֲשֶׁר יְהוָ֖ה אֹמֵ֑ר ק֚וּם רִ֣יב אֶת הֶ/הָרִ֔ים וְ/תִשְׁמַ֥עְנָה הַ/גְּבָע֖וֹת קוֹלֶֽ/ךָ"
+          "verse": 1,
+          "tth": "Escuchen, por favor, lo que יהוה dice: Levántate, disputa con los montes, y oirán las colinas tu voz.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 2,
-          "text_nikud": "שִׁמְע֤וּ הָרִים֙ אֶת רִ֣יב יְהוָ֔ה וְ/הָ/אֵתָנִ֖ים מֹ֣סְדֵי אָ֑רֶץ כִּ֣י רִ֤יב לַֽ/יהוָה֙ עִם עַמּ֔/וֹ וְ/עִם יִשְׂרָאֵ֖ל יִתְוַכָּֽח"
+          "verse": 2,
+          "tth": "Escuchen, montes, la disputa de יהוה, y los cimientos olam (de tiempo oculto) de la tierra, porque disputa tiene יהוה con su pueblo, y con Israel argumentará.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 3,
-          "text_nikud": "עַמִּ֛/י מֶה עָשִׂ֥יתִי לְ/ךָ֖ וּ/מָ֣ה הֶלְאֵתִ֑י/ךָ עֲנֵ֥ה בִּֽ/י"
+          "verse": 3,
+          "tth": "Pueblo mío, ¿qué te he hecho?,¿y en qué te he fastidiado? ¡Respóndeme!",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 4,
-          "text_nikud": "כִּ֤י הֶעֱלִתִ֨י/ךָ֙ מֵ/אֶ֣רֶץ מִצְרַ֔יִם וּ/מִ/בֵּ֥ית עֲבָדִ֖ים פְּדִיתִ֑י/ךָ וָ/אֶשְׁלַ֣ח לְ/פָנֶ֔י/ךָ אֶת מֹשֶׁ֖ה אַהֲרֹ֥ן וּ/מִרְיָֽם"
+          "verse": 4,
+          "tth": "Porque Yo te hice subir de la tierra de Mitzráim, y de la casa de esclavos te redimí, y envié delante de ti a Moshéh, Aharón y Miriam.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 5,
-          "text_nikud": "עַמִּ֗/י זְכָר נָא֙ מַה יָּעַ֗ץ בָּלָק֙ מֶ֣לֶךְ מוֹאָ֔ב וּ/מֶה עָנָ֥ה אֹת֖/וֹ בִּלְעָ֣ם בֶּן בְּע֑וֹר מִן הַ/שִּׁטִּים֙ עַד הַ/גִּלְגָּ֔ל לְמַ֕עַן דַּ֖עַת צִדְק֥וֹת יְהוָֽה"
+          "verse": 5,
+          "tth": "¡Pueblo mío, recuerda por favorlo que aconsejó Balak, rey de Moab, y lo que le respondió Bilam, hijo de Beor, desde Shitim hasta Gilgal, para conocer las justicias de יהוה! Lo que Elohim busca del hombre",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 6,
-          "text_nikud": "בַּ/מָּה֙ אֲקַדֵּ֣ם יְהוָ֔ה אִכַּ֖ף לֵ/אלֹהֵ֣י מָר֑וֹם הַ/אֲקַדְּמֶ֣/נּוּ בְ/עוֹל֔וֹת בַּ/עֲגָלִ֖ים בְּנֵ֥י שָׁנָֽה"
+          "verse": 6,
+          "tth": "¿Con qué me pondré delante de יהוהy me inclinaré al Elohim de lo alto? ¿Me pondré delante de Él con ofrendas ascendidas, con becerros hijos de un año?",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 7,
-          "text_nikud": "הֲ/יִרְצֶ֤ה יְהוָה֙ בְּ/אַלְפֵ֣י אֵילִ֔ים בְּ/רִֽבְב֖וֹת נַֽחֲלֵי שָׁ֑מֶן הַ/אֶתֵּ֤ן בְּכוֹרִ/י֙ פִּשְׁעִ֔/י פְּרִ֥י בִטְנִ֖/י חַטַּ֥את נַפְשִֽׁ/י"
+          "verse": 7,
+          "tth": "¿Se complacerá יהוהcon miles de carneros, con miríadas de ríos de aceite? ¿Daré mi primogénito por mi transgresión, el fruto de mi vientre por el pecado de mi ser?",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 8,
-          "text_nikud": "הִגִּ֥יד לְ/ךָ֛ אָדָ֖ם מַה טּ֑וֹב וּ/מָֽה יְהוָ֞ה דּוֹרֵ֣שׁ מִמְּ/ךָ֗ כִּ֣י אִם עֲשׂ֤וֹת מִשְׁפָּט֙ וְ/אַ֣הֲבַת חֶ֔סֶד וְ/הַצְנֵ֥עַ לֶ֖כֶת עִם אֱלֹהֶֽי/ךָ"
+          "verse": 8,
+          "tth": "Él te ha dado a conocer, hombre, lo que es bueno.¿Y qué busca יהוה de ti, sino hacer juicio, y amar la bondad, y modestamente andar con tu Elohim? El castigo por la injusticia",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 9,
-          "text_nikud": "ק֤וֹל יְהוָה֙ לָ/עִ֣יר יִקְרָ֔א וְ/תוּשִׁיָּ֖ה יִרְאֶ֣ה שְׁמֶ֑/ךָ שִׁמְע֥וּ מַטֶּ֖ה וּ/מִ֥י יְעָדָֽ/הּ"
+          "verse": 9,
+          "tth": "La voz de יהוה a la ciudad proclamará; perspicacia es temer a tu Nombre (Así en el T.M., en la versión gr., proclamará, y salvará a los temerosos de su Nombre): Escucha, tribu, ¿y quien lo ha designado? (Otra posible traducción es: Escucha la vara, y quien la ha designado).",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 10,
-          "text_nikud": "ע֗וֹד הַ/אִשׁ֙ בֵּ֣ית רָשָׁ֔ע אֹצְר֖וֹת רֶ֑שַׁע וְ/אֵיפַ֥ת רָז֖וֹן זְעוּמָֽה"
+          "verse": 10,
+          "tth": "Todavía hay fuego en la casa del malvado, tesoros de maldad (Otra posible traducción es: Todavía hay un hombre … con tesoros de maldad), y efáh delgado, que es indignación.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 11,
-          "text_nikud": "הַ/אֶזְכֶּ֖ה בְּ/מֹ֣אזְנֵי רֶ֑שַׁע וּ/בְ/כִ֖יס אַבְנֵ֥י מִרְמָֽה"
+          "verse": 11,
+          "tth": "¿Consideraré limpias a las balanzas de maldad y a la bolsa de piedras de engaño?",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 12,
-          "text_nikud": "אֲשֶׁ֤ר עֲשִׁירֶ֨י/הָ֙ מָלְא֣וּ חָמָ֔ס וְ/יֹשְׁבֶ֖י/הָ דִּבְּרוּ שָׁ֑קֶר וּ/לְשׁוֹנָ֖/ם רְמִיָּ֥ה בְּ/פִי/הֶֽם"
+          "verse": 12,
+          "tth": "Porque sus ricos están llenos de violencia, y sus habitantes hablan mentira, y su lengua es engañosa en sus bocas.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 13,
-          "text_nikud": "וְ/גַם אֲנִ֖י הֶחֱלֵ֣יתִי הַכּוֹתֶ֑/ךָ הַשְׁמֵ֖ם עַל חַטֹּאתֶֽ/ךָ"
+          "verse": 13,
+          "tth": "Y también Yo haré que te enfermes, golpeándote, desolándote por tus pecados.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 14,
-          "text_nikud": "אַתָּ֤ה תֹאכַל֙ וְ/לֹ֣א תִשְׂבָּ֔ע וְ/יֶשְׁחֲ/ךָ֖ בְּ/קִרְבֶּ֑/ךָ וְ/תַסֵּג֙ וְ/לֹ֣א תַפְלִ֔יט וַ/אֲשֶׁ֥ר תְּפַלֵּ֖ט לַ/חֶ֥רֶב אֶתֵּֽן"
+          "verse": 14,
+          "tth": "Tú comerás, y no te saciarás, y te abatirás dentro de ti (O, y tu hambre estará dentro de ti; significado incierto).Y apartarás, y no rescatarás nada, y lo que rescates, a la espada daré.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 15,
-          "text_nikud": "אַתָּ֥ה תִזְרַ֖ע וְ/לֹ֣א תִקְצ֑וֹר אַתָּ֤ה תִדְרֹֽךְ זַ֨יִת֙ וְ/לֹא תָס֣וּךְ שֶׁ֔מֶן וְ/תִיר֖וֹשׁ וְ/לֹ֥א תִשְׁתֶּה יָּֽיִן"
+          "verse": 15,
+          "tth": "Tú sembrarás, y no cosecharás; tú pisarás la oliva, y no te ungirás aceite, y el mosto, pero no beberás vino.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 16,
-          "text_nikud": "וְ/יִשְׁתַּמֵּ֞ר חֻקּ֣וֹת עָמְרִ֗י וְ/כֹל֙ מַעֲשֵׂ֣ה בֵית אַחְאָ֔ב וַ/תֵּלְכ֖וּ בְּ/מֹֽעֲצוֹתָ֑/ם לְמַעַן֩ תִּתִּ֨/י אֹתְ/ךָ֜ לְ/שַׁמָּ֗ה וְ/יֹשְׁבֶ֨י/הָ֙ לִ/שְׁרֵקָ֔ה וְ/חֶרְפַּ֥ת עַמִּ֖/י תִּשָּֽׂאוּ"
+          "verse": 16,
+          "tth": "Y se han guardado los estatutos de Omri, y toda obra de la casa de Ajab, y han andado ustedes en sus consejos, para que Yo te entregue a desolación, y a sus habitantes para silbido, y el reproche de mi pueblo cargarán. Lamento de Micáh",
+          "footnotes": [],
+          "hebrew_terms": []
         }
       ]
     },
     {
-      "hebrew_letter": "ז",
-      "number": 7,
+      "chapter": 7,
       "verses": [
         {
-          "number": 1,
-          "text_nikud": "אַ֣לְלַי לִ֗/י כִּ֤י הָיִ֨יתִי֙ כְּ/אָסְפֵּי קַ֔יִץ כְּ/עֹלְלֹ֖ת בָּצִ֑יר אֵין אֶשְׁכּ֣וֹל לֶ/אֱכ֔וֹל בִּכּוּרָ֖ה אִוְּתָ֥ה נַפְשִֽׁ/י"
+          "verse": 1,
+          "tth": "¡Ay de mí!, porque soycomo los recogedores de frutos de verano, como los que espigan en la cosecha.¡No hay racimo para comer! ¡La primicia de higo deseaba mi ser!",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 2,
-          "text_nikud": "אָבַ֤ד חָסִיד֙ מִן הָ/אָ֔רֶץ וְ/יָשָׁ֥ר בָּ/אָדָ֖ם אָ֑יִן כֻּלָּ/ם֙ לְ/דָמִ֣ים יֶאֱרֹ֔בוּ אִ֥ישׁ אֶת אָחִ֖י/הוּ יָצ֥וּדוּ חֵֽרֶם"
+          "verse": 2,
+          "tth": "Se perdió el bondadoso de la tierra, y recto entre los hombres no hay.Todos ellos por sangre se acechan; un hombre a su hermano lo captura con una red.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 3,
-          "text_nikud": "עַל הָ/רַ֤ע כַּפַּ֨יִם֙ לְ/הֵיטִ֔יב הַ/שַּׂ֣ר שֹׁאֵ֔ל וְ/הַ/שֹּׁפֵ֖ט בַּ/שִׁלּ֑וּם וְ/הַ/גָּד֗וֹל דֹּבֵ֨ר הַוַּ֥ת נַפְשׁ֛/וֹ ה֖וּא וַֽ/יְעַבְּתֽוּ/הָ"
+          "verse": 3,
+          "tth": "¡Para el mal las palmas de sus manos hacen bien! El príncipe pide, y el juez, una recompensa (Así en el T.M., en la versión gr., y el juez ha hablado palabras pacíficas); y el grande habla el deseo de su ser, y la pervierten (O, lo entretejen).",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 4,
-          "text_nikud": "טוֹבָ֣/ם כְּ/חֵ֔דֶק יָשָׁ֖ר מִ/מְּסוּכָ֑ה י֤וֹם מְצַפֶּ֨י/ךָ֙ פְּקֻדָּתְ/ךָ֣ בָ֔אָה עַתָּ֥ה תִהְיֶ֖ה מְבוּכָתָֽ/ם"
+          "verse": 4,
+          "tth": "Lo mejor de ellos es como espino, el más recto, más que un seto espinoso; el día de tus vigías, tu visitación, ha venido; ¡ahora será su confusión!",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 5,
-          "text_nikud": "אַל תַּאֲמִ֣ינוּ בְ/רֵ֔עַ אַֽל תִּבְטְח֖וּ בְּ/אַלּ֑וּף מִ/שֹּׁכֶ֣בֶת חֵיקֶ֔/ךָ שְׁמֹ֖ר פִּתְחֵי פִֽי/ךָ"
+          "verse": 5,
+          "tth": "No crean en el amigo, ni confíen en el íntimo amigo (O, príncipe); de la que se acuesta en tu seno, guarda las aperturas de tu boca.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 6,
-          "text_nikud": "כִּֽי בֵן֙ מְנַבֵּ֣ל אָ֔ב בַּ֚ת קָמָ֣ה בְ/אִמָּ֔/הּ כַּלָּ֖ה בַּ/חֲמֹתָ֑/הּ אֹיְבֵ֥י אִ֖ישׁ אַנְשֵׁ֥י בֵיתֽ/וֹ"
+          "verse": 6,
+          "tth": "Porque el hijo trata con desprecio al padre, la hija se levanta contra su madre, la nuera contra su suegra; los enemigos del hombre son los hombres de su casa. Elohim es salvación y luz",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 7,
-          "text_nikud": "וַ/אֲנִי֙ בַּ/יהוָ֣ה אֲצַפֶּ֔ה אוֹחִ֖ילָה לֵ/אלֹהֵ֣י יִשְׁעִ֑/י יִשְׁמָעֵ֖/נִי אֱלֹהָֽ/י"
+          "verse": 7,
+          "tth": "Pero yo en יהוה vigilaré atentamente, esperaré al Elohim de mi salvación, me escuchará mi Elohim.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 8,
-          "text_nikud": "אַֽל תִּשְׂמְחִ֤י אֹיַ֨בְתִּ/י֙ לִ֔/י כִּ֥י נָפַ֖לְתִּי קָ֑מְתִּי כִּֽי אֵשֵׁ֣ב בַּ/חֹ֔שֶׁךְ יְהוָ֖ה א֥וֹר לִֽ/י"
+          "verse": 8,
+          "tth": "No te alegres de mí, enemiga mía.Cuando me caiga, me levantaré, cuando me siente en la oscuridad, יהוה es luz para mí.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 9,
-          "text_nikud": "זַ֤עַף יְהוָה֙ אֶשָּׂ֔א כִּ֥י חָטָ֖אתִי ל֑/וֹ עַד֩ אֲשֶׁ֨ר יָרִ֤יב רִיבִ/י֙ וְ/עָשָׂ֣ה מִשְׁפָּטִ֔/י יוֹצִיאֵ֣/נִי לָ/א֔וֹר אֶרְאֶ֖ה בְּ/צִדְקָתֽ/וֹ"
+          "verse": 9,
+          "tth": "La ira de יהוה cargaré, porque le he fallado (O, pequé contra Él), hasta que pelee mi pelea y haga mi juicio.Me hará salir a la luz, veré su justicia.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 10,
-          "text_nikud": "וְ/תֵרֶ֤א אֹיַ֨בְתִּ/י֙ וּ/תְכַסֶּ֣/הָ בוּשָׁ֔ה הָ/אֹמְרָ֣ה אֵלַ֔/י אַיּ֖/וֹ יְהוָ֣ה אֱלֹהָ֑יִ/ךְ עֵינַ/י֙ תִּרְאֶ֣ינָּה בָּ֔/הּ עַתָּ֛ה תִּֽהְיֶ֥ה לְ/מִרְמָ֖ס כְּ/טִ֥יט חוּצֽוֹת"
+          "verse": 10,
+          "tth": "Y verá mi enemiga, y se cubrirá de vergüenza la que me decía: ¿Dónde está יהוה tu Elohim? Mis ojos la verán; ahora será por lugar de pisoteocomo el lodo de las calles.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 11,
-          "text_nikud": "י֖וֹם לִ/בְנ֣וֹת גְּדֵרָ֑יִ/ךְ י֥וֹם הַ/ה֖וּא יִרְחַק חֹֽק"
+          "verse": 11,
+          "tth": "¡El día para edificar tus muros!,aquel día estará lejos el límite (Otra lectura posible es: será alejado el estatuto).",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 12,
-          "text_nikud": "י֥וֹם הוּא֙ וְ/עָדֶ֣י/ךָ יָב֔וֹא לְ/מִנִּ֥י אַשּׁ֖וּר וְ/עָרֵ֣י מָצ֑וֹר וּ/לְ/מִנִּ֤י מָצוֹר֙ וְ/עַד נָהָ֔ר וְ/יָ֥ם מִ/יָּ֖ם וְ/הַ֥ר הָ/הָֽר"
+          "verse": 12,
+          "tth": "Aquel día, vendrá hasta ti desde Ashur y desde Matzor (Egipto); desde Matzor hasta el río, y de mar a mar, y de monte a monte.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 13,
-          "text_nikud": "וְ/הָיְתָ֥ה הָ/אָ֛רֶץ לִ/שְׁמָמָ֖ה עַל יֹֽשְׁבֶ֑י/הָ מִ/פְּרִ֖י מַֽעַלְלֵי/הֶֽם"
+          "verse": 13,
+          "tth": "Y será la tierra para devastaciónpor sus habitantes, por el fruto de sus acciones.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 14,
-          "text_nikud": "רְעֵ֧ה עַמְּ/ךָ֣ בְ/שִׁבְטֶ֗/ךָ צֹ֚אן נַֽחֲלָתֶ֔/ךָ שֹׁכְנִ֣י לְ/בָדָ֔ד יַ֖עַר בְּ/ת֣וֹךְ כַּרְמֶ֑ל יִרְע֥וּ בָשָׁ֛ן וְ/גִלְעָ֖ד כִּ/ימֵ֥י עוֹלָֽם"
+          "verse": 14,
+          "tth": "Pastorea a tu pueblo con tu vara, el rebaño de tu herencia, que mora solo en el bosque, en medio del Carmel (O, del huerto fructífero).Se apacentarán en Bashán y Guiladcomo en los días de la antigüedad.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 15,
-          "text_nikud": "כִּ/ימֵ֥י צֵאתְ/ךָ֖ מֵ/אֶ֣רֶץ מִצְרָ֑יִם אַרְאֶ֖/נּוּ נִפְלָאֽוֹת"
+          "verse": 15,
+          "tth": "Como en los días de tu salidade la tierra de Mitzráim, les haré ver maravillas.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 16,
-          "text_nikud": "יִרְא֤וּ גוֹיִם֙ וְ/יֵבֹ֔שׁוּ מִ/כֹּ֖ל גְּבֽוּרָתָ֑/ם יָשִׂ֤ימוּ יָד֙ עַל פֶּ֔ה אָזְנֵי/הֶ֖ם תֶּחֱרַֽשְׁנָה"
+          "verse": 16,
+          "tth": "Verán naciones y se avergonzaránde todo su poder; se pondrán la mano sobre la boca, sus oídos se ensordecerán.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 17,
-          "text_nikud": "יְלַחֲכ֤וּ עָפָר֙ כַּ/נָּחָ֔שׁ כְּ/זֹחֲלֵ֣י אֶ֔רֶץ יִרְגְּז֖וּ מִ/מִּסְגְּרֹֽתֵי/הֶ֑ם אֶל יְהוָ֤ה אֱלֹהֵ֨י/נוּ֙ יִפְחָ֔דוּ וְ/יִֽרְא֖וּ מִמֶּֽ/ךָּ"
+          "verse": 17,
+          "tth": "Lamerán el polvo como la serpiente, como los que se arrastran de la tierra; temblarán yendo desde sus lugares cerrados, hacia יהוה nuestro Elohim irán aterrados, y tendrán temor de ti.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 18,
-          "text_nikud": "מִי אֵ֣ל כָּמ֗וֹ/ךָ נֹשֵׂ֤א עָוֺן֙ וְ/עֹבֵ֣ר עַל פֶּ֔שַׁע לִ/שְׁאֵרִ֖ית נַחֲלָת֑/וֹ לֹא הֶחֱזִ֤יק לָ/עַד֙ אַפּ֔/וֹ כִּֽי חָפֵ֥ץ חֶ֖סֶד הֽוּא"
+          "verse": 18,
+          "tth": "¿Qué El hay como Tú, que soporta iniquidad y pasa por alto la transgresióndel remanente de su herencia? No se aferrará a su ira para siempre, porque anhelante de bondad es Él.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 19,
-          "text_nikud": "יָשׁ֣וּב יְרַֽחֲמֵ֔/נוּ יִכְבֹּ֖שׁ עֲוֺֽנֹתֵ֑י/נוּ וְ/תַשְׁלִ֛יךְ בִּ/מְצֻל֥וֹת יָ֖ם כָּל חַטֹּאותָֽ/ם"
+          "verse": 19,
+          "tth": "Volverá, tendrá compasión de nosotros, pisoteará nuestras iniquidades.Y lanzarás en las profundidades del martodos sus (En la versión gr., nuestros) pecados.",
+          "footnotes": [],
+          "hebrew_terms": []
         },
         {
-          "number": 20,
-          "text_nikud": "תִּתֵּ֤ן אֱמֶת֙ לְ/יַֽעֲקֹ֔ב חֶ֖סֶד לְ/אַבְרָהָ֑ם אֲשֶׁר נִשְׁבַּ֥עְתָּ לַ/אֲבֹתֵ֖י/נוּ מִ֥/ימֵי קֶֽדֶם"
+          "verse": 20,
+          "tth": "Darás verdad a Iaacob, bondad a Abraham, las cuales juraste a nuestros padresdesde los días de la antigüedad.",
+          "footnotes": [],
+          "hebrew_terms": []
         }
       ]
     }
