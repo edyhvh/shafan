@@ -223,19 +223,13 @@ export default function ChapterContent({
   /**
    * Render TTH verse text with inline footnote tooltips
    */
-  const renderTTHText = (
-    tthText: string,
-    footnotes: TTHFootnote[]
-  ) => {
+  const renderTTHText = (tthText: string, footnotes: TTHFootnote[]) => {
     if (!footnotes || footnotes.length === 0) {
       return <span dangerouslySetInnerHTML={{ __html: tthText }} />
     }
 
     // Split the text by footnote markers to insert tooltip components
-    const parts: (
-      | string
-      | { type: 'footnote'; footnote: TTHFootnote }
-    )[] = []
+    const parts: (string | { type: 'footnote'; footnote: TTHFootnote })[] = []
     let remaining = tthText
 
     // Sort footnotes by their position in the text (find each marker)
