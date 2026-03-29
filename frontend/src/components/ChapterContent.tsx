@@ -12,7 +12,7 @@ import { useTextSource } from '@/hooks/useTextSource'
 import { useSefer } from '@/hooks/useSefer'
 import { useTTH } from '@/hooks/useTTH'
 import { type BookName } from '@/lib/books'
-import type { Verse, TTHChapter } from '@/lib/types'
+import type { Verse, TTHChapter, TTHFootnote } from '@/lib/types'
 import { getChristianVerse } from '@/lib/versification'
 import { useEffect, useState } from 'react'
 import { scrollToVerse } from '@/lib/smooth-scroll'
@@ -225,7 +225,7 @@ export default function ChapterContent({
    */
   const renderTTHText = (
     tthText: string,
-    footnotes: import('@/lib/types').TTHFootnote[]
+    footnotes: TTHFootnote[]
   ) => {
     if (!footnotes || footnotes.length === 0) {
       return <span dangerouslySetInnerHTML={{ __html: tthText }} />
@@ -234,7 +234,7 @@ export default function ChapterContent({
     // Split the text by footnote markers to insert tooltip components
     const parts: (
       | string
-      | { type: 'footnote'; footnote: import('@/lib/types').TTHFootnote }
+      | { type: 'footnote'; footnote: TTHFootnote }
     )[] = []
     let remaining = tthText
 
