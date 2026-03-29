@@ -30,10 +30,8 @@ export async function loadTTHServer(
 
     const tthPath = path.join(
       process.cwd(),
-      '..',
+      'public',
       'data',
-      'tth',
-      'json',
       `${tthBookId}.json`
     )
 
