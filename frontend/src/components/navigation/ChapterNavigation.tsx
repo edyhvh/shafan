@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { useTTH } from '@/hooks/useTTH'
 
 interface ChapterNavigationProps {
   locale: string
@@ -17,11 +18,12 @@ export default function ChapterNavigation({
   totalChapters,
   className = 'mb-8 flex justify-between items-center px-4 sm:px-8',
 }: ChapterNavigationProps) {
-  const isHebrewRTL = locale === 'he'
+  const { effectiveTTHEnabled } = useTTH()
+  const isLTRNavigation = effectiveTTHEnabled
 
-  // In Hebrew RTL mode, left arrow advances to next chapter.
-  const prevArrow = isHebrewRTL ? '→' : '←'
-  const nextArrow = isHebrewRTL ? '←' : '→'
+  // Navigation follows active reading mode: Hebrew mode is RTL, TTH mode is LTR.
+  const prevArrow = isLTRNavigation ? '←' : '→'
+  const nextArrow = isLTRNavigation ? '→' : '←'
 
   const prevLink =
     currentChapter > 1 ? (
@@ -51,8 +53,8 @@ export default function ChapterNavigation({
 
   return (
     <div className={className} dir="ltr">
-      {isHebrewRTL ? nextLink : prevLink}
-      {isHebrewRTL ? prevLink : nextLink}
+      {isLTRNavigation ? prevLink : nextLink}
+      {isLTRNavigation ? nextLink : prevLink}
     </div>
   )
 }

@@ -39,12 +39,8 @@ const nextConfig = {
 
   // Security headers for production
   async headers() {
+    const isProd = process.env.NODE_ENV === 'production'
     const baseHeaders = [
-      // Enforce HTTPS in browsers once first secure request is seen
-      {
-        key: 'Strict-Transport-Security',
-        value: 'max-age=31536000; includeSubDomains',
-      },
       // Prevent clickjacking
       {
         key: 'X-Frame-Options',
@@ -81,6 +77,13 @@ const nextConfig = {
         value: 'same-origin',
       },
     ]
+
+    if (isProd) {
+      baseHeaders.unshift({
+        key: 'Strict-Transport-Security',
+        value: 'max-age=31536000; includeSubDomains',
+      })
+    }
 
     return [
       {

@@ -3,10 +3,14 @@ import type { NextRequest } from 'next/server'
 import { locales, defaultLocale, type Locale } from './lib/locale'
 
 function applyRedirectSecurityHeaders(response: NextResponse): NextResponse {
-  response.headers.set(
-    'Strict-Transport-Security',
-    'max-age=31536000; includeSubDomains'
-  )
+  const isProd = process.env.NODE_ENV === 'production'
+
+  if (isProd) {
+    response.headers.set(
+      'Strict-Transport-Security',
+      'max-age=31536000; includeSubDomains'
+    )
+  }
   response.headers.set('X-Frame-Options', 'DENY')
   response.headers.set('X-Content-Type-Options', 'nosniff')
   response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin')
@@ -51,13 +55,18 @@ function detectLocaleFromHeader(acceptLanguage: string): Locale {
 
 export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
+  const hostname = request.nextUrl.hostname
+  const isLocalhost =
+    hostname === 'localhost' || hostname === '127.0.0.1' || hostname === '::1'
+  const isProd = process.env.NODE_ENV === 'production'
+  const shouldEnforceHttps = isProd && !isLocalhost
   const forwardedProto = request.headers.get('x-forwarded-proto')
   const isStaticAsset = /\.(?:png|jpg|jpeg|gif|webp|svg|ico|txt|xml)$/i.test(
     pathname
   )
 
   // Force HTTPS at the edge layer if an upstream forwards plain HTTP.
-  if (forwardedProto === 'http') {
+  if (shouldEnforceHttps && forwardedProto === 'http') {
     const secureUrl = request.nextUrl.clone()
     secureUrl.protocol = 'https:'
     return applyRedirectSecurityHeaders(NextResponse.redirect(secureUrl, 308))

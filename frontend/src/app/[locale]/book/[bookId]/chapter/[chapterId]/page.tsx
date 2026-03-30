@@ -10,7 +10,6 @@ import SaveLastBook from '@/components/navigation/SaveLastBook'
 import AuthorInfo from '@/components/AuthorInfo'
 import { locales } from '@/lib/locale'
 import { BRAND_CONFIG } from '@/lib/config'
-import Script from 'next/script'
 
 export const revalidate = 604800
 const SOCIAL_IMAGE_URL = BRAND_CONFIG.socialImageUrl
@@ -230,73 +229,8 @@ export default async function BookChapterPage({ params }: PageProps) {
   const bookDisplayName =
     displayName[locale as 'he' | 'es' | 'en'] || displayName.en
 
-  // Generate JSON-LD structured data
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: `${bookDisplayName} ${chapterNumber}`,
-    description:
-      'Read Tanakh and Besorah in Hebrew. Fast, clean, distraction-free for deep study.',
-    url: `https://shafan.xyz/${locale}/book/${bookId}/chapter/${chapterNumber}`,
-    image: SOCIAL_IMAGE_URL,
-    author: {
-      '@type': 'Organization',
-      name: 'Shafan',
-      url: 'https://shafan.xyz',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Shafan',
-      url: 'https://shafan.xyz',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://shafan.xyz/icon.png',
-      },
-    },
-    inLanguage: locale,
-    isPartOf: {
-      '@type': 'Book',
-      name: bookDisplayName,
-    },
-  }
-
-  const breadcrumbJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: `https://shafan.xyz/${locale}`,
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: bookDisplayName,
-        item: `https://shafan.xyz/${locale}/book/${bookId}/chapter/1`,
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: `${bookDisplayName} ${chapterNumber}`,
-        item: `https://shafan.xyz/${locale}/book/${bookId}/chapter/${chapterNumber}`,
-      },
-    ],
-  }
-
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <Script
-        id={`jsonld-article-${locale}-${bookId}-${chapterNumber}`}
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <Script
-        id={`jsonld-breadcrumb-${locale}-${bookId}-${chapterNumber}`}
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
       {/* Save current location to localStorage for "Back to reading" feature */}
       <SaveLastBook bookId={bookId} chapterId={chapterId} />
 

@@ -24,36 +24,6 @@ function syncTTHParam(enabled: boolean) {
 }
 
 /**
- * Read a deterministic TTH state before preference hydration completes.
- * Priority: URL ?tth=true -> data-tth attribute -> null.
- */
-function getBootstrapTTHState(): boolean | null {
-  if (typeof window === 'undefined') return null
-
-  // 1. URL param — highest priority (shared links)
-  const params = new URLSearchParams(window.location.search)
-  if (params.get('tth') === 'true') {
-    return true
-  }
-
-  // 2. localStorage — reliable source of truth (React hydration can't touch it)
-  try {
-    const stored = localStorage.getItem(STORAGE_KEY)
-    if (stored === 'true') return true
-    if (stored === 'false') return false
-  } catch {
-    // Storage error
-  }
-
-  // 3. Data attribute — fallback (may be stale after React hydration)
-  const attr = document.documentElement.getAttribute(DATA_ATTRIBUTE)
-  if (attr === 'true') return true
-  if (attr === 'false') return false
-
-  return null
-}
-
-/**
  * Hook to manage TTH (Spanish translation) mode with localStorage persistence
  * and URL query-param sync (?tth=true).
  */
@@ -70,9 +40,8 @@ export function useTTH() {
 
   const pathname = usePathname()
   const hasReadUrl = useRef(false)
-  const bootstrapTTHState = getBootstrapTTHState()
-  const effectiveTTHEnabled =
-    bootstrapTTHState === true || (isLoaded && tthEnabled)
+  // Keep initial server/client render deterministic to avoid hydration mismatch.
+  const effectiveTTHEnabled = isLoaded ? tthEnabled : false
 
   // On first load: if ?tth=true is in the URL, enable TTH (URL overrides localStorage)
   useEffect(() => {
