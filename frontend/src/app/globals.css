@@ -639,9 +639,6 @@
     color: #faf6f0;
     border: none;
     border-radius: 8px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
     font-weight: 600;
     line-height: 1.2;
     letter-spacing: 0.05em;

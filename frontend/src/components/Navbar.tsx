@@ -230,7 +230,7 @@ export default function Navbar() {
         {/* Settings Button - Mobile */}
         <button
           onClick={toggleTTH}
-          className={`md:hidden tth-button px-3 py-2 text-xs cursor-pointer ${tthEnabled ? 'active' : ''}`}
+          className={`md:hidden inline-flex h-8 items-center justify-center tth-button px-3 text-xs leading-none cursor-pointer ${tthEnabled ? 'active' : ''}`}
           aria-label="Toggle TTH Spanish translation"
           aria-pressed={tthEnabled}
           title="TTH – Traducción del Texto Hebreo"
