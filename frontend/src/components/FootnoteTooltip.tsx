@@ -30,7 +30,7 @@ function normalizeMarker(marker: string): string {
 export default function FootnoteTooltip({ footnote }: FootnoteTooltipProps) {
   const [isVisible, setIsVisible] = useState(false)
   const triggerRef = useRef<HTMLButtonElement>(null)
-  const tooltipRef = useRef<HTMLDivElement>(null)
+  const tooltipRef = useRef<HTMLSpanElement>(null)
   const displayMarker = normalizeMarker(footnote.marker)
 
   const hide = useCallback(() => setIsVisible(false), [])
@@ -76,20 +76,25 @@ export default function FootnoteTooltip({ footnote }: FootnoteTooltipProps) {
         {displayMarker}
       </button>
       {isVisible && (
-        <div
+        <span
           ref={tooltipRef}
           role="tooltip"
-          className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-50 w-64 max-w-[85vw] p-3 rounded-lg bg-background border border-black/10 shadow-lg text-sm text-primary"
+          className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-50 block w-64 max-w-[85vw] p-3 rounded-lg bg-background border border-black/10 shadow-lg text-sm text-primary"
           onMouseEnter={() => setIsVisible(true)}
           onMouseLeave={() => setIsVisible(false)}
         >
-          <div className="font-semibold text-xs text-secondary mb-1">
+          <span className="mb-1 block font-semibold text-xs text-secondary">
             {footnote.word}
-          </div>
-          <div className="text-xs leading-relaxed">{footnote.explanation}</div>
+          </span>
+          <span className="block text-xs leading-relaxed">
+            {footnote.explanation}
+          </span>
           {/* Tooltip arrow */}
-          <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-black/10" />
-        </div>
+          <span
+            className="absolute top-full left-1/2 block h-0 w-0 -translate-x-1/2 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-black/10"
+            aria-hidden="true"
+          />
+        </span>
       )}
     </span>
   )
