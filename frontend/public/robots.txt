@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://shafan.xyz/sitemap.xml
+LLMS: https://shafan.xyz/llms.txt
