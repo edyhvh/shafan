@@ -79,6 +79,11 @@ Visit [http://localhost:3001](http://localhost:3001) to browse the Hebrew texts!
 - Widely regarded as the standard modern Hebrew New Testament
 - Data from [hebrew-bible.github.io](https://github.com/hebrew-bible/hebrew-bible.github.io)
 
+### Besorah - TTH (Traducción Textual del Hebreo)
+
+- TTH (Traducción Textual del Hebreo) source text
+- Data source: [elcuerpodelmesias.com](https://elcuerpodelmesias.com/traduccion-textual-del-hebreo/)
+
 ### Versification Mapping
 
 - [Copenhagen Alliance](https://github.com/Copenhagen-Alliance/copenhagen-alliance.github.io) standardized mappings
@@ -152,6 +157,7 @@ MIT License - see [LICENSE](LICENSE) for details.
 - **Copenhagen Alliance** — Versification mapping standards
 - **Anthropic Claude** — AI transcription technology
 - **Moriah Betzalel and Lena Kamilkov** - Helped me catch and find error patterns when the AI transcribed Hutter's text, this text is not fully corrected yet but it's a good starting point.
+- **Natanael Doldan** - For the effort in working on the TTH translation and allowing its use in this project.
 - All contributors who help verify and improve the texts
 
 ---
