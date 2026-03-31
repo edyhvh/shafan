@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from 'react'
 import type { TTHFootnote } from '@/lib/types'
+import { useIsMobile } from '@/hooks/useIsMobile'
 
 interface FootnoteTooltipProps {
   footnote: TTHFootnote
@@ -29,8 +30,12 @@ function normalizeMarker(marker: string): string {
 
 export default function FootnoteTooltip({ footnote }: FootnoteTooltipProps) {
   const [isVisible, setIsVisible] = useState(false)
+  const [positionMode, setPositionMode] = useState<'center' | 'left' | 'right'>(
+    'center'
+  )
   const triggerRef = useRef<HTMLButtonElement>(null)
   const tooltipRef = useRef<HTMLSpanElement>(null)
+  const isMobile = useIsMobile()
   const displayMarker = normalizeMarker(footnote.marker)
 
   const hide = useCallback(() => setIsVisible(false), [])
@@ -62,6 +67,59 @@ export default function FootnoteTooltip({ footnote }: FootnoteTooltipProps) {
     return () => document.removeEventListener('keydown', handleEscape)
   }, [isVisible, hide])
 
+  // On mobile, keep tooltip inside viewport by shifting alignment near edges.
+  useEffect(() => {
+    if (!isVisible || !isMobile) {
+      setPositionMode('center')
+      return
+    }
+
+    const updatePosition = () => {
+      if (!triggerRef.current || !tooltipRef.current) return
+
+      const triggerRect = triggerRef.current.getBoundingClientRect()
+      const tooltipRect = tooltipRef.current.getBoundingClientRect()
+      const viewportWidth = window.innerWidth
+      const gutter = 8
+      const triggerCenter = triggerRect.left + triggerRect.width / 2
+      const halfTooltipWidth = tooltipRect.width / 2
+
+      if (triggerCenter - halfTooltipWidth < gutter) {
+        setPositionMode('left')
+        return
+      }
+
+      if (triggerCenter + halfTooltipWidth > viewportWidth - gutter) {
+        setPositionMode('right')
+        return
+      }
+
+      setPositionMode('center')
+    }
+
+    updatePosition()
+    window.addEventListener('resize', updatePosition)
+    window.addEventListener('orientationchange', updatePosition)
+    return () => {
+      window.removeEventListener('resize', updatePosition)
+      window.removeEventListener('orientationchange', updatePosition)
+    }
+  }, [isVisible, isMobile])
+
+  const tooltipPositionClass =
+    !isMobile || positionMode === 'center'
+      ? 'left-1/2 -translate-x-1/2'
+      : positionMode === 'left'
+        ? 'left-0 translate-x-0'
+        : 'right-0 translate-x-0'
+
+  const arrowPositionClass =
+    !isMobile || positionMode === 'center'
+      ? 'left-1/2 -translate-x-1/2'
+      : positionMode === 'left'
+        ? 'left-4 translate-x-0'
+        : 'right-4 translate-x-0'
+
   return (
     <span className="relative inline">
       <button
@@ -79,7 +137,7 @@ export default function FootnoteTooltip({ footnote }: FootnoteTooltipProps) {
         <span
           ref={tooltipRef}
           role="tooltip"
-          className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-50 block w-64 max-w-[85vw] p-3 rounded-lg bg-background border border-black/10 shadow-lg text-sm text-primary"
+          className={`absolute bottom-full mb-2 z-50 block w-64 max-w-[85vw] p-3 rounded-lg bg-background border border-black/10 shadow-lg text-sm text-primary ${tooltipPositionClass}`}
           onMouseEnter={() => setIsVisible(true)}
           onMouseLeave={() => setIsVisible(false)}
         >
@@ -91,7 +149,7 @@ export default function FootnoteTooltip({ footnote }: FootnoteTooltipProps) {
           </span>
           {/* Tooltip arrow */}
           <span
-            className="absolute top-full left-1/2 block h-0 w-0 -translate-x-1/2 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-black/10"
+            className={`absolute top-full block h-0 w-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-black/10 ${arrowPositionClass}`}
             aria-hidden="true"
           />
         </span>
