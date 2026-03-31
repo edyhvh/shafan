@@ -9,6 +9,10 @@ const nextConfig = {
   // Ultra-minimalist configuration for shafan
   reactStrictMode: true,
 
+  // Allow LAN-origin dev clients (mobile/tablet) to access Next dev resources
+  allowedDevOrigins:
+    process.env.NODE_ENV === 'development' ? ['192.168.0.16'] : undefined,
+
   // Optimize for mobile and slow connections
   // Note: optimizeCss is now stable in Next.js 15, no longer experimental
 

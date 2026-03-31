@@ -14,7 +14,7 @@ export default function Logo({ className = '', size = 'default' }: LogoProps) {
 
   const width = isCompact ? 28 : 120
   const height = isCompact ? 28 : 120
-  const sizeClass = isCompact ? 'w-7 h-7' : 'w-[120px] h-[120px]'
+  const sizeClass = isCompact ? 'w-7 h-auto' : 'w-[120px] h-auto'
   const src =
     !isLoaded || theme === 'light' ? '/logo_light.svg' : '/logo_dark.svg'
 
