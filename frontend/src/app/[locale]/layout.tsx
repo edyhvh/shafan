@@ -10,6 +10,7 @@ import Script from 'next/script'
 import '../globals.css'
 import Navbar from '@/components/Navbar'
 import CorrectionWarning from '@/components/CorrectionWarning'
+import SiteFooter from '@/components/SiteFooter'
 import { Locale } from '@/lib/locale'
 import { t } from '@/lib/translations'
 import { BRAND_CONFIG } from '@/lib/config'
@@ -187,7 +188,10 @@ export default async function LocaleLayout({
           </div>
 
           {/* Main content with top padding for floating navbar */}
-          <main className="w-full pt-32 pb-16">{children}</main>
+          <main className="w-full pt-32 pb-16">
+            {children}
+            <SiteFooter locale={locale as Locale} />
+          </main>
         </div>
       </body>
     </html>

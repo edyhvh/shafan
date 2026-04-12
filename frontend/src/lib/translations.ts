@@ -8,8 +8,14 @@ type TranslationKey =
   | 'books'
   | 'donate'
   | 'info'
+  | 'terms'
+  | 'privacy'
+  | 'legal'
   | 'home'
   | 'nikud'
+  | 'back_to_app'
+  | 'legal_last_updated'
+  | 'legal_effective_date'
   | 'page_title'
   | 'site_meta_title'
   | 'site_meta_description'
@@ -50,8 +56,14 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     books: 'Books',
     donate: 'Donate',
     info: 'Info',
+    terms: 'Terms',
+    privacy: 'Privacy',
+    legal: 'Legals',
     home: 'Home',
     nikud: 'Nikud',
+    back_to_app: 'Back to app',
+    legal_last_updated: 'Last updated',
+    legal_effective_date: 'Effective date',
     page_title: 'Hebrew Besorah',
     site_meta_title: 'Shafan',
     site_meta_description:
@@ -100,8 +112,14 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     books: 'Libros',
     donate: 'Donar',
     info: 'Info',
+    terms: 'Terminos',
+    privacy: 'Privacidad',
+    legal: 'Legales',
     home: 'Inicio',
     nikud: 'Nikud',
+    back_to_app: 'Volver a la app',
+    legal_last_updated: 'Ultima actualizacion',
+    legal_effective_date: 'Fecha de vigencia',
     page_title: 'Besorah Hebrea',
     site_meta_title: 'Shafan',
     site_meta_description:
@@ -150,8 +168,14 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     books: 'ספרים',
     donate: 'לתרום',
     info: 'מידע',
+    terms: 'תנאים',
+    privacy: 'פרטיות',
+    legal: 'משפטי',
     home: 'בית',
     nikud: 'ניקוד',
+    back_to_app: 'חזרה לאפליקציה',
+    legal_last_updated: 'עודכן לאחרונה',
+    legal_effective_date: 'תאריך תחילה',
     page_title: 'בְּשׂוֹרָה עברית',
     site_meta_title: 'Shafan',
     site_meta_description:
