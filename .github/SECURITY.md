@@ -26,7 +26,6 @@ Defined in [`.github/CODEOWNERS`](.github/CODEOWNERS). The following paths requi
 
 ### Automated Security
 
-- ✅ **Dependabot** — Weekly automated dependency updates (configured in [`.github/dependabot.yml`](.github/dependabot.yml))
 - ✅ **Security Scanning** — Both `npm audit` (frontend) and `pip-audit` (Python) run on every PR
 - ✅ **Workflow Permissions** — GitHub Actions restricted to read-only access + PR comments/checks only
 
@@ -67,7 +66,6 @@ Then enable in GitHub: Settings → Branches → Edit rule → Require signed co
 - [x] Branch protection enabled on `main`
 - [x] CODEOWNERS configured for critical paths
 - [x] Automated security scanning (npm audit + pip-audit)
-- [x] Dependabot enabled with weekly checks
 - [x] Restrictive workflow permissions (read-only by default)
 - [x] Workflow approval required for first-time contributors
 - [x] Secrets properly managed (no credentials in code)
@@ -94,9 +92,9 @@ This project contains historical religious texts. Data integrity is critical:
 
 ## Supported Versions
 
-| Version | Supported          |
-| ------- | ------------------ |
-| main    | ✅ Active development |
+| Version        | Supported                     |
+| -------------- | ----------------------------- |
+| main           | ✅ Active development         |
 | other branches | ⚠️ Not monitored for security |
 
 ---
