@@ -167,6 +167,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={dir}
+      data-scroll-behavior="smooth"
       data-nikud="true"
       data-cantillation="false"
       data-text-source="delitzsch"
@@ -176,21 +177,24 @@ export default async function LocaleLayout({
       suppressHydrationWarning
     >
       <head>
-        <script
+        <Script
           id={`jsonld-website-${locale}`}
           type="application/ld+json"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
-        <script
+        <Script
           id={`jsonld-organization-${locale}`}
           type="application/ld+json"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationJsonLd),
           }}
         />
-        <script
+        <Script
           id={`jsonld-person-${locale}`}
           type="application/ld+json"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
         <Script id="shafan-initial-preferences" strategy="beforeInteractive">

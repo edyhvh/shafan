@@ -2,6 +2,7 @@ import { t } from '@/lib/translations'
 import { Locale } from '@/lib/locale'
 import type { Metadata } from 'next'
 import { BRAND_CONFIG } from '@/lib/config'
+import Script from 'next/script'
 
 interface PageProps {
   params: Promise<{
@@ -85,14 +86,16 @@ export default async function InfoPage({ params }: PageProps) {
 
   return (
     <>
-      <script
+      <Script
         id={`jsonld-faq-info-${loc}`}
         type="application/ld+json"
+        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <script
+      <Script
         id={`jsonld-webpage-info-${loc}`}
         type="application/ld+json"
+        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
       />
       <div className="max-w-3xl mx-auto px-4 pb-20">
