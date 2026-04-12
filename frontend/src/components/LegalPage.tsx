@@ -68,7 +68,10 @@ function renderMarkdownBlocks(body: string) {
 
     if (trimmed.startsWith('## ')) {
       blocks.push(
-        <h2 key={`h2-${i}`} className="mt-8 mb-3 text-xl font-semibold text-black">
+        <h2
+          key={`h2-${i}`}
+          className="mt-8 mb-3 text-xl font-semibold text-black"
+        >
           {trimmed.slice(3)}
         </h2>
       )
@@ -84,7 +87,10 @@ function renderMarkdownBlocks(body: string) {
       }
 
       blocks.push(
-        <ul key={`ul-${i}`} className="mb-4 list-disc ps-6 space-y-1 text-black/80">
+        <ul
+          key={`ul-${i}`}
+          className="mb-4 list-disc ps-6 space-y-1 text-black/80"
+        >
           {items.map((item, idx) => (
             <li key={`${idx}-${item.slice(0, 16)}`}>{renderInline(item)}</li>
           ))}
@@ -152,7 +158,10 @@ export default function LegalPage({ locale, kind }: Props) {
 
       <div className="h-px w-full bg-black/10 mb-8" />
 
-      <section className={`${isRTL ? 'text-right' : 'text-left'}`} dir={isRTL ? 'rtl' : 'ltr'}>
+      <section
+        className={`${isRTL ? 'text-right' : 'text-left'}`}
+        dir={isRTL ? 'rtl' : 'ltr'}
+      >
         {renderMarkdownBlocks(doc.body)}
       </section>
     </div>

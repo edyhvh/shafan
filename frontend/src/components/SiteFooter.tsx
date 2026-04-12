@@ -15,7 +15,9 @@ export default function SiteFooter({ locale }: Props) {
         className={`mx-auto max-w-5xl px-4 py-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between ${isRTL ? 'text-right' : 'text-left'}`}
         dir={isRTL ? 'rtl' : 'ltr'}
       >
-        <p className={`text-sm text-black/60 ${isRTL ? 'font-hebrew' : 'font-ui-latin'}`}>
+        <p
+          className={`text-sm text-black/60 ${isRTL ? 'font-hebrew' : 'font-ui-latin'}`}
+        >
           {t('legal', locale)}
         </p>
 

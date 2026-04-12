@@ -11,7 +11,9 @@ interface PageProps {
   }>
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { locale } = await params
   const loc = locale as Locale
   const canonicalUrl = `https://shafan.xyz/${loc}/privacy`
