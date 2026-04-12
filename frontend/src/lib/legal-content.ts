@@ -17,12 +17,27 @@ const LEGAL_TITLES: Record<Locale, Record<LegalKind, string>> = {
     privacy: 'Privacy Policy of Shafan',
   },
   es: {
-    terms: 'Terminos de Servicio de Shafan',
-    privacy: 'Politica de Privacidad de Shafan',
+    terms: 'Términos de Servicio de Shafan',
+    privacy: 'Política de Privacidad de Shafan',
   },
   he: {
     terms: 'תנאי השירות של Shafan',
     privacy: 'מדיניות הפרטיות של Shafan',
+  },
+}
+
+const LEGAL_DESCRIPTIONS: Record<Locale, Record<LegalKind, string>> = {
+  en: {
+    terms: 'Read the Terms of Service for Shafan.',
+    privacy: 'Read the Privacy Policy for Shafan.',
+  },
+  es: {
+    terms: 'Lee los Términos de Servicio de Shafan.',
+    privacy: 'Lee la Política de Privacidad de Shafan.',
+  },
+  he: {
+    terms: 'קראו את תנאי השירות של Shafan.',
+    privacy: 'קראו את מדיניות הפרטיות של Shafan.',
   },
 }
 
@@ -100,74 +115,74 @@ We may revise this Privacy Policy as features evolve. Continued use after public
 For privacy questions: hi@davar.bible
 `
 
-const ES_TERMS = `# Terminos de Servicio de Shafan
+const ES_TERMS = `# Términos de Servicio de Shafan
 
 **Effective Date:** 12 de abril de 2026
 **Last Updated:** 12 de abril de 2026
 
-Shafan es un sitio web de codigo abierto para leer textos del Tanaj y la Besorah en hebreo. Al usar Shafan, aceptas estos Terminos.
+Shafan es un sitio web de código abierto para leer textos del Tanaj y la Besorah en hebreo. Al usar Shafan, aceptas estos Términos.
 
 ## 1. Uso del servicio
 
-- Puedes usar Shafan para fines personales, educativos y de investigacion.
+- Puedes usar Shafan para fines personales, educativos y de investigación.
 - Aceptas no abusar, interrumpir ni comprometer el sitio web.
-- Eres responsable de cumplir las leyes aplicables en tu jurisdiccion.
+- Eres responsable de cumplir las leyes aplicables en tu jurisdicción.
 
 ## 2. Contenido y fuentes
 
-Shafan incluye textos y recursos de fuentes publicas y de terceros. Buscamos exactitud, pero no garantizamos que todo el contenido este libre de errores.
+Shafan incluye textos y recursos de fuentes públicas y de terceros. Buscamos exactitud, pero no garantizamos que todo el contenido esté libre de errores.
 
 ## 3. Propiedad intelectual
 
-El codigo del proyecto esta disponible bajo la licencia del repositorio. Los textos y materiales de terceros se rigen por sus propias licencias y requisitos de atribucion.
+El código del proyecto está disponible bajo la licencia del repositorio. Los textos y materiales de terceros se rigen por sus propias licencias y requisitos de atribución.
 
 ## 4. Disponibilidad del servicio
 
-Shafan se ofrece "tal cual" y "segun disponibilidad". Podemos actualizar, pausar o discontinuar partes del servicio sin aviso previo.
+Shafan se ofrece "tal cual" y "según disponibilidad". Podemos actualizar, pausar o discontinuar partes del servicio sin aviso previo.
 
-## 5. Limitacion de responsabilidad
+## 5. Limitación de responsabilidad
 
-En la maxima medida permitida por la ley, los mantenedores de Shafan no son responsables por danos indirectos, incidentales o consecuentes derivados del uso del servicio.
+En la máxima medida permitida por la ley, los mantenedores de Shafan no son responsables por daños indirectos, incidentales o consecuentes derivados del uso del servicio.
 
-## 6. Cambios en estos Terminos
+## 6. Cambios en estos Términos
 
-Podemos actualizar estos Terminos periodicamente. El uso continuo despues de cambios implica aceptacion de la version actualizada.
+Podemos actualizar estos Términos periódicamente. El uso continuo después de cambios implica aceptación de la versión actualizada.
 
 ## 7. Contacto
 
-Para consultas legales o de politica: hi@davar.bible
+Para consultas legales o de política: hi@davar.bible
 `
 
-const ES_PRIVACY = `# Politica de Privacidad de Shafan
+const ES_PRIVACY = `# Política de Privacidad de Shafan
 
 **Effective Date:** 12 de abril de 2026
 **Last Updated:** 12 de abril de 2026
 
-Shafan esta comprometido con la recoleccion minima de datos y con practicas transparentes.
+Shafan está comprometido con la recolección mínima de datos y con prácticas transparentes.
 
 ## 1. Datos que recopilamos
 
-Actualmente, Shafan no requiere cuentas de usuario y no recopila intencionalmente informacion personal identificable durante el uso normal de lectura.
+Actualmente, Shafan no requiere cuentas de usuario y no recopila intencionalmente información personal identificable durante el uso normal de lectura.
 
 ## 2. Preferencias locales
 
-Las preferencias de visualizacion (por ejemplo, nikud, cantilacion, tema y opciones de lectura) se guardan localmente en tu navegador.
+Las preferencias de visualización (por ejemplo, nikud, cantilación, tema y opciones de lectura) se guardan localmente en tu navegador.
 
-## 3. Registros tecnicos
+## 3. Registros técnicos
 
-Los proveedores de infraestructura pueden procesar registros tecnicos estandar (como direccion IP y metadatos de solicitudes) para seguridad y entrega del servicio.
+Los proveedores de infraestructura pueden procesar registros técnicos estándar (como dirección IP y metadatos de solicitudes) para seguridad y entrega del servicio.
 
 ## 4. Servicios de terceros
 
-Shafan puede cargar recursos desde proveedores externos (como fuentes o enlaces externos). Esos proveedores pueden procesar datos segun sus propias politicas de privacidad.
+Shafan puede cargar recursos desde proveedores externos (como fuentes o enlaces externos). Esos proveedores pueden procesar datos según sus propias políticas de privacidad.
 
 ## 5. Menores
 
-Shafan no esta dirigido a menores de 13 anos y no recopilamos intencionalmente datos personales de menores.
+Shafan no está dirigido a menores de 13 años y no recopilamos intencionalmente datos personales de menores.
 
-## 6. Cambios en esta Politica
+## 6. Cambios en esta Política
 
-Podemos revisar esta Politica de Privacidad a medida que evolucionen las funciones. El uso continuo despues de publicar cambios implica aceptacion de la version actualizada.
+Podemos revisar esta Política de Privacidad a medida que evolucionen las funciones. El uso continuo después de publicar cambios implica aceptación de la política actualizada.
 
 ## 7. Contacto
 
@@ -304,3 +319,9 @@ export const getLegalDoc = (kind: LegalKind, locale: Locale): LegalDoc => {
     body: stripHeaderLines(markdown),
   }
 }
+
+export const getLegalTitle = (kind: LegalKind, locale: Locale): string =>
+  LEGAL_TITLES[locale]?.[kind] ?? LEGAL_TITLES.en[kind]
+
+export const getLegalDescription = (kind: LegalKind, locale: Locale): string =>
+  LEGAL_DESCRIPTIONS[locale]?.[kind] ?? LEGAL_DESCRIPTIONS.en[kind]

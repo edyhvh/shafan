@@ -1,6 +1,7 @@
 import { t } from '@/lib/translations'
 import { Locale } from '@/lib/locale'
 import type { Metadata } from 'next'
+import { BRAND_CONFIG } from '@/lib/config'
 
 interface PageProps {
   params: Promise<{
@@ -18,9 +19,76 @@ export default async function InfoPage({ params }: PageProps) {
   const { locale } = await params
   const loc = locale as Locale
   const isRTL = loc === 'he'
+  const pageUrl = `${BRAND_CONFIG.siteUrl}/${loc}/info`
+
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: loc,
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: t('info_hutter_title', loc),
+        acceptedAnswer: { '@type': 'Answer', text: t('info_hutter_text', loc) },
+      },
+      {
+        '@type': 'Question',
+        name: t('info_delitzsch_title', loc),
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: t('info_delitzsch_text', loc),
+        },
+      },
+      {
+        '@type': 'Question',
+        name: t('info_polyglot_title', loc),
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: t('info_polyglot_text', loc),
+        },
+      },
+      {
+        '@type': 'Question',
+        name: t('info_besorah_title', loc),
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: t('info_besorah_text', loc),
+        },
+      },
+      {
+        '@type': 'Question',
+        name: t('info_tanaj_title', loc),
+        acceptedAnswer: { '@type': 'Answer', text: t('info_tanaj_text', loc) },
+      },
+    ],
+  }
+
+  const pageJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: t('info_title', loc),
+    description: t('site_meta_description', loc),
+    url: pageUrl,
+    inLanguage: loc,
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'Shafan',
+      url: BRAND_CONFIG.siteUrl,
+    },
+  }
 
   return (
     <div className="max-w-3xl mx-auto px-4 pb-20">
+      <script
+        id={`jsonld-faq-info-${loc}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        id={`jsonld-webpage-info-${loc}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
+      />
       <h1
         className={`font-ui-latin text-3xl font-semibold mb-10 text-center ${isRTL ? 'font-hebrew' : ''}`}
       >

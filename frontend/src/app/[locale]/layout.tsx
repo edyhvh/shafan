@@ -177,24 +177,21 @@ export default async function LocaleLayout({
       suppressHydrationWarning
     >
       <head>
-        <Script
+        <script
           id={`jsonld-website-${locale}`}
           type="application/ld+json"
-          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
-        <Script
+        <script
           id={`jsonld-organization-${locale}`}
           type="application/ld+json"
-          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationJsonLd),
           }}
         />
-        <Script
+        <script
           id={`jsonld-person-${locale}`}
           type="application/ld+json"
-          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
         <Script id="shafan-initial-preferences" strategy="beforeInteractive">
@@ -246,10 +243,9 @@ export default async function LocaleLayout({
           </div>
 
           {/* Main content with top padding for floating navbar */}
-          <main className="w-full pt-32 pb-16">
-            {children}
-            <SiteFooter locale={locale as Locale} />
-          </main>
+          <main className="w-full pt-32 pb-16">{children}</main>
+
+          <SiteFooter locale={locale as Locale} />
         </div>
       </body>
     </html>

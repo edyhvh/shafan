@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import LegalPage from '@/components/LegalPage'
 import { Locale } from '@/lib/locale'
 import { BRAND_CONFIG } from '@/lib/config'
+import { getLegalTitle, getLegalDescription } from '@/lib/legal-content'
 
 const SOCIAL_IMAGE_URL = BRAND_CONFIG.socialImageUrl
 
@@ -17,30 +18,32 @@ export async function generateMetadata({
   const { locale } = await params
   const loc = locale as Locale
   const canonicalUrl = `https://shafan.xyz/${loc}/terms`
+  const title = getLegalTitle('terms', loc)
+  const description = getLegalDescription('terms', loc)
 
   return {
-    title: 'Terms of Service of Shafan',
-    description: 'Read the Terms of Service for Shafan.',
+    title,
+    description,
     alternates: {
       canonical: canonicalUrl,
     },
     openGraph: {
-      title: 'Terms of Service of Shafan',
-      description: 'Read the Terms of Service for Shafan.',
+      title,
+      description,
       type: 'website',
       url: canonicalUrl,
       siteName: 'Shafan',
       images: [
         {
           url: SOCIAL_IMAGE_URL,
-          alt: 'Terms of Service of Shafan',
+          alt: title,
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Terms of Service of Shafan',
-      description: 'Read the Terms of Service for Shafan.',
+      title,
+      description,
       images: [SOCIAL_IMAGE_URL],
     },
   }
