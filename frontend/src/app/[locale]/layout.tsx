@@ -6,10 +6,11 @@ import {
   Cardo,
   Assistant,
 } from 'next/font/google'
-import Script from 'next/script'
 import '../globals.css'
 import Navbar from '@/components/Navbar'
 import CorrectionWarning from '@/components/CorrectionWarning'
+import SiteFooter from '@/components/SiteFooter'
+import InitialPreferencesSync from '../../components/InitialPreferencesSync'
 import { Locale } from '@/lib/locale'
 import { t } from '@/lib/translations'
 import { BRAND_CONFIG } from '@/lib/config'
@@ -51,7 +52,7 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string }>
 }): Promise<Metadata> {
-  const brandName = 'shafan'
+  const brandName = 'Shafan | Read the Hebrew Bible'
   const { locale } = await params
   const loc = (locale || 'he') as Locale
   const description = t('site_meta_description', loc)
@@ -67,12 +68,16 @@ export async function generateMetadata({
     description,
     metadataBase: new URL('https://shafan.xyz'),
     keywords: [
-      'hebrew tanakh online',
-      'besorah hebrew hutter',
-      'nikud toggle',
+      'hebrew bible',
       'hebrew bible study',
       'tanakh hebrew text',
+      'tanaj hebreo',
+      'hebrew tanakh online',
       'besorah hebrew',
+      'besorah hebreo',
+      'hebrew new testament',
+      'delitzsch hebrew translation',
+      'hutter hebrew new testament',
     ],
     robots: {
       index: true,
@@ -86,6 +91,9 @@ export async function generateMetadata({
         he: 'https://shafan.xyz/he',
       },
     },
+    authors: [{ name: BRAND_CONFIG.authorName, url: BRAND_CONFIG.authorUrl }],
+    creator: BRAND_CONFIG.authorName,
+    publisher: 'Shafan',
     openGraph: {
       title: brandName,
       description,
@@ -124,11 +132,42 @@ export default async function LocaleLayout({
   const resolvedParams = await params
   const locale = resolvedParams.locale || 'he'
   const dir = locale === 'he' ? 'rtl' : 'ltr'
+  const websiteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Shafan',
+    url: BRAND_CONFIG.siteUrl,
+    inLanguage: locale,
+  }
+  const organizationJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Shafan',
+    url: BRAND_CONFIG.siteUrl,
+    logo: BRAND_CONFIG.logoUrl,
+    sameAs: [
+      `https://x.com/${BRAND_CONFIG.twitterHandle.replace('@', '')}`,
+      BRAND_CONFIG.githubUrl,
+      BRAND_CONFIG.youtubeUrl,
+    ],
+  }
+  const personJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: BRAND_CONFIG.authorName,
+    url: BRAND_CONFIG.authorUrl,
+    sameAs: [
+      BRAND_CONFIG.authorUrl,
+      `https://x.com/${BRAND_CONFIG.twitterHandle.replace('@', '')}`,
+      BRAND_CONFIG.youtubeUrl,
+    ],
+  }
 
   return (
     <html
       lang={locale}
       dir={dir}
+      data-scroll-behavior="smooth"
       data-nikud="true"
       data-cantillation="false"
       data-text-source="delitzsch"
@@ -138,42 +177,28 @@ export default async function LocaleLayout({
       suppressHydrationWarning
     >
       <head>
-        <Script id="shafan-initial-preferences" strategy="beforeInteractive">
-          {`
-            (function() {
-              try {
-                var nikud = localStorage.getItem('shafan-nikud-enabled');
-                if (nikud !== null) {
-                  document.documentElement.setAttribute('data-nikud', nikud);
-                }
-                var cantillation = localStorage.getItem('shafan-cantillation-enabled');
-                if (cantillation !== null) {
-                  document.documentElement.setAttribute('data-cantillation', cantillation);
-                }
-                var textSource = localStorage.getItem('shafan-text-source');
-                if (textSource !== null) {
-                  document.documentElement.setAttribute('data-text-source', textSource);
-                }
-                var sefer = localStorage.getItem('shafan-sefer-enabled');
-                if (sefer !== null) {
-                  document.documentElement.setAttribute('data-sefer', sefer);
-                }
-                var tth = localStorage.getItem('shafan-tth-enabled');
-                if (tth !== null) {
-                  document.documentElement.setAttribute('data-tth', tth);
-                }
-                var theme = localStorage.getItem('shafan-theme');
-                if (theme !== null) {
-                  document.documentElement.setAttribute('data-theme', theme);
-                }
-              } catch (e) {}
-            })();
-          `}
-        </Script>
+        <script
+          id={`jsonld-website-${locale}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          id={`jsonld-organization-${locale}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
+        <script
+          id={`jsonld-person-${locale}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
       </head>
       <body
         className={`${inter.variable} ${libreBodoni.variable} ${suezOne.variable} ${cardo.variable} ${assistant.variable} font-ui-latin antialiased`}
       >
+        <InitialPreferencesSync />
         <div className="min-h-screen bg-background">
           {/* Floating Navbar */}
           <Navbar />
@@ -188,6 +213,8 @@ export default async function LocaleLayout({
 
           {/* Main content with top padding for floating navbar */}
           <main className="w-full pt-32 pb-16">{children}</main>
+
+          <SiteFooter locale={locale as Locale} />
         </div>
       </body>
     </html>

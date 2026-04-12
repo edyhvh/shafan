@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 
 /**
- * Read preference from data attribute (set by inline script) or localStorage.
+ * Read preference from data attribute or localStorage.
  * Only called inside useEffect (client-side) to avoid hydration mismatches.
  */
 function readPreferenceFromDOM<T extends string>(
@@ -11,8 +11,7 @@ function readPreferenceFromDOM<T extends string>(
   dataAttribute: string
 ): T | null {
   // Read localStorage first — it is the source of truth.
-  // Data attributes on <html> are set by the inline script but React hydration
-  // reconciles them back to the JSX-hardcoded defaults, making them unreliable.
+  // Data attributes on <html> can still provide a fallback during first render.
   try {
     const stored = localStorage.getItem(storageKey)
     if (stored !== null) {

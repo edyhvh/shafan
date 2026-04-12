@@ -8,13 +8,23 @@ type TranslationKey =
   | 'books'
   | 'donate'
   | 'info'
+  | 'terms'
+  | 'privacy'
+  | 'legal'
   | 'home'
   | 'nikud'
+  | 'back_to_app'
+  | 'legal_last_updated'
+  | 'legal_effective_date'
   | 'page_title'
   | 'site_meta_title'
   | 'site_meta_description'
   // Info page
   | 'info_title'
+  | 'info_overview_title'
+  | 'info_overview_text'
+  | 'info_study_guide_title'
+  | 'info_study_guide_text'
   | 'info_hutter_title'
   | 'info_hutter_text'
   | 'info_polyglot_title'
@@ -25,6 +35,8 @@ type TranslationKey =
   | 'info_delitzsch_text'
   | 'info_tanaj_title'
   | 'info_tanaj_text'
+  | 'info_related_questions_title'
+  | 'info_related_questions_text'
   | 'info_follow'
   | 'info_youtube_title'
   // Donate page
@@ -50,14 +62,26 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     books: 'Books',
     donate: 'Donate',
     info: 'Info',
+    terms: 'Terms',
+    privacy: 'Privacy',
+    legal: 'Legals',
     home: 'Home',
     nikud: 'Nikud',
+    back_to_app: 'Back to app',
+    legal_last_updated: 'Last updated',
+    legal_effective_date: 'Effective date',
     page_title: 'Hebrew Besorah',
     site_meta_title: 'Shafan',
     site_meta_description:
-      'Read Tanakh and Besorah in Hebrew. Fast, clean, distraction-free for deep study.',
+      'Read the Hebrew Bible (Tanakh) and Besorah in Hebrew. Fast, clean, distraction-free study with Nikud controls and trusted texts. Start reading now.',
     // Info page
     info_title: 'Info',
+    info_overview_title: 'How to use this page',
+    info_overview_text:
+      'This page explains the historical sources behind the texts on Shafan and how to read them responsibly. In short: Hutter is historically important but linguistically uneven, Delitzsch is generally more accurate for study, and the Tanakh text follows the Masoretic tradition. If you are comparing passages, start with Delitzsch, then check Hutter to see historical wording choices.',
+    info_study_guide_title: 'Study approach and examples',
+    info_study_guide_text:
+      'Example workflow: read a chapter in Hebrew with Nikud enabled, compare key terms in Hutter and Delitzsch, and note where wording changes meaning or tone. For teaching, cite the chapter URL and mention which source was active. For research, keep chapter and verse boundaries intact and avoid mixing translations in a single quotation without labeling them.',
     info_hutter_title: 'Who was Elias Hutter?',
     info_hutter_text:
       "Elias Hutter (c. 1553–1605) was a German Hebraist, linguist, and printer from Görlitz. His translation of the New Testament into Hebrew, published between 1599 and 1602 as part of the Nuremberg Polyglot, represents one of the first complete Hebrew New Testaments ever printed. Please note that Hutter's translation is not linguistically accurate and contains numerous errors. We are actively working to improve and correct these texts through ongoing research and community contributions.",
@@ -73,6 +97,9 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     info_tanaj_title: 'Tanakh',
     info_tanaj_text:
       "This project also includes the Hebrew Bible (Tanakh) from the Masoretic Text, the authoritative Hebrew text of the Bible that has been meticulously preserved through centuries of careful transmission by Israel's scribes.",
+    info_related_questions_title: 'Related questions',
+    info_related_questions_text:
+      'Which text should beginners use first? Usually Delitzsch. Why include Hutter if it has errors? Because it is a primary historical witness to early Hebrew New Testament printing. Does this replace critical editions? No. It is a reading and comparison tool designed for accessible Hebrew study.',
     info_follow: 'Follow the project',
     info_youtube_title: "Yeshua the Messiah's Besorah",
     // Donate page
@@ -100,14 +127,26 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     books: 'Libros',
     donate: 'Donar',
     info: 'Info',
+    terms: 'Términos',
+    privacy: 'Privacidad',
+    legal: 'Legales',
     home: 'Inicio',
     nikud: 'Nikud',
+    back_to_app: 'Volver a la app',
+    legal_last_updated: 'Última actualización',
+    legal_effective_date: 'Fecha de vigencia',
     page_title: 'Besorah Hebrea',
     site_meta_title: 'Shafan',
     site_meta_description:
-      'Lee Tanaj y Besorah en hebreo. Rápido, limpio y sin distracciones para un estudio profundo.',
+      'Lee la Biblia hebrea (Tanaj) y la Besorah en hebreo. Rápida, limpia y sin distracciones, con control de nikud y textos confiables. Empieza a leer ahora.',
     // Info page
     info_title: 'Info',
+    info_overview_title: 'Cómo usar esta página',
+    info_overview_text:
+      'Esta página explica las fuentes históricas detrás de los textos en Shafan y cómo leerlas con criterio. En resumen: Hutter es históricamente importante pero lingüísticamente irregular, Delitzsch suele ser más preciso para el estudio, y el texto del Tanaj sigue la tradición masorética. Si vas a comparar pasajes, comienza con Delitzsch y luego revisa Hutter para observar decisiones históricas de redacción.',
+    info_study_guide_title: 'Método de estudio y ejemplos',
+    info_study_guide_text:
+      'Ejemplo de flujo de estudio: lee un capítulo en hebreo con nikud activado, compara términos clave entre Hutter y Delitzsch, y anota dónde cambian el sentido o el tono. Para enseñanza, cita la URL canónica del capítulo e indica qué fuente de texto estaba activa. Para investigación, conserva los límites de capítulo y versículo y evita mezclar traducciones en una sola cita sin etiquetarlas.',
     info_hutter_title: '¿Quién fue Elias Hutter?',
     info_hutter_text:
       'Elias Hutter (c. 1553–1605) fue un hebraísta, lingüista e impresor alemán de Görlitz. Su traducción del Nuevo Testamento al hebreo, publicada entre 1599 y 1602 como parte de la Políglota de Núremberg, representa uno de los primeros Nuevos Testamentos hebreos completos jamás impresos. Por favor note que la traducción de Hutter no es lingüísticamente precisa y contiene numerosos errores. Estamos trabajando activamente para mejorar y corregir estos textos mediante investigación continua y contribuciones de la comunidad.',
@@ -123,6 +162,9 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     info_tanaj_title: 'Tanaj',
     info_tanaj_text:
       'Este proyecto también incluye la Biblia hebrea (Tanaj) del Texto Masorético, el texto hebreo autorizado de la Biblia que ha sido meticulosamente preservado a través de siglos de transmisión cuidadosa por parte de escribas de Israel.',
+    info_related_questions_title: 'Preguntas relacionadas',
+    info_related_questions_text:
+      '¿Con qué texto debería empezar una persona principiante? Normalmente con Delitzsch. ¿Por qué incluir Hutter si tiene errores? Porque es un testimonio histórico primario de la impresión temprana del Nuevo Testamento en hebreo. ¿Reemplaza esto a las ediciones críticas? No. Es una herramienta de lectura y comparación diseñada para un estudio hebreo accesible.',
     info_follow: 'Sigue el proyecto',
     info_youtube_title: 'La Besorah de Yeshúa el Mesías',
     // Donate page
@@ -150,14 +192,26 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     books: 'ספרים',
     donate: 'לתרום',
     info: 'מידע',
+    terms: 'תנאים',
+    privacy: 'פרטיות',
+    legal: 'משפטי',
     home: 'בית',
     nikud: 'ניקוד',
+    back_to_app: 'חזרה לאפליקציה',
+    legal_last_updated: 'עודכן לאחרונה',
+    legal_effective_date: 'תאריך תחילה',
     page_title: 'בְּשׂוֹרָה עברית',
     site_meta_title: 'Shafan',
     site_meta_description:
-      'קראו תנ״ך ובשורה בעברית. מהיר, נקי וללא הסחות ללימוד מעמיק.',
+      'קראו את התנ״ך (המקרא העברי) ואת הבשורה בעברית. מהיר, נקי וללא הסחות, עם שליטה בניקוד וטקסטים מהימנים. התחילו לקרוא עכשיו.',
     // Info page
     info_title: 'מידע',
+    info_overview_title: 'איך להשתמש בעמוד הזה',
+    info_overview_text:
+      'עמוד זה מסביר את המקורות ההיסטוריים שמאחורי הטקסטים ב־Shafan ואיך לקרוא אותם באחריות. בקצרה: הוטר חשוב מבחינה היסטורית אך לא תמיד מדויק לשונית, דליצש בדרך כלל מדויק יותר ללימוד, וטקסט התנ״ך נשען על המסורה. אם אתם משווים קטעים, התחילו בדליצש ואז בדקו גם את הוטר כדי לראות בחירות ניסוח היסטוריות.',
+    info_study_guide_title: 'שיטת לימוד ודוגמאות',
+    info_study_guide_text:
+      'דוגמה לתהליך עבודה: קראו פרק בעברית עם ניקוד מופעל, השוו מונחים מרכזיים בין הוטר לדליצש, ורשמו היכן הניסוח משנה משמעות או טון. להוראה, צטטו את כתובת הפרק וציינו איזה מקור טקסט היה פעיל. למחקר, שמרו על גבולות פרק ופסוק והימנעו מערבוב תרגומים באותה ציטטה בלי סימון ברור.',
     info_hutter_title: 'מי היה אליאס הוטר?',
     info_hutter_text:
       'אליאס הוטר (1553–1605 לערך) היה חוקר עברית, בלשן ומדפיס גרמני מגרליץ. תרגומו של הברית החדשה לעברית, שפורסם בין 1599 ל-1602 כחלק מהפוליגלוטה של נירנברג, מייצג אחד מהברית החדשות העבריות המלאות הראשונות שהודפסו אי פעם. אנא שימו לב שתרגומו של הוטר אינו מדויק לשונית וכולל שגיאות רבות. אנו עובדים באופן פעיל לשפר ולתקן טקסטים אלה באמצעות מחקר מתמשך ותרומות הקהילה.',
@@ -173,6 +227,9 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     info_tanaj_title: 'תנ״ך',
     info_tanaj_text:
       'פרויקט זה כולל גם את התנ״ך מהטקסט המסורתי, הטקסט העברי הרשמי של התנ״ך ששומר בקפידה במשך מאות שנים על ידי סופרי ישראל.',
+    info_related_questions_title: 'שאלות קשורות',
+    info_related_questions_text:
+      'עם איזה טקסט כדאי להתחיל למתחילים? בדרך כלל עם דליצש. למה לכלול את הוטר אם יש בו שגיאות? כי הוא עדות היסטורית ראשונית להדפסה מוקדמת של הברית החדשה בעברית. האם זה מחליף מהדורות ביקורתיות? לא. זהו כלי קריאה והשוואה שנועד להנגיש לימוד עברית.',
     info_follow: 'עקבו אחרי הפרויקט',
     info_youtube_title: 'בְּשׂוֹרַת יֵשׁוּעַ הַמָּשִׁיחַ',
     // Donate page

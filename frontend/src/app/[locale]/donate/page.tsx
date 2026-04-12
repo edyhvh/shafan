@@ -33,6 +33,7 @@ export async function generateMetadata({
       description,
       type: 'website',
       url: canonicalUrl,
+      siteName: 'Shafan',
       images: [
         {
           url: SOCIAL_IMAGE_URL,

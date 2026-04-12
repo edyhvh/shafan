@@ -1,6 +1,7 @@
 import { t } from '@/lib/translations'
 import { Locale } from '@/lib/locale'
 import type { Metadata } from 'next'
+import { BRAND_CONFIG } from '@/lib/config'
 
 interface PageProps {
   params: Promise<{
@@ -18,9 +19,76 @@ export default async function InfoPage({ params }: PageProps) {
   const { locale } = await params
   const loc = locale as Locale
   const isRTL = loc === 'he'
+  const pageUrl = `${BRAND_CONFIG.siteUrl}/${loc}/info`
+
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: loc,
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: t('info_hutter_title', loc),
+        acceptedAnswer: { '@type': 'Answer', text: t('info_hutter_text', loc) },
+      },
+      {
+        '@type': 'Question',
+        name: t('info_delitzsch_title', loc),
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: t('info_delitzsch_text', loc),
+        },
+      },
+      {
+        '@type': 'Question',
+        name: t('info_polyglot_title', loc),
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: t('info_polyglot_text', loc),
+        },
+      },
+      {
+        '@type': 'Question',
+        name: t('info_besorah_title', loc),
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: t('info_besorah_text', loc),
+        },
+      },
+      {
+        '@type': 'Question',
+        name: t('info_tanaj_title', loc),
+        acceptedAnswer: { '@type': 'Answer', text: t('info_tanaj_text', loc) },
+      },
+    ],
+  }
+
+  const pageJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: t('info_title', loc),
+    description: t('site_meta_description', loc),
+    url: pageUrl,
+    inLanguage: loc,
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'Shafan',
+      url: BRAND_CONFIG.siteUrl,
+    },
+  }
 
   return (
     <div className="max-w-3xl mx-auto px-4 pb-20">
+      <script
+        id={`jsonld-faq-info-${loc}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        id={`jsonld-webpage-info-${loc}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
+      />
       <h1
         className={`font-ui-latin text-3xl font-semibold mb-10 text-center ${isRTL ? 'font-hebrew' : ''}`}
       >
@@ -31,6 +99,34 @@ export default async function InfoPage({ params }: PageProps) {
         className={`space-y-10 ${isRTL ? 'text-right' : 'text-left'}`}
         dir={isRTL ? 'rtl' : 'ltr'}
       >
+        {/* Overview */}
+        <section>
+          <h2
+            className={`text-xl font-semibold mb-3 text-black ${isRTL ? 'font-hebrew' : 'font-ui-latin'}`}
+          >
+            {t('info_overview_title', loc)}
+          </h2>
+          <p
+            className={`text-black/70 leading-relaxed ${isRTL ? 'font-hebrew' : 'font-ui-latin'}`}
+          >
+            {t('info_overview_text', loc)}
+          </p>
+        </section>
+
+        {/* Study guide */}
+        <section>
+          <h2
+            className={`text-xl font-semibold mb-3 text-black ${isRTL ? 'font-hebrew' : 'font-ui-latin'}`}
+          >
+            {t('info_study_guide_title', loc)}
+          </h2>
+          <p
+            className={`text-black/70 leading-relaxed ${isRTL ? 'font-hebrew' : 'font-ui-latin'}`}
+          >
+            {t('info_study_guide_text', loc)}
+          </p>
+        </section>
+
         {/* Elias Hutter */}
         <section>
           <h2
@@ -98,6 +194,20 @@ export default async function InfoPage({ params }: PageProps) {
             className={`text-black/70 leading-relaxed ${isRTL ? 'font-hebrew' : 'font-ui-latin'}`}
           >
             {t('info_tanaj_text', loc)}
+          </p>
+        </section>
+
+        {/* Related questions */}
+        <section>
+          <h2
+            className={`text-xl font-semibold mb-3 text-black ${isRTL ? 'font-hebrew' : 'font-ui-latin'}`}
+          >
+            {t('info_related_questions_title', loc)}
+          </h2>
+          <p
+            className={`text-black/70 leading-relaxed ${isRTL ? 'font-hebrew' : 'font-ui-latin'}`}
+          >
+            {t('info_related_questions_text', loc)}
           </p>
         </section>
 
