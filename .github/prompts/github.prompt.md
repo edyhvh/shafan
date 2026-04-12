@@ -51,7 +51,7 @@ Required files to create:
    • Explain current branch protection & code review requirements
    • Mention automated checks if they exist (lint, tests, security scan, json schema…)
    • How to report security issues (private → email or security contact)
-   • Current status of Dependabot, workflow permissions, etc.
+   • Current status of dependency update tooling and workflow permissions
    • Keep realistic — don't claim protections that aren't set up yet
 
 Rules & style guidelines:
