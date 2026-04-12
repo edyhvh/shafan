@@ -92,9 +92,9 @@ This project contains historical religious texts. Data integrity is critical:
 
 ## Supported Versions
 
-| Version | Supported          |
-| ------- | ------------------ |
-| main    | ✅ Active development |
+| Version        | Supported                     |
+| -------------- | ----------------------------- |
+| main           | ✅ Active development         |
 | other branches | ⚠️ Not monitored for security |
 
 ---
