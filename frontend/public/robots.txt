@@ -1,4 +1,25 @@
 User-agent: *
 Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://shafan.xyz/sitemap.xml
+Sitemap: https://shafan.xyz/sitemap.txt
 LLMS: https://shafan.xyz/llms.txt
+AI: https://shafan.xyz/ai.txt

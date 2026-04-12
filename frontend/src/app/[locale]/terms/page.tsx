@@ -29,6 +29,7 @@ export async function generateMetadata({
       description: 'Read the Terms of Service for Shafan.',
       type: 'website',
       url: canonicalUrl,
+      siteName: 'Shafan',
       images: [
         {
           url: SOCIAL_IMAGE_URL,

@@ -30,10 +30,12 @@ export default async function Head({ params }: HeadProps) {
       'Read Tanakh and Besorah in Hebrew. Fast, clean, distraction-free for deep study.',
     url: `https://shafan.xyz/${locale}/book/${bookId}/chapter/${chapterNumber}`,
     image: socialImageUrl,
+    datePublished: BRAND_CONFIG.contentPublishedTime,
+    dateModified: BRAND_CONFIG.contentModifiedTime,
     author: {
-      '@type': 'Organization',
-      name: 'Shafan',
-      url: 'https://shafan.xyz',
+      '@type': 'Person',
+      name: BRAND_CONFIG.authorName,
+      url: BRAND_CONFIG.authorUrl,
     },
     publisher: {
       '@type': 'Organization',

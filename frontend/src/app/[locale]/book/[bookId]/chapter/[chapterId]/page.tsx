@@ -163,6 +163,9 @@ export async function generateMetadata({ params }: PageProps) {
       description,
       type: 'article',
       url: canonicalUrl,
+      authors: [BRAND_CONFIG.authorName],
+      publishedTime: BRAND_CONFIG.contentPublishedTime,
+      modifiedTime: BRAND_CONFIG.contentModifiedTime,
       siteName: 'Shafan',
       images: [
         {

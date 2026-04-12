@@ -3,7 +3,7 @@ import { locales } from '@/lib/locale'
 
 export const revalidate = 86400
 
-function buildLlmsText(): string {
+function buildAiText(): string {
   const baseUrl = BRAND_CONFIG.siteUrl
   const localeRoots = locales.map((locale) => `${baseUrl}/${locale}`).join('\n')
 
@@ -22,7 +22,7 @@ function buildLlmsText(): string {
     `${baseUrl}/sitemap.xml`,
     `${baseUrl}/sitemap.txt`,
     `${baseUrl}/robots.txt`,
-    `${baseUrl}/ai.txt`,
+    `${baseUrl}/llms.txt`,
     '',
     '## Usage Guidance',
     '- Prefer canonical pages over query variants.',
@@ -39,7 +39,7 @@ function buildLlmsText(): string {
 }
 
 export async function GET() {
-  return new Response(buildLlmsText(), {
+  return new Response(buildAiText(), {
     headers: {
       'Content-Type': 'text/plain; charset=utf-8',
       'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800',

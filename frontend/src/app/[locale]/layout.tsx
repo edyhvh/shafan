@@ -52,7 +52,7 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string }>
 }): Promise<Metadata> {
-  const brandName = 'shafan'
+  const brandName = 'Shafan | Read the Hebrew Bible'
   const { locale } = await params
   const loc = (locale || 'he') as Locale
   const description = t('site_meta_description', loc)
@@ -68,12 +68,16 @@ export async function generateMetadata({
     description,
     metadataBase: new URL('https://shafan.xyz'),
     keywords: [
-      'hebrew tanakh online',
-      'besorah hebrew hutter',
-      'nikud toggle',
+      'hebrew bible',
       'hebrew bible study',
       'tanakh hebrew text',
+      'tanaj hebreo',
+      'hebrew tanakh online',
       'besorah hebrew',
+      'besorah hebreo',
+      'hebrew new testament',
+      'delitzsch hebrew translation',
+      'hutter hebrew new testament',
     ],
     robots: {
       index: true,
@@ -87,6 +91,9 @@ export async function generateMetadata({
         he: 'https://shafan.xyz/he',
       },
     },
+    authors: [{ name: BRAND_CONFIG.authorName, url: BRAND_CONFIG.authorUrl }],
+    creator: BRAND_CONFIG.authorName,
+    publisher: 'Shafan',
     openGraph: {
       title: brandName,
       description,
@@ -125,6 +132,36 @@ export default async function LocaleLayout({
   const resolvedParams = await params
   const locale = resolvedParams.locale || 'he'
   const dir = locale === 'he' ? 'rtl' : 'ltr'
+  const websiteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Shafan',
+    url: BRAND_CONFIG.siteUrl,
+    inLanguage: locale,
+  }
+  const organizationJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Shafan',
+    url: BRAND_CONFIG.siteUrl,
+    logo: BRAND_CONFIG.logoUrl,
+    sameAs: [
+      `https://x.com/${BRAND_CONFIG.twitterHandle.replace('@', '')}`,
+      BRAND_CONFIG.githubUrl,
+      BRAND_CONFIG.youtubeUrl,
+    ],
+  }
+  const personJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: BRAND_CONFIG.authorName,
+    url: BRAND_CONFIG.authorUrl,
+    sameAs: [
+      BRAND_CONFIG.authorUrl,
+      `https://x.com/${BRAND_CONFIG.twitterHandle.replace('@', '')}`,
+      BRAND_CONFIG.youtubeUrl,
+    ],
+  }
 
   return (
     <html
@@ -139,6 +176,23 @@ export default async function LocaleLayout({
       suppressHydrationWarning
     >
       <head>
+        <script
+          id={`jsonld-website-${locale}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          id={`jsonld-organization-${locale}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
+        <script
+          id={`jsonld-person-${locale}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         <Script id="shafan-initial-preferences" strategy="beforeInteractive">
           {`
             (function() {
