@@ -35,7 +35,7 @@ shafan/
 ### Prerequisites
 
 - **Python 3.12** (managed via mise)
-- **Node.js 20.9.0** (managed via mise)
+- **Node.js 24** (managed via mise)
 - **aria2** (for downloading PDFs): `brew install aria2`
 - **poppler** (for PDF conversion): `brew install poppler`
 
