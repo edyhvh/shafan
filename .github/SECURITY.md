@@ -7,7 +7,7 @@
 Our main branch is protected with the following rules:
 
 - ✅ **Pull Request Required** — All changes must go through PR with at least 1 approval
-- ✅ **Code Owner Review** — Changes to critical paths require `@edyhvh` approval (see [CODEOWNERS](.github/CODEOWNERS))
+- ✅ **Code Owner Review** — Changes to critical paths require `@jhonnyisaacc` approval (see [CODEOWNERS](.github/CODEOWNERS))
 - ✅ **Status Checks** — Must pass before merging:
   - `Validate JSON Files` — Ensures data integrity
   - `Frontend Checks` — Linting and type checking
@@ -17,7 +17,7 @@ Our main branch is protected with the following rules:
 
 ### Code Ownership
 
-Defined in [`.github/CODEOWNERS`](.github/CODEOWNERS). The following paths require review by `@edyhvh`:
+Defined in [`.github/CODEOWNERS`](.github/CODEOWNERS). The following paths require review by `@jhonnyisaacc`:
 
 - `/output/` — JSON source files (single source of truth for all texts)
 - `/frontend/` — Web application code
@@ -38,7 +38,7 @@ Defined in [`.github/CODEOWNERS`](.github/CODEOWNERS). The following paths requi
 
 ### 1. Workflow Permissions
 
-Navigate to: `https://github.com/edyhvh/shafan/settings/actions`
+Navigate to: `https://github.com/jhonnyisaacc/shafan/settings/actions`
 
 - Set **Workflow permissions** to "Read and write permissions"
 - Enable "Allow GitHub Actions to create and approve pull requests"
@@ -77,8 +77,8 @@ Then enable in GitHub: Settings → Branches → Edit rule → Require signed co
 
 If you discover a security issue, please report it privately:
 
-1. **Email:** Contact `@edyhvh` directly through GitHub
-2. **Security Advisory:** Use GitHub's [private vulnerability reporting](https://github.com/edyhvh/shafan/security/advisories/new)
+1. **Email:** Contact `@jhonnyisaacc` directly through GitHub
+2. **Security Advisory:** Use GitHub's [private vulnerability reporting](https://github.com/jhonnyisaacc/shafan/security/advisories/new)
 
 You will receive a response within 48 hours. We appreciate responsible disclosure.
 

@@ -11,7 +11,7 @@ import { isNewTestament, AVAILABLE_BOOKS, type BookName } from '@/lib/books'
 import { WarningIcon } from './icons'
 import { useTTH } from '@/hooks/useTTH'
 
-const GITHUB_ISSUES_URL = 'https://github.com/edyhvh/shafan/issues'
+const GITHUB_ISSUES_URL = 'https://github.com/jhonnyisaacc/shafan/issues'
 
 export default function CorrectionWarning() {
   const pathname = usePathname()

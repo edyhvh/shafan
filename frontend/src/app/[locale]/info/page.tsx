@@ -223,7 +223,7 @@ export default async function InfoPage({ params }: PageProps) {
           >
             {/* GitHub */}
             <a
-              href="https://github.com/edyhvh/shafan"
+              href="https://github.com/jhonnyisaacc/shafan"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 px-5 py-3 rounded-full bg-black/5 hover:bg-black/10 transition-colors group"
