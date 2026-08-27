@@ -113,7 +113,7 @@ Improve README files, add code comments, or create guides for:
 
 ## Code Review Process
 
-- All PRs require review by `@edyhvh` (see [CODEOWNERS](.github/CODEOWNERS))
+- All PRs require review by `@jhonnyisaacc` (see [CODEOWNERS](.github/CODEOWNERS))
 - Automated checks must pass:
   - Frontend linting and type checking
   - Build verification
@@ -140,7 +140,7 @@ Improve README files, add code comments, or create guides for:
 
 - 💬 **General questions**: Open a [Discussion](https://github.com/edyhvh/shafan/discussions)
 - 🐛 **Found a bug**: Create an [Issue](https://github.com/edyhvh/shafan/issues)
-- 🤔 **Not sure where to start**: Comment on an existing issue or reach out to `@edyhvh`
+- 🤔 **Not sure where to start**: Comment on an existing issue or reach out to `@jhonnyisaacc`
 
 ## Community Guidelines
 

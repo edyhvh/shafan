@@ -113,7 +113,7 @@ export default async function DonatePage({ params }: PageProps) {
                 rel="noopener noreferrer"
                 className="underline underline-offset-2 hover:text-black transition-colors"
               >
-                @edyhvh
+                @jhonnyisaacc
               </a>
             </span>
           </p>

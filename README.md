@@ -43,7 +43,7 @@ shafan/
 
 ```bash
 # Clone the repository
-git clone https://github.com/edyhvh/shafan.git
+git clone https://github.com/jhonnyisaacc/shafan.git
 cd shafan
 
 # One-command setup (installs dependencies, creates virtual environment)
@@ -166,6 +166,6 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 **Built for digital humanities and Biblical scholarship**
 
-[Report an Issue](https://github.com/edyhvh/shafan/issues) · [Request Feature](https://github.com/edyhvh/shafan/issues) · [View Demo](https://shafan.xyz)
+[Report an Issue](https://github.com/jhonnyisaacc/shafan/issues) · [Request Feature](https://github.com/jhonnyisaacc/shafan/issues) · [View Demo](https://shafan.xyz)
 
 </div>
